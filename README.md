@@ -54,6 +54,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## UiIcon
 
-Пример использования
-
+Пример использования:
+1 Сохранить иконку в svg формате(ArrowUp.svg) в папке public/assets/icons  
+2 Добавить название иконки в enum IconName (src/ui-elements/ui-icon/icon-names.ts)
+3 Заиспользвать следующим образом:
 <UiIcon name={IconName.Analytics} size={36} />
