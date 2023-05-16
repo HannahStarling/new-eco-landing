@@ -1,0 +1,28 @@
+.ui-checkbox {
+  display: flex;
+}
+.ui-checkbox input {
+  cursor: pointer;
+  background-color: var(--colors-neutrals-white);
+  border-radius: 4px;
+  border: 1px solid var(--colors-products-super-dark);
+  width: 20px;
+  height: 20px;
+}
+.ui-checkbox:hover .checkbox__control {
+  border: 2px solid var(--colors-products-main);
+}
+.ui-checkbox__label {
+  cursor: pointer;
+  margin-left: 12px;
+  font-size: 12px;
+}
+.ui-checkbox .checkbox__control[data-checked] {
+  background-color: var(--colors-products-main);
+  border: none;
+}
+.ui-checkbox .checkbox__control[data-checked]:hover {
+  background-color: var(--colors-products-dark);
+}
+
+/*# sourceMappingURL=ui-checkbox.css.map */
