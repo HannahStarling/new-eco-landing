@@ -7,6 +7,9 @@ export enum ParagraphSize {
   large = 'paragraph_large',
 }
 
-export default function UiParagraph({children, className, size = ParagraphSize.general, ...props}) {
+export default function UiParagraph({children, className, size = ParagraphSize.general, ...props}: {
+  children: React.ReactNode;
+  size: ParagraphSize
+}) {
   return <p {...props} className={classNames('paragraph', size)}>{children}</p>
 }
