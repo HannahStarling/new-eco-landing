@@ -13,12 +13,12 @@
   opacity: 0;
   transition: all 0.8s ease;
 
-  .modal_opened {
+  &_opened {
     opacity: 1;
     visibility: visible;
   }
 
-  &__container {
+  &__inner {
     display: flex;
     flex-direction: column;
     align-items: center;

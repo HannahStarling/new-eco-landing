@@ -10,8 +10,7 @@ export default function Home() {
     <div className="wrapper">
       <HeaderComponent/>
       <MainComponent>
-        <UiSection style={{paddingTop: 60, height: 554}}>
-        </UiSection>
+        <UiSection style={{paddingTop: 60, height: 554}}>Платформа Intelogis для вашего бизнеса</UiSection>
         <Benefits/>
       </MainComponent>
       <FooterComponent/>
