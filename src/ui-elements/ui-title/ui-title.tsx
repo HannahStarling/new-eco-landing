@@ -1,6 +1,6 @@
-import './styles.scss'
+import './ui-title.scss'
 
-export default function Title({children, level, className, ...props}) {
+export default function UiTitle({children, level, className, ...props}) {
   switch (level) {
     case 2:
       return <h2 {...props} className={`title title_sub ${className}`}>{children}</h2>

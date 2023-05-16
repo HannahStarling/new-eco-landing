@@ -1,4 +1,4 @@
-import './styles.scss'
+import './ui-paragraph.scss'
 import classNames from "classnames";
 
 export enum ParagraphSize {
@@ -7,6 +7,6 @@ export enum ParagraphSize {
   large = 'paragraph_large',
 }
 
-export default function Paragraph({children, className, size = ParagraphSize.general, ...props}) {
+export default function UiParagraph({children, className, size = ParagraphSize.general, ...props}) {
   return <p {...props} className={classNames('paragraph', size)}>{children}</p>
 }

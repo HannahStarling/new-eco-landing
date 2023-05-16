@@ -2,9 +2,9 @@ import {HeaderComponent} from "@/components/header-component/header-component";
 import {FooterComponent} from "@/components/footer-component/footer-component";
 import {MainComponent} from "@/components/main-component/main-component";
 import "./styles/page.scss";
-import Title from "@/ui-elements/title/title";
-import Paragraph, {ParagraphSize} from "@/ui-elements/paragraph/paragraph";
-import Modal from "@/ui-elements/modal-window/modal-window";
+import UiTitle from "@/ui-elements/title/ui-title";
+import UiParagraph, {ParagraphSize} from "@/ui-elements/paragraph/ui-paragraph";
+import Modal from "@/ui-elements/modal-window/ui-modal-window";
 
 export default function Home() {
   return (
@@ -13,8 +13,8 @@ export default function Home() {
       <MainComponent>
         <section>
           <Modal>
-            <Title>ILS Online</Title>
-            <Paragraph size={ParagraphSize.small}>LOL</Paragraph>
+            <UiTitle>ILS Online</UiTitle>
+            <UiParagraph size={ParagraphSize.small}>LOL</UiParagraph>
           </Modal>
         </section>
       </MainComponent>
