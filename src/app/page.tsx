@@ -4,6 +4,7 @@ import {MainComponent} from "@/components/main-component/main-component";
 import "./styles/page.scss";
 import Title from "@/ui-elements/title/title";
 import Paragraph, {ParagraphSize} from "@/ui-elements/paragraph/paragraph";
+import Modal from "@/ui-elements/modal-window/modal-window";
 
 export default function Home() {
   return (
@@ -11,8 +12,10 @@ export default function Home() {
       <HeaderComponent/>
       <MainComponent>
         <section>
-          <Title>ILS Online</Title>
-          <Paragraph size={ParagraphSize.small}>LOL</Paragraph>
+          <Modal>
+            <Title>ILS Online</Title>
+            <Paragraph size={ParagraphSize.small}>LOL</Paragraph>
+          </Modal>
         </section>
       </MainComponent>
       <FooterComponent/>
