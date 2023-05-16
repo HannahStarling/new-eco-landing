@@ -1,0 +1,15 @@
+.title {
+  font-weight: 700;
+  line-height: 120%;
+}
+.title__sub {
+  font-size: 28px;
+}
+.title__section {
+  font-size: 36px;
+}
+.title__main {
+  font-size: 48px;
+}
+
+/*# sourceMappingURL=styles.css.map */
