@@ -1,0 +1,69 @@
+@import 'constants';
+
+.ui-input {
+  display: flex;
+  flex-direction: column;
+  font-weight: $input-font-weight;
+
+  &__label {
+    font-size: $input-label-font-size;
+    line-height: $input-label-line-height;
+    margin-bottom: $input-label-margin-bottom;
+
+    &-required {
+      color: var(--colors-accentRed-bright);
+      margin-left: $input-label-required-margin-left;
+    }
+  }
+
+  &__field {
+    border-radius: $input-border-radius;
+    border: 1px solid var(--colors-neutrals-250);
+    font-size: $input-font-size;
+    line-height: $input-line-height;
+    max-height: $input-height;
+    max-width: $input-width;
+    padding: $input-padding;
+
+    &::placeholder {
+      color: var(--colors-neutrals-250);
+    }
+
+    &:hover {
+      border-color: var(--colors-neutrals-50);
+    }
+
+    &:focus, &:focus-visible {
+      border-color: var(--colors-products-main) !important;
+      outline: none;
+    }
+
+    &:disabled {
+      background: var(--colors-neutrals-500);
+      color: var(--colors-typography-light);
+      border-color: var(--colors-neutrals-500);
+
+      &::placeholder {
+        color: var(--colors-typography-light);
+      }
+    }
+
+    &:invalid {
+      border-color: var(--colors-accentRed-bright);
+    }
+
+    &::-webkit-search-cancel-button {
+      cursor: pointer;
+      -webkit-appearance: none;	
+      background: no-repeat url('/public/assets/icons/Close.svg');
+      height: 14px;
+	    width: 14px;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .ui-input__field {
+    max-width: 288px;
+  }
+}

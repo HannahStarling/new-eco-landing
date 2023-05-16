@@ -45,3 +45,9 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 <UiButton mode="light" fillType="filled">
 Кнопка Светлая filled
 </UiButton>
+
+## UiCheckbox
+
+Пример использования
+
+<UiCheckbox id="23">Чекбокс</UiCheckbox>

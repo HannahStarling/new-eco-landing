@@ -1,0 +1,37 @@
+@import "./constants";
+
+.ui-checkbox {
+  display: flex;
+
+  input {
+    cursor: pointer;
+    background-color: var(--colors-neutrals-350);
+    border-radius: $checkbox-border-radius;
+    border: 1px solid var(--colors-products-50);
+    width: $checkbox-size;
+    height: $checkbox-size;
+  }
+
+  &:hover {
+    .checkbox__control {
+      border: 2px solid var(--colors-products-main);
+    }
+  }
+
+  &__label {
+    cursor: pointer;
+    margin-left: $checkbox-label-margin-left;
+    font-size: $checkbox-label-font-size;
+  }
+
+
+  // для checked
+  .checkbox__control[data-checked] {
+    background-color: var(--colors-products-main);
+    border: none;
+
+    &:hover {
+      background-color: var(--colors-products-150);
+    }
+  }
+}
