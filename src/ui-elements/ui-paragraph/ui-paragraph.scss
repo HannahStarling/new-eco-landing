@@ -1,20 +1,31 @@
 @mixin bold {
-  &-bold {
+  &.bold {
     font-weight: 600;
     line-height: 144%;
+  }
+}
+
+@mixin centered {
+  &.centered {
+    text-align: center;
   }
 }
 
 .paragraph {
   font-weight: 400;
   line-height: 139%;
-  /* font-family: 'Ubuntu'; ?? */
   color: var(--colors-typography-main);
 
-  &_large {
+  &_extra-large {
     font-size: 24px;
     line-height: 133%;
-    
+    @include bold;
+  }
+
+  &_large {
+    font-size: 20px;
+    line-height: 120%;
+    @include centered;
     @include bold;
   }
 

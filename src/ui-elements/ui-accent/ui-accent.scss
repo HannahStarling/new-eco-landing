@@ -1,0 +1,9 @@
+.accent {
+  &_main {
+    color: var(--colors-products-main);
+  }
+
+  &_presentation {
+    color: var(--colors-green-presentation);
+  }
+}

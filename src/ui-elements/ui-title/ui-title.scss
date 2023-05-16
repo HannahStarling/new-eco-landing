@@ -1,26 +1,39 @@
+@mixin medium-weight {
+  &.medium-weight {
+    font-weight: var(--font-weights-medium);
+  }
+}
+
 .title {
+  font-weight: var(--font-weights-bold);
+  line-height: 120%;
+  color: var(--colors-typography-medium);
+
   &_extra-large {
     font-size: 32px;
+    @include medium-weight;
   }
 
   &_large {
     font-size: 28px;
+    @include medium-weight;
   }
 
   &_medium {
     font-size: 20px;
     line-height: 140%;
+    @include medium-weight;
   }
 
   &_small {
-    font-weight: 600;
     font-size: 18px;
     line-height: 144%;
+    @include medium-weight;
   }
 
   &_extra-small {
-    font-weight: 600;
     font-size: 15px;
     line-height: 173%;
+    @include medium-weight;
   }
 }

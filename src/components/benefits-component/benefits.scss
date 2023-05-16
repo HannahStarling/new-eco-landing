@@ -1,0 +1,11 @@
+.benefits {
+  padding: 50px 0;
+
+  &__article {
+    padding-bottom: 100px;
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+  }
+}

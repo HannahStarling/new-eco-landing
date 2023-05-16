@@ -1,5 +1,15 @@
+@mixin disc {
+  &.disc {
+    padding-left: 20px;
+  }
+}
+
 .list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  display: flex;
+
+  @include disc;
+
+  &_vertical {
+    flex-direction: column;
+  }
 }

@@ -1,3 +1,12 @@
-@mixin color-typography($property) {
-  color: $property
+@mixin title {
+  font-weight: var(--font-weights-bold);
+  line-height: 120%;
+}
+
+@mixin centered {
+  &.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
