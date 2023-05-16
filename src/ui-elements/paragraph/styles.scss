@@ -1,8 +1,21 @@
 
 .paragraph {
   font-weight: 400;
-  font-size: 18px;
-  line-height: 139%;
   /* font-family: 'Ubuntu'; */
   color: var(--colors-typography-main);
+
+  &__small {
+    font-size: 12px;
+    line-height: 133%;
+  }
+
+  &__general {
+    font-size: 18px;
+    line-height: 139%;
+  }
+
+  &__large {
+    font-size: 24px;
+    line-height: 133%;
+  }
 }
