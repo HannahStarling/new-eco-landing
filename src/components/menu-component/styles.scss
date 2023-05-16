@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
   }
+
   &__item {
     position: relative;
     margin: 0 12px;
@@ -28,6 +29,7 @@
         margin-right: 15px;
       }
     }
+
     &_submenu {
       padding-right: 25px;
       background: url("/assets/icons/down.svg") no-repeat center right;
@@ -36,6 +38,7 @@
 
       &:hover {
         background: url("/assets/icons/up.svg") no-repeat center right;
+
         .submenu {
           opacity: 1;
           visibility: visible;
@@ -52,7 +55,7 @@
   z-index: 3;
   min-width: 286px;
   background: #fff;
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
   transition: all 0.3s ease;
   border-radius: 8px;
   overflow: hidden;
@@ -60,6 +63,7 @@
   &__subitem {
     padding: 10px 12px;
     line-height: 1.5;
+
     &:hover {
       background: #f0f6fe;
     }

@@ -1,3 +1,3 @@
-export type Fare = {
+export type Tariff = {
   price: number;
 }

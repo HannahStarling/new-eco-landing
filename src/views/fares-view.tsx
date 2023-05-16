@@ -1,7 +1,6 @@
-import { FaresComponent } from "@/components/fares-component/fares-component"
-import { useFares } from "@/hooks/useFares"
+import {useTariffs} from "@/hooks/useFares"
 
-export const FaresView = () => {
-  const fares = useFares()
-  return <FaresComponent fares={fares} />
+export const TariffsView = () => {
+  const fares = useTariffs()
+  return <p>{fares}</p>
 }

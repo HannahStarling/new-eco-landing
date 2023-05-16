@@ -1,5 +1,3 @@
-export const WELCOME_TEXT = 'Welcome!'
-
 export const BUTTONS_CONTENT = {
   GET_ACCESS: 'ПОЛУЧИТЬ ДОСТУП',
   CONTACT: 'СВЯЗАТЬСЯ'

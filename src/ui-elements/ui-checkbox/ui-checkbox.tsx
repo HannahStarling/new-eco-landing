@@ -1,10 +1,10 @@
 'use client';
 
-import { FC } from 'react';
+import {FC, InputHTMLAttributes} from 'react';
 import classNames from 'classnames';
 import './ui-checkbox.scss';
 
-export type Props = React.InputHTMLAttributes<HTMLInputElement> & {
+export type Props = InputHTMLAttributes<HTMLInputElement> & {
   className?: string;
   label?: string;
 };

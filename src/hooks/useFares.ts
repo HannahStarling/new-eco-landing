@@ -1,15 +1,25 @@
 'use client';
 
-import { Fare } from "@/models/fare"
-import { useEffect, useState } from "react"
+import {Tariff} from "@/models/fare"
+import {useEffect, useState} from "react"
+import {getTariffs} from "@/api/get-tariffs";
 
-export const useFares = () => {
-  const [ fares, setFares ] = useState<Array<Fare>>([])
+export const useTariffs = () => {
+  const [tariffs, setTariffs] = useState<Array<Tariff>>([])
+  useEffect(() => {
+    async function tokenCheck() {
+      try {
+        const tariffs = await getTariffs()
+        setTariffs(tariffs)
+      } catch (_) {
+      } finally {
+      }
+    }
 
-  // useEffect(() => {
-  //   fares await = getFares() // from api folder
-  //   setFares(fares)
-  // }, [])
+    setTariffs(tariffs)
+    tokenCheck();
+  }, []);
 
-  return fares
+
+  return tariffs
 }

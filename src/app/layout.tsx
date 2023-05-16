@@ -1,5 +1,6 @@
 import {Nunito_Sans} from 'next/font/google'
 import "./styles/global.scss";
+import {ReactNode} from "react";
 
 const NUNITO_SANS = Nunito_Sans({subsets: ['latin', "cyrillic-ext", "cyrillic"]})
 
@@ -11,7 +12,7 @@ export const metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <html lang="ru">
