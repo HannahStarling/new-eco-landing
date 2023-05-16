@@ -9,10 +9,10 @@
   padding: $button-padding;
 
   &__filled {
-    color: var(--colors-typography-250);
+    color: var(--colors-typography-white);
   
     &.ui-button__light {
-      background-color: var(--colors-products-200);
+      background-color: var(--colors-products-main);
     }
   
     &.ui-button__dark {
@@ -45,8 +45,8 @@
     background-color: transparent;
   
     &.ui-button__light {
-      color: var(--colors-products-200);
-      border: 1px solid var(--colors-products-200);
+      color: var(--colors-products-main);
+      border: 1px solid var(--colors-products-main);
     }
     
     &.ui-button__dark {
@@ -61,7 +61,7 @@
     }
   
     &:active {
-      color: var(--colors-typography-250);
+      color: var(--colors-typography-white);
       border: 1px solid var(--colors-products-150);
       background-color: var(--colors-products-100);
     }

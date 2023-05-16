@@ -14,7 +14,7 @@
 
   &:hover {
     .checkbox__control {
-      border: 2px solid var(--colors-products-200);
+      border: 2px solid var(--colors-products-main);
     }
   }
 
@@ -27,7 +27,7 @@
 
   // для checked
   .checkbox__control[data-checked] {
-    background-color: var(--colors-products-200);
+    background-color: var(--colors-products-main);
     border: none;
 
     &:hover {
