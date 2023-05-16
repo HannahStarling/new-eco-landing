@@ -5,7 +5,7 @@ import "./styles/page.scss";
 import {Benefits} from "@/components/benefits-component/benefits";
 
 
-export default function Home() {
+export const Home() {
   return (
     <div className="wrapper">
       <HeaderComponent/>

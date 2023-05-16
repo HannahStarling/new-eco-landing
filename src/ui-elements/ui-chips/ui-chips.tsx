@@ -1,6 +1,12 @@
-import './ui-chips.scss'
-import classNames from "classnames";
+import {FC} from 'react';
+import classNames from 'classnames';
+import './ui-chips.scss';
 
-export default function UiChips({children, className, ...props}) {
-  return <div {...props} className={classNames('chips', className)}>{children}</div>
-}
+type Props = {
+  className?: string;
+  label?: string;
+};
+
+export const UiChips: FC<Props> = ({children, className}) => (
+  <div className={classNames(className, 'ui-chips')}>{children}</div>
+);

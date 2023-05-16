@@ -1,5 +1,12 @@
 import './ui-paragraph.scss'
 import classNames from "classnames";
+import {FC} from "react";
+
+type Props = {
+  size?: ParagraphSize
+  bold?: boolean
+  centered?: boolean
+}
 
 export enum ParagraphSize {
   small = 'paragraph_small',
@@ -8,12 +15,7 @@ export enum ParagraphSize {
   extraLarge = 'paragraph_extra-large'
 }
 
-export default function UiParagraph({children, className, size = ParagraphSize.medium, bold, centered = false, ...props}: {
-  children: React.ReactNode;
-  size?: ParagraphSize
-  bold?: boolean
-  centered?: boolean
-}) {
+export const UiParagraph: FC<Props> = ({children, className, size = ParagraphSize.medium, bold, centered = false, ...props}) => {
   return <p {...props} className={classNames('paragraph', size, bold, {centered})}>{children}</p>
 
 }

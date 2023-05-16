@@ -1,6 +1,6 @@
 import './ui-card.scss'
 import classNames from "classnames";
-import React from "react";
+import {FC} from "react";
 
 export enum CardSize {
   large = 'card_large',
@@ -8,10 +8,11 @@ export enum CardSize {
   medium = 'card_medium'
 }
 
-export default function UiCard({children, className, size = CardSize.medium, centered = false, ...props}: {
-  children: React.ReactNode,
+export type Props = {
   size?: CardSize
   centered?: boolean
-}) {
+}
+
+export const UiCard: FC<Props> = ({children, className, size = CardSize.medium, centered = false, ...props}) => {
   return <div {...props} className={classNames('card', className, size, {centered})}>{children}</div>
 }

@@ -1,16 +1,17 @@
 import './ui-list.scss'
 import classNames from "classnames";
-import React from "react";
+import {FC} from "react";
 
 export enum ListType {
   vertical = 'list_vertical',
 }
 
-export default function UiList({children, className, type, disc = false, ...props}: {
-  children: React.ReactNode,
+type Props = {
   type?: ListType
   disc?: boolean
-}) {
+}
+
+export const UiList: FC<Props> = ({children, className, type, disc = false, ...props}) => {
   return (
     <ul {...props} className={classNames(className, `list`, type, {disc})}>
       {children}
