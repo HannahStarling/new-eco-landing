@@ -2,20 +2,26 @@
   font-weight: 700;
   line-height: 120%;
 
-  &__sub {
+  &_sub {
     font-size: 28px;
   }
 
-  &__main {
+  &_main {
     font-size: 48px;
   }
 
-  &__section {
+  &_section {
     font-size: 36px;
   }
 
-  &__header {
+  &_header {
     font-size: 20px;
     line-height: 140%;
+  }
+
+  &_small {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 173%;
   }
 }

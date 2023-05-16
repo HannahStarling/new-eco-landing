@@ -3,15 +3,15 @@
   /* font-family: 'Ubuntu'; */
   color: var(--colors-typography-main);
 }
-.paragraph__small {
+.paragraph_small {
   font-size: 12px;
   line-height: 133%;
 }
-.paragraph__general {
+.paragraph_general {
   font-size: 18px;
   line-height: 139%;
 }
-.paragraph__large {
+.paragraph_large {
   font-size: 24px;
   line-height: 133%;
 }

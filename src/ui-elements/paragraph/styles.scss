@@ -4,17 +4,17 @@
   /* font-family: 'Ubuntu'; */
   color: var(--colors-typography-main);
 
-  &__small {
+  &_small {
     font-size: 12px;
     line-height: 133%;
   }
 
-  &__general {
+  &_general {
     font-size: 18px;
     line-height: 139%;
   }
 
-  &__large {
+  &_large {
     font-size: 24px;
     line-height: 133%;
   }

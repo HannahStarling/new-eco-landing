@@ -2,18 +2,23 @@
   font-weight: 700;
   line-height: 120%;
 }
-.title__sub {
+.title_sub {
   font-size: 28px;
 }
-.title__main {
+.title_main {
   font-size: 48px;
 }
-.title__section {
+.title_section {
   font-size: 36px;
 }
-.title__header {
+.title_header {
   font-size: 20px;
   line-height: 140%;
+}
+.title_small {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 173%;
 }
 
 /*# sourceMappingURL=styles.css.map */
