@@ -1,4 +1,4 @@
-import './ui-modal-window.scss'
+import './ui-card.scss'
 import classNames from "classnames";
 
 export default function UiCard({children, className, visible, ...props}) {

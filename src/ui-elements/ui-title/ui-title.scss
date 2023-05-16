@@ -1,25 +1,24 @@
 .title {
-  font-weight: 700;
-  line-height: 120%;
+  &_extra-large {
+    font-size: 32px;
+  }
 
-  &_sub {
+  &_large {
     font-size: 28px;
   }
 
-  &_main {
-    font-size: 48px;
-  }
-
-  &_section {
-    font-size: 36px;
-  }
-
-  &_header {
+  &_medium {
     font-size: 20px;
     line-height: 140%;
   }
 
   &_small {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 144%;
+  }
+
+  &_extra-small {
     font-weight: 600;
     font-size: 15px;
     line-height: 173%;
