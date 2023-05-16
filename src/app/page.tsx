@@ -1,12 +1,19 @@
-import styles from './page.module.css'
+import {HeaderComponent} from "@/components/header-component/header-component";
+import {FooterComponent} from "@/components/footer-component/footer-component";
+import {MainComponent} from "@/components/main-component.tsx/main-component";
+import "./styles/page.scss";
 import Title from "@/ui-elements/title/title";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <Title>ILS Online</Title>
-      </div>
-    </main>
-  )
+    <div className="wrapper">
+      <HeaderComponent/>
+      <MainComponent>
+        <section>
+          <Title>ILS Online</Title>
+        </section>
+      </MainComponent>
+      <FooterComponent/>
+    </div>
+  );
 }

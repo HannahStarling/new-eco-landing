@@ -1,0 +1,86 @@
+@import './constants';
+
+.ui-button {
+  font-size: $button-font-size;
+  border: none;;
+  border-radius: $button-border-radius;
+  cursor: pointer;
+  height: $button-height;
+  padding: $button-padding;
+
+  &__filled {
+    color: var(--colors-typography-250);
+  
+    &.ui-button__light {
+      background-color: var(--colors-products-200);
+    }
+  
+    &.ui-button__dark {
+      background-color: var(--colors-products-50);
+    }
+  
+    &:hover {
+      background-color: var(--colors-products-150);
+    }
+  
+    &:active {
+      background-color: var(--colors-products-100);
+    }
+  
+    &.ui-button__disabled {
+      background-color: var(--colors-neutrals-250);
+      cursor: not-allowed;
+  
+      &:hover {
+        background-color: var(--colors-neutrals-250);
+      }
+  
+      &:active {
+        background-color: var(--colors-neutrals-250);
+      }
+    }
+  }
+
+  &__outlined {
+    background-color: transparent;
+  
+    &.ui-button__light {
+      color: var(--colors-products-200);
+      border: 1px solid var(--colors-products-200);
+    }
+    
+    &.ui-button__dark {
+      color: var(--colors-products-50);
+      border: 1px solid var(--colors-products-50);
+      background-color: transparent;
+    }
+  
+    &:hover {
+      color: var(--colors-products-150);
+      border: 1px solid var(--colors-products-150);
+    }
+  
+    &:active {
+      color: var(--colors-typography-250);
+      border: 1px solid var(--colors-products-150);
+      background-color: var(--colors-products-100);
+    }
+  
+    &.ui-button__disabled {
+      color: var(--colors-neutrals-250);
+      border: 1px solid var(--colors-neutrals-250);
+      background-color: transparent;
+      cursor: not-allowed;
+  
+      &:hover {
+        color: var(--colors-neutrals-250);
+        border: 1px solid var(--colors-neutrals-250);
+      }
+      
+      &:active {
+        color: var(--colors-neutrals-250);
+        border: 1px solid var(--colors-neutrals-250);
+      }
+    }
+  }
+}
