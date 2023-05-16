@@ -1,5 +1,17 @@
 .header {
-  //position: absolute; - раскомментировать после определния типа первого экрана
+  position: absolute;
   width: 100%;
   z-index: 1;
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+  }
+
+  .submenu {
+    top: 50px;
+    right: 0px;
+  }
 }
