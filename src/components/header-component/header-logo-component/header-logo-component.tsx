@@ -1,13 +1,13 @@
-import { LogoSize } from "@/constants/image-sizes";
+import { LogoSize } from "@/constants/images";
 import Image from "next/image";
 
 export const HeaderLogoComponent = () => {
   return (
     <Image
-      src="/assets/logo.svg"
+      src={LogoSize.header.src}
       width={LogoSize.header.width}
       height={LogoSize.header.height}
-      alt="логотип Intelogis"
+      alt={LogoSize.header.alt}
     />
   );
 };

@@ -1,14 +1,14 @@
-import { LogoSize } from "@/constants/image-sizes";
+import { LogoSize } from "@/constants/images";
 import Image from "next/image";
 
 export const FooterLogoComponent = () => {
   return (
     <div className="footer__logo">
       <Image
-        src="/assets/logo.svg"
+        src={LogoSize.footer.src}
         width={LogoSize.footer.width}
         height={LogoSize.footer.height}
-        alt="логотип Intelogis"
+        alt={LogoSize.footer.alt}
       />
     </div>
   );
