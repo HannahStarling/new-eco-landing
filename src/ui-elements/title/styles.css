@@ -5,11 +5,15 @@
 .title__sub {
   font-size: 28px;
 }
+.title__main {
+  font-size: 48px;
+}
 .title__section {
   font-size: 36px;
 }
-.title__main {
-  font-size: 48px;
+.title__header {
+  font-size: 20px;
+  line-height: 140%;
 }
 
 /*# sourceMappingURL=styles.css.map */

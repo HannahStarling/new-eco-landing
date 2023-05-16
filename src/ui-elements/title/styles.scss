@@ -6,11 +6,16 @@
     font-size: 28px;
   }
 
+  &__main {
+    font-size: 48px;
+  }
+
   &__section {
     font-size: 36px;
   }
 
-  &__main {
-    font-size: 48px;
+  &__header {
+    font-size: 20px;
+    line-height: 140%;
   }
 }

@@ -1,9 +1,19 @@
 .paragraph {
   font-weight: 400;
-  font-size: 18px;
-  line-height: 139%;
   /* font-family: 'Ubuntu'; */
   color: var(--colors-typography-main);
+}
+.paragraph__small {
+  font-size: 12px;
+  line-height: 133%;
+}
+.paragraph__general {
+  font-size: 18px;
+  line-height: 139%;
+}
+.paragraph__large {
+  font-size: 24px;
+  line-height: 133%;
 }
 
 /*# sourceMappingURL=styles.css.map */
