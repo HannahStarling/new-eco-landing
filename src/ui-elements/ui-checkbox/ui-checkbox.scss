@@ -5,9 +5,9 @@
 
   input {
     cursor: pointer;
-    background-color: var(--colors-neutrals-350);
+    background-color: var(--colors-neutrals-white);
     border-radius: $checkbox-border-radius;
-    border: 1px solid var(--colors-products-50);
+    border: 1px solid var(--colors-products-super-dark);
     width: $checkbox-size;
     height: $checkbox-size;
   }
@@ -31,7 +31,7 @@
     border: none;
 
     &:hover {
-      background-color: var(--colors-products-150);
+      background-color: var(--colors-products-dark);
     }
   }
 }

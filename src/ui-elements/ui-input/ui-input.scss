@@ -18,7 +18,7 @@
 
   &__field {
     border-radius: $input-border-radius;
-    border: 1px solid var(--colors-neutrals-250);
+    border: 1px solid var(--colors-neutrals-light);
     font-size: $input-font-size;
     line-height: $input-line-height;
     max-height: $input-height;
@@ -26,11 +26,11 @@
     padding: $input-padding;
 
     &::placeholder {
-      color: var(--colors-neutrals-250);
+      color: var(--colors-neutrals-light);
     }
 
     &:hover {
-      border-color: var(--colors-neutrals-50);
+      border-color: var(--colors-neutrals-black);
     }
 
     &:focus, &:focus-visible {
@@ -39,9 +39,9 @@
     }
 
     &:disabled {
-      background: var(--colors-neutrals-500);
+      background: var(--colors-neutrals-light-clean);
       color: var(--colors-typography-light);
-      border-color: var(--colors-neutrals-500);
+      border-color: var(--colors-neutrals-light-clean);
 
       &::placeholder {
         color: var(--colors-typography-light);

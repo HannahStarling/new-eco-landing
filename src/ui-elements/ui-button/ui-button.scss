@@ -16,27 +16,27 @@
     }
   
     &.ui-button__dark {
-      background-color: var(--colors-products-50);
+      background-color: var(--colors-products-super-dark);
     }
   
     &:hover {
-      background-color: var(--colors-products-150);
+      background-color: var(--colors-products-dark);
     }
   
     &:active {
-      background-color: var(--colors-products-100);
+      background-color: var(--colors-products-extra-dark);
     }
   
     &.ui-button__disabled {
-      background-color: var(--colors-neutrals-250);
+      background-color: var(--colors-neutrals-light);
       cursor: not-allowed;
   
       &:hover {
-        background-color: var(--colors-neutrals-250);
+        background-color: var(--colors-neutrals-light);
       }
   
       &:active {
-        background-color: var(--colors-neutrals-250);
+        background-color: var(--colors-neutrals-light);
       }
     }
   }
@@ -50,36 +50,36 @@
     }
     
     &.ui-button__dark {
-      color: var(--colors-products-50);
-      border: 1px solid var(--colors-products-50);
+      color: var(--colors-products-super-dark);
+      border: 1px solid var(--colors-products-super-dark);
       background-color: transparent;
     }
   
     &:hover {
-      color: var(--colors-products-150);
-      border: 1px solid var(--colors-products-150);
+      color: var(--colors-products-dark);
+      border: 1px solid var(--colors-products-dark);
     }
   
     &:active {
       color: var(--colors-typography-white);
-      border: 1px solid var(--colors-products-150);
-      background-color: var(--colors-products-100);
+      border: 1px solid var(--colors-products-dark);
+      background-color: var(--colors-products-extra-dark);
     }
   
     &.ui-button__disabled {
-      color: var(--colors-neutrals-250);
-      border: 1px solid var(--colors-neutrals-250);
+      color: var(--colors-neutrals-light);
+      border: 1px solid var(--colors-neutrals-light);
       background-color: transparent;
       cursor: not-allowed;
   
       &:hover {
-        color: var(--colors-neutrals-250);
-        border: 1px solid var(--colors-neutrals-250);
+        color: var(--colors-neutrals-light);
+        border: 1px solid var(--colors-neutrals-light);
       }
       
       &:active {
-        color: var(--colors-neutrals-250);
-        border: 1px solid var(--colors-neutrals-250);
+        color: var(--colors-neutrals-light);
+        border: 1px solid var(--colors-neutrals-light);
       }
     }
   }
