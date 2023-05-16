@@ -9,7 +9,7 @@ export const metadata = {
   description: "Платформа Intelogis для вашего бизнеса",
 };
 
-export default function RootLayout({
+export const RootLayout({
   children,
 }: {
   children: React.ReactNode;

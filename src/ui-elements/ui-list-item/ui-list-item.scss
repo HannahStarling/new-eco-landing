@@ -1,5 +1,9 @@
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+@mixin disc {
+  &.disc {
+    list-style: disc;
+  }
+}
+
+.list-item {
+  @include disc;
 }

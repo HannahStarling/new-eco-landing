@@ -1,15 +1,15 @@
 'use client';
 
-import { FC } from 'react';
+import {FC, InputHTMLAttributes} from 'react';
 import classNames from 'classnames';
 import './ui-input.scss';
 
-type Props = React.InputHTMLAttributes<HTMLInputElement> & {
+type Props = InputHTMLAttributes<HTMLInputElement> & {
   classname?: string;
   label?: string;
 };
 
-export const UiInput: FC<Props> = ({ classname, required, id, label, ...props }) => {
+export const UiInput: FC<Props> = ({classname, required, id, label, ...props}) => {
   return (
     <div className="ui-input">
       <label className="ui-input__label" htmlFor={id}>

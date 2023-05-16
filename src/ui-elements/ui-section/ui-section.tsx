@@ -1,6 +1,7 @@
 import './ui-section.scss'
 import classNames from "classnames";
+import {FC} from "react";
 
-export default function UiSection({children, className, ...props}) {
+export const UiSection: FC = ({children, className, ...props}) => {
   return <section {...props} className={classNames(`section`, className)}>{children}</section>
 }

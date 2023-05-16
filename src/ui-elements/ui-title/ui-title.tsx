@@ -1,5 +1,6 @@
 import './ui-title.scss'
 import classNames from "classnames";
+import {FC} from "react";
 
 export enum TitleSize {
   /**
@@ -24,9 +25,14 @@ export enum TitleSize {
   extraSmall = 'title_extra-small',
 }
 
-export default function UiTitle({children, size = TitleSize.large, className, ...props}: {
-  children: React.ReactNode;
-  size: TitleSize
-}) {
-  return <h3 {...props} className={classNames(`title`, className, size)}>{children}</h3>
+type Props = {
+  size?: TitleSize
+  /**
+   *   font-weight: 600;
+   */
+  bold?: boolean
+}
+
+export const UiTitle: FC<Props> = ({children, size = TitleSize.large, className, bold = true, ...props}) => {
+  return <h3 {...props} className={classNames(`title`, className, size, {'medium-weight': !bold})}>{children}</h3>
 }
