@@ -1,0 +1,12 @@
+@import './constants';
+
+.ui-chips {
+  display: inline;
+  padding: 2px 20px;
+  background: var(--colors-green-presentation);
+  border-radius: $chips-border-radius;
+  color: var(--colors-neutrals-white);
+  font-size: $chips-font-size;
+  line-height: $chips-line-height;
+  font-weight: $chips-font-weight;
+}
