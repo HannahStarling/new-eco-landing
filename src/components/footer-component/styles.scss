@@ -1,4 +1,25 @@
 .footer {
-  padding: 50px 0;
-  background-color: #f7f7f7;
+  padding: 36px 0;
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu {
+    margin-bottom: 36px;
+  }
+
+  &__logo {
+    margin-bottom: 8px;
+  }
+
+  &__copyright {
+    color: #8b90a0;
+  }
+  .submenu {
+    bottom: 50px;
+    left: 0px;
+  }
 }
