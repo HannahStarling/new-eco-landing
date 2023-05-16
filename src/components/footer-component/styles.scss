@@ -1,5 +1,6 @@
 .footer {
   padding: 36px 0;
+
   &__body {
     display: flex;
     flex-direction: column;
@@ -18,8 +19,9 @@
   &__copyright {
     color: #8b90a0;
   }
+
   .submenu {
     bottom: 50px;
-    left: 0px;
+    left: 0;
   }
 }

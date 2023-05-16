@@ -1,11 +1,7 @@
 import "./styles.scss";
-import { FC, ReactNode } from "react";
+import {FC} from "react";
 
-interface IProps {
-  children?: ReactNode;
-}
-
-export const MainComponent: FC<IProps> = ({ children }) => {
+export const MainComponent: FC = ({children}) => {
   return (
     <main className="main">
       <div className="main__container">{children}</div>

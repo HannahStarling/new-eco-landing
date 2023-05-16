@@ -1,14 +1,14 @@
-import UiTitle, {TitleSize} from "@/ui-elements/ui-title/ui-title";
-import UiAccent, {AccentColor} from "@/ui-elements/ui-accent/ui-accent";
-import UiList from "@/ui-elements/ui-list/ui-list";
+import {TitleSize, UiTitle} from "@/ui-elements/ui-title/ui-title";
+import {AccentColor, UiAccent} from "@/ui-elements/ui-accent/ui-accent";
+import {UiList} from "@/ui-elements/ui-list/ui-list";
 import {BUTTONS_CONTENT} from "@/constants/texts";
-import UiListItem from "@/ui-elements/ui-list-item/ui-list-item";
+import {UiListItem} from "@/ui-elements/ui-list-item/ui-list-item";
 import {UiChips} from "@/ui-elements/ui-chips/ui-chips";
 import {UiButton} from "@/ui-elements/ui-button/ui-button";
-import UiArticle from "@/ui-elements/ui-article/ui-article";
+import {UiArticle} from "@/ui-elements/ui-article/ui-article";
 import {IBenefitsArticle} from "@/components/benefits-component/benefits";
 import {BenefitCard} from "@/components/benefits-component/benefit-card";
-import UiParagraph, {ParagraphSize} from "@/ui-elements/ui-paragraph/ui-paragraph";
+import {ParagraphSize, UiParagraph} from "@/ui-elements/ui-paragraph/ui-paragraph";
 
 //TODO replace style by class
 export const BenefitsArticle = ({title, accent, text, list, chips}: IBenefitsArticle) => {

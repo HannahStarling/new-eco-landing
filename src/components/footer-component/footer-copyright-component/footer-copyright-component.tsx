@@ -1,3 +1,3 @@
 export const FooterCopyrightComponent = () => {
-  return <div className="footer__copyright">&copy; Все права защищены</div>;
+  return <p className="footer__copyright">&copy; Все права защищены</p>;
 };

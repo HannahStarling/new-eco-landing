@@ -1,17 +1,16 @@
 .header {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  padding: 15px 156px;
   z-index: 1;
-
-  &__body {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   .submenu {
     top: 50px;
-    right: 0px;
+    right: 0;
   }
 }

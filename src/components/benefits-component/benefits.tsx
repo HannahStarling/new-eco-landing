@@ -1,6 +1,6 @@
 import "./benefits.scss";
-import UiSection from "@/ui-elements/ui-section/ui-section";
-import UiSectionTitle from "@/ui-elements/ui-section-title/ui-section-title";
+import {UiSection} from "@/ui-elements/ui-section/ui-section";
+import {UiSectionTitle} from "@/ui-elements/ui-section-title/ui-section-title";
 import {CARGO_OWNER_LIST, CARRIER_CHIPS_LIST, CARRIER_LIST} from "@/constants/texts";
 import {BenefitsArticle} from "@/components/benefits-component/benefits-article";
 
@@ -46,7 +46,7 @@ const BENEFITS_ARTICLE: Record<Role, BenefitsArticle> = {
 
 export const Benefits = () => {
   return (
-    <UiSection>
+    <UiSection className={'benefits'}>
       <UiSectionTitle>{SECTION_TITLES.Benefits}</UiSectionTitle>
       {BENEFITS_ARTICLES.map(article => {
         const {text, title, accent, list, chips} = BENEFITS_ARTICLE[article]
