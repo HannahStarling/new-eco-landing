@@ -7,6 +7,7 @@ import { MenuComponent } from "@/components/menu-component/menu-component";
 import { useRef } from "react";
 import { useHeaderScroll } from "@/hooks/useHeaderScroll";
 import classNames from "classnames";
+import { HeaderBurgerComponent } from "./header-burger-component/header-burger-component";
 
 export const HeaderComponent = () => {
   const headerRef = useRef<HTMLElement>(null);
@@ -20,6 +21,7 @@ export const HeaderComponent = () => {
       <HeaderLogoComponent />
       <MenuComponent />
       <HeaderButtonComponent />
+      <HeaderBurgerComponent />
     </header>
   );
 };

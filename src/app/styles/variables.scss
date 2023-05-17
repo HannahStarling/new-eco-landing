@@ -35,9 +35,10 @@
   --font-weights-medium: 600;
   --font-weights-normal: 400;
 
-  --media-screen-mobile: min-width: 320px;
-  --media-screen-tablet: min-width: 480px;
-  --media-screen-laptop: min-width: 768px;
-  --media-screen-desktop: min-width: 1024px;
-  --media-screen-large: min-width: 1200px;
+  --media-screen-mobile: 320px;
+  --media-screen-tablet: 480px;
+  --media-screen-laptop: 768px;
+  --media-screen-desktop: 1024px;
+  --media-screen-sm-large: 1120px;
+  --media-screen-md-large: 1200px;
 }
