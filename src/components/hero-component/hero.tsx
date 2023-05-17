@@ -6,7 +6,7 @@ import { GetAccessButtonComponent } from "@/components/buttons/get-access-button
 
 interface IProps {}
 
-export const HeroComponent: FC<IProps> = ({ ...props }) => {
+export const Hero: FC<IProps> = ({ ...props }) => {
   return (
     <UiSection className={"hero"}>
       <UiMainTitle>Платформа Intelogis для вашего бизнеса</UiMainTitle>
