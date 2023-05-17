@@ -5,3 +5,38 @@
     gap: 10px;
   }
 }
+
+@media only screen and (max-width: 1072px) {
+  .comments-list__list {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    .comment {
+      min-width: 210px;
+      max-width: 320px;
+      width: auto;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 980px) {
+  .comments-list__list {
+    .comment {
+      width: 210px;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .comments-list__list {
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 24px;
+
+    .comment {
+      width: auto;
+      max-width: none;
+    }
+  }
+}
