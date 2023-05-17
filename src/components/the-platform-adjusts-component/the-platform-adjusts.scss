@@ -1,17 +1,22 @@
 @import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+$media-max-width: 479px;
 
 .the-platform-adjusts {
-  padding: 12px;
+  @include mobile {
+    padding: 12px;
+  }
 
   &__sub {
-    @media all and (max-width: 479px) {
+    @include mobile {
       font-size: 20px;
       line-height: 130%;
     }
   }
 
   &__footnote {
-    @media all and (max-width: 479px) {
+    @include mobile {
       font-size: 16px;
       line-height: 150%;
     }
