@@ -2,12 +2,5 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  padding: 0 156px 160px;
-}
-
-
-@media only screen and (max-width: 768px) {
-  .section {
-    padding: 0 12px;
-  }
+  padding: 0 calc(156 / 1440 * 100vw) calc(160 / 1440 * 100vw);
 }
