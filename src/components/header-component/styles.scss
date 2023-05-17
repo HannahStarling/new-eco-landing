@@ -72,7 +72,7 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    top: 0px;
+    top: 0;
 
     @include desktop {
       & {
@@ -87,6 +87,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     &__list {
       display: flex;
       flex-direction: row;
@@ -166,7 +167,6 @@
       }
     }
   }
-<<<<<<< HEAD
 
   @media (min-width: $breakpoint-desktop-md) {
     &__logo {
@@ -203,10 +203,8 @@
       &__list {
         flex-direction: row;
         justify-content: flex-start;
-        top: 0px;
+        top: 0;
       }
     }
   }
-=======
->>>>>>> d02712685692ad6e19ea7a839dbf67757a9dcc07
 }

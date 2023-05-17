@@ -1,3 +1,6 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
 .edo {
   display: grid;
   grid-template-areas: 'title module' 'description module' 'description view' 'percent view'  'percent view';
