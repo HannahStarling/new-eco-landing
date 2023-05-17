@@ -6,6 +6,7 @@ export enum CardSize {
   large = "card_large",
   small = "card_small",
   medium = "card_medium",
+  extraLarge = "card_extra-large",
 }
 
 export interface IProps {

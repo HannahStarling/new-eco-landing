@@ -1,5 +1,60 @@
-.hero {
-  padding: 70px 0 155px;
-  height: 554px;
-  align-items: center;
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.mobile-app {
+  &__title {
+  }
+
+  &__view {
+    padding-top: 16px;
+    display: flex;
+    align-items: center;
+    @include gap-medium;
+    position: relative;
+    @include laptop {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__decorative-element {
+    z-index: 1;
+    width: calc(364 / 1440 * 100vw);
+    height: 107px;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0deg, var(--colors-neutrals-white) 25.7%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &__list {
+    @include gap-medium;
+    @include laptop {
+      flex-direction: column;
+    }
+  }
+
+  &__card {
+    padding: 87px 20px;
+    width: calc(229 / 1440 * 100vw);
+    height: 386px;
+
+    @include laptop {
+      padding: 20px;
+      justify-content: flex-start;
+      width: calc(360 / 1023 * 100vw);
+      height: 204px;
+      &:last-of-type {
+        height: 256px;
+      }
+    }
+
+    @include mobile {
+      width: calc(336 / 360 * 100vw);
+    }
+
+    &-icon {
+      align-self: center;
+    }
+  }
 }

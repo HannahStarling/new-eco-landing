@@ -60,14 +60,7 @@ export const PlatformModules: FC = () => (
           </UiListItem>
         ))}
       </UiList>
-      <UiImage
-        size={{
-          width: 744,
-          height: 537,
-        }}
-        name={ImageName.PlatformModule}
-        alt={"Модули приложения."}
-      />
+      <UiImage name={ImageName.PlatformModule} alt={"Модули приложения."} />
     </div>
     <UiParagraph size={ParagraphSize.extraLarge}>
       Мы проводим обучение, доступ к которому останется навсегда и даем

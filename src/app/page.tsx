@@ -8,6 +8,9 @@ import { Companies } from "@/components/companies-component/companies";
 import { PlatformModules } from "@/components/platform-modules-component/platform-modules";
 import { Cover } from "@/components/cover-component/cover";
 import { ThePlatformAdjusts } from "@/components/the-platform-adjusts-component/the-platform-adjusts";
+import { Tender } from "@/components/tender-component/tender";
+import { Edo } from "@/components/EDO-component/EDO";
+import { MobileApp } from "@/components/mobile-app-component/mobile-app";
 
 export default function Home() {
   return (
@@ -18,6 +21,9 @@ export default function Home() {
         <Benefits />
         <PlatformModules />
         <ThePlatformAdjusts />
+        <Tender />
+        <Edo />
+        <MobileApp />
         <CommentsList />
         <Companies />
       </MainComponent>

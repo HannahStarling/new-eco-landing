@@ -3,7 +3,7 @@
     display: flex;
     flex-wrap: wrap;
     row-gap: 40px;
-    column-gap: 24px;
+    column- @include gap-medium;
 
     .card {
       width: 206px;
@@ -19,7 +19,7 @@
     &__list {
       flex-direction: column;
       row-gap: 12px;
-  
+
       .card {
         width: auto;
         height: 107px;
