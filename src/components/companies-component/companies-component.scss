@@ -13,3 +13,17 @@
     }
   }
 }
+
+@media only screen and (max-width: 480px) {
+  .companies {
+    &__list {
+      flex-direction: column;
+      row-gap: 12px;
+  
+      .card {
+        width: auto;
+        height: 107px;
+      }
+    }
+  }
+}
