@@ -1,6 +1,7 @@
 import { UiParagraph } from '@/ui-elements/ui-paragraph/ui-paragraph';
-import { AccentColor, UiAccent } from '@/ui-elements/ui-accent/ui-accent';
+import { UiAccent } from '@/ui-elements/ui-accent/ui-accent';
 import { FC } from 'react';
+import { Color } from '@/types/color';
 
 const CommentParagraph1: FC = () => (
   <>
@@ -12,7 +13,7 @@ const CommentParagraph1: FC = () => (
     </UiParagraph>
     <UiParagraph>
       То что делает наша команда -{' '}
-      <UiAccent color={AccentColor.presentation}>это супер-гениально и актуально.</UiAccent>”
+      <UiAccent color={Color.greenMain}>это супер-гениально и актуально.</UiAccent>”
     </UiParagraph>
   </>
 );
@@ -21,9 +22,7 @@ const CommentParagraph2: FC = () => (
   <>
     <UiParagraph>
       “Единая система технической поддержки и единое обучение всем продуктам экономит{' '}
-      <UiAccent color={AccentColor.presentation}>
-        до 10 часов рабочего времени экономит ежемесячно.
-      </UiAccent>
+      <UiAccent color={Color.greenMain}>до 10 часов рабочего времени экономит ежемесячно.</UiAccent>
       “
     </UiParagraph>
   </>
@@ -36,7 +35,7 @@ const CommentParagraph3: FC = () => (
       отслеживает, контролирует отклонения, ведет документооборот-все происходит в одной системе.
     </UiParagraph>
     <UiParagraph>
-      <UiAccent color={AccentColor.presentation}>Это дает экономию 100-200 тыс. рублей.“</UiAccent>
+      <UiAccent color={Color.greenMain}>Это дает экономию 100-200 тыс. рублей.“</UiAccent>
     </UiParagraph>
   </>
 );
@@ -48,8 +47,8 @@ const CommentParagraph4: FC = () => (
       системами.
     </UiParagraph>
     <UiParagraph>
-      Поэтому на поиск заявки
-      <UiAccent color={AccentColor.presentation}>уходит 3-10 раз меньше времени.</UiAccent> “
+      Поэтому на поиск заявки{' '}
+      <UiAccent color={Color.greenMain}>уходит 3-10 раз меньше времени.</UiAccent> “
     </UiParagraph>
   </>
 );
