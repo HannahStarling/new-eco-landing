@@ -2,8 +2,15 @@
 @import "@/app/styles/mixins.scss";
 
 .the-platform-adjusts {
-  @include mobile {
+  @include laptop {
     padding: 12px;
+  }
+
+  &__content {
+    gap: 40px;
+    @include laptop {
+      gap: 24px;
+    }
   }
 
   &__sub {
