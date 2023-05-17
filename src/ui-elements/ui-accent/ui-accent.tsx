@@ -1,16 +1,20 @@
-import './ui-accent.scss'
+import "./ui-accent.scss";
 import classNames from "classnames";
-import {FC} from "react";
-
-export enum AccentColor {
-  main = 'accent_main',
-  presentation = 'accent_presentation'
-}
+import { FC } from "react";
+import { Color } from "@/types/color";
 
 export type Props = {
-  color?: AccentColor
-}
+  color?: Color;
+};
 
-export const UiAccent: FC<Props> = ({children, color = AccentColor.main, ...props}) => {
-  return <span {...props} className={classNames('accent', color)}>{children}</span>
-}
+export const UiAccent: FC<Props> = ({
+  children,
+  color = Color.blue,
+  ...props
+}) => {
+  return (
+    <span {...props} className={classNames("accent", color)}>
+      {children}
+    </span>
+  );
+};

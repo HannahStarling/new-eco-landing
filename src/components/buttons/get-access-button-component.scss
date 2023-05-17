@@ -1,0 +1,13 @@
+.button {
+  &_get-access {
+    width: calc((264 / 1440) * 100vw);
+
+    &.full {
+      width: 100%;
+    }
+
+    &.uppercase {
+      text-transform: uppercase;
+    }
+  }
+}
