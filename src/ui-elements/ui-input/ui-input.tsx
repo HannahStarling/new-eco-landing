@@ -4,12 +4,14 @@ import {FC, InputHTMLAttributes} from 'react';
 import classNames from 'classnames';
 import './ui-input.scss';
 
-type Props = InputHTMLAttributes<HTMLInputElement> & {
-  classname?: string;
-  label?: string;
+interface IProps
+
+InputHTMLAttributes<HTMLInputElement> & {
+  classname? : string;
+  label? : string;
 };
 
-export const UiInput: FC<Props> = ({classname, required, id, label, ...props}) => {
+export const UiInput: FC<IProps> = ({classname, required, id, label, ...props}) => {
   return (
     <div className="ui-input">
       <label className="ui-input__label" htmlFor={id}>
