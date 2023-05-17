@@ -1,6 +1,6 @@
 .section {
-  box-sizing: border-box;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 calc(156 / 1440 * 100vw) calc(160 / 1440 * 100vw);
+  justify-content: space-between;
 }

@@ -17,9 +17,11 @@ export const HeaderComponent = () => {
       ref={headerRef}
       className={classNames("header", isScroll ? "header_sticky" : null)}
     >
-      <HeaderLogoComponent />
-      <MenuComponent />
-      <HeaderButtonComponent />
+      <div className={"header__container"}>
+        <HeaderLogoComponent />
+        <MenuComponent />
+        <HeaderButtonComponent />
+      </div>
     </header>
   );
 };
