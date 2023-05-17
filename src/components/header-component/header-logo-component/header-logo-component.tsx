@@ -1,11 +1,17 @@
 import { Logo } from "@/constants/images";
 import Image from "next/image";
+import { FC } from "react";
 
-export const HeaderLogoComponent = () => {
+interface IProps {
+  isScroll: boolean;
+  isOpen: boolean;
+}
+
+export const HeaderLogoComponent: FC<IProps> = ({ isScroll, isOpen }) => {
   return (
     <div className="header__logo">
       <Image
-        src={Logo.header.src}
+        src={isScroll || isOpen ? Logo.header.black : Logo.header.white}
         width={Logo.header.width}
         height={Logo.header.height}
         alt={Logo.header.alt}

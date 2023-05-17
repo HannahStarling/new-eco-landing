@@ -2,7 +2,8 @@ export const Logo = {
   header: {
     width: 168,
     height: 34,
-    src: "/assets/logo.svg",
+    white: "/assets/logo_white.svg",
+    black: "/assets/logo.svg",
     alt: "логотип Intelogis",
   },
   footer: {

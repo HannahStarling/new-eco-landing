@@ -3,13 +3,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--colors-typography-main);
   }
 
   &__item {
     position: relative;
     margin: 0 12px;
-    padding: 20px 0;
+    height: 40px;
+    line-height: 40px;
     cursor: pointer;
 
     &:active,
@@ -31,12 +31,11 @@
 
     &_submenu {
       padding-right: 25px;
-      background: url("/assets/icons/down.svg") no-repeat center right;
-      line-height: 0.5;
+      background: url("/assets/icons/down_white.svg") no-repeat center right;
       transition: all 0.2s ease;
 
       &:hover {
-        background: url("/assets/icons/up.svg") no-repeat center right;
+        background: url("/assets/icons/up_white.svg") no-repeat center right;
 
         .submenu {
           opacity: 1;

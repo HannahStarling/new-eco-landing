@@ -1,3 +1,3 @@
-export type Mode = 'dark' | 'light';
+export type Mode = "dark" | "light" | "none";
 
-export type Type = 'filled' | 'outlined';
+export type Type = "filled" | "outlined";

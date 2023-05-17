@@ -21,11 +21,11 @@ export const HeaderComponent = () => {
       className={classNames("header", isScroll ? "header_sticky" : null)}
     >
       <div className={"header__container"}>
-        <HeaderLogoComponent />
+        <HeaderLogoComponent isScroll={isScroll} isOpen={isOpen} />
         <div className={classNames("header__action", isOpen ? "active" : null)}>
           <div className="header__links">
-            <MenuComponent />
-            <HeaderButtonComponent />
+            <MenuComponent isOpen={isOpen} isScroll={isScroll} />
+            <HeaderButtonComponent isOpen={isOpen} isScroll={isScroll} />
           </div>
         </div>
         <HeaderBurgerComponent onBurgerClick={onBurgerClick} isOpen={isOpen} />
