@@ -1,0 +1,15 @@
+.companies {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 24px;
+
+    .card {
+      width: 206px;
+      height: 124px;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
