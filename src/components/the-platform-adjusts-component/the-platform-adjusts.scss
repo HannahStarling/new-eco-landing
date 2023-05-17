@@ -1,0 +1,19 @@
+@import "@/app/styles/breakpoints.scss";
+
+.the-platform-adjusts {
+  padding: 12px;
+
+  &__sub {
+    @media all and (max-width: 479px) {
+      font-size: 20px;
+      line-height: 130%;
+    }
+  }
+
+  &__footnote {
+    @media all and (max-width: 479px) {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+}

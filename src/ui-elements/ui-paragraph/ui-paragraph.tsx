@@ -27,7 +27,10 @@ export const UiParagraph: FC<IProps> = ({
   ...props
 }) => {
   return (
-    <p {...props} className={classNames("paragraph", size, bold, { centered })}>
+    <p
+      {...props}
+      className={classNames(className, "paragraph", size, bold, { centered })}
+    >
       {children}
     </p>
   );

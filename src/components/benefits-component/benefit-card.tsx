@@ -9,6 +9,7 @@ import {
   UiParagraph,
 } from "@/ui-elements/ui-paragraph/ui-paragraph";
 import { IBenefitsArticle } from "@/components/benefits-component/benefits";
+import { Color } from "@/types/color";
 
 interface IProps {
   accent: IBenefitsArticle["accent"];
@@ -20,7 +21,7 @@ export const BenefitCard: FC<IProps> = ({ accent, text, list }) => {
   return (
     <UiCard>
       <UiTitle size={TitleSize.small}>
-        <UiAccent>{accent}</UiAccent>
+        <UiAccent color={Color.blue}>{accent}</UiAccent>
         {text}
       </UiTitle>
       <UiList disc type={ListType.vertical}>
