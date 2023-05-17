@@ -1,22 +1,24 @@
-import {menu} from "@/constants/menu";
-import {UiListItem} from "@/ui-elements/ui-list-item/ui-list-item";
-import {UiList} from "@/ui-elements/ui-list/ui-list";
+import { menu } from "@/constants/menu";
+import { UiListItem } from "@/ui-elements/ui-list-item/ui-list-item";
+import { UiList } from "@/ui-elements/ui-list/ui-list";
 import "./styles.scss";
-import {SubMenuComponent} from "./sub-menu-component/sub-menu-component";
-import {FC} from "react";
+import { SubMenuComponent } from "./sub-menu-component/sub-menu-component";
+import { FC } from "react";
 
 export enum MenuPlacement {
-  header = 'header',
-  footer = 'footer'
+  header = "header",
+  footer = "footer",
 }
 
 type Props = {
-  placement?: MenuPlacement
-}
+  placement?: MenuPlacement;
+};
 
-export const MenuComponent: FC<Props> = ({placement = MenuPlacement.header}) => {
+export const MenuComponent: FC<Props> = ({
+  placement = MenuPlacement.header,
+}) => {
   return (
-    <nav className={`menu ${placement}__menu}`}>
+    <nav className={`menu ${placement}__menu`}>
       <UiList className="menu__list">
         {Object.values(menu).map((menuItem, index) => (
           <UiListItem
@@ -28,7 +30,7 @@ export const MenuComponent: FC<Props> = ({placement = MenuPlacement.header}) => 
             }
           >
             {menuItem.name}
-            {<SubMenuComponent menu={menuItem.children}/>}
+            {<SubMenuComponent menu={menuItem.children} />}
           </UiListItem>
         ))}
       </UiList>
