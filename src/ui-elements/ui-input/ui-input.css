@@ -9,7 +9,7 @@
   margin-bottom: 4px;
 }
 .ui-input__label-required {
-  color: var(--colors-accentRed-bright);
+  color: var(--colors-accent-red-brigh);
   margin-left: 4px;
 }
 .ui-input__field {
@@ -25,10 +25,10 @@
   color: var(--colors-neutrals-light);
 }
 .ui-input__field:hover {
-  border-color: var(--colors-neutrals-black);
+  border-color: var(--colors-neutrals-super-dark;
 }
 .ui-input__field:focus, .ui-input__field:focus-visible {
-  border-color: var(--colors-products-main) !important;
+  border-color: var(--colors-accent-blue) !important;
   outline: none;
 }
 .ui-input__field:disabled {
@@ -40,7 +40,7 @@
   color: var(--colors-typography-light);
 }
 .ui-input__field:invalid {
-  border-color: var(--colors-accentRed-bright);
+  border-color: var(--colors-accent-red-brigh);
 }
 .ui-input__field::-webkit-search-cancel-button {
   cursor: pointer;

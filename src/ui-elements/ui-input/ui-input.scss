@@ -11,7 +11,7 @@
     margin-bottom: $input-label-margin-bottom;
 
     &-required {
-      color: var(--colors-accentRed-bright);
+      color: var(--colors-accent-red-brigh);
       margin-left: $input-label-required-margin-left;
     }
   }
@@ -30,11 +30,11 @@
     }
 
     &:hover {
-      border-color: var(--colors-neutrals-black);
+      border-color: var(--colors-neutrals-super-dark;
     }
 
     &:focus, &:focus-visible {
-      border-color: var(--colors-products-main) !important;
+      border-color: var(--colors-accent-blue) !important;
       outline: none;
     }
 
@@ -49,7 +49,7 @@
     }
 
     &:invalid {
-      border-color: var(--colors-accentRed-bright);
+      border-color: var(--colors-accent-red-brigh);
     }
 
     &::-webkit-search-cancel-button {

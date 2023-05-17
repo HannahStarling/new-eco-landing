@@ -12,19 +12,19 @@
     color: var(--colors-typography-white);
   
     &.ui-button__light {
-      background-color: var(--colors-products-main);
+      background-color: var(--colors-accent-blue);
     }
   
     &.ui-button__dark {
-      background-color: var(--colors-products-super-dark);
+      background-color: var(--colors-accent-blue-super-dark);
     }
   
     &:hover {
-      background-color: var(--colors-products-dark);
+      background-color: var(--colors-accent-blue-dark);
     }
   
     &:active {
-      background-color: var(--colors-products-extra-dark);
+      background-color: var(--colors-accent-blue-extra-dark);
     }
   
     &.ui-button__disabled {
@@ -45,25 +45,25 @@
     background-color: transparent;
   
     &.ui-button__light {
-      color: var(--colors-products-main);
-      border: 1px solid var(--colors-products-main);
+      color: var(--colors-accent-blue);
+      border: 1px solid var(--colors-accent-blue);
     }
     
     &.ui-button__dark {
-      color: var(--colors-products-super-dark);
-      border: 1px solid var(--colors-products-super-dark);
+      color: var(--colors-accent-blue-super-dark);
+      border: 1px solid var(--colors-accent-blue-super-dark);
       background-color: transparent;
     }
   
     &:hover {
-      color: var(--colors-products-dark);
-      border: 1px solid var(--colors-products-dark);
+      color: var(--colors-accent-blue-dark);
+      border: 1px solid var(--colors-accent-blue-dark);
     }
   
     &:active {
       color: var(--colors-typography-white);
-      border: 1px solid var(--colors-products-dark);
-      background-color: var(--colors-products-extra-dark);
+      border: 1px solid var(--colors-accent-blue-dark);
+      background-color: var(--colors-accent-blue-extra-dark);
     }
   
     &.ui-button__disabled {

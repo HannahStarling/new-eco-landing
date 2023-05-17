@@ -7,14 +7,14 @@
     cursor: pointer;
     background-color: var(--colors-neutrals-white);
     border-radius: $checkbox-border-radius;
-    border: 1px solid var(--colors-products-super-dark);
+    border: 1px solid var(--colors-accent-blue-super-dark);
     width: $checkbox-size;
     height: $checkbox-size;
   }
 
   &:hover {
     .checkbox__control {
-      border: 2px solid var(--colors-products-main);
+      border: 2px solid var(--colors-accent-blue);
     }
   }
 
@@ -27,11 +27,11 @@
 
   // для checked
   .checkbox__control[data-checked] {
-    background-color: var(--colors-products-main);
+    background-color: var(--colors-accent-blue);
     border: none;
 
     &:hover {
-      background-color: var(--colors-products-dark);
+      background-color: var(--colors-accent-blue-dark);
     }
   }
 }
