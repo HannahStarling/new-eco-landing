@@ -1,9 +1,9 @@
 .accent {
-  &_main {
-    color: var(--colors-accent-blue);
+  &_green {
+    color: var(--colors-accent-green-main);
   }
 
-  &_presentation {
-    color: var(--colors-accent-green-main);
+  &_blue {
+    color: var(--colors-accent-blue);
   }
 }
