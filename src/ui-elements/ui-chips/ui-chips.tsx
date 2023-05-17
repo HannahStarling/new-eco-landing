@@ -1,12 +1,12 @@
-import {FC} from 'react';
-import classNames from 'classnames';
-import './ui-chips.scss';
+import { FC } from "react";
+import classNames from "classnames";
+import "./ui-chips.scss";
 
 type Props = {
-  className?: string;
+  big?: boolean;
   label?: string;
 };
 
-export const UiChips: FC<Props> = ({children, className}) => (
-  <div className={classNames(className, 'ui-chips')}>{children}</div>
+export const UiChips: FC<Props> = ({ children, className, big = false }) => (
+  <p className={classNames(className, "ui-chips", { big })}>{children}</p>
 );

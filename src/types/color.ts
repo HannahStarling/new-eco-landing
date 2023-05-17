@@ -1,0 +1,16 @@
+export enum Color {
+  greenMain = "green-main",
+  greenBright = "green-bright",
+  acidGreen = "acid-green",
+  yellowBright = "yellow-bright",
+  yellow = "yellow",
+  blueAcid = "blue-acid",
+  blueSuperDark = "blue-super-dark",
+  blueExtraDark = "blue-extra-dark",
+  blueDark = "blue-dark",
+  blue = "blue",
+  bluePowder = "blue-powder",
+  bluePale = "blue-pale",
+  redBright = "red-bright",
+  redMedium = "red-medium",
+}

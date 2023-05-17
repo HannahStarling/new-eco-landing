@@ -1,12 +1,17 @@
 @import './constants';
 
 .ui-chips {
-  //display: inline;
-  padding: 2px 20px;
+  width: calc((168 / 1440) * 100vw);
+  padding: 4px;
   background: var(--colors-accent-green-main);
   border-radius: $chips-border-radius;
   color: var(--colors-neutrals-white);
   font-size: $chips-font-size;
   line-height: $chips-line-height;
   font-weight: $chips-font-weight;
+  text-align: center;
+
+  &.big {
+    width: calc((264 / 1440) * 100vw);
+  }
 }
