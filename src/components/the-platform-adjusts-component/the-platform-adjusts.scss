@@ -1,8 +1,6 @@
 @import "@/app/styles/breakpoints.scss";
 @import "@/app/styles/mixins.scss";
 
-$media-max-width: 479px;
-
 .the-platform-adjusts {
   @include mobile {
     padding: 12px;
