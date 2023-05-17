@@ -1,14 +1,12 @@
 .comments-list {
   &__list {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
+    gap: 24px;
   }
 }
 
 @media only screen and (max-width: 1072px) {
   .comments-list__list {
-    justify-content: center;
     flex-wrap: wrap;
     gap: 24px;
 
@@ -31,7 +29,6 @@
 @media only screen and (max-width: 480px) {
   .comments-list__list {
     flex-wrap: wrap;
-    justify-content: start;
     gap: 24px;
 
     .comment {
