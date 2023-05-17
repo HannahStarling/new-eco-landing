@@ -10,4 +10,8 @@ export enum IconName {
   EDO = 'EDO',
   CommentAvatarGreen = 'CommentAvatarGreen',
   CommentAvatarBlue = 'CommentAvatarBlue',
+  Skype = 'Skype',
+  Email = 'Email',
+  Phone = 'Phone',
+  Telegram = 'Telegram',
 }
