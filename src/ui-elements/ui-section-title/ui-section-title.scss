@@ -1,10 +1,17 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
 .title {
   font-weight: var(--font-weights-bold);
   line-height: 120%;
   color: var(--colors-typography-medium);
-  
+
   &_section {
     font-size: 36px;
     padding-bottom: 24px;
+    @include mobile {
+      font-size: 28px;
+      line-height: 120%;
+    }
   }
 }

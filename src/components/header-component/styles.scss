@@ -139,7 +139,7 @@
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    top: 0px;
+    top: 0;
 
     @include desktop {
       & {
@@ -155,6 +155,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     &__list {
       display: flex;
       flex-direction: row;
@@ -269,6 +270,46 @@
         content: "";
         bottom: 9px;
         transform: rotate(45deg);
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-desktop-md) {
+    &__logo {
+      padding: 0;
+    }
+    &__burger {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &__action {
+      position: static;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: none;
+      box-shadow: none;
+      flex: 1;
+      transform: translate(0);
+    }
+
+    &__links {
+      flex-direction: row;
+      justify-content: flex-end;
+      top: 0;
+    }
+
+    .menu {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &__list {
+        flex-direction: row;
+        justify-content: flex-start;
+        top: 0;
       }
     }
   }

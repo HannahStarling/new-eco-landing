@@ -1,14 +1,17 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
 .comments-list {
   &__list {
     display: flex;
-    gap: 24px;
+    @include gap-medium;
   }
 }
 
 @media only screen and (max-width: 1072px) {
   .comments-list__list {
     flex-wrap: wrap;
-    gap: 24px;
+    @include gap-medium;
 
     .comment {
       min-width: 210px;
@@ -29,7 +32,7 @@
 @media only screen and (max-width: 480px) {
   .comments-list__list {
     flex-wrap: wrap;
-    gap: 24px;
+    @include gap-medium;
 
     .comment {
       width: auto;

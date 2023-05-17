@@ -1,3 +1,6 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
 .companies {
   &__list {
     display: flex;
@@ -19,7 +22,7 @@
     &__list {
       flex-direction: column;
       row-gap: 12px;
-  
+
       .card {
         width: auto;
         height: 107px;

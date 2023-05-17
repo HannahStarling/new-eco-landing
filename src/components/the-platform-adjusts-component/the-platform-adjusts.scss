@@ -2,14 +2,10 @@
 @import "@/app/styles/mixins.scss";
 
 .the-platform-adjusts {
-  @include laptop {
-    padding: 12px;
-  }
-
   &__content {
     gap: 40px;
     @include laptop {
-      gap: 24px;
+      @include gap-medium;
     }
   }
 

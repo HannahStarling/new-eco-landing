@@ -1,3 +1,6 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
 @mixin disc {
   &.disc {
     padding-left: 20px;

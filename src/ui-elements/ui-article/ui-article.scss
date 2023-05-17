@@ -1,5 +1,8 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
 .article {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  @include gap-medium;
 }

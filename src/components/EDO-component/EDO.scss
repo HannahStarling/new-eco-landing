@@ -1,5 +1,50 @@
-.hero {
-  padding: 70px 0 155px;
-  height: 554px;
-  align-items: center;
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.edo {
+  display: grid;
+  grid-template-areas: 'title module' 'description module' 'description view' 'percent view'  'percent view';
+  grid-template-columns: 456px 648px;
+  gap: 40px 24px;
+
+  &__title {
+    grid-area: title;
+  }
+
+  &__paragraph {
+    &_percent {
+      font-weight: 600;
+      font-size: 72px;
+      line-height: 100px;
+    }
+  }
+
+  &__card {
+    padding: 50px 20px;
+
+    &_percent {
+      grid-area: percent;
+      font-weight: 600;
+      font-size: 72px;
+      line-height: 100px;
+    }
+
+    &_description {
+      grid-area: description;
+    }
+  }
+
+  &__image {
+    &_module {
+      grid-area: module;
+
+    }
+
+    &_view {
+      grid-area: view;
+
+    }
+  }
+
+
 }
