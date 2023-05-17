@@ -1,6 +1,6 @@
-import './ui-section.scss';
-import classNames from 'classnames';
-import { FC } from 'react';
+import "./ui-section.scss";
+import classNames from "classnames";
+import { FC } from "react";
 
 type Props = {
   children?: any;

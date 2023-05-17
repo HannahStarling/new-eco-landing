@@ -1,18 +1,22 @@
 .header {
   position: sticky;
+  margin: 0 auto;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 15px 156px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: transparent;
-  z-index: 1;
+
+  &__container {
+    //padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    z-index: 1;
+  }
 
   &_sticky {
     position: fixed;
-    background: var(--colors-typography-white);
+    background: var(--colors-neutrals-white);
   }
 
   .submenu {
