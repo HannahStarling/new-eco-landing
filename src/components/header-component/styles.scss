@@ -67,8 +67,7 @@
     }
   }
 
-  //TODO variables
-  @media screen and (min-width: 1120px) {
+  @media (min-width: 1120px) {
     &__burger {
       visibility: hidden;
       opacity: 0;

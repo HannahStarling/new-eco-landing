@@ -3,10 +3,11 @@
 @import "./mixins.scss";
 @import "./colors.scss";
 @import "./constants.scss";
+@import "./breakpoints.scss";
 
 [class*="__container"] {
   max-width: var(--max-width-container);
-  padding: 0;
+  padding: 0 5px;
   margin: 0 auto;
   box-sizing: border-box;
 }
