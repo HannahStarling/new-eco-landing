@@ -1,13 +1,19 @@
 .header {
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   padding: 15px 156px;
-  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: transparent;
+  z-index: 1;
+
+  &_sticky {
+    position: fixed;
+    background: #fff;
+  }
 
   .submenu {
     top: 50px;

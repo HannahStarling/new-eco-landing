@@ -3,6 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--colors-typography-main);
   }
 
   &__item {
@@ -11,15 +12,13 @@
     padding: 20px 0;
     cursor: pointer;
 
+    &:active,
+    &:hover,
+    &:focus {
+      color: var(--colors-accent-blue-dark);
+    }
+
     .item {
-      fill: green;
-
-      &:active,
-      &:hover,
-      &:focus {
-        color: #005ad3;
-      }
-
       &__name {
         margin-right: 19px;
       }
@@ -52,17 +51,24 @@
   position: absolute;
   opacity: 0;
   visibility: hidden;
-  z-index: 3;
   min-width: 286px;
-  background: #fff;
+  background-color: var(--colors-typography-white);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
   transition: all 0.3s ease;
   border-radius: 8px;
   overflow: hidden;
+  z-index: 3;
 
   &__subitem {
     padding: 10px 12px;
     line-height: 1.5;
+    color: var(--colors-typography-main);
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: var(--colors-typography-main);
+    }
 
     &:hover {
       background: #f0f6fe;
