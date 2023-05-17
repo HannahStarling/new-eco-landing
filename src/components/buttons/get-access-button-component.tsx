@@ -1,8 +1,8 @@
+import "./get-access-button-component.scss";
 import { FC } from "react";
 import { UiButton, UiButtonProps } from "@/ui-elements/ui-button/ui-button";
 import { BUTTONS_CONTENT } from "@/constants/texts";
 import classNames from "classnames";
-import "./get-access-button-component.scss";
 
 interface IProps extends UiButtonProps {
   full?: boolean;

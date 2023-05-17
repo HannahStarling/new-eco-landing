@@ -1,24 +1,28 @@
-import { FC } from 'react';
-import { UiCard } from '@/ui-elements/ui-card/ui-card';
-import { UiIcon } from '@/ui-elements/ui-icon/ui-icon';
-import { IconName } from '@/ui-elements/ui-icon/icon-names';
-import './comment.scss';
+import { FC } from "react";
+import { UiCard } from "@/ui-elements/ui-card/ui-card";
+import { UiIcon } from "@/ui-elements/ui-icon/ui-icon";
+import { IconName } from "@/ui-elements/ui-icon/icon-names";
+import "./comment.scss";
 
-type Color = 'green' | 'blue';
+type Color = "green" | "blue";
 
-type Props = {
+interface IProps {
   children?: any;
   color?: Color;
-};
+}
 
-export const Comment: FC<Props> = ({ children, color = 'green' }) => {
+export const Comment: FC<IProps> = ({ children, color = "green" }) => {
   return (
     <UiCard className="comment">
-      {color === 'green' ? (
-        <UiIcon size={53} name={IconName.CommentAvatarGreen} />
-      ) : (
-        <UiIcon size={53} name={IconName.CommentAvatarBlue} />
-      )}
+      <UiIcon
+        alt={"Аватар пользователя, который оставил отзыв."}
+        size={{ width: 53, height: 53 }}
+        name={
+          color === "green"
+            ? IconName.CommentAvatarGreen
+            : IconName.CommentAvatarBlue
+        }
+      />
       {children}
     </UiCard>
   );

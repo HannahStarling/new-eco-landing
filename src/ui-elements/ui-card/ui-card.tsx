@@ -1,21 +1,21 @@
-import './ui-card.scss';
-import classNames from 'classnames';
-import { FC } from 'react';
+import "./ui-card.scss";
+import classNames from "classnames";
+import { FC } from "react";
 
 export enum CardSize {
-  large = 'card_large',
-  small = 'card_small',
-  medium = 'card_medium',
+  large = "card_large",
+  small = "card_small",
+  medium = "card_medium",
 }
 
-export type Props = {
+export interface IProps {
   size?: CardSize;
   centered?: boolean;
   children?: any;
   className?: string;
-};
+}
 
-export const UiCard: FC<Props> = ({
+export const UiCard: FC<IProps> = ({
   children,
   className,
   size = CardSize.medium,
@@ -23,7 +23,10 @@ export const UiCard: FC<Props> = ({
   ...props
 }) => {
   return (
-    <div {...props} className={classNames('card', className, size, { centered })}>
+    <div
+      {...props}
+      className={classNames("card", className, size, { centered })}
+    >
       {children}
     </div>
   );

@@ -1,13 +1,13 @@
-"use client";
-
 import { FC } from "react";
 import Image from "next/image";
 import classNames from "classnames";
-import { IconName } from "./icon-names";
+import { ImageName } from "@/ui-elements/ui-image/image-names";
+
+const ROOT_PATH = "/assets/images/";
 
 export interface IProps {
   className?: string;
-  name: IconName;
+  name: ImageName;
   alt: string;
   size?: {
     width: number;
@@ -15,24 +15,18 @@ export interface IProps {
   };
 }
 
-const ROOT_PATH = "/assets/icons/";
-
-export const UiIcon: FC<IProps> = ({
+export const UiImage: FC<IProps> = ({
   alt,
   className,
   name,
-  size: { width, height } = {
-    width: 20,
-    height: 20,
-  },
+  size: { width, height },
 }) => {
   return (
     <Image
       width={width}
       height={height}
-      priority
-      className={classNames(className, "ui-icon")}
-      src={`${ROOT_PATH}${name}.svg`}
+      className={classNames(className)}
+      src={`${ROOT_PATH}${name}.png`}
       alt={alt}
     />
   );

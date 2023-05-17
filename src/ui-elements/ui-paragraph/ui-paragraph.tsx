@@ -1,23 +1,24 @@
-import './ui-paragraph.scss';
-import classNames from 'classnames';
-import { FC } from 'react';
+import "./ui-paragraph.scss";
+import classNames from "classnames";
+import { FC } from "react";
 
-type Props = {
+interface IProps {
   size?: ParagraphSize;
   bold?: boolean;
   centered?: boolean;
   children?: any;
   className?: string;
-};
-
-export enum ParagraphSize {
-  small = 'paragraph_small',
-  medium = 'paragraph_medium',
-  large = 'paragraph_large',
-  extraLarge = 'paragraph_extra-large',
 }
 
-export const UiParagraph: FC<Props> = ({
+export enum ParagraphSize {
+  small = "paragraph_small",
+  medium = "paragraph_medium",
+  large = "paragraph_large",
+  extraLarge = "paragraph_extra-large",
+  extraSmall = "paragraph_extra-small",
+}
+
+export const UiParagraph: FC<IProps> = ({
   children,
   className,
   size = ParagraphSize.medium,
@@ -26,7 +27,7 @@ export const UiParagraph: FC<Props> = ({
   ...props
 }) => {
   return (
-    <p {...props} className={classNames('paragraph', size, bold, { centered })}>
+    <p {...props} className={classNames("paragraph", size, bold, { centered })}>
       {children}
     </p>
   );

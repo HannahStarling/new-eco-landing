@@ -10,11 +10,11 @@ export enum MenuPlacement {
   footer = "footer",
 }
 
-type Props = {
+interface IProps {
   placement?: MenuPlacement;
-};
+}
 
-export const MenuComponent: FC<Props> = ({
+export const MenuComponent: FC<IProps> = ({
   placement = MenuPlacement.header,
 }) => {
   return (
