@@ -1,0 +1,11 @@
+.hero {
+  //TODO correct style
+  background: salmon;
+  //background-image: url("/assets/images/cover.png");
+  padding-top: 120px;
+  height: 554px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}

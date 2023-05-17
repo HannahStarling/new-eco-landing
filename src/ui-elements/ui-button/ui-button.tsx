@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import classNames from 'classnames';
-import {ButtonHTMLAttributes, FC} from 'react';
-import './ui-button.scss';
-import {Mode, Type} from './types';
+import classNames from "classnames";
+import { ButtonHTMLAttributes, FC } from "react";
+import "./ui-button.scss";
+import { Mode, Type } from "./types";
 
-type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
+export type UiButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   // отвечает за синий или голубой цвет кнопки
   mode?: Mode;
   // отвечает за заполнение кнопки: заполненная или прозрачная
@@ -13,11 +13,11 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
   isLoading?: boolean;
 };
 
-export const UiButton: FC<Props> = ({
+export const UiButton: FC<UiButtonProps> = ({
   isLoading = false,
   disabled = false,
-  mode = 'light',
-  fillType = 'filled',
+  mode = "light",
+  fillType = "filled",
   onClick,
   className,
   children,
@@ -30,16 +30,17 @@ export const UiButton: FC<Props> = ({
     <button
       className={classNames(
         className,
-        'ui-button',
-        {'ui-button__filled': fillType === 'filled'},
-        {'ui-button__outlined': fillType === 'outlined'},
-        {'ui-button__disabled': isDisabled},
-        {'ui-button__light': mode === 'light'},
-        {'ui-button__dark': mode === 'dark'},
+        "ui-button",
+        { "ui-button__filled": fillType === "filled" },
+        { "ui-button__outlined": fillType === "outlined" },
+        { "ui-button__disabled": isDisabled },
+        { "ui-button__light": mode === "light" },
+        { "ui-button__dark": mode === "dark" }
       )}
       onClick={handleClick}
       type="button"
-      {...props}>
+      {...props}
+    >
       {children}
     </button>
   );

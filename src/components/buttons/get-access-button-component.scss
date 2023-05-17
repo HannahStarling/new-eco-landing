@@ -1,13 +1,18 @@
-.button {
-  &_get-access {
-    width: calc((264 / 1440) * 100vw);
+.button-get-access {
+  width: calc((264 / 1440) * 100vw);
 
-    &.full {
-      width: 100%;
-    }
+  &.full {
+    width: 100%;
+  }
 
-    &.uppercase {
-      text-transform: uppercase;
-    }
+  &.uppercase {
+    text-transform: uppercase;
+  }
+
+  &.hero__button {
+    background: var(--colors-accent-acid-green);
+    width: calc((360 / 1440) * 100vw);
+    color: var(--colors-typography-main);
+    border: none;
   }
 }
