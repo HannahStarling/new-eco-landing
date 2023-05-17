@@ -19,6 +19,7 @@
   &_extra-large {
     font-size: 24px;
     line-height: 133%;
+    @include centered;
     @include bold;
   }
 
@@ -31,14 +32,21 @@
 
   &_medium {
     font-size: 18px;
-
+    @include centered;
     @include bold;
   }
 
   &_small {
+    font-size: 16px;
+    line-height: 133%;
+    @include centered;
+    @include bold;
+  }
+
+  &_extra-small {
     font-size: 12px;
     line-height: 133%;
-
+    @include centered;
     @include bold;
   }
 }

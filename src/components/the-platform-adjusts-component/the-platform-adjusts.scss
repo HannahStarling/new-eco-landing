@@ -1,0 +1,29 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.the-platform-adjusts {
+  @include laptop {
+    padding: 12px;
+  }
+
+  &__content {
+    gap: 40px;
+    @include laptop {
+      gap: 24px;
+    }
+  }
+
+  &__sub {
+    @include mobile {
+      font-size: 20px;
+      line-height: 130%;
+    }
+  }
+
+  &__footnote {
+    @include mobile {
+      font-size: 16px;
+      line-height: 150%;
+    }
+  }
+}

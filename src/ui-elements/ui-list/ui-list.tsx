@@ -6,12 +6,12 @@ export enum ListType {
   vertical = 'list_vertical',
 }
 
-type Props = {
+interface IProps {
   type?: ListType;
   disc?: boolean;
   children?: any;
   className?: string;
-};
+}
 
 export const UiList: FC<Props> = ({ children, className, type, disc = false, ...props }) => {
   return (

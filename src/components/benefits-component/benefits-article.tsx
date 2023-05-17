@@ -1,3 +1,4 @@
+import {FC} from "react";
 import {TitleSize, UiTitle} from "@/ui-elements/ui-title/ui-title";
 import {UiAccent} from "@/ui-elements/ui-accent/ui-accent";
 import {UiList} from "@/ui-elements/ui-list/ui-list";
@@ -10,13 +11,13 @@ import {Color} from "@/types/color";
 import {GetAccessButtonComponent} from "@/components/buttons/get-access-button-component";
 
 //TODO replace style by class
-export const BenefitsArticle = ({
+export const BenefitsArticle: FC<IBenefitsArticle> = ({
   title,
   accent,
   text,
   list,
   chips,
-}: IBenefitsArticle) => {
+}) => {
   return (
     <UiArticle className={"benefits__article"}>
       <UiTitle size={TitleSize.extraLarge}>

@@ -3,12 +3,19 @@
 @import "./mixins.scss";
 @import "./colors.scss";
 @import "./constants.scss";
+@import "./breakpoints.scss";
 
 [class*="__container"] {
   max-width: var(--max-width-container);
   padding: 0 5px;
   margin: 0 auto;
   box-sizing: border-box;
+}
+
+[class*="__content"] {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 :root {

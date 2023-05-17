@@ -1,5 +1,11 @@
 import { UiButton } from "@/ui-elements/ui-button/ui-button";
 
 export const HeaderButtonComponent = () => {
-  return <UiButton fillType="outlined">Войти</UiButton>;
+  return (
+    <div className="header__button button">
+      <UiButton fillType="outlined" className="button__login">
+        Войти
+      </UiButton>
+    </div>
+  );
 };

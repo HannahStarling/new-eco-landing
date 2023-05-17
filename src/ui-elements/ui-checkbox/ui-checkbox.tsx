@@ -4,12 +4,14 @@ import {FC, InputHTMLAttributes} from 'react';
 import classNames from 'classnames';
 import './ui-checkbox.scss';
 
-export type Props = InputHTMLAttributes<HTMLInputElement> & {
-  className?: string;
-  label?: string;
+export interface IProps
+
+InputHTMLAttributes<HTMLInputElement> & {
+  className? : string;
+  label? : string;
 };
 
-export const UiCheckbox: FC<Props> = ({
+export const UiCheckbox: FC<IProps> = ({
   id,
   label,
   checked,

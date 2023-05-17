@@ -1,12 +1,13 @@
+import './styles/page.scss';
 import { HeaderComponent } from '@/components/header-component/header-component';
 import { FooterComponent } from '@/components/footer-component/footer-component';
 import { MainComponent } from '@/components/main-component/main-component';
-import './styles/page.scss';
 import { Benefits } from '@/components/benefits-component/benefits';
-import { Hero } from '@/components/hero-component/hero';
 import { CommentsList } from '@/components/comments-list-component/comments-list';
-import { Companies } from '@/components/companies-component/companies-component';
-import { Presentation } from '@/components/presentation-component/presentation-component';
+import { Companies } from '@/components/companies-component/companies';
+import { PlatformModules } from '@/components/platform-modules-component/platform-modules';
+import { Cover } from '@/components/cover-component/cover';
+import { ThePlatformAdjusts } from '@/components/the-platform-adjusts-component/the-platform-adjusts';
 import { FullCycle } from '@/components/full-cycle-component/full-cycle-component';
 
 export default function Home() {
@@ -14,10 +15,11 @@ export default function Home() {
     <div className="wrapper">
       <HeaderComponent />
       <MainComponent>
-        <Hero />
+        <Cover />
         <Benefits />
-        <Presentation />
         <FullCycle />
+        <PlatformModules />
+        <ThePlatformAdjusts />
         <CommentsList />
         <Companies />
       </MainComponent>

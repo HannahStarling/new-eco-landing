@@ -1,27 +1,39 @@
-'use client';
+"use client";
 
-import { FC } from 'react';
-import Image from 'next/image';
-import classNames from 'classnames';
-import { IconName } from './icon-names';
+import { FC } from "react";
+import Image from "next/image";
+import classNames from "classnames";
+import { IconName } from "./icon-names";
 
-export type Props = {
+export interface IProps {
   className?: string;
   name: IconName;
-  size?: number;
-};
+  alt: string;
+  size?: {
+    width: number;
+    height: number;
+  };
+}
 
-const ROOT_PATH = '/assets/icons/';
+const ROOT_PATH = "/assets/icons/";
 
-export const UiIcon: FC<Props> = ({ className, name, size = 20 }) => {
+export const UiIcon: FC<IProps> = ({
+  alt,
+  className,
+  name,
+  size: { width, height } = {
+    width: 20,
+    height: 20,
+  },
+}) => {
   return (
     <Image
-      width={size}
-      height={size}
+      width={width}
+      height={height}
       priority
-      className={classNames(className, 'ui-icon')}
+      className={classNames(className, "ui-icon")}
       src={`${ROOT_PATH}${name}.svg`}
-      alt="Follow us on Twitter"
+      alt={alt}
     />
   );
 };

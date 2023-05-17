@@ -10,3 +10,33 @@
     align-items: center;
   }
 }
+
+@mixin mobile {
+  @media all and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media all and (max-width: $breakpoint-laptop) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media all and (max-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media all and (max-width: $breakpoint-desktop-md) {
+    @content;
+  }
+}
+
+@mixin desktop-md {
+  @media all and (max-width: $breakpoint-desktop-lg) {
+    @content;
+  }
+}
