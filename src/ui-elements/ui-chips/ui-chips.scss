@@ -1,7 +1,8 @@
 @import './constants';
 
 .ui-chips {
-  width: calc((168 / 1440) * 100vw);
+  width: calc(#{$chips-max-width} / 1440 * 100vw);
+  max-width: #{$chips-max-width}px;
   padding: 4px;
   background: var(--colors-accent-green-main);
   border-radius: $chips-border-radius;
@@ -12,6 +13,7 @@
   text-align: center;
 
   &.big {
-    width: calc((264 / 1440) * 100vw);
+    width: calc((#{$chips-big-max-width} / 1440) * 100vw);
+    max-width: #{$chips-big-max-width}px;
   }
 }
