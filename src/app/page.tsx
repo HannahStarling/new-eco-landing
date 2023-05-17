@@ -17,8 +17,8 @@ export default function Home() {
       <MainComponent>
         <Cover />
         <Benefits />
-        <FullCycle />
         <PlatformModules />
+        <FullCycle />
         <ThePlatformAdjusts />
         <CommentsList />
         <Companies />

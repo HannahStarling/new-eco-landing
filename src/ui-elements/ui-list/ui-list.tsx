@@ -13,7 +13,7 @@ interface IProps {
   className?: string;
 }
 
-export const UiList: FC<Props> = ({ children, className, type, disc = false, ...props }) => {
+export const UiList: FC<IProps> = ({ children, className, type, disc = false, ...props }) => {
   return (
     <ul {...props} className={classNames(className, `list`, type, { disc })}>
       {children}
