@@ -8,4 +8,6 @@ export enum IconName {
   Tracking = 'Tracking',
   Analytics = 'Analytics',
   EDO = 'EDO',
+  CommentAvatarGreen = 'CommentAvatarGreen',
+  CommentAvatarBlue = 'CommentAvatarBlue',
 }
