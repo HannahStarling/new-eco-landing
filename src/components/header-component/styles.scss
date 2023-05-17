@@ -1,3 +1,5 @@
+@import "@/app/styles/breakpoints.scss";
+
 .header {
   position: sticky;
   margin: 0 auto;
@@ -5,8 +7,13 @@
   left: 0;
   width: 100%;
 
+  &__logo {
+    position: relative;
+    z-index: 2;
+    padding: 10px 30px;
+  }
+
   &__container {
-    //padding: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,6 +29,38 @@
   .submenu {
     top: 50px;
     left: -60px;
+  }
+
+  &__action {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background: var(--colors-neutrals-white);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+    min-width: 250px;
+    transform: translate(-4000px);
+    transition: all 0.4s ease;
+
+    &.active {
+      transform: translate(0);
+    }
+  }
+
+  &__links {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    top: 54px;
+  }
+
+  .menu {
+    &__list {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
   }
 
   &__burger {
@@ -40,37 +79,85 @@
       height: 3px;
       width: 30px;
       background: var(--colors-typography-main);
-    }
 
-    &::before {
-      content: "";
-      display: inline-block;
-      height: 3px;
-      width: 30px;
-      background: var(--colors-typography-main);
-      position: absolute;
-      top: 0;
-      left: 0;
-      transition-duration: 300ms;
-    }
+      &::before {
+        content: "";
+        display: inline-block;
+        height: 3px;
+        width: 30px;
+        background: var(--colors-typography-main);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition-duration: 300ms;
+      }
 
-    &::after {
-      content: "";
-      display: inline-block;
-      height: 3px;
-      width: 30px;
-      background: var(--colors-typography-main);
-      position: absolute;
-      bottom: 3px;
-      left: 0;
-      transition-duration: 300ms;
+      &::after {
+        content: "";
+        display: inline-block;
+        height: 3px;
+        width: 30px;
+        background: var(--colors-typography-main);
+        position: absolute;
+        bottom: 3px;
+        left: 0;
+        transition-duration: 300ms;
+      }
+
+      &.active {
+        height: 0px;
+      }
+
+      &.active:before {
+        content: "";
+        top: 10px;
+        transform: rotate(-45deg);
+      }
+
+      &.active:after {
+        content: "";
+        bottom: 9px;
+        transform: rotate(45deg);
+      }
     }
   }
 
-  @media (min-width: 1120px) {
+  @media (min-width: $breakpoint-desktop-md) {
+    &__logo {
+      padding: 0;
+    }
     &__burger {
       visibility: hidden;
       opacity: 0;
+    }
+
+    &__action {
+      position: static;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background: none;
+      box-shadow: none;
+      flex: 1;
+      transform: translate(0);
+    }
+
+    &__links {
+      flex-direction: row;
+      justify-content: flex-end;
+      top: 0;
+    }
+
+    .menu {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &__list {
+        flex-direction: row;
+        justify-content: flex-start;
+        top: 0px;
+      }
     }
   }
 }
