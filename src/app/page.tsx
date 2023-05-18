@@ -15,6 +15,7 @@ import { Implementing } from "@/components/implementing-component/implementing";
 import { Tariffs } from "@/components/tariffs-component/tariffs";
 import { Monitoring } from "@/components/monitoring-component/monitoring-component";
 import { Contact } from "@/components/contact-component/contact";
+import { Comparison } from "@/components/comparison-component/comparison";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
         <Monitoring />
         <Edo />
         <MobileApp />
+        <Comparison />
         <Implementing />
         <Tariffs />
         <CommentsList />

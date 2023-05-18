@@ -1,4 +1,5 @@
 export enum ImageName {
+  Comparison = "Comparison",
   PlatformModules = "PlatformModules",
   Process = "Process",
   Tender = "Tender",
@@ -37,5 +38,9 @@ export const ImageSize: Record<
   [ImageName.Smartphone]: {
     width: 369,
     height: 588,
+  },
+  [ImageName.Comparison]: {
+    width: 1128,
+    height: 404,
   },
 };

@@ -18,6 +18,7 @@ export const Cover: FC<IProps> = () => {
         <GetAccessButtonComponent
           className={"hero__access"}
           cover
+          big
           uppercase={false}
         />
       </div>
