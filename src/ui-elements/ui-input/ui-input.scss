@@ -30,7 +30,7 @@
     }
 
     &:hover {
-      border-color: var(--colors-neutrals-super-dark;
+      border-color: var(--colors-neutrals-super-dark);
     }
 
     &:focus, &:focus-visible {
@@ -54,10 +54,10 @@
 
     &::-webkit-search-cancel-button {
       cursor: pointer;
-      -webkit-appearance: none;	
+      -webkit-appearance: none;
       background: no-repeat url('/public/assets/icons/Close.svg');
       height: 14px;
-	    width: 14px;
+      width: 14px;
     }
   }
 }
