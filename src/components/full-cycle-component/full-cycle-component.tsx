@@ -39,7 +39,7 @@ export const FullCycle = () => (
         ))}
       </UiList>
       <Image
-        src={Logo.header.src}
+        src={Logo.header.black}
         width={Logo.header.width}
         height={Logo.header.height}
         alt={Logo.header.alt}
