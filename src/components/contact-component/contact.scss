@@ -7,6 +7,17 @@
   grid-template-columns: 1fr 576px;
   gap: 40px 96px;
 
+  @include laptop {
+    gap: 40px;
+  }
+
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
   &__title {
     grid-area: title;
   }
