@@ -58,11 +58,13 @@ export const MobileApp: FC<IProps> = ({ ...props }) => {
         Мобильное приложение<UiAccent> для водителей</UiAccent>
       </UiSectionTitle>
       <div className={"mobile-app__view"}>
-        <UiImage
-          alt={"Мобильный телефон с изображением мобильного приложения  ИЛС."}
-          name={ImageName.Smartphone}
-        />
-        {/*<div className={"mobile-app__decorative-element"} />*/}
+        <div className={"mobile-app__image-container"}>
+          <UiImage
+            alt={"Мобильный телефон с изображением мобильного приложения  ИЛС."}
+            name={ImageName.Smartphone}
+          />
+          <div className={"mobile-app__decorative-element"} />
+        </div>
         <UiList className={"mobile-app__list"}>
           {MOBILE_APP_CARDS.map((card) => {
             return (
