@@ -11,7 +11,7 @@
     align-items: center;
     @include gap-medium;
     //position: relative;
-    @include laptop {
+    @include tablet {
       flex-direction: column-reverse;
     }
   }

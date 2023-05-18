@@ -7,6 +7,22 @@
   grid-template-columns: 456px 648px;
   gap: 40px 24px;
 
+  @include laptop {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include tablet {
+    grid-template-areas: 'title title' 'description percent' 'module module';
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
   &__title {
     grid-area: title;
   }
@@ -42,7 +58,9 @@
 
     &_view {
       grid-area: view;
-
+      @include tablet {
+        display: none;
+      }
     }
   }
 
