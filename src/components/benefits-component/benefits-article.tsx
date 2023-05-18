@@ -5,12 +5,11 @@ import { UiList } from "@/ui-elements/ui-list/ui-list";
 import { UiListItem } from "@/ui-elements/ui-list-item/ui-list-item";
 import { UiChips } from "@/ui-elements/ui-chips/ui-chips";
 import { UiArticle } from "@/ui-elements/ui-article/ui-article";
-import { IBenefitsArticle } from "@/components/benefits-component/benefits";
 import { BenefitCard } from "@/components/benefits-component/benefit-card";
 import { Color } from "@/types/color";
 import { GetAccessButtonComponent } from "@/components/buttons/get-access-button/get-access-button-component";
+import { IBenefitsArticle } from "@/types/models";
 
-//TODO replace style by class
 export const BenefitsArticle: FC<IBenefitsArticle> = ({
   title,
   accent,
@@ -27,7 +26,7 @@ export const BenefitsArticle: FC<IBenefitsArticle> = ({
       {chips && (
         <>
           <UiTitle bold={false}>{chips.title}</UiTitle>
-          <UiList style={{ gap: 24 }}>
+          <UiList className={"benefits__chips-list"}>
             {chips.list.map((chips, i, array) => {
               return (
                 <UiListItem key={chips}>

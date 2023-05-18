@@ -1,15 +1,13 @@
-'use client';
+"use client";
 
-import {FC, InputHTMLAttributes} from 'react';
-import classNames from 'classnames';
-import './ui-checkbox.scss';
+import { FC, InputHTMLAttributes } from "react";
+import classNames from "classnames";
+import "./ui-checkbox.scss";
 
-export interface IProps
-
-InputHTMLAttributes<HTMLInputElement> & {
-  className? : string;
-  label? : string;
-};
+export interface IProps extends InputHTMLAttributes<HTMLInputElement> {
+  className?: string;
+  label?: string;
+}
 
 export const UiCheckbox: FC<IProps> = ({
   id,
@@ -23,7 +21,7 @@ export const UiCheckbox: FC<IProps> = ({
   required,
   ...props
 }) => (
-  <div className={classNames(className, 'ui-checkbox')}>
+  <div className={classNames(className, "ui-checkbox")}>
     <input
       type="checkbox"
       id={id}

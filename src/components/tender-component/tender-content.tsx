@@ -2,9 +2,7 @@ import { FC } from "react";
 import { UiParagraph } from "@/ui-elements/ui-paragraph/ui-paragraph";
 import { TenderView } from "@/components/tender-component/tender-view";
 
-interface IProps {}
-
-export const TenderContent: FC<IProps> = ({ ...props }) => {
+export const TenderContent: FC = () => {
   return (
     <div className={"tender__content"}>
       <UiParagraph style={{ fontSize: 28 }}>

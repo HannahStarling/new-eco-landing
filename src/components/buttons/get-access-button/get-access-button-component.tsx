@@ -5,14 +5,16 @@ import { BUTTONS_CONTENT } from "@/constants/texts";
 import classNames from "classnames";
 
 interface IProps extends UiButtonProps {
+  big?: boolean;
   full?: boolean;
   uppercase?: boolean;
-  hero?: boolean;
+  cover?: boolean;
 }
 
 export const GetAccessButtonComponent: FC<IProps> = ({
+  big = false,
   full = false,
-  hero = false,
+  cover = false,
   uppercase = true,
   className,
 }) => {
@@ -21,9 +23,10 @@ export const GetAccessButtonComponent: FC<IProps> = ({
       className={classNames(
         "button-get-access",
         {
+          big,
           full,
           uppercase,
-          hero__button: hero,
+          cover__button: cover,
         },
         className
       )}

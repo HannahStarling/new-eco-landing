@@ -1,2 +1,8 @@
 @import "@/app/styles/breakpoints.scss";
 @import "@/app/styles/mixins.scss";
+
+.platform-modules {
+  &__view {
+    display: flex;
+  }
+}

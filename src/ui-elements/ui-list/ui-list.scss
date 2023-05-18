@@ -9,7 +9,7 @@
 
 .list {
   display: flex;
-
+  @include centered;
   @include disc;
 
   &_vertical {

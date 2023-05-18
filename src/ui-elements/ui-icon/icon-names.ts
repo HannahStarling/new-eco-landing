@@ -1,4 +1,6 @@
 export enum IconName {
+  MonitorWidget = "MonitorWidget",
+  MonitorAnalytics = "MonitorAnalytics",
   Analytics = "Analytics",
   ArrowUp = "ArrowUp",
   ArrowDown = "ArrowDown",
@@ -30,4 +32,8 @@ export enum IconName {
   Integration = "Integration",
   Support = "Support",
   SystemSetting = "SystemSetting",
+  LocationAnalysis = "LocationAnalysis",
+  Location = "Location",
+  RegionStatistics = "RegionStatistics",
+  ViolationStatistics = "ViolationStatistics",
 }

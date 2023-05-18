@@ -1,5 +1,9 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
 .button-get-access {
   width: calc((264 / 1440) * 100vw);
+  min-width: 264px;
 
   &.full {
     width: 100%;
@@ -9,7 +13,7 @@
     text-transform: uppercase;
   }
 
-  &.hero__button {
+  &.cover__button {
     background: var(--colors-accent-acid-green);
     width: calc((360 / 1440) * 100vw);
     color: var(--colors-typography-main);

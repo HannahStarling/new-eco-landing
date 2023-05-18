@@ -1,5 +1,8 @@
 export enum ImageName {
-  PlatformModule = "PlatformModules",
+  BoardStart = "BoardStart",
+  BoardNew = "BoardNew",
+  Comparison = "Comparison",
+  PlatformModules = "PlatformModules",
   Process = "Process",
   Tender = "Tender",
   Edo = "Edo",
@@ -22,7 +25,7 @@ export const ImageSize: Record<
     width: 840,
     height: 381.49,
   },
-  [ImageName.PlatformModule]: {
+  [ImageName.PlatformModules]: {
     width: 744,
     height: 537,
   },
@@ -37,5 +40,17 @@ export const ImageSize: Record<
   [ImageName.Smartphone]: {
     width: 369,
     height: 588,
+  },
+  [ImageName.Comparison]: {
+    width: 1128,
+    height: 404,
+  },
+  [ImageName.BoardStart]: {
+    width: 563,
+    height: 270,
+  },
+  [ImageName.BoardNew]: {
+    width: 555,
+    height: 268,
   },
 };

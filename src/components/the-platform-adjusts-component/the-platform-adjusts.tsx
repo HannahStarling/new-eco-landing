@@ -5,9 +5,7 @@ import { UiSectionTitle } from "@/ui-elements/ui-section-title/ui-section-title"
 import { UiAccent } from "@/ui-elements/ui-accent/ui-accent";
 import { ThePlatformAdjustsContent } from "@/components/the-platform-adjusts-component/the-platform-adjusts-content";
 
-interface IProps {}
-
-export const ThePlatformAdjusts: FC<IProps> = () => (
+export const ThePlatformAdjusts: FC = () => (
   <UiSection className="the-platform-adjusts">
     <UiSectionTitle>
       <UiAccent>Платформа подстраивается</UiAccent> под любые бизнес-процессы*

@@ -8,8 +8,8 @@ import {
   ParagraphSize,
   UiParagraph,
 } from "@/ui-elements/ui-paragraph/ui-paragraph";
-import { IBenefitsArticle } from "@/components/benefits-component/benefits";
 import { Color } from "@/types/color";
+import { IBenefitsArticle } from "@/types/models";
 
 interface IProps {
   accent: IBenefitsArticle["accent"];
