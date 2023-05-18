@@ -57,6 +57,7 @@
     position: fixed;
     background: var(--colors-neutrals-white);
     color: var(--colors-typography-main);
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
 
     .list {
       .menu {
@@ -176,6 +177,12 @@
 
     &__item {
       &_submenu {
+        & {
+          background: url("/assets/icons/up_white.svg") no-repeat 100%;
+        }
+        &:hover {
+          background: url("/assets/icons/down_white.svg") no-repeat center right;
+        }
         @include desktop {
           & {
             padding: 0;
@@ -184,6 +191,10 @@
           &.active {
             height: 100%;
             background: url("/assets/icons/down.svg") no-repeat 100% 5%;
+          }
+
+          &:hover:not(.active) {
+            background: url("/assets/icons/up.svg") no-repeat center right;
           }
         }
       }
