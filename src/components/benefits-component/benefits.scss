@@ -1,3 +1,6 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
 .benefits {
   padding: 50px 0;
 
@@ -7,5 +10,9 @@
     &:last-of-type {
       padding-bottom: 0;
     }
+  }
+
+  @include mobile {
+    display: none;
   }
 }
