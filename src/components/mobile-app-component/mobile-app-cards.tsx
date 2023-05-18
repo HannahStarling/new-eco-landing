@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { UiList } from "@/ui-elements/ui-list/ui-list";
-import { MOBILE_APP_CARDS } from "@/constants/mobile-aapp";
+import { MOBILE_APP_CARDS } from "@/constants/mobile-app";
 import { UiListItem } from "@/ui-elements/ui-list-item/ui-list-item";
 import { CardSize, UiCard } from "@/ui-elements/ui-card/ui-card";
 import { UiIcon } from "@/ui-elements/ui-icon/ui-icon";

@@ -1,12 +1,12 @@
 import { FC } from "react";
 import { ListType, UiList } from "@/ui-elements/ui-list/ui-list";
-import { TENDER_CARDS } from "@/components/tender-component/tender";
 import { UiListItem } from "@/ui-elements/ui-list-item/ui-list-item";
 import { CardSize, UiCard } from "@/ui-elements/ui-card/ui-card";
 import { UiIcon } from "@/ui-elements/ui-icon/ui-icon";
 import { UiParagraph } from "@/ui-elements/ui-paragraph/ui-paragraph";
 import { UiImage } from "@/ui-elements/ui-image/ui-image";
 import { ImageName } from "@/ui-elements/ui-image/image-names";
+import { TENDER_CARDS } from "@/constants/tender";
 
 interface IProps {}
 
