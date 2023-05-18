@@ -10,7 +10,6 @@ import { BenefitCard } from "@/components/benefits-component/benefit-card";
 import { Color } from "@/types/color";
 import { GetAccessButtonComponent } from "@/components/buttons/get-access-button/get-access-button-component";
 
-//TODO replace style by class
 export const BenefitsArticle: FC<IBenefitsArticle> = ({
   title,
   accent,
@@ -27,7 +26,7 @@ export const BenefitsArticle: FC<IBenefitsArticle> = ({
       {chips && (
         <>
           <UiTitle bold={false}>{chips.title}</UiTitle>
-          <UiList style={{ gap: 24 }}>
+          <UiList className={"benefits__chips-list"}>
             {chips.list.map((chips, i, array) => {
               return (
                 <UiListItem key={chips}>

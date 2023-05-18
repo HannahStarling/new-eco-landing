@@ -12,6 +12,16 @@
     }
   }
 
+  &__chips-list {
+    @include gap-medium;
+    @include laptop {
+      .ui-chips {
+        min-width: 264px;
+      }
+      flex-direction: column;
+    }
+  }
+
   @include mobile {
     display: none;
   }

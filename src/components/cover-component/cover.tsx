@@ -17,7 +17,7 @@ export const Cover: FC<IProps> = ({ ...props }) => {
         <PartnersDetailComponent />
         <GetAccessButtonComponent
           className={"hero__access"}
-          hero
+          cover
           uppercase={false}
         />
       </div>

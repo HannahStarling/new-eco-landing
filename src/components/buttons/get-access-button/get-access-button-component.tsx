@@ -7,12 +7,12 @@ import classNames from "classnames";
 interface IProps extends UiButtonProps {
   full?: boolean;
   uppercase?: boolean;
-  hero?: boolean;
+  cover?: boolean;
 }
 
 export const GetAccessButtonComponent: FC<IProps> = ({
   full = false,
-  hero = false,
+  cover = false,
   uppercase = true,
   className,
 }) => {
@@ -23,7 +23,7 @@ export const GetAccessButtonComponent: FC<IProps> = ({
         {
           full,
           uppercase,
-          hero__button: hero,
+          cover__button: cover,
         },
         className
       )}
