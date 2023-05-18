@@ -7,7 +7,7 @@ import { PartnersDetailComponent } from "../partners-detail-component/partners-d
 
 interface IProps {}
 
-export const Cover: FC<IProps> = ({ ...props }) => {
+export const Cover: FC<IProps> = () => {
   return (
     <UiSection className={"hero"}>
       <div className={"hero__container"}>

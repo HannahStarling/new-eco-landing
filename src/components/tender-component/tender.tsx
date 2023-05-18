@@ -38,7 +38,7 @@ export const TENDER_CARDS = [
   },
 ];
 
-export const Tender: FC<IProps> = ({ ...props }) => {
+export const Tender: FC<IProps> = () => {
   return (
     <UiSection className="tender">
       <UiSectionTitle>

@@ -3,6 +3,6 @@ import { FC } from "react";
 
 interface IProps {}
 
-export const Contact: FC<IProps> = ({ ...props }) => {
+export const Contact: FC<IProps> = () => {
   return <></>;
 };

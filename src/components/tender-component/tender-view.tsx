@@ -10,7 +10,7 @@ import { ImageName } from "@/ui-elements/ui-image/image-names";
 
 interface IProps {}
 
-export const TenderView: FC<IProps> = ({ ...props }) => {
+export const TenderView: FC<IProps> = () => {
   return (
     <div className={"tender__view"}>
       <UiList className={"tender__list"} type={ListType.vertical}>

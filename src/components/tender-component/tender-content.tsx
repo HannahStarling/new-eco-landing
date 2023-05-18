@@ -4,7 +4,7 @@ import { TenderView } from "@/components/tender-component/tender-view";
 
 interface IProps {}
 
-export const TenderContent: FC<IProps> = ({ ...props }) => {
+export const TenderContent: FC<IProps> = () => {
   return (
     <div className={"tender__content"}>
       <UiParagraph style={{ fontSize: 28 }}>

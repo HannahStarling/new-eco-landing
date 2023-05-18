@@ -16,7 +16,7 @@ import { Color } from "@/types/color";
 
 interface IProps {}
 
-export const Edo: FC<IProps> = ({ ...props }) => {
+export const Edo: FC<IProps> = () => {
   return (
     <UiSection className="edo">
       <UiSectionTitle className="edo__title">

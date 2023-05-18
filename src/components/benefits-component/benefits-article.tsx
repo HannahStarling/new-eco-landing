@@ -5,10 +5,10 @@ import { UiList } from "@/ui-elements/ui-list/ui-list";
 import { UiListItem } from "@/ui-elements/ui-list-item/ui-list-item";
 import { UiChips } from "@/ui-elements/ui-chips/ui-chips";
 import { UiArticle } from "@/ui-elements/ui-article/ui-article";
-import { IBenefitsArticle } from "@/components/benefits-component/benefits";
 import { BenefitCard } from "@/components/benefits-component/benefit-card";
 import { Color } from "@/types/color";
 import { GetAccessButtonComponent } from "@/components/buttons/get-access-button/get-access-button-component";
+import { IBenefitsArticle } from "@/constants/benefits";
 
 export const BenefitsArticle: FC<IBenefitsArticle> = ({
   title,

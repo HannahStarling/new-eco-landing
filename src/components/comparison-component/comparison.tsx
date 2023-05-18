@@ -3,6 +3,6 @@ import { FC } from "react";
 
 interface IProps {}
 
-export const Comparison: FC<IProps> = ({ ...props }) => {
+export const Comparison: FC<IProps> = () => {
   return <></>;
 };

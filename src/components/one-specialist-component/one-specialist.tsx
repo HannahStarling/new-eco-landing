@@ -3,6 +3,6 @@ import { FC } from "react";
 
 interface IProps {}
 
-export const OneSpecialist: FC<IProps> = ({ ...props }) => {
+export const OneSpecialist: FC<IProps> = () => {
   return <></>;
 };

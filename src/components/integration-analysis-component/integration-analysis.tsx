@@ -3,6 +3,6 @@ import { FC } from "react";
 
 interface IProps {}
 
-export const IntegrationAnalysis: FC<IProps> = ({ ...props }) => {
+export const IntegrationAnalysis: FC<IProps> = () => {
   return <></>;
 };
