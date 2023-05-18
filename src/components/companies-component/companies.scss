@@ -1,3 +1,6 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
 .companies {
   &__list {
     display: flex;
@@ -14,7 +17,7 @@
   }
 }
 
-@media only screen and (max-width: 480px) {
+@include tablet {
   .companies {
     &__list {
       flex-direction: column;
