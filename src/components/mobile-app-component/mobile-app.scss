@@ -8,19 +8,24 @@
   &__view {
     padding-top: 16px;
     display: flex;
+    justify-content: center;
     align-items: center;
     @include gap-medium;
-    position: relative;
-    @include laptop {
+    //position: relative;
+
+    @include tablet {
       flex-direction: column-reverse;
     }
   }
 
+  &__image-container {
+    position: relative;
+  }
+
   &__decorative-element {
     z-index: 1;
-    width: calc(364 / 1440 * 100vw);
+    width: 100%;
     height: 107px;
-
     position: absolute;
     bottom: 0;
     left: 0;
@@ -49,7 +54,7 @@
       }
     }
 
-    @include mobile {
+    @include tablet {
       width: calc(336 / 360 * 100vw);
     }
 

@@ -14,22 +14,22 @@
 
   &_extra-large {
     padding: 32px 20px;
-    @include centered;
+    @include centered-text;
   }
 
   &_large {
     padding: 24px 20px;
-    @include centered;
+    @include centered-text;
   }
 
   &_medium {
     padding: 16px 20px;
     @include gap-small;
-    @include centered;
+    @include centered-text;
   }
 
   &_small {
     padding: 16px 20px;
-    @include centered;
+    @include centered-text;
   }
 }

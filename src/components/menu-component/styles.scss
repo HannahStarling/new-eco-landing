@@ -1,3 +1,4 @@
+@import "@/app/styles/paths.scss";
 .menu {
   &__list {
     display: flex;
@@ -31,11 +32,12 @@
 
     &_submenu {
       padding-right: 25px;
-      background: url("/assets/icons/down_white.svg") no-repeat center right;
+      background: url($icon-down-black) no-repeat center right;
       transition: all 0.2s ease;
+      font-weight: var(--font-weights-medium);
 
       &:hover {
-        background: url("/assets/icons/up_white.svg") no-repeat center right;
+        background: url($icon-up-black) no-repeat center right;
 
         .submenu {
           opacity: 1;

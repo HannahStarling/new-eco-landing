@@ -10,7 +10,9 @@ export const Cover: FC<IProps> = ({ ...props }) => {
   return (
     <UiSection className={"hero"}>
       <div className={"hero__container"}>
-        <UiMainTitle>Платформа Intelogis для вашего бизнеса</UiMainTitle>
+        <UiMainTitle className={"hero__head"}>
+          Платформа Intelogis для вашего бизнеса
+        </UiMainTitle>
         <GetAccessButtonComponent hero uppercase={false} />
       </div>
     </UiSection>

@@ -1,5 +1,6 @@
 @import "@/app/styles/breakpoints.scss";
 @import "@/app/styles/mixins.scss";
+@import "@/app/styles/paths.scss";
 
 .header {
   position: absolute;
@@ -57,15 +58,20 @@
     position: fixed;
     background: var(--colors-neutrals-white);
     color: var(--colors-typography-main);
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.1);
 
     .list {
       .menu {
         &__item {
           &_submenu {
-            background: url("/assets/icons/down.svg") no-repeat center right;
+            background: url($icon-down-black) no-repeat center right;
 
             &:hover {
-              background: url("/assets/icons/up.svg") no-repeat center right;
+              background: url($icon-down-black) no-repeat center right;
+            }
+
+            &:hover.active {
+              background: url($icon-down-black) no-repeat 100% 5%;
             }
           }
         }
@@ -176,14 +182,24 @@
 
     &__item {
       &_submenu {
+        & {
+          background: url($icon-up-white) no-repeat 100%;
+        }
+        &:hover {
+          background: url($icon-down-white) no-repeat center right;
+        }
         @include desktop {
           & {
             padding: 0;
-            background: url("/assets/icons/up.svg") no-repeat 100%;
+            background: url($icon-up-black) no-repeat 100%;
           }
           &.active {
             height: 100%;
-            background: url("/assets/icons/down.svg") no-repeat 100% 5%;
+            background: url($icon-down-black) no-repeat 100% 5%;
+          }
+
+          &:hover:not(.active) {
+            background: url($icon-up-black) no-repeat center right;
           }
         }
       }
