@@ -29,8 +29,8 @@ export const UiButton: FC<UiButtonProps> = ({
   return (
     <button
       className={classNames(
-        className,
         "ui-button",
+        className,
         { "ui-button__filled": fillType === "filled" },
         { "ui-button__outlined": fillType === "outlined" },
         { "ui-button__disabled": isDisabled },

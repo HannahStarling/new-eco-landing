@@ -9,8 +9,10 @@ interface IProps {}
 export const Cover: FC<IProps> = ({ ...props }) => {
   return (
     <UiSection className={"hero"}>
-      <UiMainTitle>Платформа Intelogis для вашего бизнеса</UiMainTitle>
-      <GetAccessButtonComponent hero uppercase={false} />
+      <div className={"hero__container"}>
+        <UiMainTitle>Платформа Intelogis для вашего бизнеса</UiMainTitle>
+        <GetAccessButtonComponent hero uppercase={false} />
+      </div>
     </UiSection>
   );
 };

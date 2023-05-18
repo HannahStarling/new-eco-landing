@@ -7,15 +7,15 @@ export const useHeaderScroll = ({
 }: {
   headerRef: RefObject<HTMLElement>;
 }) => {
-  const isScroll = useRef(false);
+  const [isScroll, setScroll] = useState(false);
   useEffect(() => {
     const updateScrollDirection = () => {
       const headerTopPosition =
         headerRef.current?.getBoundingClientRect().bottom;
       if (headerTopPosition && window.pageYOffset >= headerTopPosition) {
-        isScroll.current = true;
+        setScroll(true);
       } else {
-        isScroll.current = false;
+        setScroll(false);
       }
     };
     window.addEventListener("scroll", updateScrollDirection);

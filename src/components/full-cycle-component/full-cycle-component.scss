@@ -46,7 +46,7 @@
 }
 
 
-@media only screen and (max-width: 800px) {
+@include desktop {
   .full-cycle {
     &__scheme {
       display: flex;
