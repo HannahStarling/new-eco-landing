@@ -1,6 +1,7 @@
 export const BUTTONS_CONTENT = {
   GET_ACCESS: "Получить доступ",
   CONTACT: "Связаться",
+  LOGIN: "Войти",
 };
 
 export const CARGO_OWNER_LIST = [

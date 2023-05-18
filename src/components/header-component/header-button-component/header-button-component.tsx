@@ -1,3 +1,4 @@
+import { BUTTONS_CONTENT } from "@/constants/texts";
 import { UiButton } from "@/ui-elements/ui-button/ui-button";
 import classNames from "classnames";
 import { FC, ReactNode } from "react";
@@ -18,7 +19,7 @@ export const HeaderButtonComponent: FC<IProps> = ({ isOpen, isScroll }) => {
           isOpen || isScroll ? "black" : null
         )}
       >
-        Войти
+        {BUTTONS_CONTENT.LOGIN}
       </UiButton>
     </div>
   );
