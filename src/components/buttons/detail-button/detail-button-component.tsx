@@ -1,4 +1,4 @@
-import "./get-access-button-component.scss";
+import "./detail-button-component.scss";
 import { FC } from "react";
 import { UiButton, UiButtonProps } from "@/ui-elements/ui-button/ui-button";
 import { BUTTONS_CONTENT } from "@/constants/texts";
@@ -7,25 +7,27 @@ import classNames from "classnames";
 interface IProps extends UiButtonProps {
   full?: boolean;
   uppercase?: boolean;
-  hero?: boolean;
 }
 
-export const GetAccessButtonComponent: FC<IProps> = ({
+export const DetailButtonComponent: FC<IProps> = ({
   full = false,
-  hero = false,
   uppercase = true,
+  className,
 }) => {
   return (
     <UiButton
-      className={classNames("button-get-access", {
-        full,
-        uppercase,
-        hero__button: hero,
-      })}
+      className={classNames(
+        "button-get-detail",
+        {
+          full,
+          uppercase,
+        },
+        className
+      )}
       mode={"dark"}
       fillType={"outlined"}
     >
-      {BUTTONS_CONTENT.GET_ACCESS}
+      {BUTTONS_CONTENT.DETAIL}
     </UiButton>
   );
 };

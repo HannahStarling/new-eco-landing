@@ -13,4 +13,5 @@ export enum Color {
   bluePale = "blue-pale",
   redBright = "red-bright",
   redMedium = "red-medium",
+  white = "white",
 }

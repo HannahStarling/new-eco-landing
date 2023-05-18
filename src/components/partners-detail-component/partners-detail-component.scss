@@ -1,0 +1,25 @@
+.partners__scroll {
+}
+
+.partner {
+  &__detail {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-bottom: 62px;
+  }
+
+  &__single {
+  }
+
+  button.ui-button {
+    color: var(--colors-typography-white);
+    border: 1px solid var(--colors-typography-white);
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-size: 36px;
+    font-weight: var(--font-weights-bold);
+  }
+}
