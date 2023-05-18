@@ -1,22 +1,10 @@
-import {BenefitsArticle} from "@/components/benefits-component/benefits-article";
-import {CARGO_OWNER_LIST, CARRIER_CHIPS_LIST, CARRIER_LIST,} from "@/constants/texts";
-
-//TODO types
-export enum Role {
-  Carrier = "Carrier",
-  CargoOwner = "CargoOwner",
-}
-
-export interface IBenefitsArticle {
-  title: string;
-  accent: string;
-  text: string;
-  list: Array<string>;
-  chips?: {
-    title: string;
-    list: Array<string>;
-  };
-}
+import { BenefitsArticle } from "@/components/benefits-component/benefits-article";
+import {
+  CARGO_OWNER_LIST,
+  CARRIER_CHIPS_LIST,
+  CARRIER_LIST,
+} from "@/constants/texts";
+import { Role } from "@/types/models";
 
 export const BENEFITS_ARTICLES: Array<Role> = [Role.CargoOwner, Role.Carrier];
 

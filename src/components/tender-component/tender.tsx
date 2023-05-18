@@ -5,9 +5,7 @@ import { UiAccent } from "@/ui-elements/ui-accent/ui-accent";
 import { UiSection } from "@/ui-elements/ui-section/ui-section";
 import { TenderContent } from "@/components/tender-component/tender-content";
 
-interface IProps {}
-
-export const Tender: FC<IProps> = () => {
+export const Tender: FC = () => {
   return (
     <UiSection className="tender">
       <UiSectionTitle>

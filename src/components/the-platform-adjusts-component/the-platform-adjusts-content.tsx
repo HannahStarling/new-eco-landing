@@ -6,9 +6,7 @@ import {
 import { UiImage } from "@/ui-elements/ui-image/ui-image";
 import { ImageName } from "@/ui-elements/ui-image/image-names";
 
-interface IProps {}
-
-export const ThePlatformAdjustsContent: FC<IProps> = () => {
+export const ThePlatformAdjustsContent: FC = () => {
   return (
     <div className={"the-platform-adjusts__content"}>
       <UiParagraph

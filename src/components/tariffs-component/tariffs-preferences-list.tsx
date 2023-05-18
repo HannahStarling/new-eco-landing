@@ -4,9 +4,7 @@ import { FOR_ALL_MEMBER_PREFERENCES } from "@/constants/tariffs";
 import { UiListItem } from "@/ui-elements/ui-list-item/ui-list-item";
 import { UiParagraph } from "@/ui-elements/ui-paragraph/ui-paragraph";
 
-interface IProps {}
-
-export const TariffsPreferencesList: FC<IProps> = () => {
+export const TariffsPreferencesList: FC = () => {
   return (
     <UiList
       className={"tariffs__preferences"}

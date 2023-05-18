@@ -1,8 +1,6 @@
 import "./planning-routes.scss";
 import { FC } from "react";
 
-interface IProps {}
-
-export const PlanningRoutes: FC<IProps> = () => {
+export const PlanningRoutes: FC = () => {
   return <></>;
 };

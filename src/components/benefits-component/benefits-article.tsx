@@ -8,7 +8,7 @@ import { UiArticle } from "@/ui-elements/ui-article/ui-article";
 import { BenefitCard } from "@/components/benefits-component/benefit-card";
 import { Color } from "@/types/color";
 import { GetAccessButtonComponent } from "@/components/buttons/get-access-button/get-access-button-component";
-import { IBenefitsArticle } from "@/constants/benefits";
+import { IBenefitsArticle } from "@/types/models";
 
 export const BenefitsArticle: FC<IBenefitsArticle> = ({
   title,

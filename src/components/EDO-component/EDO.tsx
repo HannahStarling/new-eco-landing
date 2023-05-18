@@ -14,9 +14,7 @@ import {
 } from "@/ui-elements/ui-paragraph/ui-paragraph";
 import { Color } from "@/types/color";
 
-interface IProps {}
-
-export const Edo: FC<IProps> = () => {
+export const Edo: FC = () => {
   return (
     <UiSection className="edo">
       <UiSectionTitle className="edo__title">

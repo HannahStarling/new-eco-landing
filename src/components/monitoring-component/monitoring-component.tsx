@@ -7,9 +7,7 @@ import Image from "next/image";
 import { MonitoringFeatures } from "./monitoring-features/monitoring-features";
 import { MonitoringStatistics } from "./monitoring-statistics/monitoring-statistics";
 
-interface IProps {}
-
-export const Monitoring: FC<IProps> = () => {
+export const Monitoring: FC = () => {
   return (
     <UiSection className="monitoring">
       <UiSectionTitle>

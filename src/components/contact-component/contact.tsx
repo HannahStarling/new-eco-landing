@@ -7,9 +7,7 @@ import { UiListItem } from "@/ui-elements/ui-list-item/ui-list-item";
 import { UiSocial } from "@/ui-elements/ui-social/ui-social";
 import { IconName } from "@/ui-elements/ui-icon/icon-names";
 
-interface IProps {}
-
-export const Contact: FC<IProps> = () => {
+export const Contact: FC = () => {
   return (
     <UiSection className={"contact"}>
       <UiSectionTitle className={"contact__title"}>

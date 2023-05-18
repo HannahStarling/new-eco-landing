@@ -7,9 +7,7 @@ import { GetAccessButtonComponent } from "@/components/buttons/get-access-button
 import { UiImage } from "@/ui-elements/ui-image/ui-image";
 import { ImageName } from "@/ui-elements/ui-image/image-names";
 
-interface IProps {}
-
-export const Comparison: FC<IProps> = () => {
+export const Comparison: FC = () => {
   return (
     <UiSection className={"comparison"}>
       <UiSectionTitle>

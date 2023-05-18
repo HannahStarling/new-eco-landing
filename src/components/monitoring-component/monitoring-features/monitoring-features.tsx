@@ -37,9 +37,7 @@ const FEATURES_INFO = [
   },
 ];
 
-interface IProps {}
-
-export const MonitoringFeatures: FC<IProps> = () => {
+export const MonitoringFeatures: FC = () => {
   return (
     <div className="monitoring-features">
       <div className="monitoring-features__gps">

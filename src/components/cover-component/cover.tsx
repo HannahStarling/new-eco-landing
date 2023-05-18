@@ -5,9 +5,7 @@ import { UiMainTitle } from "@/ui-elements/ui-main-title/ui-main-title";
 import { GetAccessButtonComponent } from "@/components/buttons/get-access-button/get-access-button-component";
 import { PartnersDetailComponent } from "../partners-detail-component/partners-detail-component";
 
-interface IProps {}
-
-export const Cover: FC<IProps> = () => {
+export const Cover: FC = () => {
   return (
     <UiSection className={"hero"}>
       <div className={"hero__container"}>

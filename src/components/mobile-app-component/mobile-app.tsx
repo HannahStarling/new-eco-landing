@@ -5,9 +5,7 @@ import { UiSectionTitle } from "@/ui-elements/ui-section-title/ui-section-title"
 import { UiAccent } from "@/ui-elements/ui-accent/ui-accent";
 import { MobileAppView } from "@/components/mobile-app-component/mobile-app-view";
 
-interface IProps {}
-
-export const MobileApp: FC<IProps> = () => {
+export const MobileApp: FC = () => {
   return (
     <UiSection className="mobile-app">
       <UiSectionTitle className={"mobile-app__title"}>

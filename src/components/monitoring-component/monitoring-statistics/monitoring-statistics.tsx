@@ -1,20 +1,24 @@
-import './monitoring-statistics.scss';
-import { FC } from 'react';
-import { IconName } from '@/ui-elements/ui-icon/icon-names';
-import { UiCard } from '@/ui-elements/ui-card/ui-card';
-import { TitleSize, UiTitle } from '@/ui-elements/ui-title/ui-title';
-import { UiIcon } from '@/ui-elements/ui-icon/ui-icon';
-import { UiAccent } from '@/ui-elements/ui-accent/ui-accent';
-import { ParagraphSize, UiParagraph } from '@/ui-elements/ui-paragraph/ui-paragraph';
-import { Color } from '@/types/color';
+import "./monitoring-statistics.scss";
+import { FC } from "react";
+import { IconName } from "@/ui-elements/ui-icon/icon-names";
+import { UiCard } from "@/ui-elements/ui-card/ui-card";
+import { TitleSize, UiTitle } from "@/ui-elements/ui-title/ui-title";
+import { UiIcon } from "@/ui-elements/ui-icon/ui-icon";
+import { UiAccent } from "@/ui-elements/ui-accent/ui-accent";
+import {
+  ParagraphSize,
+  UiParagraph,
+} from "@/ui-elements/ui-paragraph/ui-paragraph";
+import { Color } from "@/types/color";
 
-interface IProps {}
-
-export const MonitoringStatistics: FC<IProps> = () => {
+export const MonitoringStatistics: FC = () => {
   return (
     <UiCard className="monitoring-statistics">
       <div className="monitoring-statistics__region">
-        <UiTitle className="monitoring-statistics__region-title" size={TitleSize.extraSmall}>
+        <UiTitle
+          className="monitoring-statistics__region-title"
+          size={TitleSize.extraSmall}
+        >
           Статистика по регионам
         </UiTitle>
         <UiIcon
@@ -38,7 +42,9 @@ export const MonitoringStatistics: FC<IProps> = () => {
         </div>
       </div>
 
-      <UiTitle size={TitleSize.extraSmall}>Виды нарушений на разных типах дорог</UiTitle>
+      <UiTitle size={TitleSize.extraSmall}>
+        Виды нарушений на разных типах дорог
+      </UiTitle>
       <UiIcon
         name={IconName.ViolationStatistics}
         alt="Статистика нарушений"

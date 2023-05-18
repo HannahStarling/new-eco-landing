@@ -4,9 +4,7 @@ import { TariffsPeriodRadio } from "@/components/tariffs-component/tariffs-perio
 import { TariffsCards } from "@/components/tariffs-component/tariffs-cards";
 import { Period } from "@/constants/tariffs";
 
-interface IProps {}
-
-export const TariffsList: FC<IProps> = () => {
+export const TariffsList: FC = () => {
   const [checked, setChecked] = useState(Period.Year);
 
   const onCheck = ({ item }) => setChecked(item.value);

@@ -8,9 +8,7 @@ import {
   UiParagraph,
 } from "@/ui-elements/ui-paragraph/ui-paragraph";
 
-interface IProps {}
-
-export const PlatformModulesList: FC<IProps> = () => {
+export const PlatformModulesList: FC = () => {
   return (
     <UiList style={{ maxWidth: 327, paddingLeft: 4 }} type={ListType.vertical}>
       <UiTitle

@@ -9,7 +9,7 @@ import {
   UiParagraph,
 } from "@/ui-elements/ui-paragraph/ui-paragraph";
 import { Color } from "@/types/color";
-import { IBenefitsArticle } from "@/constants/benefits";
+import { IBenefitsArticle } from "@/types/models";
 
 interface IProps {
   accent: IBenefitsArticle["accent"];

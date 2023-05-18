@@ -11,8 +11,6 @@ import { ContentCard } from "./content-card";
 import { LinkInfo } from "./link-info";
 import Image from "next/image";
 
-interface IProps {}
-
 const CONTENT_CARD_INFO = [
   {
     title: "Видео-курс с теорией",
@@ -32,7 +30,7 @@ const ACCESS_LINKS_INFO = [
   "Тендерная площадка ИЛС (перевозчик) с нуля до PRO",
 ];
 
-export const Education: FC<IProps> = () => {
+export const Education: FC = () => {
   return (
     <div className="education">
       <UiSectionTitle>

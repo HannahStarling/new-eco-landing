@@ -8,8 +8,6 @@ import { IconName } from "@/ui-elements/ui-icon/icon-names";
 import { StageCard } from "./stage-card";
 import { StageInfo } from "./stage-info";
 
-interface IProps {}
-
 const CARDS_INFO = {
   DataAnalys: {
     title: "Сбор и анализ данных",
@@ -51,7 +49,7 @@ const CARDS_INFO = {
   },
 };
 
-export const Incorporate: FC<IProps> = () => {
+export const Incorporate: FC = () => {
   return (
     <div className="incorporate">
       <UiSectionTitle>

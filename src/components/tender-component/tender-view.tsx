@@ -6,11 +6,9 @@ import { UiIcon } from "@/ui-elements/ui-icon/ui-icon";
 import { UiParagraph } from "@/ui-elements/ui-paragraph/ui-paragraph";
 import { UiImage } from "@/ui-elements/ui-image/ui-image";
 import { ImageName } from "@/ui-elements/ui-image/image-names";
-import { TENDER_CARDS } from "@/constants/tender";
+import { TENDER_CARDS } from "@/constants/cards";
 
-interface IProps {}
-
-export const TenderView: FC<IProps> = () => {
+export const TenderView: FC = () => {
   return (
     <div className={"tender__view"}>
       <UiList className={"tender__list"} type={ListType.vertical}>

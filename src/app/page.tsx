@@ -16,6 +16,7 @@ import { Tariffs } from "@/components/tariffs-component/tariffs";
 import { Monitoring } from "@/components/monitoring-component/monitoring-component";
 import { Contact } from "@/components/contact-component/contact";
 import { Comparison } from "@/components/comparison-component/comparison";
+import { IntegrationAnalysis } from "@/components/integration-analysis-component/integration-analysis";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
         <Tender />
         <Monitoring />
         <Edo />
+        <IntegrationAnalysis />
         <MobileApp />
         <Comparison />
         <Implementing />

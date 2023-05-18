@@ -5,9 +5,7 @@ import { PlatformModulesList } from "@/components/platform-modules-component/pla
 import { UiImage } from "@/ui-elements/ui-image/ui-image";
 import { ImageName } from "@/ui-elements/ui-image/image-names";
 
-interface IProps {}
-
-export const PlatformModulesView: FC<IProps> = () => {
+export const PlatformModulesView: FC = () => {
   return (
     <div className={"platform-modules__view"}>
       <UiIcon
