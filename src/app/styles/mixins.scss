@@ -3,6 +3,19 @@
   line-height: 120%;
 }
 
+@mixin bold {
+  &.bold {
+    font-weight: var(--font-weights-medium);
+    line-height: 144%;
+  }
+}
+
+@mixin centered-text {
+  &.centered {
+    text-align: center;
+  }
+}
+
 @mixin full-width {
   width: 100%;
 }
