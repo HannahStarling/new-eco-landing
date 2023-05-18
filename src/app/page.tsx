@@ -13,6 +13,7 @@ import { Tender } from '@/components/tender-component/tender';
 import { Edo } from '@/components/EDO-component/EDO';
 import { MobileApp } from '@/components/mobile-app-component/mobile-app';
 import { Implementing } from '@/components/implementing-component/implementing';
+import { Tariffs } from '@/components/tariffs-component/tariffs';
 import { Monitoring } from '@/components/monitoring-component/monitoring-component';
 
 export default function Home() {
@@ -20,7 +21,6 @@ export default function Home() {
     <div className="wrapper">
       <HeaderComponent />
       <MainComponent>
-        <Cover />
         <Benefits />
         <PlatformModules />
         <FullCycle />
@@ -30,6 +30,7 @@ export default function Home() {
         <Edo />
         <MobileApp />
         <Implementing />
+        <Tariffs />
         <CommentsList />
         <Companies />
       </MainComponent>

@@ -1,6 +1,5 @@
 .hero {
   padding: 110px 0;
-  height: 554px;
   align-items: center;
   position: absolute;
   width: 100%;
@@ -14,5 +13,12 @@
   &__head.title {
     color: var(--colors-typography-white);
     font-weight: var(--font-weights-medium);
+    margin-bottom: 64px;
+  }
+
+  &__access.ui-button {
+    font-weight: var(--font-weights-medium);
+    min-width: 168px;
+    max-width: 360px;
   }
 }

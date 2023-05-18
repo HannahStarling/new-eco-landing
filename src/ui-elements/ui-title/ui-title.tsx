@@ -1,28 +1,28 @@
-import './ui-title.scss';
-import classNames from 'classnames';
-import { FC } from 'react';
+import "./ui-title.scss";
+import classNames from "classnames";
+import { FC, ReactNode } from "react";
 
 export enum TitleSize {
   /**
    *   font-size: 32px;
    */
-  extraLarge = 'title_extra-large',
+  extraLarge = "title_extra-large",
   /**
    *   font-size: 28px;
    */
-  large = 'title_large',
+  large = "title_large",
   /**
    *   font-size: 20px;
    */
-  medium = 'title_medium',
+  medium = "title_medium",
   /**
    *   font-size: 18px;
    */
-  small = 'title_small',
+  small = "title_small",
   /**
    *   font-size: 15px;
    */
-  extraSmall = 'title_extra-small',
+  extraSmall = "title_extra-small",
 }
 
 interface IProps {
@@ -31,7 +31,7 @@ interface IProps {
    *   font-weight: 600;
    */
   bold?: boolean;
-  children?: any;
+  children?: ReactNode;
   className?: string;
 }
 
@@ -46,8 +46,9 @@ export const UiTitle: FC<IProps> = ({
     <h3
       {...props}
       className={classNames(`title`, className, size, {
-        'medium-weight': !bold,
-      })}>
+        "medium-weight": !bold,
+      })}
+    >
       {children}
     </h3>
   );
