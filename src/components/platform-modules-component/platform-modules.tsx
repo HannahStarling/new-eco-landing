@@ -60,7 +60,7 @@ export const PlatformModules: FC = () => (
           </UiListItem>
         ))}
       </UiList>
-      <UiImage name={ImageName.PlatformModule} alt={"Модули приложения."} />
+      <UiImage name={ImageName.PlatformModules} alt={"Модули приложения."} />
     </div>
     <UiParagraph size={ParagraphSize.extraLarge}>
       Мы проводим обучение, доступ к которому останется навсегда и даем

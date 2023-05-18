@@ -1,5 +1,5 @@
 export enum ImageName {
-  PlatformModule = "PlatformModules",
+  PlatformModules = "PlatformModules",
   Process = "Process",
   Tender = "Tender",
   Edo = "Edo",
@@ -22,7 +22,7 @@ export const ImageSize: Record<
     width: 840,
     height: 381.49,
   },
-  [ImageName.PlatformModule]: {
+  [ImageName.PlatformModules]: {
     width: 744,
     height: 537,
   },
