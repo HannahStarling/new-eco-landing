@@ -1,0 +1,29 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.monitoring-features {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  @include desktop {
+    width: calc(360 / 1440 * 100vw);
+  }
+
+  @include tablet {
+    width: auto;
+  }
+
+  &__gps {
+    display: flex;
+    margin-bottom: 16px;
+    justify-content: space-between;
+    @include gap-medium;
+  }
+
+  &__feature {
+    display: flex;
+    flex-direction: column;
+    @include gap-medium;
+  }
+}

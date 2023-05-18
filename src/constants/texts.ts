@@ -2,6 +2,7 @@ export const BUTTONS_CONTENT = {
   GET_ACCESS: "Получить доступ",
   CONTACT: "Связаться",
   LOGIN: "Войти",
+  DETAIL: "Подробнее",
 };
 
 export const CARGO_OWNER_LIST = [
@@ -24,3 +25,5 @@ export const CARRIER_LIST = [
 ];
 
 export const CARRIER_CHIPS_LIST = ["На людях", "На пробеге", "На автомобилях"];
+
+export const PARTNERS = ["Перевозчикам", "Грузовладельцам", "Партнерам"];
