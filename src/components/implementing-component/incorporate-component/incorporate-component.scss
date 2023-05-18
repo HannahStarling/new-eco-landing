@@ -1,0 +1,33 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.incorporate {
+  &__text {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__stages {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-row-gap: 40px;
+    grid-column-gap: 24px;
+
+    @include tablet {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      @include gap-medium;
+    }
+
+    @include mobile {
+      .stage-card {
+        width: auto;
+        max-width: none;
+        justify-content: space-between;
+      }
+    }
+  }
+}

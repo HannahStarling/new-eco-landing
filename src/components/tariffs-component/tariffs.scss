@@ -1,2 +1,37 @@
 @import "@/app/styles/breakpoints.scss";
 @import "@/app/styles/mixins.scss";
+
+.tariffs {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+
+  &__card {
+    width: 360px;
+
+    &-content {
+      padding: 24px;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      &-icon {
+        fill: var(--colors-neutrals-super-dark);
+      }
+
+      &-item {
+        display: flex;
+        gap: 14px
+      }
+    }
+
+    &s {
+      @include gap-medium;
+      flex-wrap: wrap;
+    }
+  }
+}

@@ -5,6 +5,9 @@ export enum IconName {
   Box = "Box",
   Bill = "Bill",
   Cargo = "Cargo",
+  CheckMarkGreen = "CheckMarkGreen",
+  CheckMarkSuperDark = "CheckMarkSuperDark",
+  CheckMarkMediumLight = "CheckMarkMediumLight",
   Close = "Close",
   CommentAvatarGreen = "CommentAvatarGreen",
   CommentAvatarBlue = "CommentAvatarBlue",
@@ -23,4 +26,8 @@ export enum IconName {
   TenderDoc = "TenderDoc",
   Tracking = "Tracking",
   up = "up",
+  DataAnalys = "DataAnalys",
+  Integration = "Integration",
+  Support = "Support",
+  SystemSetting = "SystemSetting",
 }
