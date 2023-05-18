@@ -14,7 +14,7 @@ interface IProps {
   title: string;
 }
 
-export const TariffFeature: FC<IProps> = ({ include, title }) => {
+export const TariffsFeature: FC<IProps> = ({ include, title }) => {
   return (
     <UiListItem className={"tariffs__card-list-item"}>
       <UiIcon

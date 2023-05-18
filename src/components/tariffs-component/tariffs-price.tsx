@@ -6,7 +6,7 @@ interface IProps {
   price: number;
 }
 
-export const TariffPrice: FC<IProps> = ({ price }) => {
+export const TariffsPrice: FC<IProps> = ({ price }) => {
   return (
     <>
       ₽{" "}

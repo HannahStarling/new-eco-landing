@@ -11,7 +11,7 @@ interface IProps {
   onCheck({ checked, item }: { checked: boolean; item: IOption }): void;
 }
 
-export const TariffPeriodRadio: FC<IProps> = ({ onCheck, checked }) => {
+export const TariffsPeriodRadio: FC<IProps> = ({ onCheck, checked }) => {
   return (
     <UiRadioGroup
       className={"tariffs__period-radio-group"}

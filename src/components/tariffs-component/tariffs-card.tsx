@@ -5,8 +5,8 @@ import { ListType, UiList } from "@/ui-elements/ui-list/ui-list";
 import { UiButton } from "@/ui-elements/ui-button/ui-button";
 import { UiParagraph } from "@/ui-elements/ui-paragraph/ui-paragraph";
 import { Period, TARIFFS, TARIFFS_FEATURES } from "@/constants/tariffs";
-import { TariffPrice } from "@/components/tariffs-component/tariff-price";
-import { TariffFeature } from "@/components/tariffs-component/tarif-feature";
+import { TariffsPrice } from "@/components/tariffs-component/tariffs-price";
+import { TariffsFeature } from "@/components/tariffs-component/tariffs-feature";
 
 interface IProps {
   tariff: string;
@@ -23,11 +23,11 @@ export const TariffsCard: FC<IProps> = ({ tariff, period = Period.Year }) => {
       <UiList type={ListType.vertical} className={"tariffs__card-list"}>
         {TARIFFS_FEATURES.map(([key, title]) => {
           const include = includes.includes(key);
-          return <TariffFeature key={key} title={title} include={include} />;
+          return <TariffsFeature key={key} title={title} include={include} />;
         })}
       </UiList>
       <UiParagraph>
-        {isPersonal ? cost : <TariffPrice price={cost[period].price} />}
+        {isPersonal ? cost : <TariffsPrice price={cost[period].price} />}
       </UiParagraph>
       <UiButton className={"tariffs__card-button"}>Связаться</UiButton>
     </UiCard>

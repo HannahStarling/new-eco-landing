@@ -1,7 +1,7 @@
 "use client";
 import { FC, useState } from "react";
-import { TariffPeriodRadio } from "@/components/tariffs-component/tariff-period-radio";
-import { TariffCards } from "@/components/tariffs-component/tariff-cards";
+import { TariffsPeriodRadio } from "@/components/tariffs-component/tariffs-period-radio";
+import { TariffsCards } from "@/components/tariffs-component/tariffs-cards";
 import { Period } from "@/constants/tariffs";
 
 interface IProps {}
@@ -12,8 +12,8 @@ export const TariffsList: FC<IProps> = () => {
   const onCheck = ({ item }) => setChecked(item.value);
   return (
     <>
-      <TariffPeriodRadio onCheck={onCheck} checked={checked} />
-      <TariffCards checked={checked} />
+      <TariffsPeriodRadio onCheck={onCheck} checked={checked} />
+      <TariffsCards checked={checked} />
     </>
   );
 };

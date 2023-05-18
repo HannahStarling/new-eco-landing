@@ -8,7 +8,7 @@ interface IProps {
   checked: Period;
 }
 
-export const TariffCards: FC<IProps> = ({ checked }) => {
+export const TariffsCards: FC<IProps> = ({ checked }) => {
   return (
     <UiList className={"tariffs__cards"}>
       {TARIFFS_LIST.map((tariff) => {
