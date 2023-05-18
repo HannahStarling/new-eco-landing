@@ -10,4 +10,9 @@
   &__container {
     text-align: center;
   }
+
+  &__head.title {
+    color: var(--colors-typography-white);
+    font-weight: var(--font-weights-medium);
+  }
 }
