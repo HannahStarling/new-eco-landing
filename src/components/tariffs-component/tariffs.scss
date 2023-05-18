@@ -6,9 +6,32 @@
   flex-direction: column;
   justify-items: center;
   align-items: center;
+  @include gap-large;
+
+  &__preferences {
+    @include gap-medium;
+    @include mobile {
+      gap: 28px
+    }
+  }
+
+  &__period-radio-group {
+    @include tablet {
+      flex-direction: column;
+      @include gap-medium;
+    }
+  }
 
   &__card {
     width: 360px;
+
+    @include mobile {
+      width: 336px;
+    }
+
+    &-button {
+      @include full-width;
+    }
 
     &-content {
       padding: 24px;
@@ -17,11 +40,7 @@
     &-list {
       display: flex;
       flex-direction: column;
-      gap: 16px;
-
-      &-icon {
-        fill: var(--colors-neutrals-super-dark);
-      }
+      @include gap-small;
 
       &-item {
         display: flex;
@@ -32,6 +51,7 @@
     &s {
       @include gap-medium;
       flex-wrap: wrap;
+      justify-content: center;
     }
   }
 }
