@@ -12,6 +12,7 @@ import { ThePlatformAdjusts } from "@/components/the-platform-adjusts-component/
 import { Tender } from "@/components/tender-component/tender";
 import { Edo } from "@/components/EDO-component/EDO";
 import { MobileApp } from "@/components/mobile-app-component/mobile-app";
+import { Implementing } from "@/components/implementing-component/implementing";
 import { Tariffs } from "@/components/tariffs-component/tariffs";
 
 export default function Home() {
@@ -27,6 +28,7 @@ export default function Home() {
         <Tender />
         <Edo />
         <MobileApp />
+        <Implementing />
         <Tariffs />
         <CommentsList />
         <Companies />

@@ -26,4 +26,8 @@ export enum IconName {
   TenderDoc = "TenderDoc",
   Tracking = "Tracking",
   up = "up",
+  DataAnalys = "DataAnalys",
+  Integration = "Integration",
+  Support = "Support",
+  SystemSetting = "SystemSetting",
 }
