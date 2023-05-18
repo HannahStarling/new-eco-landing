@@ -4,29 +4,31 @@
 .companies {
   &__list {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     row-gap: 40px;
     column-gap: 24px;
+
+    @include tablet {
+      align-items: center;
+      row-gap: 12px;
+    }
 
     .card {
       width: 206px;
       height: 124px;
       justify-content: center;
       align-items: center;
-    }
-  }
-}
 
-@include tablet {
-  .companies {
-    &__list {
-      flex-direction: column;
-      row-gap: 12px;
-
-      .card {
+      @include tablet {
         width: auto;
         height: 107px;
+      }
+
+      @include mobile {
+        width: 100%;
       }
     }
   }
 }
+

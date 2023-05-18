@@ -12,7 +12,13 @@
     }
 
     @include tablet {
+      flex-direction: row;
       @include full-width;
+      min-height: 252px;
+    }
+
+    @include mobile {
+      flex-direction: column;
     }
   }
 
@@ -20,7 +26,7 @@
     align-items: center;
     display: flex;
     @include gap-medium;
-    @include mobile {
+    @include tablet {
       flex-direction: column;
     }
   }
@@ -29,6 +35,14 @@
     @include gap-small;
     @include laptop {
       padding: 45px 20px;
+    }
+
+    @include tablet {
+      height: 100%;
+    }
+
+    @include mobile {
+      flex-direction: column;
     }
   }
 

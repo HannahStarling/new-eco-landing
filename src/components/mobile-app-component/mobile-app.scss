@@ -8,9 +8,11 @@
   &__view {
     padding-top: 16px;
     display: flex;
+    justify-content: center;
     align-items: center;
     @include gap-medium;
     //position: relative;
+
     @include tablet {
       flex-direction: column-reverse;
     }
