@@ -27,4 +27,8 @@ export enum IconName {
   Integration = 'Integration',
   Support = 'Support',
   SystemSetting = 'SystemSetting',
+  LocationAnalysis = 'LocationAnalysis',
+  Location = 'Location',
+  RegionStatistics = 'RegionStatistics',
+  ViolationStatistics = 'ViolationStatistics',
 }

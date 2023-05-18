@@ -13,6 +13,7 @@ import { Tender } from '@/components/tender-component/tender';
 import { Edo } from '@/components/EDO-component/EDO';
 import { MobileApp } from '@/components/mobile-app-component/mobile-app';
 import { Implementing } from '@/components/implementing-component/implementing';
+import { Monitoring } from '@/components/monitoring-component/monitoring-component';
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
         <FullCycle />
         <ThePlatformAdjusts />
         <Tender />
+        <Monitoring />
         <Edo />
         <MobileApp />
         <Implementing />
