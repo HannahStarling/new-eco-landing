@@ -20,7 +20,6 @@ export default function Home() {
     <div className="wrapper">
       <HeaderComponent />
       <MainComponent>
-        <Cover />
         <Benefits />
         <PlatformModules />
         <FullCycle />
