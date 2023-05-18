@@ -27,3 +27,5 @@ export const CARRIER_LIST = [
 export const CARRIER_CHIPS_LIST = ["На людях", "На пробеге", "На автомобилях"];
 
 export const PARTNERS = ["Перевозчикам", "Грузовладельцам", "Партнерам"];
+
+export const EMPTY_STRING = "";
