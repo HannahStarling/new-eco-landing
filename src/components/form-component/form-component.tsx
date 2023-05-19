@@ -44,6 +44,7 @@ export const FormComponent: FC<IProps> = ({ action, className, method = METHOD.P
               id={name}
               key={name}
               name={name}
+              pattern={field.pattern}
               label={field.text}
               type={field.type}
               classname={field.className}
@@ -52,7 +53,9 @@ export const FormComponent: FC<IProps> = ({ action, className, method = METHOD.P
             />
           );
         })}
-        <UiButton className="form__submit">Запрос на доступ</UiButton>
+        <UiButton type="submit" className="form__submit">
+          Запрос на доступ
+        </UiButton>
       </form>
     </div>
   );

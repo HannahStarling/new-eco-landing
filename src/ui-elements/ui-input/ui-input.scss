@@ -11,7 +11,7 @@
     margin-bottom: $input-label-margin-bottom;
 
     &-required {
-      color: var(--colors-accent-red-brigh);
+      color: var(--colors-accent-red-bright);
       margin-left: $input-label-required-margin-left;
     }
   }
@@ -49,8 +49,12 @@
       }
     }
 
-    &:invalid {
-      border-color: var(--colors-accent-red-brigh);
+    &:not(:focus):not(:placeholder-shown):invalid {
+      border-color: var(--colors-accent-red-bright);
+    }
+
+    &:not(:focus):not(:placeholder-shown):valid {
+      border-color: var(--colors-neutrals-super-light);
     }
 
     &::-webkit-search-cancel-button {
