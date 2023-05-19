@@ -7,6 +7,7 @@ import { SubMenuComponent } from "./sub-menu-component/sub-menu-component";
 import { FC } from "react";
 import { useMenu } from "@/hooks/useMenu";
 import classNames from "classnames";
+import Link from "next/link";
 
 export enum MenuPlacement {
   header = "header",
@@ -24,7 +25,8 @@ export const MenuComponent: FC<IProps> = ({
   isOpen,
   isScroll,
 }) => {
-  const { activeMenu, handleSetActive } = useMenu();
+  const { activeMenu, handleSetActive, handleScroll } = useMenu();
+
   return (
     <nav
       className={classNames(
@@ -45,13 +47,22 @@ export const MenuComponent: FC<IProps> = ({
                 itemClasses,
                 activeMenu[key] ? "active" : null
               )}
-              onClick={() => handleSetActive(key)}
+              onClick={(e: React.MouseEvent<HTMLAnchorElement, any>) =>
+                handleSetActive(e, key)
+              }
             >
-              {menuItem.name}
+              {menuItem?.sectionID ? (
+                <Link href={menuItem?.sectionID} onClick={handleScroll}>
+                  {menuItem.name}
+                </Link>
+              ) : (
+                menuItem.name
+              )}
               {
                 <SubMenuComponent
                   className={activeMenu[key] ? "active" : null}
                   menu={menuItem.children}
+                  handleScroll={handleScroll}
                 />
               }
             </UiListItem>
