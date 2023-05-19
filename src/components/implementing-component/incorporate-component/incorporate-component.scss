@@ -2,7 +2,16 @@
 @import "@/app/styles/mixins.scss";
 
 .incorporate {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    align-items: center;
+  }
+
   &__text {
+    font-size: 28px;
+    max-width: 900px;
     @include tablet {
       display: none;
     }
@@ -19,6 +28,7 @@
       margin-top: 24px;
       display: flex;
       flex-direction: column;
+      max-width: 360px;
       @include gap-medium;
     }
 

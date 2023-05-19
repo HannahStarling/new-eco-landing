@@ -18,6 +18,7 @@ import { Monitoring } from '@/components/monitoring-component/monitoring-compone
 import { Planning } from '@/components/planning/planning';
 import { IntegrationAnalysis } from '@/components/integration-analysis-component/integration-analysis';
 import { Contact } from '@/components/contact-component/contact';
+import { Comparison } from '@/components/comparison-component/comparison';
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
         <Edo />
         <IntegrationAnalysis />
         <MobileApp />
+        <Comparison />
         <Implementing />
         <Tariffs />
         <CommentsList />

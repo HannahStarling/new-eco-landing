@@ -18,6 +18,7 @@
 
     @include tablet {
       flex-direction: column;
+      @include flex-center;
     }
 
     &-features {
@@ -31,6 +32,10 @@
       flex-direction: column;
       justify-content: flex-start;
       @include gap-small;
+
+      @include mobile {
+        width: 100%;
+      }
     }
 
     &-map {
@@ -40,8 +45,8 @@
       }
 
       @include tablet {
-        width: auto;
-        min-height: 183px;
+        width: 100%;
+        height: auto;
       }
     }
   }
@@ -54,8 +59,7 @@
     }
 
     @include mobile {
-      min-width: 298px;
-      width: auto;
+      width: 100%;
     }
   }
 }

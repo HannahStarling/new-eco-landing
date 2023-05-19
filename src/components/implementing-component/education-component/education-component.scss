@@ -3,6 +3,16 @@
 
 .education {
   margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    align-items: center;
+  }
+
+  .title_section {
+    padding-bottom: 40px;
+  }
   
   &__info {
     display: flex;
@@ -10,6 +20,7 @@
 
     @include tablet {
       flex-direction: column;
+      max-width: 360px;
     }
 
     &-left {
@@ -33,7 +44,7 @@
         border-radius: 12px;
 
         @include tablet {
-          width: 336px;
+          width: 360px;
         }
       
         @include mobile {
