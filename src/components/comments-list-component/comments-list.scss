@@ -4,6 +4,7 @@
 .comments-list {
   &__list {
     display: flex;
+    justify-content: center;
     @include gap-medium;
   }
 
@@ -12,23 +13,13 @@
   }
 }
 
-@media only screen and (max-width: 1072px) {
+@media only screen and (max-width: 1053px) {
   .comments-list__list {
     flex-wrap: wrap;
     @include gap-medium;
 
     .comment {
-      min-width: 210px;
-      max-width: 320px;
-      width: auto;
-    }
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 980px) {
-  .comments-list__list {
-    .comment {
-      width: 210px;
+      width: 330px;
     }
   }
 }
