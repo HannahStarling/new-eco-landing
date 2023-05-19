@@ -31,7 +31,7 @@ export const FormFields = {
     placeholder: 'Введите вашу почту',
     type: FormType.email,
     className: null,
-    required: false,
+    required: true,
     pattern: null,
   },
   company: {
