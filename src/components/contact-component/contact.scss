@@ -20,6 +20,9 @@
 
   &__title {
     grid-area: title;
+    @include mobile {
+      padding: 0;
+    }
   }
 
   &__list {

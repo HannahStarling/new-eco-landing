@@ -4,7 +4,10 @@ import { INTEGRATION_ANALYSIS_CARDS } from "@/constants/cards";
 import { UiListItem } from "@/ui-elements/ui-list-item/ui-list-item";
 import { CardSize, UiCard } from "@/ui-elements/ui-card/ui-card";
 import { UiIcon } from "@/ui-elements/ui-icon/ui-icon";
-import { UiParagraph } from "@/ui-elements/ui-paragraph/ui-paragraph";
+import {
+  ParagraphSize,
+  UiParagraph,
+} from "@/ui-elements/ui-paragraph/ui-paragraph";
 
 export const IntegrationAnalysisCards: FC = () => {
   return (
@@ -14,10 +17,10 @@ export const IntegrationAnalysisCards: FC = () => {
           <UiListItem key={card.icon}>
             <UiCard
               className={"integration-analysis__card"}
-              size={CardSize.extraLarge}
+              size={CardSize.square}
             >
               <UiIcon name={card.icon} alt={card.alt} size={card.size} />
-              <UiParagraph>{card.text}</UiParagraph>
+              <UiParagraph size={ParagraphSize.large}>{card.text}</UiParagraph>
             </UiCard>
           </UiListItem>
         );

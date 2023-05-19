@@ -16,7 +16,7 @@ export const UiAccent: FC<IProps> = ({
   ...props
 }) => {
   return (
-    <span {...props} className={classNames("accent", color, bold)}>
+    <span {...props} className={classNames("accent", color, { bold })}>
       {children}
     </span>
   );

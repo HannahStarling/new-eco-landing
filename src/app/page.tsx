@@ -15,8 +15,7 @@ import { Implementing } from "@/components/implementing-component/implementing";
 import { Tariffs } from "@/components/tariffs-component/tariffs";
 import { SchemeComponent } from "@/components/scheme-component/scheme-component";
 import { Monitoring } from "@/components/monitoring-component/monitoring-component";
-import { Contact } from "@/components/contact-component/contact";
-import { Comparison } from "@/components/comparison-component/comparison";
+import { Planning } from "@/components/planning/planning";
 import { IntegrationAnalysis } from "@/components/integration-analysis-component/integration-analysis";
 
 export default function Home() {
@@ -29,17 +28,16 @@ export default function Home() {
         <FullCycle />
         <ThePlatformAdjusts />
         <SchemeComponent />
+        <Planning />
         <Tender />
         <Monitoring />
         <Edo />
         <IntegrationAnalysis />
         <MobileApp />
-        <Comparison />
         <Implementing />
         <Tariffs />
         <CommentsList />
         <Companies />
-        <Contact />
       </MainComponent>
       <FooterComponent />
     </div>
