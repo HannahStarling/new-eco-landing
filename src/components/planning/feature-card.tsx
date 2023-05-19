@@ -17,7 +17,7 @@ interface IProps {
 
 export const FeatureCard: FC<IProps> = ({ title, img, text, accent }) => {
   return (
-    <UiCard className="feature-card">
+    <UiCard className="planning-feature-card">
       <div className="feature-card__header">
         <UiTitle size={TitleSize.medium}>{title}</UiTitle>
         {img && (
