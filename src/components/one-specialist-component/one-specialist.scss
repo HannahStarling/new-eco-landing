@@ -1,14 +1,37 @@
 @import "@/app/styles/breakpoints.scss";
 @import "@/app/styles/mixins.scss";
 .one-specialist {
-  display: flex;
-  justify-content: space-between;
+  @include desktop {
+    .title_section {
+      text-align: center;
+    }
+  }
+  &__body {
+    display: flex;
+    justify-content: space-between;
+
+    @include desktop {
+      flex-direction: column;
+      align-items: center;
+
+      .title_section {
+        text-align: center;
+      }
+    }
+  }
 
   &__left {
     border: 1px solid var(--colors-accent-red-bright);
     border-radius: 20px;
     padding: 22px 5px 0px;
     margin-right: 24px;
+    background: var(--colors-typography-white);
+    max-width: 655px;
+
+    @include desktop {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
   }
 
   .left {
@@ -108,6 +131,8 @@
     border-radius: 20px;
     padding: 28px 20px 72px;
     flex: 1;
+    background: var(--colors-typography-white);
+    max-width: 655px;
     .right {
       &__head {
         display: flex;
@@ -159,6 +184,10 @@
       &__right {
         height: 100;
       }
+
+      &__right {
+        text-align: right;
+      }
     }
 
     .responsibility {
@@ -170,6 +199,17 @@
         font-weight: 600;
         font-size: 18px;
         line-height: 120%;
+        vertical-align: middle;
+      }
+
+      &_l,
+      &_r {
+        &:nth-child(1) {
+          line-height: 4;
+          @include desktop {
+            line-height: 1;
+          }
+        }
       }
     }
   }

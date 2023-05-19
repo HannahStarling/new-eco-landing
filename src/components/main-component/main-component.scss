@@ -17,9 +17,11 @@
     }
 
     .section:nth-child(1),
+    .section:nth-child(4),
     .section:nth-child(5),
     .section:nth-child(9),
-    .section:nth-child(13) {
+    .section:nth-child(13),
+    .section:nth-child(18) {
       background: url($backgroud-img) no-repeat;
       background-repeat: no-repeat;
       background-size: 100% 100%;
