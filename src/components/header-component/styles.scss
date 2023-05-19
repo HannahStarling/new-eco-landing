@@ -129,6 +129,7 @@
         background: var(--colors-neutrals-white);
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
         min-width: 250px;
+        max-width: 315px;
         transform: translate(-4000px);
         transition: all 0.4s ease;
       }
@@ -183,10 +184,10 @@
     &__item {
       &_submenu {
         & {
-          background: url($icon-up-white) no-repeat 100%;
+          background: url($icon-down-white) no-repeat 100%;
         }
         &:hover {
-          background: url($icon-down-white) no-repeat center right;
+          background: url($icon-up-white) no-repeat center right;
         }
         @include desktop {
           & {

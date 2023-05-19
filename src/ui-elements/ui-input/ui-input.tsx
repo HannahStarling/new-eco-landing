@@ -1,30 +1,42 @@
-'use client';
+"use client";
 
-import {FC, InputHTMLAttributes} from 'react';
-import classNames from 'classnames';
-import './ui-input.scss';
+import { FC } from "react";
+import classNames from "classnames";
+import "./ui-input.scss";
+import { FormType } from "@/constants/form";
 
-interface IProps
+interface IProps {
+  label: string;
+  required?: boolean;
+  id?: string;
+  classname?: string | null;
+  type: typeof FormType | string;
+  name: string;
+  placeholder?: string;
+}
 
-InputHTMLAttributes<HTMLInputElement> & {
-  classname? : string;
-  label? : string;
-};
-
-export const UiInput: FC<IProps> = ({classname, required, id, label, ...props}) => {
+export const UiInput: FC<IProps> = ({
+  classname,
+  required,
+  id,
+  label,
+  type = "search",
+  name,
+  ...props
+}) => {
   return (
     <div className="ui-input">
+      <input
+        id={id}
+        type={type as string}
+        className={classNames("ui-input__field", classname)}
+        name={name}
+        {...props}
+      />
       <label className="ui-input__label" htmlFor={id}>
         {label}
         {required && <span className="ui-input__label-required">*</span>}
       </label>
-      <input
-        id={id}
-        type="search"
-        required={required}
-        className={classNames(classname, 'ui-input__field')}
-        {...props}
-      />
     </div>
   );
 };

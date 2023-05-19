@@ -33,6 +33,8 @@ export const CARRIER_CHIPS_LIST = ["На людях", "На пробеге", "Н
 
 export const PARTNERS = ["Перевозчикам", "Грузовладельцам", "Партнерам"];
 
+export const EMPTY_STRING = "";
+
 export const PLATFORM_MODULES_LIST = [
   "Управление заявками на перевозку",
   "Планирование маршрута",

@@ -1,5 +1,8 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
 .partners__scroll {
   overflow-x: auto;
+  margin-bottom: 15px;
 }
 
 .partner {
@@ -10,7 +13,8 @@
     margin-bottom: 62px;
   }
 
-  &__single {
+  &__single:nth-child(2) {
+    margin: 0 40px;
   }
 
   button.ui-button {
@@ -22,5 +26,9 @@
     margin-bottom: 24px;
     font-size: 36px;
     font-weight: var(--font-weights-bold);
+
+    @include mobile {
+      margin-bottom: 26px;
+    }
   }
 }

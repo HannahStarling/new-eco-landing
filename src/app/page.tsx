@@ -13,6 +13,7 @@ import { Edo } from '@/components/EDO-component/EDO';
 import { MobileApp } from '@/components/mobile-app-component/mobile-app';
 import { Implementing } from '@/components/implementing-component/implementing';
 import { Tariffs } from '@/components/tariffs-component/tariffs';
+import { SchemeComponent } from '@/components/scheme-component/scheme-component';
 import { Monitoring } from '@/components/monitoring-component/monitoring-component';
 import { Planning } from '@/components/planning/planning';
 
@@ -25,6 +26,7 @@ export default function Home() {
         <PlatformModules />
         <FullCycle />
         <ThePlatformAdjusts />
+        <SchemeComponent />
         <Planning />
         <Tender />
         <Monitoring />

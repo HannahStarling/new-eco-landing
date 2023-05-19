@@ -6,6 +6,7 @@ import { ListType, UiList } from "@/ui-elements/ui-list/ui-list";
 import { UiListItem } from "@/ui-elements/ui-list-item/ui-list-item";
 import { UiSocial } from "@/ui-elements/ui-social/ui-social";
 import { IconName } from "@/ui-elements/ui-icon/icon-names";
+import { FormComponent } from "../form-component/form-component";
 
 export const Contact: FC = () => {
   return (
@@ -43,7 +44,9 @@ export const Contact: FC = () => {
           />
         </UiListItem>
       </UiList>
-      <div className={"contact__form"}>form</div>
+      <div className={"contact__form"}>
+        <FormComponent />
+      </div>
     </UiSection>
   );
 };
