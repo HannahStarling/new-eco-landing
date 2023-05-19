@@ -1,3 +1,5 @@
+@import "@/app/styles/paths.scss";
+
 .main {
   position: relative;
   flex: 1 1 auto;
@@ -9,5 +11,19 @@
     gap: 160px;
     margin: 0 auto;
     box-sizing: border-box;
+
+    .section:nth-child(1) {
+      padding-top: 160px;
+    }
+
+    .section:nth-child(1),
+    .section:nth-child(5),
+    .section:nth-child(9),
+    .section:nth-child(13) {
+      background: url($backgroud-img) no-repeat;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: center top;
+    }
   }
 }
