@@ -13,9 +13,19 @@
     line-height: 40px;
     cursor: pointer;
 
-    &:active,
-    &:hover,
-    &:focus {
+    a {
+      display: block;
+    }
+
+    a:link,
+    a:visited {
+      display: block;
+      color: inherit;
+    }
+
+    a:active,
+    a:hover,
+    a:focus {
       color: var(--colors-accent-blue-dark);
     }
 
@@ -61,18 +71,26 @@
   z-index: 3;
 
   &__subitem {
-    padding: 10px 12px;
     line-height: 1.5;
     color: var(--colors-typography-main);
 
-    &:active,
-    &:hover,
-    &:focus {
-      color: var(--colors-typography-main);
+    a {
+      padding: 10px 12px;
     }
 
-    &:hover {
-      background: #f0f6fe;
+    a:hover,
+    a:focus {
+      color: inherit;
+      background: var(--colors-accent-blue-pale);
     }
+
+    a:active {
+      color: var(--colors-typography-white);
+      background: var(--colors-accent-blue);
+    }
+  }
+
+  &__name {
+    display: block;
   }
 }

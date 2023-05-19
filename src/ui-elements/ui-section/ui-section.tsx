@@ -15,7 +15,7 @@ export const UiSection: FC<IProps> = ({
   ...props
 }) => {
   return (
-    <section className={"section"}>
+    <section id={className} className={"section"}>
       <div
         {...props}
         className={classNames(
