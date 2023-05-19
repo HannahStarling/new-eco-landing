@@ -1,9 +1,9 @@
-import { PARTNERS } from "@/constants/texts";
-import { DetailButtonComponent } from "../buttons/detail-button/detail-button-component";
-import { TitleSize, UiTitle } from "@/ui-elements/ui-title/ui-title";
-import { UiAccent } from "@/ui-elements/ui-accent/ui-accent";
-import { Color } from "@/types/color";
-import "./partners-detail-component.scss";
+import { PARTNERS } from '@/constants/texts';
+import { DetailButtonComponent } from '../buttons/detail-button/detail-button-component';
+import { TitleSize, UiTitle } from '@/ui-elements/ui-title/ui-title';
+import { UiAccent } from '@/ui-elements/ui-accent/ui-accent';
+import { Color } from '@/types/color';
+import './partners-detail-component.scss';
 
 export const PartnersDetailComponent = () => {
   return (
@@ -11,11 +11,11 @@ export const PartnersDetailComponent = () => {
       <div className="partner__detail">
         {PARTNERS.map((partner, index) => {
           return (
-            <div key={partner + index} className="partner__single">
+            <div key={partner.name + index} className="partner__single">
               <UiTitle className="partner__title" size={TitleSize.extraLarge}>
-                <UiAccent color={Color.white}>{partner}</UiAccent>
+                <UiAccent color={Color.white}>{partner.name}</UiAccent>
               </UiTitle>
-              <DetailButtonComponent />
+              <DetailButtonComponent url={partner.url} />
             </div>
           );
         })}
