@@ -1,8 +1,9 @@
-import "./get-access-button-component.scss";
-import { FC } from "react";
-import { UiButton, UiButtonProps } from "@/ui-elements/ui-button/ui-button";
-import { BUTTONS_CONTENT } from "@/constants/texts";
-import classNames from "classnames";
+import './get-access-button-component.scss';
+import { FC } from 'react';
+import { UiButton, UiButtonProps } from '@/ui-elements/ui-button/ui-button';
+import { BUTTONS_CONTENT } from '@/constants/texts';
+import classNames from 'classnames';
+import { ConnectModal } from '@/components/connect-modal/connect-modal';
 
 interface IProps extends UiButtonProps {
   big?: boolean;
@@ -19,21 +20,18 @@ export const GetAccessButtonComponent: FC<IProps> = ({
   className,
 }) => {
   return (
-    <UiButton
+    <ConnectModal
       className={classNames(
-        "button-get-access",
+        'button-get-access',
         {
           big,
           full,
           uppercase,
           cover__button: cover,
         },
-        className
+        className,
       )}
-      mode={"dark"}
-      fillType={"outlined"}
-    >
-      {BUTTONS_CONTENT.GET_ACCESS}
-    </UiButton>
+      buttonText={BUTTONS_CONTENT.GET_ACCESS.toUpperCase()}
+    />
   );
 };

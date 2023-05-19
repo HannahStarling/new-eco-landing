@@ -1,21 +1,23 @@
 .button-get-access {
-  width: calc((264 / 1440) * 100vw);
+  .connect-modal__button {
+    width: calc((264 / 1440) * 100vw);
 
-  &.big {
-    width: calc((360 / 1440) * 100vw);
-  }
-
-  &.full {
-    width: 100%;
-  }
-
-  &.uppercase {
-    text-transform: uppercase;
-  }
-
-  &.cover__button {
-    background: var(--colors-accent-acid-green);
-    color: var(--colors-typography-main);
-    border: none;
+    &.big {
+      width: calc((360 / 1440) * 100vw);
+    }
+  
+    &.full {
+      width: 100%;
+    }
+  
+    &.uppercase {
+      text-transform: uppercase;
+    }
+  
+    &.cover__button {
+      background: var(--colors-accent-acid-green);
+      color: var(--colors-typography-main);
+      border: none;
+    }
   }
 }

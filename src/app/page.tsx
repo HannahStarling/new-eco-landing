@@ -16,6 +16,7 @@ import { Tariffs } from '@/components/tariffs-component/tariffs';
 import { SchemeComponent } from '@/components/scheme-component/scheme-component';
 import { Monitoring } from '@/components/monitoring-component/monitoring-component';
 import { Planning } from '@/components/planning/planning';
+import { Contact } from '@/components/contact-component/contact';
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
         <Tariffs />
         <CommentsList />
         <Companies />
+        <Contact />
       </MainComponent>
       <FooterComponent />
     </div>
