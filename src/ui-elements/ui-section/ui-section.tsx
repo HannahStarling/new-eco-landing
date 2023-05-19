@@ -5,12 +5,26 @@ import { FC } from "react";
 interface IProps {
   children?: any;
   className?: string;
+  fullWidth?: boolean;
 }
 
-export const UiSection: FC<IProps> = ({ children, className, ...props }) => {
+export const UiSection: FC<IProps> = ({
+  children,
+  className,
+  fullWidth = false,
+  ...props
+}) => {
   return (
-    <section {...props} className={classNames(className, `section`)}>
-      {children}
+    <section className={"section"}>
+      <div
+        {...props}
+        className={classNames(
+          className,
+          !fullWidth ? `section__container` : null
+        )}
+      >
+        {children}
+      </div>
     </section>
   );
 };

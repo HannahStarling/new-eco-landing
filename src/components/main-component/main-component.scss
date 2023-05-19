@@ -3,9 +3,11 @@
   flex: 1 1 auto;
   z-index: 1;
 
-  &__container {
+  &__wrapper {
     display: flex;
     flex-direction: column;
     gap: 160px;
+    margin: 0 auto;
+    box-sizing: border-box;
   }
 }
