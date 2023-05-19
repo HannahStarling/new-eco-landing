@@ -9,8 +9,10 @@ export const Tariffs: FC = () => {
   return (
     <UiSection className="tariffs">
       <UiSectionTitle>Тарифы на Платформу</UiSectionTitle>
-      <TariffsPreferencesList />
-      <TariffsList />
+      <div className="tariffs__content">
+        <TariffsPreferencesList />
+        <TariffsList />
+      </div>
     </UiSection>
   );
 };
