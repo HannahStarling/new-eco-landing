@@ -100,6 +100,10 @@
     }
 
     &__description {
+      padding: 20px;
+      span {
+        display: block;
+      }
       &:first-child {
       }
     }

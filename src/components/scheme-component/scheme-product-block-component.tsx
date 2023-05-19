@@ -21,7 +21,7 @@ export const ProductBlock: FC<IProps> = ({ data }) => {
           <div className="left__description">{data.leftArrow?.text}</div>
         </div>
         <div className={classNames("product__description", data.className)}>
-          {data.name}
+          <span>{data.name}</span>
         </div>
         <div className="product__right right">
           <div className="right__arrow">
