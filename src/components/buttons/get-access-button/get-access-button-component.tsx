@@ -12,6 +12,9 @@ interface IProps extends UiButtonProps {
 }
 
 export const GetAccessButtonComponent: FC<IProps> = ({
+  mode = "dark",
+  fillType = "outlined",
+  children,
   big = false,
   full = false,
   cover = false,
@@ -30,10 +33,10 @@ export const GetAccessButtonComponent: FC<IProps> = ({
         },
         className
       )}
-      mode={"dark"}
-      fillType={"outlined"}
+      mode={mode}
+      fillType={fillType}
     >
-      {BUTTONS_CONTENT.GET_ACCESS}
+      {children ?? BUTTONS_CONTENT.GET_ACCESS}
     </UiButton>
   );
 };
