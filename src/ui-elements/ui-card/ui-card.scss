@@ -12,6 +12,11 @@
   border-radius: 20px;
   box-sizing: border-box;
 
+  &_square {
+    padding: 20px;
+    @include centered-text;
+  }
+
   &_extra-large {
     padding: 32px 20px;
     @include centered-text;

@@ -1,12 +1,14 @@
 @import "@/app/styles/breakpoints.scss";
 @import "@/app/styles/mixins.scss";
-.hero {
+.top {
   padding: 110px 0;
   align-items: center;
   position: absolute;
   width: 100%;
-  top: 0;
+  margin: 0 auto;
   left: 0;
+  right: 0;
+  text-align: center;
 
   &__container {
     text-align: center;

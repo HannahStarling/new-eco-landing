@@ -4,7 +4,7 @@
 .integration-analysis {
   &__list {
     width: 100%;
-    @include gap-extra-small;
+    @include gap-medium;
 
     @include laptop {
       min-width: 185px;

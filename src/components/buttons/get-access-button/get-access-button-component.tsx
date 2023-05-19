@@ -13,6 +13,8 @@ interface IProps extends UiButtonProps {
 }
 
 export const GetAccessButtonComponent: FC<IProps> = ({
+  mode = 'dark',
+  fillType = 'outlined',
   big = false,
   full = false,
   cover = false,
@@ -31,6 +33,8 @@ export const GetAccessButtonComponent: FC<IProps> = ({
         },
         className,
       )}
+      mode={mode}
+      fillType={fillType}
       buttonText={BUTTONS_CONTENT.GET_ACCESS.toUpperCase()}
     />
   );

@@ -7,10 +7,13 @@ import { UiButton } from '@/ui-elements/ui-button/ui-button';
 import { UiModal } from '@/ui-elements/ui-modal-window/ui-modal-window';
 import { FormComponent } from '../form-component/form-component';
 import classNames from 'classnames';
+import { Mode, Type } from '@/ui-elements/ui-button/types';
 
 interface IProps {
   className?: string;
   buttonText: string;
+  mode?: Mode;
+  fillType?: Type;
 }
 
 export const ConnectModal: FC<IProps> = ({ className, buttonText }) => {

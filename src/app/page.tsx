@@ -16,6 +16,7 @@ import { Tariffs } from '@/components/tariffs-component/tariffs';
 import { SchemeComponent } from '@/components/scheme-component/scheme-component';
 import { Monitoring } from '@/components/monitoring-component/monitoring-component';
 import { Planning } from '@/components/planning/planning';
+import { IntegrationAnalysis } from '@/components/integration-analysis-component/integration-analysis';
 import { Contact } from '@/components/contact-component/contact';
 
 export default function Home() {
@@ -32,6 +33,7 @@ export default function Home() {
         <Tender />
         <Monitoring />
         <Edo />
+        <IntegrationAnalysis />
         <MobileApp />
         <Implementing />
         <Tariffs />
