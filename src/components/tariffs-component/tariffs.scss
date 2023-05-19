@@ -5,6 +5,7 @@
   @include flex-column-center;
 
   &__content {
+    padding-top: 16px;
     @include flex-column-center;
     @include gap-large;
     @include mobile {
