@@ -17,6 +17,7 @@ import { SchemeComponent } from "@/components/scheme-component/scheme-component"
 import { Monitoring } from "@/components/monitoring-component/monitoring-component";
 import { Planning } from "@/components/planning/planning";
 import { IntegrationAnalysis } from "@/components/integration-analysis-component/integration-analysis";
+import { OneSpecialist } from "@/components/one-specialist-component/one-specialist";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <Benefits />
         <PlatformModules />
         <FullCycle />
+        <OneSpecialist />
         <ThePlatformAdjusts />
         <SchemeComponent />
         <Planning />
