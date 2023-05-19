@@ -2,6 +2,10 @@
 @import "@/app/styles/mixins.scss";
 
 .companies {
+  .title_section {
+    padding-bottom: 40px;
+  }
+  
   &__list {
     display: flex;
     justify-content: center;

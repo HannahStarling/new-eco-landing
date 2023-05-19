@@ -8,6 +8,7 @@ import {
   UiParagraph,
 } from "@/ui-elements/ui-paragraph/ui-paragraph";
 import { PlatformModulesView } from "@/components/platform-modules-component/platform-modules-view";
+import { GetAccessButtonComponent } from "@/components/buttons/get-access-button/get-access-button-component";
 
 export const PlatformModules: FC = () => (
   <UiSection className="platform-modules">
@@ -16,9 +17,20 @@ export const PlatformModules: FC = () => (
       логистикой
     </UiSectionTitle>
     <PlatformModulesView />
-    <UiParagraph size={ParagraphSize.extraLarge}>
-      Мы проводим обучение, доступ к которому останется навсегда и даем
-      бесплатный тестовый период пользования платформой
+    <UiParagraph
+      className={"platform-modules__description"}
+      size={ParagraphSize.extraLarge}
+    >
+      Мы&nbsp;проводим обучение, доступ к&nbsp;которому останется навсегда
+      и&nbsp;даем бесплатный тестовый период пользования платформой
     </UiParagraph>
+    <GetAccessButtonComponent
+      className={"platform-modules__button"}
+      full
+      mode={"light"}
+      fillType={"filled"}
+    >
+      Получить тестовый доступ
+    </GetAccessButtonComponent>
   </UiSection>
 );

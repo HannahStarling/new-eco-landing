@@ -3,6 +3,7 @@
 
 .monitoring-statistics {
   flex: 1;
+  border: none;
 
   @include desktop {
     width: calc(360 / 1440 * 100vw);

@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { FC } from "react";
-import classNames from "classnames";
-import "./ui-input.scss";
-import { FormType } from "@/constants/form";
+import { FC } from 'react';
+import classNames from 'classnames';
+import './ui-input.scss';
+import { FormType } from '@/constants/form';
 
 interface IProps {
   label: string;
@@ -13,6 +13,7 @@ interface IProps {
   type: typeof FormType | string;
   name: string;
   placeholder?: string;
+  pattern?: string | null;
 }
 
 export const UiInput: FC<IProps> = ({
@@ -20,8 +21,9 @@ export const UiInput: FC<IProps> = ({
   required,
   id,
   label,
-  type = "search",
+  type = 'search',
   name,
+  pattern,
   ...props
 }) => {
   return (
@@ -29,8 +31,10 @@ export const UiInput: FC<IProps> = ({
       <input
         id={id}
         type={type as string}
-        className={classNames("ui-input__field", classname)}
+        className={classNames('ui-input__field', classname)}
         name={name}
+        pattern={pattern || undefined}
+        required={required}
         {...props}
       />
       <label className="ui-input__label" htmlFor={id}>

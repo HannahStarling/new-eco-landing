@@ -4,28 +4,29 @@
 .comments-list {
   &__list {
     display: flex;
+    justify-content: center;
     @include gap-medium;
+  }
+
+  .title_section {
+    padding-bottom: 40px;
   }
 }
 
-@media only screen and (max-width: 1072px) {
+@media only screen and (max-width: 1053px) {
   .comments-list__list {
     flex-wrap: wrap;
     @include gap-medium;
 
     .comment {
-      min-width: 210px;
-      max-width: 320px;
-      width: auto;
+      width: 330px;
     }
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 980px) {
+@media only screen and (max-width: 768px) {
   .comments-list__list {
-    .comment {
-      width: 210px;
-    }
+    justify-content: center;
   }
 }
 
