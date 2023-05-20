@@ -33,12 +33,11 @@ export const useForm = <V>({
         const { data } = await getToken();
         setToken(data);
       } catch (error) {
-        console.log(error);
+        console.error(error);
       } finally {
       }
     }
 
-    console.log("render");
     tokenCheck();
   }, []);
 
