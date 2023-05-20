@@ -15,12 +15,14 @@ export const ProductBlock: FC<IProps> = ({ data }) => {
     <div className="scheme__product product">
       <div className="product__body">
         <div className="product__left left">
-          <div className="left__arrow">
-            <img
-              alt={"Стрелка, показывает влево."}
-              src={data.leftArrow?.icon}
-            />
-          </div>
+          {data.leftArrow?.icon && (
+            <div className="left__arrow">
+              <img
+                alt={"Стрелка, показывает влево."}
+                src={data.leftArrow?.icon}
+              />
+            </div>
+          )}
           <div className="left__description">{data.leftArrow?.text}</div>
         </div>
         <div className={classNames("product__description", data.className)}>
@@ -36,9 +38,11 @@ export const ProductBlock: FC<IProps> = ({ data }) => {
           <div className="right__description">{data.leftArrow?.text}</div>
         </div>
       </div>
-      <div className="product__down">
-        <img alt={"Стрелка, показывает вниз."} src={data.downArrow} />
-      </div>
+      {data.downArrow && (
+        <div className="product__down">
+          <img alt={"Стрелка, показывает вниз."} src={data.downArrow} />
+        </div>
+      )}
     </div>
   );
 };
