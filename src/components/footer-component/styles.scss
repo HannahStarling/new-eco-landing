@@ -1,3 +1,6 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
 .footer {
   padding: 36px 0;
 
@@ -18,10 +21,21 @@
 
   .menu {
     margin-bottom: 36px;
+
+    @include tablet {
+      &__list {
+        flex-direction: column;
+      }
+    }
   }
 
   .submenu {
     bottom: 50px;
     left: 0;
+    @include tablet {
+      &__list {
+        left: -50px;
+      }
+    }
   }
 }
