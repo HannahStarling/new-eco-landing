@@ -2,6 +2,9 @@
 @import "@/app/styles/mixins.scss";
 
 .monitoring {
+  display: flex;
+  flex-direction: column;
+
   &__info {
     display: flex;
     flex-direction: row;
@@ -12,6 +15,7 @@
     @include tablet {
       flex-direction: column;
       max-width: 336px;
+      align-self: center;
       @include gap-medium;
     }
 

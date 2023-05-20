@@ -1,4 +1,6 @@
 @import "@/app/styles/paths.scss";
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
 
 .main {
   position: relative;
@@ -12,14 +14,24 @@
     margin: 0 auto;
     box-sizing: border-box;
 
+    @include mobile {
+      gap: 80px;
+    }
+
     .section:nth-child(1) {
       padding-top: 160px;
+
+      @include mobile {
+        padding-top: 40px;
+      }
     }
 
     .section:nth-child(1),
+    .section:nth-child(4),
     .section:nth-child(5),
     .section:nth-child(9),
-    .section:nth-child(13) {
+    .section:nth-child(13),
+    .section:nth-child(18) {
       background-size: 100% 100%;
       background: url($backgroud-img) no-repeat center top;
     }

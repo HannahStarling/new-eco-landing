@@ -13,6 +13,7 @@ interface IProps {
   type: typeof FormType | string;
   name: string;
   placeholder?: string;
+  pattern?: string | null;
 }
 
 export const UiInput: FC<IProps> = ({
@@ -22,6 +23,7 @@ export const UiInput: FC<IProps> = ({
   label,
   type = "search",
   name,
+  pattern,
   ...props
 }) => {
   return (
@@ -33,6 +35,8 @@ export const UiInput: FC<IProps> = ({
         type={type as string}
         className={classNames("ui-input__field", classname)}
         name={name}
+        pattern={pattern || undefined}
+        required={required}
       />
       <label className="ui-input__label" htmlFor={id}>
         {label}

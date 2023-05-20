@@ -5,6 +5,10 @@
   display: flex;
   justify-content: space-between;
 
+  @include tablet {
+    @include flex-center;
+  }
+
   .title {
     max-width: 390px;
     width: calc(400 / 1440 * 100vw);
@@ -12,6 +16,7 @@
     @include tablet {
       max-width: none;
       width: auto;
+      text-align: center;
     }
   }
 

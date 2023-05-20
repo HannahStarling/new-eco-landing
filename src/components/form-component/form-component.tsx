@@ -60,6 +60,7 @@ export const FormComponent: FC<IProps> = ({
               id={name}
               key={name}
               name={name}
+              pattern={field.pattern}
               label={field.text}
               type={field.type}
               classname={field.className}

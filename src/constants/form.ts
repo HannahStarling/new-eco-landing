@@ -19,6 +19,7 @@ type InputProps = {
   placeholder: string;
   type: FormType;
   required: boolean;
+  pattern?: RegExp | null;
 };
 export type FormValuesContactUs = FormValues<FormFieldContactUs>;
 
@@ -29,6 +30,7 @@ export const FormFields: Record<FormFieldContactUs, InputProps> = {
     type: FormType.text,
     className: null,
     required: true,
+    pattern: null,
   },
   Phone: {
     text: "Телефон",
@@ -36,6 +38,7 @@ export const FormFields: Record<FormFieldContactUs, InputProps> = {
     type: FormType.tel,
     className: null,
     required: true,
+    pattern: null,
   },
   EMail: {
     text: "Электронная почта",
@@ -43,6 +46,7 @@ export const FormFields: Record<FormFieldContactUs, InputProps> = {
     type: FormType.email,
     className: null,
     required: true,
+    pattern: null,
   },
   Organization: {
     text: "Название компании",
