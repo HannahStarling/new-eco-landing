@@ -16,7 +16,10 @@ export const ProductBlock: FC<IProps> = ({ data }) => {
       <div className="product__body">
         <div className="product__left left">
           <div className="left__arrow">
-            <img src={data.leftArrow?.icon} />
+            <img
+              alt={"Стрелка, показывает влево."}
+              src={data.leftArrow?.icon}
+            />
           </div>
           <div className="left__description">{data.leftArrow?.text}</div>
         </div>
@@ -25,13 +28,16 @@ export const ProductBlock: FC<IProps> = ({ data }) => {
         </div>
         <div className="product__right right">
           <div className="right__arrow">
-            <img src={data.rightArrow?.icon} />
+            <img
+              alt={"Стрелка, показывает вправо."}
+              src={data.rightArrow?.icon}
+            />
           </div>
           <div className="right__description">{data.leftArrow?.text}</div>
         </div>
       </div>
       <div className="product__down">
-        <img src={data.downArrow} />
+        <img alt={"Стрелка, показывает вниз."} src={data.downArrow} />
       </div>
     </div>
   );

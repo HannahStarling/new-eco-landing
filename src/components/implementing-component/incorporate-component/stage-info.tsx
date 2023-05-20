@@ -1,7 +1,7 @@
-import { FC } from 'react';
-import { UiParagraph } from '@/ui-elements/ui-paragraph/ui-paragraph';
-import { UiSectionTitle } from '@/ui-elements/ui-section-title/ui-section-title';
-import { UiAccent } from '@/ui-elements/ui-accent/ui-accent';
+import { FC } from "react";
+import { UiParagraph } from "@/ui-elements/ui-paragraph/ui-paragraph";
+import { UiSectionTitle } from "@/ui-elements/ui-section-title/ui-section-title";
+import { UiAccent } from "@/ui-elements/ui-accent/ui-accent";
 
 interface IProps {
   accent: string;

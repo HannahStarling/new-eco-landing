@@ -1,4 +1,4 @@
-import { IconName } from '@/ui-elements/ui-icon/icon-names';
+import { IconName } from "@/ui-elements/ui-icon/icon-names";
 
 export type ImageType = {
   width: number;

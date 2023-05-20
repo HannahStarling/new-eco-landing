@@ -1,19 +1,16 @@
-'use client';
+"use client";
 
-import { useModal } from '@/hooks/useModal';
-import './connect-modal.scss';
-import { FC } from 'react';
-import { UiButton } from '@/ui-elements/ui-button/ui-button';
-import { UiModal } from '@/ui-elements/ui-modal-window/ui-modal-window';
-import { FormComponent } from '../form-component/form-component';
-import classNames from 'classnames';
-import { Mode, Type } from '@/ui-elements/ui-button/types';
+import { useModal } from "@/hooks/useModal";
+import "./connect-modal.scss";
+import { FC } from "react";
+import { UiButton } from "@/ui-elements/ui-button/ui-button";
+import { UiModal } from "@/ui-elements/ui-modal-window/ui-modal-window";
+import classNames from "classnames";
+import { ContactUsFormView } from "@/views/contact-us-form-view";
 
 interface IProps {
   className?: string;
   buttonText: string;
-  mode?: Mode;
-  fillType?: Type;
 }
 
 export const ConnectModal: FC<IProps> = ({ className, buttonText }) => {
@@ -21,15 +18,18 @@ export const ConnectModal: FC<IProps> = ({ className, buttonText }) => {
   return (
     <div className="connect-modal">
       <UiButton
-        className={classNames(className, 'connect-modal__button')}
+        className={classNames(className, "connect-modal__button")}
         fillType="outlined"
         mode="dark"
-        onClick={() => setModalOpened(true)}>
+        onClick={() => setModalOpened(true)}
+      >
         {buttonText}
       </UiButton>
-      <UiModal visible={modalOpened}>
-        <FormComponent onClose={() => setModalOpened(false)} />
-      </UiModal>
+      {modalOpened && (
+        <UiModal visible={modalOpened}>
+          <ContactUsFormView onClose={() => setModalOpened(false)} />
+        </UiModal>
+      )}
     </div>
   );
 };

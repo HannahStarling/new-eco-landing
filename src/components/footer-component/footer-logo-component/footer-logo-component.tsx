@@ -1,4 +1,4 @@
-import {Logo} from "@/constants/images";
+import { Logo } from "@/constants/images";
 import Image from "next/image";
 
 export const FooterLogoComponent = () => {

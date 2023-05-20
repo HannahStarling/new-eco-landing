@@ -27,11 +27,12 @@ export const UiInput: FC<IProps> = ({
   return (
     <div className="ui-input">
       <input
+        autoComplete={"on"}
+        {...props}
         id={id}
         type={type as string}
         className={classNames("ui-input__field", classname)}
         name={name}
-        {...props}
       />
       <label className="ui-input__label" htmlFor={id}>
         {label}

@@ -1,19 +1,25 @@
-import { UiParagraph } from '@/ui-elements/ui-paragraph/ui-paragraph';
-import { UiAccent } from '@/ui-elements/ui-accent/ui-accent';
-import { FC } from 'react';
-import { Color } from '@/types/color';
+import { UiParagraph } from "@/ui-elements/ui-paragraph/ui-paragraph";
+import { UiAccent } from "@/ui-elements/ui-accent/ui-accent";
+import { FC } from "react";
+import { Color } from "@/types/color";
 
 const CommentParagraph1: FC = () => (
   <>
     <UiParagraph>“Продукт гениальный! Обучение по нему - огонь!</UiParagraph>
-    <UiParagraph>С точки зрения ux/ui по данной системе - вообще супер!</UiParagraph>
     <UiParagraph>
-      Я в восторге! Маленькие недочеты, которые я заметила, направила в комментариях по курсу. Но
-      они не меняют моего отношения к продукту в целом!
+      С точки зрения ux/ui по данной системе - вообще супер!
     </UiParagraph>
     <UiParagraph>
-      То что делает наша команда -{' '}
-      <UiAccent color={Color.greenMain}>это супер-гениально и актуально.</UiAccent>”
+      Я в восторге! Маленькие недочеты, которые я заметила, направила в
+      комментариях по курсу. Но они не меняют моего отношения к продукту в
+      целом!
+    </UiParagraph>
+    <UiParagraph>
+      То что делает наша команда -{" "}
+      <UiAccent color={Color.greenMain}>
+        это супер-гениально и актуально.
+      </UiAccent>
+      ”
     </UiParagraph>
   </>
 );

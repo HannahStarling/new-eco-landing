@@ -2,6 +2,7 @@ import { FC } from "react";
 import { IUiRadioProps, UiRadio } from "@/ui-elements/ui-radio/ui-radio";
 import { UiList } from "@/ui-elements/ui-list/ui-list";
 import { UiListItem } from "@/ui-elements/ui-list-item/ui-list-item";
+import classNames from "classnames";
 
 interface IProps extends Omit<IUiRadioProps, "item" | "value" | "checked"> {
   className?: string;
@@ -22,7 +23,7 @@ export const UiRadioGroup: FC<IProps> = ({
   ...props
 }) => {
   return (
-    <UiList className={className}>
+    <UiList className={classNames(className)}>
       {options.map((item) => {
         return (
           <UiListItem key={item.value}>

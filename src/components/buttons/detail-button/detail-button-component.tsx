@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import './detail-button-component.scss';
-import { FC } from 'react';
-import { UiButton, UiButtonProps } from '@/ui-elements/ui-button/ui-button';
-import { BUTTONS_CONTENT } from '@/constants/texts';
-import classNames from 'classnames';
-import { downloadFileByUrl } from '@/helpers/download-file-by-url';
+import "./detail-button-component.scss";
+import { FC } from "react";
+import { UiButton, UiButtonProps } from "@/ui-elements/ui-button/ui-button";
+import { BUTTONS_CONTENT } from "@/constants/texts";
+import classNames from "classnames";
+import { downloadFileByUrl } from "@/helpers/download-file-by-url";
 
 interface IProps extends UiButtonProps {
   full?: boolean;

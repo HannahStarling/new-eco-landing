@@ -1,23 +1,23 @@
-import { UiSection } from '@/ui-elements/ui-section/ui-section';
-import { UiSectionTitle } from '@/ui-elements/ui-section-title/ui-section-title';
-import { UiAccent } from '@/ui-elements/ui-accent/ui-accent';
-import './full-cycle-component.scss';
-import { Color } from '@/types/color';
-import Image from 'next/image';
-import { UiCard } from '@/ui-elements/ui-card/ui-card';
-import { UiParagraph } from '@/ui-elements/ui-paragraph/ui-paragraph';
-import { Logo } from '@/constants/images';
-import { fullCycleImages } from './full-cycle-images';
-import { ListType, UiList } from '@/ui-elements/ui-list/ui-list';
-import { UiListItem } from '@/ui-elements/ui-list-item/ui-list-item';
+import { UiSection } from "@/ui-elements/ui-section/ui-section";
+import { UiSectionTitle } from "@/ui-elements/ui-section-title/ui-section-title";
+import { UiAccent } from "@/ui-elements/ui-accent/ui-accent";
+import "./full-cycle-component.scss";
+import { Color } from "@/types/color";
+import Image from "next/image";
+import { UiCard } from "@/ui-elements/ui-card/ui-card";
+import { UiParagraph } from "@/ui-elements/ui-paragraph/ui-paragraph";
+import { Logo } from "@/constants/images";
+import { fullCycleImages } from "./full-cycle-images";
+import { ListType, UiList } from "@/ui-elements/ui-list/ui-list";
+import { UiListItem } from "@/ui-elements/ui-list-item/ui-list-item";
 
 const CYCLE_TEXT_LIST = [
-  'Учет и ведение заявок',
-  'Планирование маршрутов',
-  'Поиск перевозчика',
-  'Проверка контрагентов',
-  'Отслеживание рейсов',
-  'Электронный документооборот',
+  "Учет и ведение заявок",
+  "Планирование маршрутов",
+  "Поиск перевозчика",
+  "Проверка контрагентов",
+  "Отслеживание рейсов",
+  "Электронный документооборот",
 ];
 
 export const FullCycle = () => (

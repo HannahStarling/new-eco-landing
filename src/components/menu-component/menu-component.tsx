@@ -4,7 +4,7 @@ import { UiListItem } from "@/ui-elements/ui-list-item/ui-list-item";
 import { UiList } from "@/ui-elements/ui-list/ui-list";
 import "./styles.scss";
 import { SubMenuComponent } from "./sub-menu-component/sub-menu-component";
-import { FC } from "react";
+import { FC, MouseEvent } from "react";
 import { useMenu } from "@/hooks/useMenu";
 import classNames from "classnames";
 import Link from "next/link";
@@ -47,12 +47,12 @@ export const MenuComponent: FC<IProps> = ({
                 itemClasses,
                 activeMenu[key] ? "active" : null
               )}
-              onClick={(e: React.MouseEvent<HTMLAnchorElement, any>) =>
+              onClick={(e: MouseEvent<HTMLAnchorElement, any>) =>
                 handleSetActive(e, key)
               }
             >
               {menuItem?.sectionID ? (
-                <Link href={menuItem?.sectionID} onClick={handleScroll}>
+                <Link href={menuItem.sectionID} onClick={handleScroll}>
                   {menuItem.name}
                 </Link>
               ) : (
@@ -60,7 +60,7 @@ export const MenuComponent: FC<IProps> = ({
               )}
               {
                 <SubMenuComponent
-                  className={activeMenu[key] ? "active" : null}
+                  className={classNames({ active: activeMenu?.[key] })}
                   menu={menuItem.children}
                   handleScroll={handleScroll}
                 />

@@ -25,7 +25,6 @@ export const UiRadio: FC<IUiRadioProps> = ({
   buttonStyle = "outline",
   autoFocus = false,
   checked = false,
-  defaultChecked = false,
   disabled = false,
 }) => {
   const onChange = (e: ChangeEvent<HTMLInputElement>) =>
@@ -34,7 +33,6 @@ export const UiRadio: FC<IUiRadioProps> = ({
   return (
     <label htmlFor={id} className={classNames("radio-label", buttonStyle)}>
       <input
-        defaultChecked={defaultChecked}
         disabled={disabled}
         autoFocus={autoFocus}
         id={id}

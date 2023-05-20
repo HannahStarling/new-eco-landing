@@ -14,7 +14,7 @@ export const HeaderBurgerComponent: FC<IProps> = ({
 }) => {
   return (
     <div className="header__burger" onClick={onBurgerClick}>
-      <span className={classNames(isOpen ? "active" : null)}></span>
+      <span className={classNames(isOpen ? "active" : null)} />
     </div>
   );
 };

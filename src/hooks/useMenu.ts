@@ -1,14 +1,11 @@
-import { SyntheticEvent, useState } from "react";
+import { MouseEvent, useState } from "react";
 
 export const useMenu = () => {
-  const [activeMenu, setActiveMenu] = useState<{ [k: string]: boolean }>({});
-  const handleSetActive = (
-    e: React.MouseEvent<HTMLAnchorElement, any>,
-    key: string
-  ) => {
+  const [activeMenu, setActiveMenu] = useState<Record<string, boolean>>({});
+  const handleSetActive = (e: MouseEvent<HTMLAnchorElement>, key: string) => {
     e.preventDefault();
     e.stopPropagation();
-    setActiveMenu((prev) => {
+    setActiveMenu((prev): Record<string, boolean> => {
       if (key in prev) {
         return {
           ...prev,
@@ -22,7 +19,7 @@ export const useMenu = () => {
     });
   };
 
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, any>) => {
+  const handleScroll = (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const href = e.currentTarget.href;
     const targetId = href.replace(/.*\#/, "");

@@ -2,6 +2,7 @@ import { BUTTONS_CONTENT } from "@/constants/texts";
 import { UiButton } from "@/ui-elements/ui-button/ui-button";
 import classNames from "classnames";
 import { FC, ReactNode } from "react";
+
 interface IProps {
   children?: ReactNode;
   isOpen: boolean;

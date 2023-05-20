@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { FC } from 'react';
-import Image from 'next/image';
-import classNames from 'classnames';
-import { IconName } from './icon-names';
+import { FC } from "react";
+import Image from "next/image";
+import classNames from "classnames";
+import { IconName } from "./icon-names";
 
 export interface IProps {
   className?: string;
@@ -16,7 +16,7 @@ export interface IProps {
   onClick?: () => void;
 }
 
-const ROOT_PATH = '/assets/icons/';
+const ROOT_PATH = "/assets/icons/";
 
 export const UiIcon: FC<IProps> = ({
   alt,
@@ -33,7 +33,7 @@ export const UiIcon: FC<IProps> = ({
       width={width}
       height={height}
       priority
-      className={classNames(className, 'ui-icon')}
+      className={classNames(className, "ui-icon")}
       src={`${ROOT_PATH}${name}.svg`}
       alt={alt}
       onClick={onClick}

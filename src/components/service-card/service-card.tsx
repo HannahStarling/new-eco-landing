@@ -1,7 +1,7 @@
-import './service-card.scss';
-import { FC } from 'react';
-import Image from 'next/image';
-import { UiCard } from '@/ui-elements/ui-card/ui-card';
+import "./service-card.scss";
+import { FC } from "react";
+import Image from "next/image";
+import { UiCard } from "@/ui-elements/ui-card/ui-card";
 
 interface IProps {
   width: number;

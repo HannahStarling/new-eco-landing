@@ -1,21 +1,21 @@
-import './monitoring-features.scss';
-import { FC } from 'react';
-import { IconName } from '@/ui-elements/ui-icon/icon-names';
-import { FeatureCard } from './feature-card';
-import { ServiceCard } from '@/components/service-card/service-card';
+import "./monitoring-features.scss";
+import { FC } from "react";
+import { IconName } from "@/ui-elements/ui-icon/icon-names";
+import { FeatureCard } from "./feature-card";
+import { ServiceCard } from "@/components/service-card/service-card";
 
 const GPS_IMAGES = [
   {
     width: 135,
     height: 26,
-    src: '/assets/images/Wialon.png',
-    alt: 'логотип Wialon',
+    src: "/assets/images/Wialon.png",
+    alt: "логотип Wialon",
   },
   {
     width: 135,
     height: 11,
-    src: '/assets/images/Omnicomm.png',
-    alt: 'логотип Omnicomm',
+    src: "/assets/images/Omnicomm.png",
+    alt: "логотип Omnicomm",
   },
 ];
 

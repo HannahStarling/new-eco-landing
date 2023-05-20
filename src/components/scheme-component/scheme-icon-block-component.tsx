@@ -11,11 +11,11 @@ interface IProps {
   >;
 }
 
-export const IconBlock: FC<IProps> = ({ children, data }) => {
+export const IconBlock: FC<IProps> = ({ data }) => {
   if (!data.text)
     return (
       <div className="scheme__icon_empty">
-        <img src={data.icon} />
+        <img src={data.icon} alt={"Заглушка."} />
       </div>
     );
   return (
@@ -30,7 +30,7 @@ export const IconBlock: FC<IProps> = ({ children, data }) => {
         <span>{data.text}</span>
       </div>
       <div className="icon__arrow">
-        {data.arrow ? <img src={data.arrow} /> : null}
+        {data.arrow ? <img src={data.arrow} alt={"Стрелка."} /> : null}
       </div>
     </div>
   );

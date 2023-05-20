@@ -1,11 +1,11 @@
-import './stage-card.scss';
-import { FC } from 'react';
-import { TitleSize, UiTitle } from '@/ui-elements/ui-title/ui-title';
-import { UiIcon } from '@/ui-elements/ui-icon/ui-icon';
-import { ImageType } from '@/types/image';
-import { UiCard } from '@/ui-elements/ui-card/ui-card';
-import { ListType, UiList } from '@/ui-elements/ui-list/ui-list';
-import { UiListItem } from '@/ui-elements/ui-list-item/ui-list-item';
+import "./stage-card.scss";
+import { FC } from "react";
+import { TitleSize, UiTitle } from "@/ui-elements/ui-title/ui-title";
+import { UiIcon } from "@/ui-elements/ui-icon/ui-icon";
+import { ImageType } from "@/types/image";
+import { UiCard } from "@/ui-elements/ui-card/ui-card";
+import { ListType, UiList } from "@/ui-elements/ui-list/ui-list";
+import { UiListItem } from "@/ui-elements/ui-list-item/ui-list-item";
 
 interface IProps {
   title: string;

@@ -1,6 +1,6 @@
 "use client";
 
-import { RefObject, useEffect, useRef, useState } from "react";
+import { RefObject, useEffect, useState } from "react";
 
 export const useHeaderScroll = ({
   headerRef,
@@ -12,6 +12,7 @@ export const useHeaderScroll = ({
     const updateScrollDirection = () => {
       const headerTopPosition =
         headerRef.current?.getBoundingClientRect().bottom;
+      //TODO deprecated symbol
       if (headerTopPosition && window.pageYOffset >= headerTopPosition) {
         setScroll(true);
       } else {

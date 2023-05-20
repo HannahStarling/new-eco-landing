@@ -11,7 +11,7 @@ import { HeaderBurgerComponent } from "./header-burger-component/header-burger-c
 import { useBurger } from "@/hooks/useBurgerClick";
 
 export const HeaderComponent = () => {
-  const headerRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLElement | null>(null);
   const isScroll = useHeaderScroll({ headerRef });
   const { onBurgerClick, isOpen } = useBurger();
 

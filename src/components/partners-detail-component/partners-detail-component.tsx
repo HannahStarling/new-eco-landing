@@ -1,9 +1,9 @@
-import { PARTNERS } from '@/constants/texts';
-import { DetailButtonComponent } from '../buttons/detail-button/detail-button-component';
-import { TitleSize, UiTitle } from '@/ui-elements/ui-title/ui-title';
-import { UiAccent } from '@/ui-elements/ui-accent/ui-accent';
-import { Color } from '@/types/color';
-import './partners-detail-component.scss';
+import { PARTNERS } from "@/constants/texts";
+import { DetailButtonComponent } from "../buttons/detail-button/detail-button-component";
+import { TitleSize, UiTitle } from "@/ui-elements/ui-title/ui-title";
+import { UiAccent } from "@/ui-elements/ui-accent/ui-accent";
+import { Color } from "@/types/color";
+import "./partners-detail-component.scss";
 
 export const PartnersDetailComponent = () => {
   return (
