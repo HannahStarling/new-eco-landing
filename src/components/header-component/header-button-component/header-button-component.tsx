@@ -5,20 +5,16 @@ import { FC, ReactNode } from "react";
 
 interface IProps {
   children?: ReactNode;
-  isOpen: boolean;
-  isScroll: boolean;
+  isWhiteHeader: boolean;
 }
 
-export const HeaderButtonComponent: FC<IProps> = ({ isOpen, isScroll }) => {
+export const HeaderButtonComponent: FC<IProps> = ({ isWhiteHeader }) => {
   return (
     <div className="header__button button">
       <UiButton
         fillType="outlined"
         mode={"none"}
-        className={classNames(
-          "button__login",
-          isOpen || isScroll ? "black" : null
-        )}
+        className={classNames("button__login", isWhiteHeader ? "black" : null)}
       >
         {BUTTONS_CONTENT.LOGIN}
       </UiButton>

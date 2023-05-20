@@ -1,5 +1,6 @@
 "use client";
 
+import { MOBILE_RESOLUTION } from "@/constants/general";
 import { RefObject, useEffect, useState } from "react";
 
 export const useHeaderScroll = ({
@@ -7,6 +8,9 @@ export const useHeaderScroll = ({
 }: {
   headerRef: RefObject<HTMLElement>;
 }) => {
+  const [isFixed, setFixedHeader] = useState(
+    window.innerWidth < MOBILE_RESOLUTION
+  );
   const [isScroll, setScroll] = useState(false);
   useEffect(() => {
     const updateScrollDirection = () => {
@@ -19,11 +23,21 @@ export const useHeaderScroll = ({
         setScroll(false);
       }
     };
+
+    const updateResize = () => {
+      if (window.innerWidth < MOBILE_RESOLUTION) {
+        setFixedHeader(true);
+      } else {
+        setFixedHeader(false);
+      }
+    };
     window.addEventListener("scroll", updateScrollDirection);
+    window.addEventListener("resize", updateResize);
     return () => {
       window.removeEventListener("scroll", updateScrollDirection);
+      window.removeEventListener("resize", updateResize);
     };
   }, [headerRef]);
 
-  return isScroll;
+  return { isScroll, isFixed };
 };

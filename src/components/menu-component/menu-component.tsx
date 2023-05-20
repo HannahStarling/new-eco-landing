@@ -16,14 +16,12 @@ export enum MenuPlacement {
 
 interface IProps {
   placement?: MenuPlacement;
-  isScroll?: boolean;
-  isOpen?: boolean;
+  isWhiteHeader: boolean;
 }
 
 export const MenuComponent: FC<IProps> = ({
   placement = MenuPlacement.header,
-  isOpen,
-  isScroll,
+  isWhiteHeader,
 }) => {
   const { activeMenu, handleSetActive, handleScroll } = useMenu();
 
@@ -31,7 +29,7 @@ export const MenuComponent: FC<IProps> = ({
     <nav
       className={classNames(
         `menu ${placement}__menu`,
-        isOpen || isScroll ? "black" : null
+        isWhiteHeader ? "black" : null
       )}
     >
       <UiList className="menu__list">

@@ -12,20 +12,21 @@ import { useBurger } from "@/hooks/useBurgerClick";
 
 export const HeaderComponent = () => {
   const headerRef = useRef<HTMLElement | null>(null);
-  const isScroll = useHeaderScroll({ headerRef });
+  const { isScroll, isFixed } = useHeaderScroll({ headerRef });
   const { onBurgerClick, isOpen } = useBurger();
+  const isWhiteHeader = isScroll || isFixed || isOpen;
 
   return (
     <header
       ref={headerRef}
-      className={classNames("header", isScroll ? "header_sticky" : null)}
+      className={classNames("header", isWhiteHeader ? "header_sticky" : null)}
     >
       <div className={"header__container"}>
-        <HeaderLogoComponent isScroll={isScroll} isOpen={isOpen} />
+        <HeaderLogoComponent isWhiteHeader={isWhiteHeader} />
         <div className={classNames("header__action", isOpen ? "active" : null)}>
           <div className="header__links">
-            <MenuComponent isOpen={isOpen} isScroll={isScroll} />
-            <HeaderButtonComponent isOpen={isOpen} isScroll={isScroll} />
+            <MenuComponent isWhiteHeader={isWhiteHeader} />
+            <HeaderButtonComponent isWhiteHeader={isWhiteHeader} />
           </div>
         </div>
         <HeaderBurgerComponent onBurgerClick={onBurgerClick} isOpen={isOpen} />
