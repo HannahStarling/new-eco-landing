@@ -1,10 +1,10 @@
 import "./get-access-button-component.scss";
 import { FC } from "react";
 import { UiButtonProps } from "@/ui-elements/ui-button/ui-button";
-import { BUTTONS_CONTENT } from "@/constants/texts";
 import classNames from "classnames";
 import { ConnectModal } from "@/components/connect-modal/connect-modal";
 import { Mode, Type } from "@/ui-elements/ui-button/types";
+import { BUTTONS_CONTENT } from "@/constants/texts";
 
 interface IProps extends UiButtonProps {
   mode?: Mode;
@@ -16,6 +16,7 @@ interface IProps extends UiButtonProps {
 }
 
 export const GetAccessButtonComponent: FC<IProps> = ({
+  children,
   mode = "dark",
   fillType = "outlined",
   big = false,
@@ -38,7 +39,7 @@ export const GetAccessButtonComponent: FC<IProps> = ({
       )}
       mode={mode}
       fillType={fillType}
-      buttonText={BUTTONS_CONTENT.GET_ACCESS}
+      buttonText={children ?? BUTTONS_CONTENT.GET_ACCESS}
     />
   );
 };

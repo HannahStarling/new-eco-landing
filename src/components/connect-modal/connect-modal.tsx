@@ -13,14 +13,19 @@ interface IProps {
   buttonText: string;
 }
 
-export const ConnectModal: FC<IProps> = ({ className, buttonText }) => {
+export const ConnectModal: FC<IProps> = ({
+  className,
+  buttonText,
+  mode = "dark",
+  fillType = "outlined",
+}) => {
   const { modalOpened, setModalOpened } = useModal();
   return (
     <div className="connect-modal">
       <UiButton
         className={classNames(className, "connect-modal__button")}
-        fillType="outlined"
-        mode="dark"
+        fillType={fillType}
+        mode={mode}
         onClick={() => setModalOpened(true)}
       >
         {buttonText}
