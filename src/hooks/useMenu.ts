@@ -1,3 +1,4 @@
+import { HEADER_CSS_SELECTOR } from "@/constants/general";
 import { MouseEvent, useState } from "react";
 
 export const useMenu = () => {
@@ -23,8 +24,15 @@ export const useMenu = () => {
     e.preventDefault();
     const href = e.currentTarget.href;
     const targetId = href.replace(/.*\#/, "");
-    const elem = document.getElementById(targetId);
-    elem?.scrollIntoView({
+    const headerOffset = document
+      .querySelector(HEADER_CSS_SELECTOR)!
+      .getBoundingClientRect().height;
+    const elementPosition = document
+      .getElementById(targetId)!
+      .getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+    window.scrollTo({
+      top: offsetPosition,
       behavior: "smooth",
     });
   };
