@@ -1,8 +1,13 @@
-import "./ui-main-title.scss";
-import classNames from "classnames";
-import { FC } from "react";
+import './ui-main-title.scss';
+import classNames from 'classnames';
+import { FC } from 'react';
 
-export const UiMainTitle: FC = ({ children, className, ...props }) => {
+type Props = {
+  children?: React.ReactNode | React.ReactElement;
+  className?: string;
+};
+
+export const UiMainTitle: FC<Props> = ({ children, className, ...props }) => {
   return (
     <h1 {...props} className={classNames(`title title_main`, className)}>
       {children}

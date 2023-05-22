@@ -1,24 +1,17 @@
-import "./ui-modal-window.scss";
-import classNames from "classnames";
-import { FC } from "react";
+import './ui-modal-window.scss';
+import classNames from 'classnames';
+import { FC } from 'react';
 
 interface IProps {
   visible: boolean;
-  children?: any;
+  children?: React.ReactNode | React.ReactElement;
   className?: string;
 }
 
-export const UiModal: FC<IProps> = ({
-  children,
-  className,
-  visible,
-  ...props
-}) => {
+export const UiModal: FC<IProps> = ({ children, className, visible, ...props }) => {
   return (
-    <aside
-      className={classNames("modal", className, { modal_opened: visible })}
-    >
-      <div {...props} className={classNames("modal__inner", className)}>
+    <aside className={classNames('modal', className, { modal_opened: visible })}>
+      <div {...props} className={classNames('modal__inner', className)}>
         {children}
       </div>
     </aside>

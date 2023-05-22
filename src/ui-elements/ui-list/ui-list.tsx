@@ -1,16 +1,16 @@
-import "./ui-list.scss";
-import classNames from "classnames";
-import { FC } from "react";
+import './ui-list.scss';
+import classNames from 'classnames';
+import { FC } from 'react';
 
 export enum ListType {
-  vertical = "list_vertical",
+  vertical = 'list_vertical',
 }
 
 interface IProps {
   centered?: boolean;
   type?: ListType;
   disc?: boolean;
-  children?: any;
+  children?: React.ReactNode | React.ReactElement;
   className?: string;
 }
 
@@ -23,10 +23,7 @@ export const UiList: FC<IProps> = ({
   ...props
 }) => {
   return (
-    <ul
-      {...props}
-      className={classNames(className, `list`, type, { disc, centered })}
-    >
+    <ul {...props} className={classNames(className, `list`, type, { disc, centered })}>
       {children}
     </ul>
   );
