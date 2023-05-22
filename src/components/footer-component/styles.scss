@@ -22,10 +22,23 @@
   .menu {
     margin-bottom: 36px;
 
+    &__item {
+      @include tablet {
+        position: static;
+      }
+    }
+
     @include tablet {
       &__list {
         flex-direction: column;
       }
+    }
+  }
+
+  &__body {
+    @include tablet {
+      position: relative;
+      width: 100%;
     }
   }
 
@@ -34,7 +47,9 @@
     left: 0;
     @include tablet {
       &__list {
-        left: -50px;
+        left: 0px;
+        right: 0;
+        bottom: 250px;
       }
     }
   }
