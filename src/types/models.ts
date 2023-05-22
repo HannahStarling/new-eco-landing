@@ -16,11 +16,17 @@ export interface IBenefitsArticle {
   };
 }
 
-export type FormValues<K> = Record<K, string | boolean | number | undefined>;
+export type FormValues<K> = Record<
+  K,
+  HTMLInputElement["value"] | HTMLInputElement["checked"]
+>;
 export type FormErrors<K> = Record<K, string>;
+export type FormValidationMessages<K> = Record<K, string>;
 
-export interface IUseFormArgument<V> {
-  initialValues: V;
-  onSubmit: IFormFunction<V>["onSubmit"];
-  validator: IFormFunction<V>["validator"];
+export interface IUseFormArgument<K> {
+  initialValues: FormValues<K>;
+  initialErrors: FormErrors<K>;
+  validationMessages: FormValidationMessages<K>;
+  onSubmit: IFormFunction<K>["onSubmit"];
+  validator: IFormFunction<K>["validator"];
 }

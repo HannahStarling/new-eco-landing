@@ -1,6 +1,6 @@
 import { EMPTY_STRING } from "@/constants/texts";
 import { ContactUsRequest } from "@/types/api";
-import { FormValues } from "@/types/models";
+import { FormErrors, FormValues } from "@/types/models";
 
 export enum FormType {
   tel = "tel",
@@ -81,4 +81,12 @@ export const CONTACT_US_FORM_INITIAL_VALUES: FormValuesContactUs = {
   Phone: EMPTY_STRING,
   EMail: EMPTY_STRING,
   Agreement: true,
+};
+export const CONTACT_US_FORM_INITIAL_ERRORS: FormErrors<FormFieldContactUs> = {
+  Organization: EMPTY_STRING,
+  Appointment: EMPTY_STRING,
+  Name: EMPTY_STRING,
+  Phone: EMPTY_STRING,
+  EMail: EMPTY_STRING,
+  Agreement: EMPTY_STRING,
 };

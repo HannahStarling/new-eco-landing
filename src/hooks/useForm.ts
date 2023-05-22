@@ -1,8 +1,7 @@
 import {ChangeEvent, useCallback, useEffect, useState} from "react";
 import {getToken} from "@/api/get-token";
-import {FormErrors, IUseFormArgument} from "@/types/models";
+import {FormErrors, FormValues, IUseFormArgument} from "@/types/models";
 import {FORM_TAG} from "@/constants/general";
-import {FormFieldContactUs} from "@/constants/form";
 
 /**
  * Хук, управляющей формой и её полями ввода.
@@ -14,18 +13,22 @@ import {FormFieldContactUs} from "@/constants/form";
  *     resetForm,
  *     handleSubmit,
  *   }
- * @param initialValues  Object with keys: input['name'], value: string/boolean/number
+ * @param initialValues  Object with keys: input['name'], value: string/boolean
  * @param onSubmit callback for submit
  * @param validator callback for validation setter
+ * @param validationMessages  Object with keys: input['name'], value: string
+ * @param initialErrors Object with keys: input['name'], value: string/boolean/number
  */
-export const useForm = <V>({
-  initialValues,
+export const useForm = <K>({
+  initialValues = {},
   onSubmit,
   validator = () => true,
-}: IUseFormArgument<V>) => {
-  const [values, setValues] = useState<V>(initialValues ?? {});
-  const [errors, setErrors] = useState<FormErrors<FormFieldContactUs>>({});
-  const [isValid, setIsValid] = useState(false);
+  validationMessages = {},
+  initialErrors = {},
+}: IUseFormArgument<K>) => {
+  const [values, setValues] = useState<FormValues<K>>(initialValues);
+  const [errors, setErrors] = useState<FormErrors<K>>(initialErrors);
+  const [isValid, setIsValid] = useState<boolean>(false);
   const [token, setToken] = useState<string | null>(null);
 
   useEffect(() => {
@@ -72,7 +75,7 @@ export const useForm = <V>({
     setErrors((prevErrors) => {
       return {
         ...prevErrors,
-        [name]: validationMessage,
+        [name]: validationMessages[name] ?? validationMessage,
       };
     });
 

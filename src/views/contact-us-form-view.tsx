@@ -6,9 +6,11 @@ import { handleContactUsSubmit } from "@/helpers/contact-us-form/contact-us";
 import { useForm } from "@/hooks/useForm";
 import { validateData } from "@/helpers/contact-us-form/validate-data";
 import {
+  CONTACT_US_FORM_INITIAL_ERRORS,
   CONTACT_US_FORM_INITIAL_VALUES,
   FormValuesContactUs,
 } from "@/constants/form";
+import { CONTACT_US_VALIDATION_MESSAGES } from "@/constants/validation";
 
 interface IProps {
   onClose?(): void;
@@ -20,6 +22,8 @@ export const ContactUsFormView: FC<IProps> = ({ onClose }) => {
       initialValues: CONTACT_US_FORM_INITIAL_VALUES,
       onSubmit: handleContactUsSubmit,
       validator: validateData,
+      initialErrors: CONTACT_US_FORM_INITIAL_ERRORS,
+      validationMessages: CONTACT_US_VALIDATION_MESSAGES,
     });
 
   return (

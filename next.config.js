@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  env: {
+    API_HOST: "https://react.intelogis.ru",
+    HTTPS: "true",
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

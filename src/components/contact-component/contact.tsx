@@ -32,7 +32,7 @@ export const Contact: FC = () => {
         <UiListItem>
           <UiSocial
             alt={"Иконка телефон."}
-            text={"+7 (903) 122-54-37"}
+            text={"+7 (495) 989 96 09"}
             img={IconName.Phone}
           />
         </UiListItem>

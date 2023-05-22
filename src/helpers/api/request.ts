@@ -1,6 +1,6 @@
 import { ContentType, Credential, HeadersMode, Method } from "@/types/api";
 import { BASE_URL } from "@/constants/api";
-import { createAuthorizationHeader } from "@/helpers/create-authorization-header";
+import { createAuthorizationHeader } from "@/helpers/api/create-authorization-header";
 import { buildFormDataRequest } from "@/helpers/api/build-form-data-request";
 import { prepareData } from "@/helpers/api/prepare-data";
 

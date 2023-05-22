@@ -41,7 +41,7 @@ export const PARTNERS = [
   },
 ];
 
-export const EMPTY_STRING = "";
+export const EMPTY_STRING: string = "";
 
 export const PLATFORM_MODULES_LIST = [
   "Управление заявками на перевозку",
