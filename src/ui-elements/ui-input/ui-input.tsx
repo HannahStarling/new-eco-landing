@@ -14,9 +14,11 @@ interface IProps {
   name: string;
   placeholder?: string;
   pattern?: string | null;
+  error?: string;
 }
 
 export const UiInput: FC<IProps> = ({
+  error,
   classname,
   required,
   id,
@@ -33,11 +35,18 @@ export const UiInput: FC<IProps> = ({
         {...props}
         id={id}
         type={type as string}
-        className={classNames("ui-input__field", classname)}
+        className={classNames("ui-input__field", classname, {
+          "ui-input_type_error": error,
+        })}
         name={name}
         pattern={pattern || undefined}
         required={required}
       />
+      {error && (
+        <span className="ui-input-error" aria-live="polite">
+          {error}
+        </span>
+      )}
       <label className="ui-input__label" htmlFor={id}>
         {label}
         {required && <span className="ui-input__label-required">*</span>}

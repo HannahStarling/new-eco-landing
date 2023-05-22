@@ -3,25 +3,25 @@
 import { FormFieldContactUs, FormFields } from "@/constants/form";
 import { UiInput } from "@/ui-elements/ui-input/ui-input";
 import classNames from "classnames";
-import { FC, FormEvent } from "react";
+import { ChangeEvent, FC, FormEvent } from "react";
 import "./form-component.scss";
 import { UiButton } from "@/ui-elements/ui-button/ui-button";
 import { UiTitle } from "@/ui-elements/ui-title/ui-title";
 import { UiIcon } from "@/ui-elements/ui-icon/ui-icon";
 import { IconName } from "@/ui-elements/ui-icon/icon-names";
-import { Method } from "@/types/api";
-import { FormValues } from "@/types/models";
+import { FormErrors, FormValues } from "@/types/models";
 
 interface IProps {
   className?: string;
-  action?: string;
-  method?: Method;
   values: FormValues<FormFieldContactUs>;
   isValid: boolean;
+  errors: FormErrors<FormFieldContactUs>;
+
+  onChange(e: ChangeEvent<HTMLInputElement>): void;
 
   onClose?(): void;
 
-  onSubmit(v: any): void;
+  onSubmit(values: FormValues<FormFieldContactUs>): void;
 }
 
 export const FormComponent: FC<IProps> = ({
@@ -31,6 +31,7 @@ export const FormComponent: FC<IProps> = ({
   onSubmit,
   className,
   onClose,
+  errors,
 }) => {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
@@ -57,6 +58,7 @@ export const FormComponent: FC<IProps> = ({
         {Object.entries(FormFields).map(([name, field]) => {
           return (
             <UiInput
+              error={errors[name]}
               id={name}
               key={name}
               name={name}

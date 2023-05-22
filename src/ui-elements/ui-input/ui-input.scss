@@ -5,6 +5,25 @@
   flex-direction: column-reverse;
   font-weight: $input-font-weight;
 
+  &-error {
+    box-sizing: border-box;
+    min-height: 20px;
+    display: block;
+    padding: 6px 0 0;
+    font-size: 10px;
+    line-height: 12px;
+    color: var(--colors-accent-red-bright);
+  }
+
+  &_type_error {
+    color: var(--colors-accent-red-bright);
+    border-bottom-color: var(--colors-accent-red-bright);
+
+    &:focus, :active {
+      border-bottom-color: var(--colors-accent-red-bright);
+    }
+  }
+
   &__label {
     font-size: $input-label-font-size;
     line-height: $input-label-line-height;

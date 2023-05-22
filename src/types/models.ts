@@ -17,6 +17,7 @@ export interface IBenefitsArticle {
 }
 
 export type FormValues<K> = Record<K, string | boolean | number | undefined>;
+export type FormErrors<K> = Record<K, string>;
 
 export interface IUseFormArgument<V> {
   initialValues: V;

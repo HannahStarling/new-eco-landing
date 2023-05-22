@@ -19,7 +19,7 @@ type InputProps = {
   placeholder: string;
   type: FormType;
   required: boolean;
-  pattern?: RegExp | null;
+  pattern: string | null;
 };
 export type FormValuesContactUs = FormValues<FormFieldContactUs>;
 
@@ -30,7 +30,7 @@ export const FormFields: Record<FormFieldContactUs, InputProps> = {
     type: FormType.text,
     className: null,
     required: true,
-    pattern: null,
+    pattern: "^[А-ЯЁ][а-яё]{1,40}$",
   },
   Phone: {
     text: "Телефон",
@@ -38,7 +38,7 @@ export const FormFields: Record<FormFieldContactUs, InputProps> = {
     type: FormType.tel,
     className: null,
     required: true,
-    pattern: null,
+    pattern: "^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$",
   },
   EMail: {
     text: "Электронная почта",
@@ -54,6 +54,7 @@ export const FormFields: Record<FormFieldContactUs, InputProps> = {
     type: FormType.text,
     className: null,
     required: false,
+    pattern: null,
   },
   Appointment: {
     text: "Должность",
@@ -61,6 +62,7 @@ export const FormFields: Record<FormFieldContactUs, InputProps> = {
     type: FormType.text,
     className: null,
     required: false,
+    pattern: null,
   },
   Agreement: {
     text: "Нажимая кнопку “Отправить”, я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ “О персональных данных”, на условиях и для целей, оперделенных в Согласии на обработку персональных данных",
@@ -68,5 +70,15 @@ export const FormFields: Record<FormFieldContactUs, InputProps> = {
     className: "custom-checkbox",
     required: false,
     placeholder: EMPTY_STRING,
+    pattern: null,
   },
+};
+
+export const CONTACT_US_FORM_INITIAL_VALUES: FormValuesContactUs = {
+  Organization: EMPTY_STRING,
+  Appointment: EMPTY_STRING,
+  Name: EMPTY_STRING,
+  Phone: EMPTY_STRING,
+  EMail: EMPTY_STRING,
+  Agreement: true,
 };

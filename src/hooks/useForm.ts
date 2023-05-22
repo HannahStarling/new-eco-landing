@@ -1,7 +1,8 @@
 import {ChangeEvent, useCallback, useEffect, useState} from "react";
 import {getToken} from "@/api/get-token";
+import {FormErrors, IUseFormArgument} from "@/types/models";
 import {FORM_TAG} from "@/constants/general";
-import {IUseFormArgument} from "@/types/models";
+import {FormFieldContactUs} from "@/constants/form";
 
 /**
  * Хук, управляющей формой и её полями ввода.
@@ -23,7 +24,7 @@ export const useForm = <V>({
   validator = () => true,
 }: IUseFormArgument<V>) => {
   const [values, setValues] = useState<V>(initialValues ?? {});
-  const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState<FormErrors<FormFieldContactUs>>({});
   const [isValid, setIsValid] = useState(false);
   const [token, setToken] = useState<string | null>(null);
 
@@ -56,9 +57,10 @@ export const useForm = <V>({
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked, validationMessage, closest } = e.target;
+    const { name, value, type, checked, validationMessage } = e.target;
 
-    const isValid = closest(FORM_TAG).checkValidity() && validator({ values });
+    const isValid =
+      e.target.closest(FORM_TAG).checkValidity() && validator({ values });
 
     setValues((prevValues) => {
       return {
