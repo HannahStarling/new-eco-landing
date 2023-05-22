@@ -18,7 +18,6 @@ export const validateData: IFormFunction<FormValuesContactUs>["validator"] = ({
       Agreement: true,
     }
   );
-  console.log(check);
   const isValid = Object.values(check);
   return isValid.every((valid) => valid);
 };
