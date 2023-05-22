@@ -1,7 +1,7 @@
-import {ChangeEvent, useCallback, useEffect, useState} from "react";
-import {getToken} from "@/api/get-token";
-import {FormErrors, FormValues, IUseFormArgument} from "@/types/models";
-import {FORM_TAG} from "@/constants/general";
+import { ChangeEvent, useCallback, useEffect, useState } from 'react';
+import { getToken } from '@/api/get-token';
+import { FormErrors, FormValues, IUseFormArgument } from '@/types/models';
+import { FORM_TAG } from '@/constants/general';
 
 /**
  * Хук, управляющей формой и её полями ввода.
@@ -25,6 +25,7 @@ export const useForm = <K>({
   validator = () => true,
   validationMessages = {},
   initialErrors = {},
+  handleApiError,
 }: IUseFormArgument<K>) => {
   const [values, setValues] = useState<FormValues<K>>(initialValues);
   const [errors, setErrors] = useState<FormErrors<K>>(initialErrors);
@@ -36,8 +37,9 @@ export const useForm = <K>({
       try {
         const { data } = await getToken();
         setToken(data);
-      } catch (error) {
+      } catch (error: any) {
         console.error(error);
+        handleApiError(error.name);
       } finally {
       }
     }
@@ -51,24 +53,23 @@ export const useForm = <K>({
       setErrors(resetErrors);
       setIsValid(resetIsValid);
     },
-    [initialValues]
+    [initialValues],
   );
 
   const handleSubmit = (values) => {
     if (!Boolean(values.Agreement && isValid)) return;
-    onSubmit({ payload: values, resetForm, token });
+    onSubmit({ payload: values, resetForm, token, handleApiError });
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked, validationMessage } = e.target;
 
-    const isValid =
-      e.target.closest(FORM_TAG).checkValidity() && validator({ values });
+    const isValid = e.target.closest(FORM_TAG).checkValidity() && validator({ values });
 
     setValues((prevValues) => {
       return {
         ...prevValues,
-        [name]: type === "checkbox" ? checked : value,
+        [name]: type === 'checkbox' ? checked : value,
       };
     });
     /** Если необходимо выводить ошибки (feedback) */
@@ -77,9 +78,7 @@ export const useForm = <K>({
         ? initialErrors
         : {
             ...prevErrors,
-            [name]:
-              Boolean(validationMessage) &&
-              (validationMessages[name] ?? validationMessage),
+            [name]: Boolean(validationMessage) && (validationMessages[name] ?? validationMessage),
           };
     });
 
