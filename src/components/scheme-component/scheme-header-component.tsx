@@ -22,7 +22,7 @@ export const SchemeHeaderComponent = () => {
         </div>
         <div className="scheme-head__right">
           <span className="scheme-head__text scheme-head__text_right">
-            {SchemeHeaderText.left}
+            {SchemeHeaderText.right}
           </span>
           <span className="scheme-head__border" />
         </div>

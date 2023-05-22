@@ -9,14 +9,18 @@
     @include flex-column-center;
     @include gap-large;
     @include mobile {
-      gap: 24px
+      gap: 24px;
     }
   }
 
   &__preferences {
-    @include gap-medium;
+    @include gap-extra-small;
     @include mobile {
-      gap: 28px
+      gap: 28px;
+    }
+
+    .paragraph {
+      font-size: 20px;
     }
   }
 
@@ -49,7 +53,7 @@
 
       &-item {
         display: flex;
-        gap: 14px
+        gap: 14px;
       }
     }
 
