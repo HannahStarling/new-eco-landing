@@ -73,10 +73,14 @@ export const useForm = <K>({
     });
     /** Если необходимо выводить ошибки (feedback) */
     setErrors((prevErrors) => {
-      return {
-        ...prevErrors,
-        [name]: validationMessages[name] ?? validationMessage,
-      };
+      return isValid
+        ? initialErrors
+        : {
+            ...prevErrors,
+            [name]:
+              Boolean(validationMessage) &&
+              (validationMessages[name] ?? validationMessage),
+          };
     });
 
     setIsValid(isValid);
