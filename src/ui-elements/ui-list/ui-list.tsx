@@ -1,6 +1,6 @@
 import "./ui-list.scss";
 import classNames from "classnames";
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 
 export enum ListType {
   vertical = "list_vertical",
@@ -14,7 +14,7 @@ interface IProps {
   className?: string;
 }
 
-export const UiList: FC<IProps> = ({
+export const UiList: FC<PropsWithChildren<IProps>> = ({
   children,
   className,
   type,

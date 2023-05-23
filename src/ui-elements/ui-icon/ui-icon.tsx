@@ -1,6 +1,6 @@
 "use client";
 
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import Image from "next/image";
 import classNames from "classnames";
 import { IconName } from "./icon-names";
@@ -18,7 +18,7 @@ export interface IProps {
 
 const ROOT_PATH = "/assets/icons/";
 
-export const UiIcon: FC<IProps> = ({
+export const UiIcon: FC<PropsWithChildren<IProps>> = ({
   alt,
   className,
   name,

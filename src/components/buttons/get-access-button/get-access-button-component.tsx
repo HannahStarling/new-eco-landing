@@ -1,5 +1,5 @@
 import "./get-access-button-component.scss";
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import { UiButtonProps } from "@/ui-elements/ui-button/ui-button";
 import classNames from "classnames";
 import { ConnectModal } from "@/components/connect-modal/connect-modal";
@@ -15,7 +15,7 @@ interface IProps extends UiButtonProps {
   cover?: boolean;
 }
 
-export const GetAccessButtonComponent: FC<IProps> = ({
+export const GetAccessButtonComponent: FC<PropsWithChildren<IProps>> = ({
   children,
   mode = "dark",
   fillType = "outlined",

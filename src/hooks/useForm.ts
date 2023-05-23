@@ -2,6 +2,7 @@ import {ChangeEvent, useCallback, useEffect, useState} from "react";
 import {getToken} from "@/api/get-token";
 import {FormErrors, FormValues, IUseFormArgument} from "@/types/models";
 import {FORM_TAG} from "@/constants/general";
+import {IFormFunction} from "@/types/functions";
 
 /**
  * Хук, управляющей формой и её полями ввода.
@@ -19,12 +20,12 @@ import {FORM_TAG} from "@/constants/general";
  * @param validationMessages  Object with keys: input['name'], value: string
  * @param initialErrors Object with keys: input['name'], value: string/boolean/number
  */
-export const useForm = <K>({
-  initialValues = {},
+export const useForm = <K extends string | number | symbol>({
+  initialValues,
   onSubmit,
   validator = () => true,
-  validationMessages = {},
-  initialErrors = {},
+  validationMessages,
+  initialErrors,
 }: IUseFormArgument<K>) => {
   const [values, setValues] = useState<FormValues<K>>(initialValues);
   const [errors, setErrors] = useState<FormErrors<K>>(initialErrors);
@@ -45,25 +46,29 @@ export const useForm = <K>({
     tokenCheck();
   }, []);
 
-  const resetForm = useCallback(
-    (resetValues = initialValues, resetErrors = {}, resetIsValid = false) => {
+  const resetForm: IFormFunction<K>["resetForm"] = useCallback(
+    (
+      resetValues = initialValues,
+      resetErrors = initialErrors,
+      resetIsValid = false
+    ) => {
       setValues(resetValues);
       setErrors(resetErrors);
       setIsValid(resetIsValid);
     },
-    [initialValues]
+    [initialValues, initialErrors]
   );
 
-  const handleSubmit = (values) => {
+  const handleSubmit = (values: FormValues<K> & { Agreement: boolean }) => {
     if (!Boolean(values.Agreement && isValid)) return;
-    onSubmit({ payload: values, resetForm, token });
+    token && onSubmit({ payload: values, resetForm, token });
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked, validationMessage } = e.target;
 
     const isValid =
-      e.target.closest(FORM_TAG).checkValidity() && validator({ values });
+      e.target.closest(FORM_TAG)?.checkValidity() && validator({ values });
 
     setValues((prevValues) => {
       return {
@@ -79,11 +84,11 @@ export const useForm = <K>({
             ...prevErrors,
             [name]:
               Boolean(validationMessage) &&
-              (validationMessages[name] ?? validationMessage),
+              (validationMessages[name as K] ?? validationMessage),
           };
     });
 
-    setIsValid(isValid);
+    setIsValid(Boolean(isValid));
   };
 
   return {

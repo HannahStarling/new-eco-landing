@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import { UiCard } from "@/ui-elements/ui-card/ui-card";
 import { UiIcon } from "@/ui-elements/ui-icon/ui-icon";
 import { IconName } from "@/ui-elements/ui-icon/icon-names";
@@ -11,7 +11,10 @@ interface IProps {
   color?: Color;
 }
 
-export const Comment: FC<IProps> = ({ children, color = "green" }) => {
+export const Comment: FC<PropsWithChildren<IProps>> = ({
+  children,
+  color = "green",
+}) => {
   return (
     <UiCard className="comment">
       <UiIcon

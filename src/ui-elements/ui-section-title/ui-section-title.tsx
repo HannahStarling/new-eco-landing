@@ -1,13 +1,13 @@
 import "./ui-section-title.scss";
 import classNames from "classnames";
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 
 interface IProps {
   children?: any;
   className?: string;
 }
 
-export const UiSectionTitle: FC<IProps> = ({
+export const UiSectionTitle: FC<PropsWithChildren<IProps>> = ({
   children,
   className,
   ...props

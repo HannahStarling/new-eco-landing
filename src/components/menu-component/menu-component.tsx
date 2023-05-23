@@ -4,7 +4,7 @@ import { UiListItem } from "@/ui-elements/ui-list-item/ui-list-item";
 import { UiList } from "@/ui-elements/ui-list/ui-list";
 import "./styles.scss";
 import { SubMenuComponent } from "./sub-menu-component/sub-menu-component";
-import { FC, MouseEvent } from "react";
+import { FC, MouseEvent, PropsWithChildren } from "react";
 import { useMenu } from "@/hooks/useMenu";
 import classNames from "classnames";
 import Link from "next/link";
@@ -19,7 +19,7 @@ interface IProps {
   isWhiteHeader: boolean;
 }
 
-export const MenuComponent: FC<IProps> = ({
+export const MenuComponent: FC<PropsWithChildren<IProps>> = ({
   placement = MenuPlacement.header,
   isWhiteHeader,
 }) => {

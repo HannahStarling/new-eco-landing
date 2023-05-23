@@ -1,5 +1,5 @@
 import "./feature-card.scss";
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import { UiCard } from "@/ui-elements/ui-card/ui-card";
 import { ImageType } from "@/types/image";
 import { UiIcon } from "@/ui-elements/ui-icon/ui-icon";
@@ -13,10 +13,18 @@ interface IProps {
   img: ImageType;
 }
 
-export const FeatureCard: FC<IProps> = ({ title, list, img }) => {
+export const FeatureCard: FC<PropsWithChildren<IProps>> = ({
+  title,
+  list,
+  img,
+}) => {
   return (
     <UiCard className="feature-card">
-      <UiIcon alt="GPS иконка" name={img.name} size={{ width: img.width, height: img.height }} />
+      <UiIcon
+        alt="GPS иконка"
+        name={img.name}
+        size={{ width: img.width, height: img.height }}
+      />
       <UiTitle size={TitleSize.medium}>{title}</UiTitle>
       {list && (
         <UiList type={ListType.vertical} disc>

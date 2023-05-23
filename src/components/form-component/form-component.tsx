@@ -1,9 +1,15 @@
 "use client";
 
-import { FormFieldContactUs, FormFields } from "@/constants/form";
+import { FormFieldContactUs, FormFields, InputProps } from "@/constants/form";
 import { UiInput } from "@/ui-elements/ui-input/ui-input";
 import classNames from "classnames";
-import { ChangeEvent, FC, FormEvent } from "react";
+import {
+  ChangeEvent,
+  FC,
+  FormEvent,
+  InputHTMLAttributes,
+  PropsWithChildren,
+} from "react";
 import "./form-component.scss";
 import { UiButton } from "@/ui-elements/ui-button/ui-button";
 import { UiTitle } from "@/ui-elements/ui-title/ui-title";
@@ -24,7 +30,7 @@ interface IProps {
   onSubmit(values: FormValues<FormFieldContactUs>): void;
 }
 
-export const FormComponent: FC<IProps> = ({
+export const FormComponent: FC<PropsWithChildren<IProps>> = ({
   isValid,
   values,
   onChange,
@@ -55,7 +61,9 @@ export const FormComponent: FC<IProps> = ({
         )}
       </div>
       <form onSubmit={handleSubmit}>
-        {Object.entries(FormFields).map(([name, field]) => {
+        {(
+          Object.entries(FormFields) as Array<[FormFieldContactUs, InputProps]>
+        ).map(([name, field]) => {
           return (
             <UiInput
               error={errors[name]}
@@ -68,8 +76,10 @@ export const FormComponent: FC<IProps> = ({
               classname={field.className}
               placeholder={field.placeholder}
               required={field.required}
-              checked={values[name]}
-              value={values[name]}
+              checked={Boolean(values[name])}
+              value={
+                values[name] as InputHTMLAttributes<HTMLInputElement>["value"]
+              }
               onChange={onChange}
             />
           );

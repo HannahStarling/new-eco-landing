@@ -1,6 +1,6 @@
 import "./ui-paragraph.scss";
 import classNames from "classnames";
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 
 interface IProps {
   size?: ParagraphSize;
@@ -33,7 +33,7 @@ export enum ParagraphSize {
   extraSmall = "paragraph_extra-small",
 }
 
-export const UiParagraph: FC<IProps> = ({
+export const UiParagraph: FC<PropsWithChildren<IProps>> = ({
   children,
   className,
   size = ParagraphSize.medium,

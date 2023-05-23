@@ -1,12 +1,15 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import classNames from "classnames";
 import "./ui-chips.scss";
 
 interface IProps {
+  className?: string;
   big?: boolean;
   label?: string;
 }
 
-export const UiChips: FC<IProps> = ({ children, className, big = false }) => (
-  <p className={classNames(className, "ui-chips", { big })}>{children}</p>
-);
+export const UiChips: FC<PropsWithChildren<IProps>> = ({
+  children,
+  className,
+  big = false,
+}) => <p className={classNames(className, "ui-chips", { big })}>{children}</p>;

@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import {
   IOption,
   UiRadioGroup,
@@ -11,7 +11,10 @@ interface IProps {
   onCheck({ checked, item }: { checked: boolean; item: IOption }): void;
 }
 
-export const TariffsPeriodRadio: FC<IProps> = ({ onCheck, checked }) => {
+export const TariffsPeriodRadio: FC<PropsWithChildren<IProps>> = ({
+  onCheck,
+  checked,
+}) => {
   return (
     <UiRadioGroup
       className={"tariffs__period-radio-group"}

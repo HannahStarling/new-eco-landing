@@ -1,14 +1,15 @@
 "use client";
 
 import classNames from "classnames";
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 
 interface IProps {
-  onBurgerClick: () => void;
+  onBurgerClick(): void;
+
   isOpen: boolean;
 }
 
-export const HeaderBurgerComponent: FC<IProps> = ({
+export const HeaderBurgerComponent: FC<PropsWithChildren<IProps>> = ({
   onBurgerClick,
   isOpen,
 }) => {

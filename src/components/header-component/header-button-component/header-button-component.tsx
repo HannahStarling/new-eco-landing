@@ -1,14 +1,15 @@
 import { BUTTONS_CONTENT } from "@/constants/texts";
 import { UiButton } from "@/ui-elements/ui-button/ui-button";
 import classNames from "classnames";
-import { FC, ReactNode } from "react";
+import { FC, PropsWithChildren } from "react";
 
 interface IProps {
-  children?: ReactNode;
   isWhiteHeader: boolean;
 }
 
-export const HeaderButtonComponent: FC<IProps> = ({ isWhiteHeader }) => {
+export const HeaderButtonComponent: FC<PropsWithChildren<IProps>> = ({
+  isWhiteHeader,
+}) => {
   return (
     <div className="header__button button">
       <UiButton

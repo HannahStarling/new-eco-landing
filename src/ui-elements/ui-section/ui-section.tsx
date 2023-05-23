@@ -1,6 +1,6 @@
 import "./ui-section.scss";
 import classNames from "classnames";
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 
 interface IProps {
   children?: any;
@@ -8,7 +8,7 @@ interface IProps {
   fullWidth?: boolean;
 }
 
-export const UiSection: FC<IProps> = ({
+export const UiSection: FC<PropsWithChildren<IProps>> = ({
   children,
   className,
   fullWidth = false,

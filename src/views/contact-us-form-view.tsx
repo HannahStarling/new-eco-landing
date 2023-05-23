@@ -1,6 +1,6 @@
 "use client";
 
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import { FormComponent } from "@/components/form-component/form-component";
 import { handleContactUsSubmit } from "@/helpers/contact-us-form/contact-us";
 import { useForm } from "@/hooks/useForm";
@@ -16,7 +16,9 @@ interface IProps {
   onClose?(): void;
 }
 
-export const ContactUsFormView: FC<IProps> = ({ onClose }) => {
+export const ContactUsFormView: FC<PropsWithChildren<IProps>> = ({
+  onClose,
+}) => {
   const { values, isValid, handleChange, handleSubmit, errors } =
     useForm<FormValuesContactUs>({
       initialValues: CONTACT_US_FORM_INITIAL_VALUES,

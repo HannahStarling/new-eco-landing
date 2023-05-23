@@ -1,4 +1,5 @@
 import { IFormFunction } from "@/types/functions";
+import { InputHTMLAttributes } from "react";
 
 export enum Role {
   Carrier = "Carrier",
@@ -16,14 +17,17 @@ export interface IBenefitsArticle {
   };
 }
 
-export type FormValues<K> = Record<
+export type FormValues<K extends string | symbol | number> = Record<
   K,
-  HTMLInputElement["value"] | HTMLInputElement["checked"]
+  InputHTMLAttributes<HTMLInputElement>["value"] | HTMLInputElement["checked"]
 >;
-export type FormErrors<K> = Record<K, string>;
-export type FormValidationMessages<K> = Record<K, string>;
+export type FormErrors<K extends string | symbol | number> = Record<K, string>;
+export type FormValidationMessages<K extends string | symbol | number> = Record<
+  K,
+  string
+>;
 
-export interface IUseFormArgument<K> {
+export interface IUseFormArgument<K extends string | symbol | number> {
   initialValues: FormValues<K>;
   initialErrors: FormErrors<K>;
   validationMessages: FormValidationMessages<K>;

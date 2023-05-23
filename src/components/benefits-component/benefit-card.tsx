@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import { UiCard } from "@/ui-elements/ui-card/ui-card";
 import { TitleSize, UiTitle } from "@/ui-elements/ui-title/ui-title";
 import { UiAccent } from "@/ui-elements/ui-accent/ui-accent";
@@ -17,7 +17,11 @@ interface IProps {
   list: IBenefitsArticle["list"];
 }
 
-export const BenefitCard: FC<IProps> = ({ accent, text, list }) => {
+export const BenefitCard: FC<PropsWithChildren<IProps>> = ({
+  accent,
+  text,
+  list,
+}) => {
   return (
     <UiCard>
       <UiTitle size={TitleSize.small}>
