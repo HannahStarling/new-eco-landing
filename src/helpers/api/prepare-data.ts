@@ -1,4 +1,4 @@
-export const prepareData = (res) => {
+export const prepareData = (res: Response) => {
   return res.ok
     ? res.json()
     : Promise.reject({

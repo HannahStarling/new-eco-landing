@@ -20,7 +20,7 @@ import { IFormFunction } from "@/types/functions";
  * @param validationMessages  Object with keys: input['name'], value: string
  * @param initialErrors Object with keys: input['name'], value: string/boolean/number
  */
-export const useForm = <K extends string | number | symbol>({
+export const useForm = <K>({
   initialValues,
   onSubmit,
   validator = () => true,
@@ -40,7 +40,7 @@ export const useForm = <K extends string | number | symbol>({
         setToken(data);
       } catch (error: any) {
         console.error(error);
-        handleApiError(error.name);
+        handleApiError?.(error.name);
       } finally {
       }
     }
@@ -86,7 +86,7 @@ export const useForm = <K extends string | number | symbol>({
             ...prevErrors,
             [name]:
               Boolean(validationMessage) &&
-              (validationMessages[name as K] ?? validationMessage),
+              (validationMessages[name] ?? validationMessage),
           };
     });
 

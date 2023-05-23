@@ -6,5 +6,5 @@ export const sendRequest = ({
   token,
 }: {
   token?: string | undefined;
-  body?: Request | undefined;
+  body?: Request;
 }) => request({ url: APIURL.sendRequest, body, token });

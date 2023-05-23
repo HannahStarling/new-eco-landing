@@ -1,21 +1,39 @@
+"use client";
+
 import "./ui-list-item.scss";
 import classNames from "classnames";
-import { FC, PropsWithChildren } from "react";
+import {
+  FC,
+  MouseEventHandler,
+  PropsWithChildren,
+  SyntheticEvent,
+} from "react";
 
 interface IProps {
   disc?: boolean;
   children?: any;
   className?: string;
+  elementKey?: string;
+  handleSetActive?: (
+    e: SyntheticEvent<Element, Event>,
+    key: string | undefined
+  ) => void;
 }
 
 export const UiListItem: FC<PropsWithChildren<IProps>> = ({
   children,
   className,
   disc = false,
+  elementKey,
+  handleSetActive,
   ...props
 }) => {
   return (
-    <li className={classNames(className, `list-item`, { disc })} {...props}>
+    <li
+      onClick={(event: SyntheticEvent) => handleSetActive?.(event, elementKey)}
+      className={classNames(className, `list-item`, { disc })}
+      {...props}
+    >
       {children}
     </li>
   );

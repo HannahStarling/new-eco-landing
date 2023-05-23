@@ -2,12 +2,12 @@ import { UiListItem } from "@/ui-elements/ui-list-item/ui-list-item";
 import { ListType, UiList } from "@/ui-elements/ui-list/ui-list";
 import classNames from "classnames";
 import Link from "next/link";
-import { FC, MouseEvent, PropsWithChildren } from "react";
+import { FC, MouseEvent, PropsWithChildren, SyntheticEvent } from "react";
 
 interface IProps {
   className?: string | null;
   menu?: Record<string, { name: string; sectionID: string }> | null;
-  handleScroll: (e: MouseEvent<HTMLAnchorElement, MouseEvent<any>>) => void;
+  handleScroll: (e: SyntheticEvent) => void;
 }
 
 export const SubMenuComponent: FC<PropsWithChildren<IProps>> = ({
