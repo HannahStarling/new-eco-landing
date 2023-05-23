@@ -36,7 +36,6 @@ export const PARTNERS = [
   { name: "Грузовладельцам" },
   {
     name: "Партнерам",
-    // TODO: заменить на нормальый линк, когда придет от бэка
     url: "/assets/files/intelogis_presentation.pdf",
   },
 ];
