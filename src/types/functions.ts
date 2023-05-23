@@ -1,19 +1,19 @@
 import { FormValues } from '@/types/models';
 
-export interface IFormFunction<V> {
+export interface IFormFunction<V extends string | number | symbol> {
   validator({ values, rules }: { values: FormValues<V>; rules?: Record<string, RegExp> }): boolean;
 
-  resetFrom(resetValues: FormValues<V>, resetErrors: {}, resetIsValid: boolean): void;
+  resetForm(resetValues?: FormValues<V>, resetErrors?: {}, resetIsValid?: boolean): void;
 
   onSubmit({
     payload,
     token,
-    resetFrom,
+    resetForm,
     handleApiError,
   }: {
     payload: FormValues<V>;
-    token: string;
-    resetFrom: IFormFunction<V>['resetFrom'];
+    token: string | null;
+    resetForm: IFormFunction<V>['resetForm'];
     handleApiError: (error: string) => void;
   }): void;
 }

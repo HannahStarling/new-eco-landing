@@ -19,7 +19,7 @@ import { FORM_TAG } from '@/constants/general';
  * @param validationMessages  Object with keys: input['name'], value: string
  * @param initialErrors Object with keys: input['name'], value: string/boolean/number
  */
-export const useForm = <K>({
+export const useForm = <K extends string | number | symbol>({
   initialValues = {},
   onSubmit,
   validator = () => true,
@@ -56,7 +56,7 @@ export const useForm = <K>({
     [initialValues],
   );
 
-  const handleSubmit = (values) => {
+  const handleSubmit = (values: any) => {
     if (!Boolean(values.Agreement && isValid)) return;
     onSubmit({ payload: values, resetForm, token, handleApiError });
   };
