@@ -1,0 +1,56 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.tender {
+
+  &__list {
+    width: calc(264 / 1440 * 100vw);
+    @include gap-extra-small;
+
+    @include laptop {
+      min-width: 185px;
+    }
+
+    @include tablet {
+      flex-direction: row;
+      @include full-width;
+      min-height: 252px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__view {
+    align-items: center;
+    display: flex;
+    @include gap-medium;
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__card {
+    @include gap-small;
+    @include laptop {
+      padding: 45px 20px;
+    }
+
+    @include tablet {
+      height: 100%;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    @include gap-large;
+    @include laptop {
+      flex-direction: column;
+      @include gap-medium;
+    }
+  }
+}

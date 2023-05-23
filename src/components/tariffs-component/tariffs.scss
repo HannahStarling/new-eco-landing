@@ -1,0 +1,66 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.tariffs {
+  @include flex-column-center;
+
+  &__content {
+    padding-top: 16px;
+    @include flex-column-center;
+    @include gap-large;
+    @include mobile {
+      gap: 24px;
+    }
+  }
+
+  &__preferences {
+    @include gap-extra-small;
+    @include mobile {
+      gap: 28px;
+    }
+
+    .paragraph {
+      font-size: 20px;
+    }
+  }
+
+  &__period-radio-group {
+    @include tablet {
+      flex-direction: column;
+      //NOTE: чтобы без лишних обёрток сделать отступ 28, который отличается от общего flow
+      padding-top: 4px;
+      @include gap-medium;
+    }
+  }
+
+  &__card {
+    width: 360px;
+
+    @include mobile {
+      width: 336px;
+    }
+
+    &-button {
+      @include full-width;
+    }
+
+    &-content {
+      padding: 24px;
+    }
+
+    &-list {
+      @include gap-small;
+
+      &-item {
+        display: flex;
+        gap: 14px;
+      }
+    }
+
+    &s {
+      @include gap-medium;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}

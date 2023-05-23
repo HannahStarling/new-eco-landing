@@ -1,0 +1,78 @@
+.form {
+  max-width: 576px;
+  position: relative;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+
+    &-title {
+      font-size: 20px;
+    }
+
+    &-close {
+      cursor: pointer;
+    }
+  }
+
+  &__submit {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  .ui-input {
+    margin-bottom: 16px;
+    outline: var(--colors-neutrals-super-light);
+  }
+
+  /* для элемента input c type="checkbox" */
+  .custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    bottom: 0;
+    & + label {
+      display: inline-flex;
+      user-select: none;
+      margin-top: 5px;
+    }
+    & + label::before {
+      content: "";
+      display: inline-block;
+      width: 1.5rem;
+      height: 1.5rem;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border: 1px solid var(--colors-neutrals-light);
+      border-radius: 0.25em;
+      margin-right: 0.8em;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 50% 50%;
+    }
+    &:not(:disabled):not(:checked) + label:hover::before {
+      border-color: var(--colors-accent-blue-powder);
+    }
+    &:not(:disabled):active + label::before {
+      background-color: var(--colors-accent-blue-powder);
+      border-color: var(--colors-accent-blue-powder);
+    }
+    &:focus + label::before {
+      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+    &:focus:not(:checked) + label::before {
+      border-color: var(--colors-accent-blue-powder);
+    }
+    &:checked + label::before {
+      border-color: var(--colors-accent-blue);
+      background-color: var(--colors-accent-blue);
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+    }
+    &:disabled + label::before {
+      background-color: var(--colors-accent-blue-pale);
+    }
+  }
+}

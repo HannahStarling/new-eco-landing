@@ -1,95 +1,51 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import "./styles/page.scss";
+import { HeaderComponent } from "@/components/header-component/header-component";
+import { FooterComponent } from "@/components/footer-component/footer-component";
+import { MainComponent } from "@/components/main-component/main-component";
+import { Benefits } from "@/components/benefits-component/benefits";
+import { CommentsList } from "@/components/comments-list-component/comments-list";
+import { Companies } from "@/components/companies-component/companies";
+import { PlatformModules } from "@/components/platform-modules-component/platform-modules";
+import { FullCycle } from "@/components/full-cycle-component/full-cycle-component";
+import { ThePlatformAdjusts } from "@/components/the-platform-adjusts-component/the-platform-adjusts";
+import { Tender } from "@/components/tender-component/tender";
+import { Edo } from "@/components/EDO-component/EDO";
+import { MobileApp } from "@/components/mobile-app-component/mobile-app";
+import { Implementing } from "@/components/implementing-component/implementing";
+import { Tariffs } from "@/components/tariffs-component/tariffs";
+import { SchemeComponent } from "@/components/scheme-component/scheme-component";
+import { Monitoring } from "@/components/monitoring-component/monitoring-component";
+import { Planning } from "@/components/planning/planning";
+import { IntegrationAnalysis } from "@/components/integration-analysis-component/integration-analysis";
+import { OneSpecialist } from "@/components/one-specialist-component/one-specialist";
+import { Contact } from "@/components/contact-component/contact";
+import { Comparison } from "@/components/comparison-component/comparison";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editingg&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    <div className="wrapper">
+      <HeaderComponent />
+      <MainComponent>
+        <Benefits />
+        <PlatformModules />
+        <FullCycle />
+        <OneSpecialist />
+        <ThePlatformAdjusts />
+        <SchemeComponent />
+        <Planning />
+        <Tender />
+        <Monitoring />
+        <Edo />
+        <IntegrationAnalysis />
+        <MobileApp />
+        <Comparison />
+        <Implementing />
+        <Tariffs />
+        <CommentsList />
+        <Companies />
+        <Contact />
+      </MainComponent>
+      <FooterComponent />
+    </div>
+  );
 }

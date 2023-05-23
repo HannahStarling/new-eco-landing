@@ -1,0 +1,40 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.planning-feature-card {
+  width: 264px;
+  min-width: 175px;
+  gap: 16px;
+  height: 226px;
+  justify-content: center;
+
+  @include laptop {
+    width: calc((264 / 1304) * 100vw);;
+  }
+
+  @include tablet {
+    min-width: 336px;
+  }
+
+  @include mobile {
+    min-width: 298px;
+    width: auto;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .accent {
+    font-size: 30px;
+    line-height: 40px;
+    padding: 0;
+  }
+
+  .title {
+    padding: 0;
+  }
+}

@@ -1,0 +1,43 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.incorporate {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    align-items: center;
+  }
+
+  &__text {
+    font-size: 28px;
+    max-width: 900px;
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__stages {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-row-gap: 40px;
+    grid-column-gap: 24px;
+
+    @include tablet {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: column;
+      max-width: 360px;
+      @include gap-medium;
+    }
+
+    @include mobile {
+      .stage-card {
+        width: auto;
+        max-width: none;
+        justify-content: space-between;
+      }
+    }
+  }
+}

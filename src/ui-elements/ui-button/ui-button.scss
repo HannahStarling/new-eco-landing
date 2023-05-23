@@ -1,0 +1,87 @@
+@import './constants';
+
+.ui-button {
+  font-size: $button-font-size;
+  font-weight: 600;
+  border: none;
+  border-radius: $button-border-radius;
+  cursor: pointer;
+  height: $button-height;
+  padding: $button-padding;
+
+  &__filled {
+    color: var(--colors-typography-white);
+
+    &.ui-button__light {
+      background-color: var(--colors-accent-blue);
+    }
+
+    &.ui-button__dark {
+      background-color: var(--colors-accent-blue-super-dark);
+    }
+
+    &:hover {
+      background-color: var(--colors-accent-blue-dark);
+    }
+
+    &:active {
+      background-color: var(--colors-accent-blue-extra-dark);
+    }
+
+    &.ui-button__disabled {
+      background-color: var(--colors-neutrals-light);
+      cursor: not-allowed;
+
+      &:hover {
+        background-color: var(--colors-neutrals-light);
+      }
+
+      &:active {
+        background-color: var(--colors-neutrals-light);
+      }
+    }
+  }
+
+  &__outlined {
+    background-color: transparent;
+
+    &.ui-button__light {
+      color: var(--colors-accent-blue);
+      border: 1px solid var(--colors-accent-blue);
+    }
+
+    &.ui-button__dark {
+      color: var(--colors-accent-blue-super-dark);
+      border: 1px solid var(--colors-accent-blue-super-dark);
+      background-color: transparent;
+    }
+
+    &:hover {
+      color: var(--colors-accent-blue-dark);
+      border: 1px solid var(--colors-accent-blue-dark);
+    }
+
+    &:active {
+      color: var(--colors-typography-white);
+      border: 1px solid var(--colors-accent-blue-dark);
+      background-color: var(--colors-accent-blue-extra-dark);
+    }
+
+    &.ui-button__disabled {
+      color: var(--colors-neutrals-light);
+      border: 1px solid var(--colors-neutrals-light);
+      background-color: transparent;
+      cursor: not-allowed;
+
+      &:hover {
+        color: var(--colors-neutrals-light);
+        border: 1px solid var(--colors-neutrals-light);
+      }
+
+      &:active {
+        color: var(--colors-neutrals-light);
+        border: 1px solid var(--colors-neutrals-light);
+      }
+    }
+  }
+}

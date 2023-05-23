@@ -1,0 +1,19 @@
+@import './constants';
+
+.ui-chips {
+  width: calc(#{$chips-max-width} / 1440 * 100vw);
+  max-width: #{$chips-max-width}px;
+  padding: 4px;
+  background: var(--colors-accent-green-main);
+  border-radius: $chips-border-radius;
+  color: var(--colors-neutrals-white);
+  font-size: $chips-font-size;
+  line-height: $chips-line-height;
+  font-weight: $chips-font-weight;
+  text-align: center;
+
+  &.big {
+    width: calc((#{$chips-big-max-width} / 1440) * 100vw);
+    max-width: #{$chips-big-max-width}px;
+  }
+}

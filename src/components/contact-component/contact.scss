@@ -1,0 +1,40 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.contact {
+  display: grid;
+  grid-template-areas: 'title form' 'social-list form';
+  grid-template-columns: 1fr 576px;
+  gap: 40px 96px;
+
+  @include laptop {
+    gap: 40px;
+  }
+
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__title {
+    grid-area: title;
+    @include mobile {
+      padding: 0;
+    }
+  }
+
+  &__list {
+    grid-area: social-list;
+    @include gap-medium;
+  }
+
+  &__form {
+    grid-area: form;
+  }
+
+  .card {
+    border: none;
+  }
+}

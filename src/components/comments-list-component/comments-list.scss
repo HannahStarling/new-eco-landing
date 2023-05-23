@@ -1,0 +1,43 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.comments-list {
+  &__list {
+    display: flex;
+    justify-content: center;
+    @include gap-medium;
+  }
+
+  .title_section {
+    padding-bottom: 40px;
+  }
+}
+
+@media only screen and (max-width: 1053px) {
+  .comments-list__list {
+    flex-wrap: wrap;
+    @include gap-medium;
+
+    .comment {
+      width: 330px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .comments-list__list {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .comments-list__list {
+    flex-wrap: wrap;
+    @include gap-medium;
+
+    .comment {
+      width: auto;
+      max-width: none;
+    }
+  }
+}

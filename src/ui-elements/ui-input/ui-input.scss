@@ -1,0 +1,93 @@
+@import "constants";
+
+.ui-input {
+  display: flex;
+  flex-direction: column-reverse;
+  font-weight: $input-font-weight;
+
+  &-error {
+    box-sizing: border-box;
+    min-height: 20px;
+    display: block;
+    padding: 6px 0 0;
+    font-size: 10px;
+    line-height: 12px;
+    color: var(--colors-accent-red-bright);
+  }
+
+  &_type_error {
+    color: var(--colors-accent-red-bright);
+    border-bottom-color: var(--colors-accent-red-bright);
+
+    &:focus, :active {
+      border-bottom-color: var(--colors-accent-red-bright);
+    }
+  }
+
+  &__label {
+    font-size: $input-label-font-size;
+    line-height: $input-label-line-height;
+    margin-bottom: $input-label-margin-bottom;
+
+    &-required {
+      color: var(--colors-accent-red-bright);
+      margin-left: $input-label-required-margin-left;
+    }
+  }
+
+  &__field {
+    border-radius: $input-border-radius;
+    border: 1px solid var(--colors-neutrals-super-light);
+    font-size: $input-font-size;
+    line-height: $input-line-height;
+    max-height: $input-height;
+    max-width: $input-width;
+    padding: $input-padding;
+
+    &::placeholder {
+      color: var(--colors-neutrals-light);
+    }
+
+    &:hover {
+      border-color: var(--colors-neutrals-super-dark);
+    }
+
+    &:focus,
+    &:focus-visible {
+      border-color: var(--colors-accent-blue) !important;
+      outline: none;
+    }
+
+    &:disabled {
+      background: var(--colors-neutrals-light-clean);
+      color: var(--colors-typography-light);
+      border-color: var(--colors-neutrals-light-clean);
+
+      &::placeholder {
+        color: var(--colors-typography-light);
+      }
+    }
+
+    &:not(:focus):not(:placeholder-shown):invalid {
+      border-color: var(--colors-accent-red-bright);
+    }
+
+    &:not(:focus):not(:placeholder-shown):valid {
+      border-color: var(--colors-neutrals-super-light);
+    }
+
+    &::-webkit-search-cancel-button {
+      cursor: pointer;
+      -webkit-appearance: none;
+      background: no-repeat url("/public/assets/icons/Close.svg");
+      height: 14px;
+      width: 14px;
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .ui-input__field {
+    max-width: 288px;
+  }
+}

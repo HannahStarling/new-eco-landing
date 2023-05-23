@@ -1,0 +1,89 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.integration-analysis {
+  &__list {
+    width: 100%;
+    @include gap-medium;
+
+    @include laptop {
+      min-width: 185px;
+    }
+
+    @include tablet {
+      flex-direction: row;
+      @include full-width;
+      min-height: 252px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__view {
+    display: grid;
+    grid-template-columns: 264px 1fr;
+
+    @include gap-medium;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__card {
+    @include gap-small;
+    @include laptop {
+      padding: 45px 20px;
+    }
+
+    @include tablet {
+      height: 100%;
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    &_board-start {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include laptop {
+        position: static;
+      }
+    }
+
+    &_board-new {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      @include laptop {
+        position: static;
+      }
+    }
+
+    &s {
+      position: relative;
+      @include tablet {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+
+
+  &__content {
+    @include gap-large;
+    @include laptop {
+      display: flex;
+      flex-direction: column;
+      @include gap-medium;
+    }
+  }
+}

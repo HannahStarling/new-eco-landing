@@ -1,0 +1,14 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.accent {
+  @include bold;
+
+  &_green {
+    color: var(--colors-accent-green-main);
+  }
+
+  &_blue {
+    color: var(--colors-accent-blue);
+  }
+}

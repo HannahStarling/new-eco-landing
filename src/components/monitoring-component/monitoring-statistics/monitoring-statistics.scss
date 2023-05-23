@@ -1,0 +1,39 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.monitoring-statistics {
+  flex: 1;
+  border: none;
+
+  @include desktop {
+    width: calc(360 / 1440 * 100vw);
+  }
+  
+  @include tablet {
+    width: auto;
+  }
+
+  &__region, &__mileage {
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--colors-neutrals-super-light);
+  }
+
+  &__region-title {
+    margin-bottom: 12px;
+  }
+
+  &__mileage {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .paragraph {
+      font-weight: 600;
+    }
+
+    .accent {
+      font-size: 38px;
+      line-height: 40px;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.link-info {
+  display: flex;
+  justify-content: space-between;
+
+  @include tablet {
+    @include flex-center;
+  }
+
+  .title {
+    max-width: 390px;
+    width: calc(400 / 1440 * 100vw);
+
+    @include tablet {
+      max-width: none;
+      width: auto;
+      text-align: center;
+    }
+  }
+
+  button {
+    width: 222px;
+    height: 36px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  @include tablet {
+    flex-direction: column;
+    gap: 40px
+  }
+}

@@ -1,0 +1,37 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+.top {
+  padding: 110px 0;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  &__container {
+    text-align: center;
+  }
+
+  .modal {
+    text-align: left;
+  }
+
+  &__head.title {
+    color: var(--colors-typography-white);
+    font-weight: var(--font-weights-medium);
+    margin-bottom: 64px;
+
+    @include mobile {
+      margin-bottom: 44px;
+      font-size: 36px;
+    }
+  }
+
+  &__access.ui-button {
+    font-weight: var(--font-weights-medium);
+    min-width: 220px;
+    max-width: 360px;
+  }
+}

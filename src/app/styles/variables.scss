@@ -1,0 +1,39 @@
+// colors
+:root {
+  // typography
+  --colors-typography-white: #fff;
+  --colors-typography-main: #232735;
+  --colors-typography-medium: #505565;
+  --colors-typography-light: #8b90a0;
+
+  // neutrals
+  --colors-neutrals-super-dark: #231f20;
+  --colors-neutrals-dark: #4e4e5a;
+  --colors-neutrals-medium: #7c7e87;
+  --colors-neutrals-light: #a1a4b1;
+  --colors-neutrals-super-light: #d3d4d8;
+  --colors-neutrals-white: #fff;
+  --colors-neutrals-light-clean: #f0f1f3;
+
+  // accent
+  --colors-accent-green-main: #0d9b1b;
+  --colors-accent-green-bright: #33be3d;
+  --colors-accent-acid-green: #d5fe61;
+  --colors-accent-yellow-bright: #faf546;
+  --colors-accent-yellow: #f4cd51;
+  --colors-accent-blue-acid: #091bad;
+  --colors-accent-blue-super-dark: #01306f;
+  --colors-accent-blue-extra-dark: #0049ad;
+  --colors-accent-blue-dark: #005ad3;
+  --colors-accent-blue: #2f80ed;
+  --colors-accent-blue-powder: #afc9f0;
+  --colors-accent-blue-pale: #e7effc;
+  --colors-accent-red-bright: #f93737;
+  --colors-accent-red-medium: #eb5757;
+
+  --font-weights-bold: 700;
+  --font-weights-medium: 600;
+  --font-weights-normal: 400;
+
+  --max-width-container: 1152px;
+}

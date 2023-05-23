@@ -1,0 +1,65 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.planning {
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @include gap-large;
+
+    @include desktop {
+      @include gap-medium;
+    }
+
+    @include laptop {
+      @include gap-small;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      @include flex-center;
+    }
+
+    &-features {
+      display: flex;
+      flex-direction: column;
+      @include gap-medium;
+    }
+
+    &-algorithms {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      @include gap-small;
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    &-map {
+      @include desktop-md {
+        height: calc((476 / 648) * (648 / 1304) * 100vw);
+        width: calc((648 / 1304) * 100vw);
+      }
+
+      @include tablet {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .service-card {
+    height: 76px;
+
+    @include tablet {
+      min-width: 336px;
+    }
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+}

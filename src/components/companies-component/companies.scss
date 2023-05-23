@@ -1,0 +1,38 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.companies {
+  .title_section {
+    padding-bottom: 40px;
+  }
+  
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 24px;
+
+    @include tablet {
+      align-items: center;
+      row-gap: 12px;
+    }
+
+    .card {
+      width: 206px;
+      height: 124px;
+      justify-content: center;
+      align-items: center;
+
+      @include tablet {
+        width: auto;
+        height: 107px;
+      }
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+}
+

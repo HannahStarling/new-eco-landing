@@ -1,0 +1,9 @@
+@mixin disc {
+  &.disc {
+    list-style: disc;
+  }
+}
+
+.list-item {
+  @include disc;
+}

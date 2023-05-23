@@ -1,0 +1,39 @@
+@import "@/app/styles/paths.scss";
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.main {
+  position: relative;
+  flex: 1 1 auto;
+  z-index: 1;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+    @include mobile {
+      gap: 80px;
+    }
+
+    .section:nth-child(1) {
+      padding-top: 160px;
+
+      @include mobile {
+        padding-top: 40px;
+      }
+    }
+
+    .section:nth-child(1),
+    .section:nth-child(4),
+    .section:nth-child(6),
+    .section:nth-child(9),
+    .section:nth-child(13),
+    .section:nth-child(18) {
+      background: url($backgroud-img) no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+}

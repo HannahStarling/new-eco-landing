@@ -1,0 +1,56 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.footer {
+  padding: 36px 0;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-bottom: 8px;
+  }
+
+  &__copyright {
+    color: #8b90a0;
+  }
+
+  .menu {
+    margin-bottom: 36px;
+
+    &__item {
+      @include tablet {
+        position: static;
+      }
+    }
+
+    @include tablet {
+      &__list {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__body {
+    @include tablet {
+      position: relative;
+      width: 100%;
+    }
+  }
+
+  .submenu {
+    bottom: 50px;
+    left: 0;
+    @include tablet {
+      &__list {
+        left: 0px;
+        right: 0;
+        bottom: 250px;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+@mixin disc {
+  &.disc {
+    padding-left: 20px;
+  }
+}
+
+.list {
+  display: flex;
+  @include centered;
+  @include disc;
+
+  &_vertical {
+    flex-direction: column;
+  }
+}

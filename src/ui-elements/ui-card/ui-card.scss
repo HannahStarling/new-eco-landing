@@ -1,0 +1,40 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--colors-neutrals-white);
+  border: 1px solid var(--colors-neutrals-super-light);
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-sizing: border-box;
+
+  &_square {
+    padding: 20px;
+    @include centered-text;
+  }
+
+  &_extra-large {
+    padding: 32px 20px;
+    @include centered-text;
+  }
+
+  &_large {
+    padding: 24px 20px;
+    @include centered-text;
+  }
+
+  &_medium {
+    padding: 16px 20px;
+    @include gap-small;
+    @include centered-text;
+  }
+
+  &_small {
+    padding: 16px 20px;
+    @include centered-text;
+  }
+}

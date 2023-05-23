@@ -1,0 +1,96 @@
+@import "@/app/styles/paths.scss";
+.menu {
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item {
+    position: relative;
+    margin: 0 12px;
+    height: 40px;
+    line-height: 40px;
+    cursor: pointer;
+
+    a {
+      display: block;
+    }
+
+    a:link,
+    a:visited {
+      display: block;
+      color: inherit;
+    }
+
+    a:active,
+    a:hover,
+    a:focus {
+      color: var(--colors-accent-blue-dark);
+    }
+
+    .item {
+      &__name {
+        margin-right: 19px;
+      }
+
+      &__icon {
+        line-height: 0.5;
+        margin-right: 15px;
+      }
+    }
+
+    &_submenu {
+      padding-right: 25px;
+      background: url($icon-down-black) no-repeat center right;
+      transition: all 0.2s ease;
+      font-weight: var(--font-weights-medium);
+
+      &:hover {
+        background: url($icon-up-black) no-repeat center right;
+
+        .submenu {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+}
+
+.submenu {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  min-width: 286px;
+  background-color: var(--colors-typography-white);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 3;
+
+  &__subitem {
+    line-height: 1.5;
+    color: var(--colors-typography-main);
+
+    a {
+      padding: 10px 12px;
+    }
+
+    a:hover,
+    a:focus {
+      color: inherit;
+      background: var(--colors-accent-blue-pale);
+    }
+
+    a:active {
+      color: var(--colors-typography-white);
+      background: var(--colors-accent-blue);
+    }
+  }
+
+  &__name {
+    display: block;
+  }
+}

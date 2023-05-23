@@ -1,0 +1,35 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.benefits {
+  padding: 50px 12px;
+
+  &__article {
+    padding-bottom: 100px;
+
+    &:last-of-type {
+      padding-bottom: 0;
+    }
+  }
+
+  &__chips-list {
+    @include gap-medium;
+    @include laptop {
+      .ui-chips {
+        min-width: 264px;
+      }
+      flex-direction: column;
+    }
+  }
+
+  @include mobile {
+    display: none;
+  }
+  .paragraph {
+    font-weight: var(--font-weights-medium);
+  }
+
+  .ui-button {
+    max-width: 264px;
+  }
+}

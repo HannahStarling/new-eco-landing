@@ -1,0 +1,89 @@
+@mixin title {
+  font-weight: var(--font-weights-bold);
+  line-height: 120%;
+}
+
+@mixin bold {
+  &.bold {
+    font-size: 25px;
+    font-weight: var(--font-weights-large);
+    line-height: 144%;
+  }
+}
+
+@mixin centered-text {
+  &.centered {
+    text-align: center;
+  }
+}
+
+@mixin full-width {
+  width: 100%;
+}
+
+// __FLEX&GRID__
+@mixin flex-center {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+@mixin flex-column-center {
+  @include flex-center;
+  flex-direction: column;
+}
+
+@mixin centered {
+  &.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@mixin gap-large {
+  gap: 40px;
+}
+
+@mixin gap-medium {
+  gap: 24px;
+}
+
+@mixin gap-small {
+  gap: 16px;
+}
+
+@mixin gap-extra-small {
+  gap: 12px;
+}
+
+// __ADAPTIVE__
+@mixin mobile {
+  @media all and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media all and (max-width: $breakpoint-laptop) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media all and (max-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media all and (max-width: $breakpoint-desktop-md) {
+    @content;
+  }
+}
+
+@mixin desktop-md {
+  @media all and (max-width: $breakpoint-desktop-lg) {
+    @content;
+  }
+}

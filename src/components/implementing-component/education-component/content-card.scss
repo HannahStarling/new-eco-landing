@@ -1,0 +1,21 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.content-card {
+  height: 335px;
+  justify-content: center;
+
+  @include tablet {
+    width: 360px;
+    height: fit-content;
+  }
+
+  @include mobile {
+    width: auto;
+  }
+
+  .title {
+    line-height: 120%;
+    font-size: 24px;
+  }
+}

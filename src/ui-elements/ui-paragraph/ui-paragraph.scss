@@ -1,0 +1,42 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
+.paragraph {
+  font-weight: 400;
+  line-height: 130%;
+  color: var(--colors-typography-main);
+
+  &_extra-large {
+    font-size: 24px;
+    line-height: 133%;
+    @include centered-text;
+    @include bold;
+  }
+
+  &_large {
+    font-size: 20px;
+    line-height: 120%;
+    @include centered-text;
+    @include bold;
+  }
+
+  &_medium {
+    font-size: 18px;
+    @include centered-text;
+    @include bold;
+  }
+
+  &_small {
+    font-size: 16px;
+    line-height: 133%;
+    @include centered-text;
+    @include bold;
+  }
+
+  &_extra-small {
+    font-size: 12px;
+    line-height: 133%;
+    @include centered-text;
+    @include bold;
+  }
+}
