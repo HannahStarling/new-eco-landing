@@ -4,9 +4,9 @@ import classNames from "classnames";
 import { FC, PropsWithChildren } from "react";
 
 interface IProps {
-  onBurgerClick(): void;
-
   isOpen: boolean;
+
+  onBurgerClick(): void;
 }
 
 export const HeaderBurgerComponent: FC<PropsWithChildren<IProps>> = ({

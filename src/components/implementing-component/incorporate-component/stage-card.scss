@@ -12,7 +12,7 @@
     line-height: 120%;
   }
 
-  &__text{
+  &__text {
     display: flex;
     flex-direction: column;
     @include gap-extra-small;
