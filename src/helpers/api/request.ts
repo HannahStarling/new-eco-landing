@@ -1,8 +1,8 @@
-import { ContentType, Credential, HeadersMode, Method } from "@/types/api";
-import { BASE_URL } from "@/constants/api";
-import { createAuthorizationHeader } from "@/helpers/api/create-authorization-header";
-import { buildFormDataRequest } from "@/helpers/api/build-form-data-request";
-import { prepareData } from "@/helpers/api/prepare-data";
+import { ContentType, Credential, HeadersMode, Method } from '@/types/api';
+import { BASE_URL } from '@/constants/api';
+import { createAuthorizationHeader } from '@/helpers/api/create-authorization-header';
+import { buildFormDataRequest } from '@/helpers/api/build-form-data-request';
+import { prepareData } from '@/helpers/api/prepare-data';
 
 export const request = ({
   url,
@@ -12,7 +12,7 @@ export const request = ({
 }: {
   url: string;
   method?: Method;
-  token?: string;
+  token?: string | null;
   body?: Request;
 }) => {
   const input = `${BASE_URL}${url}`;
@@ -21,8 +21,7 @@ export const request = ({
     method,
     headers: {
       Accept: ContentType.JSON,
-      "Content-Type":
-        method === Method.GET ? ContentType.JSON : ContentType.FormData,
+      'Content-Type': method === Method.GET ? ContentType.JSON : ContentType.FormData,
       ...(!!token && { Authorization: createAuthorizationHeader(token) }),
     },
     ...(!!body && { body: buildFormDataRequest(body) }),
