@@ -1,13 +1,11 @@
 import { UiSection } from "@/ui-elements/ui-section/ui-section";
 import "./top-picture.scss";
 import classNames from "classnames";
-import { FC, ReactNode } from "react";
+import { FC, PropsWithChildren } from "react";
 
-interface IProps {
-  children: ReactNode;
-}
+interface IProps {}
 
-export const TopPicture: FC<IProps> = ({ children }) => {
+export const TopPicture: FC<PropsWithChildren<IProps>> = ({ children }) => {
   return (
     <UiSection fullWidth className={classNames("top-picture")}>
       {children}

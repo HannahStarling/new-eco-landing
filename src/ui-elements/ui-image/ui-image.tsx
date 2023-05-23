@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import Image from "next/image";
 import classNames from "classnames";
 import { ImageName, ImageSize } from "@/ui-elements/ui-image/image-names";
@@ -11,7 +11,11 @@ export interface IProps {
   alt: string;
 }
 
-export const UiImage: FC<IProps> = ({ alt, className, name }) => {
+export const UiImage: FC<PropsWithChildren<IProps>> = ({
+  alt,
+  className,
+  name,
+}) => {
   return (
     <Image
       width={ImageSize[name].width}

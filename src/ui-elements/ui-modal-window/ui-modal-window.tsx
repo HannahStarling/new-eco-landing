@@ -1,6 +1,6 @@
 import "./ui-modal-window.scss";
 import classNames from "classnames";
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 
 interface IProps {
   visible: boolean;
@@ -8,7 +8,7 @@ interface IProps {
   className?: string;
 }
 
-export const UiModal: FC<IProps> = ({
+export const UiModal: FC<PropsWithChildren<IProps>> = ({
   children,
   className,
   visible,

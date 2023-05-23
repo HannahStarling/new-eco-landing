@@ -1,6 +1,6 @@
 import "./ui-card.scss";
 import classNames from "classnames";
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 
 export enum CardSize {
   /**
@@ -32,7 +32,7 @@ export interface IProps {
   className?: string;
 }
 
-export const UiCard: FC<IProps> = ({
+export const UiCard: FC<PropsWithChildren<IProps>> = ({
   children,
   className,
   size = CardSize.medium,

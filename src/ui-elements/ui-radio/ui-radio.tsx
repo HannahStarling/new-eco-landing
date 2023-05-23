@@ -7,14 +7,14 @@ import classNames from "classnames";
 
 export interface IUiRadioProps
   extends InputHTMLAttributes<InputHTMLAttributes<RadioNodeList>> {
-  onCheck({ checked, item }: { checked: boolean; item: IOption }): void;
-
   item: IOption;
   autoFocus?: boolean;
   checked?: boolean;
   defaultChecked?: boolean;
   disabled?: boolean;
   value: any;
+
+  onCheck({ checked, item }: { checked: boolean; item: IOption }): void;
 }
 
 export const UiRadio: FC<IUiRadioProps> = ({

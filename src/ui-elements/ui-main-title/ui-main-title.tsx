@@ -1,8 +1,16 @@
 import "./ui-main-title.scss";
 import classNames from "classnames";
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 
-export const UiMainTitle: FC = ({ children, className, ...props }) => {
+interface IProps {
+  className?: string;
+}
+
+export const UiMainTitle: FC<PropsWithChildren<IProps>> = ({
+  children,
+  className,
+  ...props
+}) => {
   return (
     <h1 {...props} className={classNames(`title title_main`, className)}>
       {children}

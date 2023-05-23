@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import { UiAccent } from "@/ui-elements/ui-accent/ui-accent";
 import { TitleSize, UiTitle } from "@/ui-elements/ui-title/ui-title";
 import { ImageType } from "@/types/image";
@@ -15,7 +15,12 @@ interface IProps {
   accent?: string;
 }
 
-export const FeatureCard: FC<IProps> = ({ title, img, text, accent }) => {
+export const FeatureCard: FC<PropsWithChildren<IProps>> = ({
+  title,
+  img,
+  text,
+  accent,
+}) => {
   return (
     <UiCard className="planning-feature-card">
       <div className="planning-feature-card__header">
@@ -23,7 +28,7 @@ export const FeatureCard: FC<IProps> = ({ title, img, text, accent }) => {
         {img && (
           <UiIcon
             name={img.name}
-            alt={img.alt || 'Функция'}
+            alt={img.alt || "Функция"}
             size={{ width: img.width, height: img.height }}
           />
         )}

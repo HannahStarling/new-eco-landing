@@ -1,5 +1,5 @@
 import "./content-card.scss";
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import { TitleSize, UiTitle } from "@/ui-elements/ui-title/ui-title";
 import { UiCard } from "@/ui-elements/ui-card/ui-card";
 import {
@@ -13,7 +13,7 @@ interface IProps {
   text: string;
 }
 
-export const ContentCard: FC<IProps> = ({ title, text }) => {
+export const ContentCard: FC<PropsWithChildren<IProps>> = ({ title, text }) => {
   return (
     <UiCard className="content-card">
       <UiTitle size={TitleSize.medium}>

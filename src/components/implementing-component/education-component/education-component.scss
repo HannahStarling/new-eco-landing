@@ -13,7 +13,7 @@
   .title_section {
     padding-bottom: 40px;
   }
-  
+
   &__info {
     display: flex;
     gap: 27px;
@@ -46,7 +46,7 @@
         @include tablet {
           width: 360px;
         }
-      
+
         @include mobile {
           width: auto;
         }

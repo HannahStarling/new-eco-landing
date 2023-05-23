@@ -1,7 +1,7 @@
 "use client";
 
 import "./detail-button-component.scss";
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import { UiButton, UiButtonProps } from "@/ui-elements/ui-button/ui-button";
 import { BUTTONS_CONTENT } from "@/constants/texts";
 import classNames from "classnames";
@@ -13,7 +13,7 @@ interface IProps extends UiButtonProps {
   url?: string;
 }
 
-export const DetailButtonComponent: FC<IProps> = ({
+export const DetailButtonComponent: FC<PropsWithChildren<IProps>> = ({
   full = false,
   uppercase = true,
   className,
@@ -24,16 +24,17 @@ export const DetailButtonComponent: FC<IProps> = ({
   return (
     <UiButton
       className={classNames(
-        'button-get-detail',
+        "button-get-detail",
         {
           full,
           uppercase,
         },
-        className,
+        className
       )}
       onClick={onClick}
-      mode={'dark'}
-      fillType={'outlined'}>
+      mode={"dark"}
+      fillType={"outlined"}
+    >
       {BUTTONS_CONTENT.DETAIL}
     </UiButton>
   );

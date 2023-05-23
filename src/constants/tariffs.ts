@@ -23,7 +23,7 @@ export enum PeriodName {
   Decade = "3 месяца",
 }
 
-export const PERIODS = Object.keys(Period);
+export const PERIODS = Object.keys(Period) as Array<Period>;
 
 export type Cost = Record<Period, { price: number }> | string;
 

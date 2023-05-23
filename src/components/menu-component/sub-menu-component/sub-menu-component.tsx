@@ -2,7 +2,7 @@ import { UiListItem } from "@/ui-elements/ui-list-item/ui-list-item";
 import { ListType, UiList } from "@/ui-elements/ui-list/ui-list";
 import classNames from "classnames";
 import Link from "next/link";
-import { FC, MouseEvent } from "react";
+import { FC, MouseEvent, PropsWithChildren } from "react";
 
 interface IProps {
   className?: string | null;
@@ -10,7 +10,7 @@ interface IProps {
   handleScroll: (e: MouseEvent<HTMLAnchorElement, MouseEvent<any>>) => void;
 }
 
-export const SubMenuComponent: FC<IProps> = ({
+export const SubMenuComponent: FC<PropsWithChildren<IProps>> = ({
   className,
   menu,
   handleScroll,
@@ -21,20 +21,22 @@ export const SubMenuComponent: FC<IProps> = ({
       type={ListType.vertical}
       className={classNames("submenu submenu__list", className)}
     >
-      {Object.values(menu).map((menuItem, index) => (
-        <UiListItem
-          key={menuItem.name + index}
-          className={"submenu__subitem subitem"}
-        >
-          {menuItem?.sectionID ? (
-            <Link href={menuItem.sectionID} onClick={handleScroll}>
+      {(Object.values(menu) as Array<{ name: string; sectionID: string }>).map(
+        (menuItem, index) => (
+          <UiListItem
+            key={menuItem.name + index}
+            className={"submenu__subitem subitem"}
+          >
+            {menuItem?.sectionID ? (
+              <Link href={menuItem.sectionID} onClick={handleScroll}>
+                <span className="subitem__name">{menuItem.name}</span>
+              </Link>
+            ) : (
               <span className="subitem__name">{menuItem.name}</span>
-            </Link>
-          ) : (
-            <span className="subitem__name">{menuItem.name}</span>
-          )}
-        </UiListItem>
-      ))}
+            )}
+          </UiListItem>
+        )
+      )}
     </UiList>
   );
 };

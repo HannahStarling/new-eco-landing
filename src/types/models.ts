@@ -1,8 +1,9 @@
-import { IFormFunction } from '@/types/functions';
+import { IFormFunction } from "@/types/functions";
+import { InputHTMLAttributes } from "react";
 
 export enum Role {
-  Carrier = 'Carrier',
-  CargoOwner = 'CargoOwner',
+  Carrier = "Carrier",
+  CargoOwner = "CargoOwner",
 }
 
 export interface IBenefitsArticle {
@@ -16,15 +17,21 @@ export interface IBenefitsArticle {
   };
 }
 
-export type FormValues<K> = Record<K, HTMLInputElement['value'] | HTMLInputElement['checked']>;
-export type FormErrors<K> = Record<K, string>;
-export type FormValidationMessages<K> = Record<K, string>;
+export type FormValues<K extends string | symbol | number> = Record<
+  K,
+  InputHTMLAttributes<HTMLInputElement>["value"] | HTMLInputElement["checked"]
+>;
+export type FormErrors<K extends string | symbol | number> = Record<K, string>;
+export type FormValidationMessages<K extends string | symbol | number> = Record<
+  K,
+  string
+>;
 
-export interface IUseFormArgument<K> {
+export interface IUseFormArgument<K extends string | symbol | number> {
   initialValues: FormValues<K>;
   initialErrors: FormErrors<K>;
   validationMessages: FormValidationMessages<K>;
-  onSubmit: IFormFunction<K>['onSubmit'];
-  validator: IFormFunction<K>['validator'];
+  onSubmit: IFormFunction<K>["onSubmit"];
+  validator: IFormFunction<K>["validator"];
   handleApiError: (error: string) => void;
 }

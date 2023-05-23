@@ -1,6 +1,6 @@
 import "./ui-list-item.scss";
 import classNames from "classnames";
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 
 interface IProps {
   disc?: boolean;
@@ -8,7 +8,7 @@ interface IProps {
   className?: string;
 }
 
-export const UiListItem: FC<IProps> = ({
+export const UiListItem: FC<PropsWithChildren<IProps>> = ({
   children,
   className,
   disc = false,

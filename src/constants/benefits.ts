@@ -1,14 +1,13 @@
-import { BenefitsArticle } from "@/components/benefits-component/benefits-article";
 import {
   CARGO_OWNER_LIST,
   CARRIER_CHIPS_LIST,
   CARRIER_LIST,
 } from "@/constants/texts";
-import { Role } from "@/types/models";
+import { IBenefitsArticle, Role } from "@/types/models";
 
 export const BENEFITS_ARTICLES: Array<Role> = [Role.CargoOwner, Role.Carrier];
 
-export const BENEFITS_ARTICLE: Record<Role, BenefitsArticle> = {
+export const BENEFITS_ARTICLE: Record<Role, IBenefitsArticle> = {
   [Role.Carrier]: {
     title: "Перевозчикам",
     accent: "1 специалист ведет 50-100 авто",

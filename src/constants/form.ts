@@ -13,13 +13,13 @@ export enum FormType {
 
 export type FormFieldContactUs = keyof ContactUsRequest | "Agreement";
 
-type InputProps = {
+export type InputProps = {
   className: string | null;
   text: string;
   placeholder: string;
   type: FormType;
   required: boolean;
-  pattern: string | null;
+  pattern?: string;
 };
 export type FormValuesContactUs = FormValues<FormFieldContactUs>;
 
@@ -46,7 +46,6 @@ export const FormFields: Record<FormFieldContactUs, InputProps> = {
     type: FormType.email,
     className: null,
     required: true,
-    pattern: null,
   },
   Organization: {
     text: "Название компании",
@@ -54,7 +53,6 @@ export const FormFields: Record<FormFieldContactUs, InputProps> = {
     type: FormType.text,
     className: null,
     required: false,
-    pattern: null,
   },
   Appointment: {
     text: "Должность",
@@ -62,7 +60,6 @@ export const FormFields: Record<FormFieldContactUs, InputProps> = {
     type: FormType.text,
     className: null,
     required: false,
-    pattern: null,
   },
   Agreement: {
     text: "Нажимая кнопку “Отправить”, я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ “О персональных данных”, на условиях и для целей, оперделенных в Согласии на обработку персональных данных",
@@ -70,7 +67,6 @@ export const FormFields: Record<FormFieldContactUs, InputProps> = {
     className: "custom-checkbox",
     required: false,
     placeholder: EMPTY_STRING,
-    pattern: null,
   },
 };
 

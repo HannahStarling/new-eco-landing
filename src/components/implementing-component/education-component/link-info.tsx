@@ -1,5 +1,5 @@
 import "./link-info.scss";
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import { TitleSize, UiTitle } from "@/ui-elements/ui-title/ui-title";
 import { ConnectModal } from "@/components/connect-modal/connect-modal";
 
@@ -7,7 +7,7 @@ interface IProps {
   text: string;
 }
 
-export const LinkInfo: FC<IProps> = ({ text }) => {
+export const LinkInfo: FC<PropsWithChildren<IProps>> = ({ text }) => {
   return (
     <div className="link-info">
       <UiTitle size={TitleSize.medium}>{text}</UiTitle>
