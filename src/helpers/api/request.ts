@@ -21,8 +21,6 @@ export const request = ({
     method,
     headers: {
       Accept: ContentType.JSON,
-      "Content-Type":
-        method === Method.GET ? ContentType.JSON : ContentType.FormData,
       ...(!!token && { Authorization: createAuthorizationHeader(token) }),
     },
     ...(!!body && { body: buildFormDataRequest(body) }),
