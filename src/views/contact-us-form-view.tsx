@@ -8,7 +8,6 @@ import { validateData } from "@/helpers/contact-us-form/validate-data";
 import {
   CONTACT_US_FORM_INITIAL_ERRORS,
   CONTACT_US_FORM_INITIAL_VALUES,
-  FormValuesContactUs,
 } from "@/constants/form";
 import { CONTACT_US_VALIDATION_MESSAGES } from "@/constants/validation";
 
@@ -19,14 +18,13 @@ interface IProps {
 export const ContactUsFormView: FC<PropsWithChildren<IProps>> = ({
   onClose,
 }) => {
-  const { values, isValid, handleChange, handleSubmit, errors } =
-    useForm<FormValuesContactUs>({
-      initialValues: CONTACT_US_FORM_INITIAL_VALUES,
-      onSubmit: handleContactUsSubmit,
-      validator: validateData,
-      initialErrors: CONTACT_US_FORM_INITIAL_ERRORS,
-      validationMessages: CONTACT_US_VALIDATION_MESSAGES,
-    });
+  const { values, isValid, handleChange, handleSubmit, errors } = useForm({
+    initialValues: CONTACT_US_FORM_INITIAL_VALUES,
+    onSubmit: handleContactUsSubmit,
+    validator: validateData,
+    initialErrors: CONTACT_US_FORM_INITIAL_ERRORS,
+    validationMessages: CONTACT_US_VALIDATION_MESSAGES,
+  });
 
   return (
     <FormComponent

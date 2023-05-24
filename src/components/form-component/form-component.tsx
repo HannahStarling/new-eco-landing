@@ -61,29 +61,29 @@ export const FormComponent: FC<PropsWithChildren<IProps>> = ({
         )}
       </div>
       <form onSubmit={handleSubmit}>
-        {(
-          Object.entries(FormFields) as Array<[FormFieldContactUs, InputProps]>
-        ).map(([name, field]) => {
-          return (
-            <UiInput
-              error={errors[name]}
-              id={name}
-              key={name}
-              name={name}
-              pattern={field.pattern}
-              label={field.text}
-              type={field.type}
-              classname={field.className}
-              placeholder={field.placeholder}
-              required={field.required}
-              checked={Boolean(values[name])}
-              value={
-                values[name] as InputHTMLAttributes<HTMLInputElement>["value"]
-              }
-              onChange={onChange}
-            />
-          );
-        })}
+        {(Object.entries(FormFields) as Array<[FormFields, InputProps]>).map(
+          ([name, field]) => {
+            return (
+              <UiInput
+                error={errors[name]}
+                id={name}
+                key={name}
+                name={name}
+                pattern={field.pattern}
+                label={field.text}
+                type={field.type}
+                classname={field.className}
+                placeholder={field.placeholder}
+                required={field.required}
+                checked={Boolean(values[name])}
+                value={
+                  values[name] as InputHTMLAttributes<HTMLInputElement>["value"]
+                }
+                onChange={onChange}
+              />
+            );
+          }
+        )}
         <UiButton
           disabled={!Boolean(values.Agreement) || !isValid}
           type={"submit"}

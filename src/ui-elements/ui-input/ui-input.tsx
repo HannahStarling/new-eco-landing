@@ -13,7 +13,7 @@ interface IProps extends Omit<InputHTMLAttributes<HTMLInputElement>, "type"> {
   type: typeof FormType | string;
   name: string;
   placeholder?: string;
-  error?: string;
+  error?: string | boolean;
 }
 
 export const UiInput: FC<PropsWithChildren<IProps>> = ({

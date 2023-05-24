@@ -12,7 +12,8 @@ export interface IUiRadioProps
   checked?: boolean;
   defaultChecked?: boolean;
   disabled?: boolean;
-  value: any;
+  value?: any;
+  buttonStyle: string;
 
   onCheck({ checked, item }: { checked: boolean; item: IOption }): void;
 }

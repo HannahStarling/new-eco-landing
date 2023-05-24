@@ -11,7 +11,11 @@ export enum FormType {
   checkbox = "checkbox",
 }
 
-export type FormFieldContactUs = keyof ContactUsRequest | "Agreement";
+export type FormFields = keyof ContactUsRequest | "Agreement";
+
+export type FormFieldContactUs = {
+  [P in FormFields]: string | boolean;
+};
 
 export type InputProps = {
   className: string | null;
@@ -23,7 +27,7 @@ export type InputProps = {
 };
 export type FormValuesContactUs = FormValues<FormFieldContactUs>;
 
-export const FormFields: Record<FormFieldContactUs, InputProps> = {
+export const FormFields: Record<FormFields, InputProps> = {
   Name: {
     text: "Имя",
     placeholder: "Введите имя",

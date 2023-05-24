@@ -9,7 +9,9 @@ export const useHeaderScroll = ({
   headerRef: RefObject<HTMLElement>;
 }) => {
   const [isFixed, setFixedHeader] = useState(
-    window.innerWidth < MOBILE_RESOLUTION
+    typeof window !== "undefined"
+      ? window.innerWidth < MOBILE_RESOLUTION
+      : false
   );
   const [isScroll, setScroll] = useState(false);
   useEffect(() => {

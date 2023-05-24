@@ -1,3 +1,3 @@
-export const createAuthorizationHeader = (token) => {
+export const createAuthorizationHeader = (token: string) => {
   return `Bearer ${token}`;
 };

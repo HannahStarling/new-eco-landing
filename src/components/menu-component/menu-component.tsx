@@ -16,7 +16,7 @@ export enum MenuPlacement {
 
 interface IProps {
   placement?: MenuPlacement;
-  isWhiteHeader: boolean;
+  isWhiteHeader?: boolean;
 }
 
 export const MenuComponent: FC<PropsWithChildren<IProps>> = ({
@@ -45,9 +45,8 @@ export const MenuComponent: FC<PropsWithChildren<IProps>> = ({
                 itemClasses,
                 activeMenu[key] ? "active" : null
               )}
-              onClick={(e: MouseEvent<HTMLAnchorElement, any>) =>
-                handleSetActive(e, key)
-              }
+              elementKey={key}
+              handleSetActive={handleSetActive}
             >
               {menuItem?.sectionID ? (
                 <Link href={menuItem.sectionID} onClick={handleScroll}>
