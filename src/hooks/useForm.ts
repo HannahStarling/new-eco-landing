@@ -1,8 +1,8 @@
-import { ChangeEvent, useCallback, useEffect, useState } from "react";
-import { getToken } from "@/api/get-token";
-import { FORM_TAG } from "@/constants/general";
-import { FormErrors, FormValues, IUseFormArgument } from "@/types/models";
-import { IFormFunction } from "@/types/functions";
+import {ChangeEvent, useCallback, useEffect, useState} from "react";
+import {getToken} from "@/api/get-token";
+import {FORM_TAG} from "@/constants/general";
+import {FormErrors, FormValues, IUseFormArgument} from "@/types/models";
+import {IFormFunction} from "@/types/functions";
 
 /**
  * Хук, управляющей формой и её полями ввода.
@@ -17,10 +17,11 @@ import { IFormFunction } from "@/types/functions";
  * @param initialValues  Object with keys: input['name'], value: string/boolean
  * @param onSubmit callback for submit
  * @param validator callback for validation setter
+ * @param handleApiError
  * @param validationMessages  Object with keys: input['name'], value: string
  * @param initialErrors Object with keys: input['name'], value: string/boolean/number
  */
-export const useForm = <K extends string|number|symbol>({
+export const useForm = <K>({
   initialValues,
   onSubmit,
   validator = () => true,

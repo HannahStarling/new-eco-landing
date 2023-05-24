@@ -1,34 +1,28 @@
-<<<<<<< HEAD
 import "./ui-card.scss";
 import classNames from "classnames";
 import { FC, PropsWithChildren } from "react";
-=======
-import './ui-card.scss';
-import classNames from 'classnames';
-import { FC } from 'react';
->>>>>>> 0c9b9da66bd7626183050583773d920a12eb9d0a
 
 export enum CardSize {
   /**
    *   padding: 32px 20px;
    */
-  large = 'card_large',
+  large = "card_large",
   /**
    *   padding: 24px 20px;
    */
-  small = 'card_small',
+  small = "card_small",
   /**
    *   padding: 16px 20px;
    */
-  medium = 'card_medium',
+  medium = "card_medium",
   /**
    *   padding: 16px 20px;
    */
-  extraLarge = 'card_extra-large',
+  extraLarge = "card_extra-large",
   /**
    *   padding: 20px;
    */
-  square = 'card_square',
+  square = "card_square",
 }
 
 export interface IProps {
@@ -46,7 +40,10 @@ export const UiCard: FC<PropsWithChildren<IProps>> = ({
   ...props
 }) => {
   return (
-    <div {...props} className={classNames('card', className, size, { centered })}>
+    <div
+      {...props}
+      className={classNames("card", className, size, { centered })}
+    >
       {children}
     </div>
   );

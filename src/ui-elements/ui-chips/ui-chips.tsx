@@ -6,7 +6,8 @@ interface IProps {
   className?: string;
   big?: boolean;
   label?: string;
-  children?: React.ReactNode | React.ReactElement;}
+  children?: React.ReactNode | React.ReactElement;
+}
 
 export const UiChips: FC<PropsWithChildren<IProps>> = ({
   children,
