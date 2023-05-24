@@ -6,21 +6,21 @@ import {
 import { Period, PeriodName, PERIODS } from "@/constants/tariffs";
 
 interface IProps {
-  checked: Period;
+  chosen: Period;
 
-  onCheck({ checked, item }: { checked: boolean; item: IOption }): void;
+  onCheck({ item }: { item: IOption }): void;
 }
 
 export const TariffsPeriodRadio: FC<PropsWithChildren<IProps>> = ({
   onCheck,
-  checked,
+  chosen,
 }) => {
   return (
     <UiRadioGroup
-      className={"tariffs__period-radio-group"}
+      className={'tariffs__period-radio-group'}
       onCheck={onCheck}
-      checked={checked}
-      buttonStyle={"solid"}
+      chosen={chosen}
+      buttonStyle={'solid'}
       options={PERIODS.map((tariff) => ({
         value: tariff,
         label: PeriodName[tariff],

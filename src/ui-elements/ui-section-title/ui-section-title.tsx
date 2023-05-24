@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { FC, PropsWithChildren } from "react";
 
 interface IProps {
-  children?: any;
+  children?: React.ReactNode | React.ReactElement;
   className?: string;
 }
 

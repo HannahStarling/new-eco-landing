@@ -2,7 +2,7 @@ import { UiListItem } from "@/ui-elements/ui-list-item/ui-list-item";
 import { ListType, UiList } from "@/ui-elements/ui-list/ui-list";
 import classNames from "classnames";
 import Link from "next/link";
-import { FC, MouseEvent, PropsWithChildren, SyntheticEvent } from "react";
+import { FC,  PropsWithChildren, SyntheticEvent } from "react";
 
 interface IProps {
   className?: string | null;

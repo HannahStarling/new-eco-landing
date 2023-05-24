@@ -5,10 +5,10 @@ import { UiListItem } from "@/ui-elements/ui-list-item/ui-list-item";
 import classNames from "classnames";
 import { Period } from "@/constants/tariffs";
 
-interface IProps extends Omit<IUiRadioProps, "item" | "value" | "checked"> {
+interface IProps extends Omit<IUiRadioProps, 'item' | 'value' | 'checked'> {
   className?: string;
   options: Array<IOption>;
-  checked: Period;
+  chosen: Period;
   buttonStyle: "solid";
 
   onCheck({ checked, item }: { checked: boolean; item: IOption }): void;
@@ -16,7 +16,7 @@ interface IProps extends Omit<IUiRadioProps, "item" | "value" | "checked"> {
 
 export interface IOption {
   label: string;
-  value: string;
+  value: Period;
   disabled?: boolean;
 }
 
@@ -24,7 +24,7 @@ export const UiRadioGroup: FC<PropsWithChildren<IProps>> = ({
   className,
   options,
   name,
-  checked,
+  chosen,
   ...props
 }) => {
   return (
@@ -36,8 +36,7 @@ export const UiRadioGroup: FC<PropsWithChildren<IProps>> = ({
               {...props}
               item={item}
               name={name ?? item.value}
-              checked={checked === item.value}
-            >
+              checked={chosen === item.value}>
               {item.label}
             </UiRadio>
           </UiListItem>

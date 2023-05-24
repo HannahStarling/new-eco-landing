@@ -20,7 +20,7 @@ import { IFormFunction } from "@/types/functions";
  * @param validationMessages  Object with keys: input['name'], value: string
  * @param initialErrors Object with keys: input['name'], value: string/boolean/number
  */
-export const useForm = <K>({
+export const useForm = <K extends string|number|symbol>({
   initialValues,
   onSubmit,
   validator = () => true,

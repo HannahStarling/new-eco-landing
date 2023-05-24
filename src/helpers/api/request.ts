@@ -12,7 +12,7 @@ export const request = ({
 }: {
   url: string;
   method?: Method;
-  token?: string;
+  token?: string | null;
   body?: Request;
 }) => {
   const input = `${BASE_URL}${url}`;
