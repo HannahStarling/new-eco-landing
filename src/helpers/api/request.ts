@@ -4,7 +4,7 @@ import { createAuthorizationHeader } from "@/helpers/api/create-authorization-he
 import { buildFormDataRequest } from "@/helpers/api/build-form-data-request";
 import { prepareData } from "@/helpers/api/prepare-data";
 
-export const request = ({
+export const request = async ({
   url,
   method = Method.POST,
   token,
@@ -27,5 +27,6 @@ export const request = ({
     credentials: Credential.Include,
     mode: HeadersMode.CORS,
   };
-  return fetch(input, config).then(prepareData);
+  const response = await fetch(input, config);
+  return response.json();
 };

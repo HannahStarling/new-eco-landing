@@ -1,5 +1,6 @@
 .form {
   max-width: 576px;
+  max-height: 616px;
   position: relative;
 
   &__header {
@@ -9,7 +10,7 @@
     margin-bottom: 24px;
 
     &-title {
-      font-size: 20px;
+      font-size: 20px !important;
     }
 
     &-close {

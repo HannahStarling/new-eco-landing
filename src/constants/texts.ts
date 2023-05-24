@@ -1,3 +1,5 @@
+import { Role } from "@/types/models";
+
 export const BUTTONS_CONTENT = {
   GET_ACCESS: "Получить доступ",
   CONTACT: "Связаться",
@@ -32,8 +34,8 @@ export const CARRIER_LIST = [
 export const CARRIER_CHIPS_LIST = ["На людях", "На пробеге", "На автомобилях"];
 
 export const PARTNERS = [
-  { name: "Перевозчикам" },
-  { name: "Грузовладельцам" },
+  { name: "Перевозчикам", link: "#" + Role.Carrier },
+  { name: "Грузовладельцам", link: "#" + Role.CargoOwner },
   {
     name: "Партнерам",
     url: "/assets/files/intelogis_presentation.pdf",
