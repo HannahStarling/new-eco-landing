@@ -17,11 +17,13 @@ export const BENEFITS_ARTICLE: Record<Role, IBenefitsArticle> = {
       title: "Компании сокращают штат и зарабатывают больше за счёт экономии",
       list: CARRIER_CHIPS_LIST,
     },
+    id: Role.Carrier,
   },
   [Role.CargoOwner]: {
     title: "Грузовладельцам",
     accent: "1 специалист вместо 5 человек",
     text: " ведет всю цепочку заявок от заведения заявки до отчета о доставке груза",
     list: CARGO_OWNER_LIST,
+    id: Role.CargoOwner,
   },
 };

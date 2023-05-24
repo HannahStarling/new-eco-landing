@@ -12,6 +12,18 @@
   background: transparent;
   color: var(--colors-neutrals-white);
 
+  @include mobile {
+    &__burger {
+      span {
+        background: var(--colors-typography-main) !important;
+        &::after,
+        &::before {
+          background: var(--colors-typography-main) !important;
+        }
+      }
+    }
+  }
+
   &__logo {
     padding: 0;
     cursor: pointer;

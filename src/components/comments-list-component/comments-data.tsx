@@ -55,7 +55,7 @@ const CommentParagraph3: FC = () => (
 const CommentParagraph4: FC = () => (
   <>
     <UiParagraph>
-      “Все заявки находятся в одной системе, есть интеграция с ати.суи другими
+      “Все заявки находятся в одной системе, есть интеграция с ati.su и другими
       популярными системами.
     </UiParagraph>
     <UiParagraph>

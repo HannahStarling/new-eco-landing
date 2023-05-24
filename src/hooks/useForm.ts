@@ -1,8 +1,8 @@
-import {ChangeEvent, useCallback, useEffect, useState} from "react";
-import {getToken} from "@/api/get-token";
-import {FORM_TAG} from "@/constants/general";
-import {FormErrors, FormValues, IUseFormArgument} from "@/types/models";
-import {IFormFunction} from "@/types/functions";
+import { ChangeEvent, useCallback, useEffect, useState } from "react";
+import { getToken } from "@/api/get-token";
+import { FORM_TAG } from "@/constants/general";
+import { FormErrors, FormValues, IUseFormArgument } from "@/types/models";
+import { IFormFunction } from "@/types/functions";
 
 /**
  * Хук, управляющей формой и её полями ввода.
@@ -28,17 +28,19 @@ export const useForm = <K>({
   handleApiError,
   validationMessages,
   initialErrors,
+  onClose,
 }: IUseFormArgument<K>) => {
   const [values, setValues] = useState<FormValues<K>>(initialValues);
   const [errors, setErrors] = useState<FormErrors<K>>(initialErrors);
   const [isValid, setIsValid] = useState<boolean>(false);
   const [token, setToken] = useState<string | null>(null);
+  const [isSuccess, setSuccess] = useState<boolean>(false);
 
   useEffect(() => {
     async function tokenCheck() {
       try {
-        const { data } = await getToken();
-        setToken(data);
+        const response = await getToken();
+        setToken(response?.data);
       } catch (error: any) {
         console.error(error);
         handleApiError?.(error.name);
@@ -62,9 +64,20 @@ export const useForm = <K>({
     [initialValues, initialErrors]
   );
 
+  const handleSetSuccess = (success: boolean) => {
+    if (success) {
+      setSuccess(true);
+      document.querySelector("body")?.classList.add("lock");
+    } else {
+      setSuccess(false);
+      document.querySelector("body")?.classList.remove("lock");
+      onClose?.();
+    }
+  };
+
   const handleSubmit = (values: FormValues<K> & { Agreement: boolean }) => {
     if (!Boolean(values.Agreement && isValid)) return;
-    token && onSubmit({ payload: values, resetForm, token });
+    token && onSubmit({ payload: values, resetForm, token, handleSetSuccess });
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -101,5 +114,7 @@ export const useForm = <K>({
     handleChange,
     resetForm,
     handleSubmit,
+    isSuccess,
+    handleSetSuccess,
   };
 };

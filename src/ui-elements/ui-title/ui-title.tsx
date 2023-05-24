@@ -32,6 +32,7 @@ interface IProps {
    */
   bold?: boolean;
   className?: string;
+  id?: string;
 }
 
 export const UiTitle: FC<PropsWithChildren<IProps>> = ({
