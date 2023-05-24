@@ -24,7 +24,7 @@ export const SuccessWindow: FC<PropsWithChildren<IProps>> = ({
             />
           </div>
           <div className="success-window__text">
-            Ближайшее время мы свяжемся с вами для уточнения информации и
+            В ближайшее время мы свяжемся с вами для уточнения информации и
             предоставления тестового доступа к платформе
           </div>
           <div

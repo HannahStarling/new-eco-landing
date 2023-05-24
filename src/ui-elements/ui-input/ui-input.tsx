@@ -14,6 +14,7 @@ interface IProps extends Omit<InputHTMLAttributes<HTMLInputElement>, "type"> {
   name: string;
   placeholder?: string;
   error?: string | boolean;
+  maxlength?: number | null;
 }
 
 export const UiInput: FC<PropsWithChildren<IProps>> = ({

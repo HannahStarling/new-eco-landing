@@ -9,6 +9,7 @@ import {
   FormEvent,
   InputHTMLAttributes,
   PropsWithChildren,
+  useEffect,
 } from "react";
 import "./form-component.scss";
 import { UiButton } from "@/ui-elements/ui-button/ui-button";
@@ -76,6 +77,7 @@ export const FormComponent: FC<PropsWithChildren<IProps>> = ({
                 placeholder={field.placeholder}
                 required={field.required}
                 checked={Boolean(values[name])}
+                maxlength={field.maxlength}
                 value={
                   values[name] as InputHTMLAttributes<HTMLInputElement>["value"]
                 }
