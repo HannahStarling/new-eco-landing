@@ -16,10 +16,13 @@ export interface IFormFunction<V> {
     payload,
     token,
     resetForm,
+    handleApiError,
+    handleSetSuccess,
   }: {
     payload: FormValues<V> | Request;
     token: string;
     resetForm: IFormFunction<V>["resetForm"];
     handleApiError?: (error: string) => void;
+    handleSetSuccess?: (status: boolean) => void;
   }): void;
 }

@@ -57,6 +57,11 @@
       }
     }
 
+    .connect-modal {
+      align-self: center;
+      width: 100%;
+    }
+
     &s {
       @include gap-medium;
       flex-wrap: wrap;

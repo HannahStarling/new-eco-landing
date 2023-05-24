@@ -11,7 +11,8 @@ export const Benefits: FC = () => {
     <UiSection className={"benefits"}>
       <UiSectionTitle>{SECTION_TITLES.Benefits}</UiSectionTitle>
       {BENEFITS_ARTICLES.map((article) => {
-        const { text, title, accent, list, chips } = BENEFITS_ARTICLE[article];
+        const { text, title, accent, list, chips, id } =
+          BENEFITS_ARTICLE[article];
         return (
           <BenefitsArticle
             key={article}
@@ -20,6 +21,7 @@ export const Benefits: FC = () => {
             accent={accent}
             chips={chips}
             list={list}
+            id={id}
           />
         );
       })}

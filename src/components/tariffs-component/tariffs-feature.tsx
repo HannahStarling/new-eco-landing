@@ -29,7 +29,7 @@ export const TariffsFeature: FC<PropsWithChildren<IProps>> = ({
         alt={"Галочка."}
       />
       <UiParagraph size={ParagraphSize.extraSmall}>
-        <UiAccent color={include ? Color.typographyMain : Color.neutralsLight}>
+        <UiAccent color={include ? Color.typographyMain : Color.superLight}>
           {title}
         </UiAccent>
       </UiParagraph>
