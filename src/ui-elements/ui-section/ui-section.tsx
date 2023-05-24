@@ -1,6 +1,6 @@
-import './ui-section.scss';
-import classNames from 'classnames';
-import { FC } from 'react';
+import "./ui-section.scss";
+import classNames from "classnames";
+import { FC, PropsWithChildren } from "react";
 
 interface IProps {
   children?: React.ReactNode | React.ReactElement;
@@ -8,10 +8,21 @@ interface IProps {
   fullWidth?: boolean;
 }
 
-export const UiSection: FC<IProps> = ({ children, className, fullWidth = false, ...props }) => {
+export const UiSection: FC<PropsWithChildren<IProps>> = ({
+  children,
+  className,
+  fullWidth = false,
+  ...props
+}) => {
   return (
-    <section id={className} className={'section'}>
-      <div {...props} className={classNames(className, !fullWidth ? `section__container` : null)}>
+    <section id={className} className={"section"}>
+      <div
+        {...props}
+        className={classNames(
+          className,
+          !fullWidth ? `section__container` : null
+        )}
+      >
         {children}
       </div>
     </section>

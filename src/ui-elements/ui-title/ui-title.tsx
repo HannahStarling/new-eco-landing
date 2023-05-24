@@ -1,6 +1,6 @@
 import "./ui-title.scss";
 import classNames from "classnames";
-import { FC, ReactNode } from "react";
+import { FC, PropsWithChildren } from "react";
 
 export enum TitleSize {
   /**
@@ -31,11 +31,10 @@ interface IProps {
    *   font-weight: 600;
    */
   bold?: boolean;
-  children?: ReactNode;
   className?: string;
 }
 
-export const UiTitle: FC<IProps> = ({
+export const UiTitle: FC<PropsWithChildren<IProps>> = ({
   children,
   size = TitleSize.large,
   className,

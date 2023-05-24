@@ -36,8 +36,7 @@ export const PARTNERS = [
   { name: "Грузовладельцам" },
   {
     name: "Партнерам",
-    // TODO: заменить на нормальый линк, когда придет от бэка
-    url: "https://memepedia.ru/wp-content/uploads/2018/12/kot-kashlyaet-mem.png",
+    url: "/assets/files/intelogis_presentation.pdf",
   },
 ];
 

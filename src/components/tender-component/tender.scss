@@ -47,6 +47,7 @@
   }
 
   &__content {
+    font-size: 28px;
     @include gap-large;
     @include laptop {
       flex-direction: column;

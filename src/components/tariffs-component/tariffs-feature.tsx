@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import { UiListItem } from "@/ui-elements/ui-list-item/ui-list-item";
 import { UiIcon } from "@/ui-elements/ui-icon/ui-icon";
 import { IconName } from "@/ui-elements/ui-icon/icon-names";
@@ -14,7 +14,10 @@ interface IProps {
   title: string;
 }
 
-export const TariffsFeature: FC<IProps> = ({ include, title }) => {
+export const TariffsFeature: FC<PropsWithChildren<IProps>> = ({
+  include,
+  title,
+}) => {
   return (
     <UiListItem className={"tariffs__card-list-item"}>
       <UiIcon

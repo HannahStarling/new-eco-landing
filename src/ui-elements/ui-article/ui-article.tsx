@@ -1,15 +1,14 @@
-import './ui-article.scss';
-import classNames from 'classnames';
-import { FC } from 'react';
+import "./ui-article.scss";
+import classNames from "classnames";
+import { FC, PropsWithChildren } from "react";
 
-type Props = {
-  children?: React.ReactNode | React.ReactElement;
-  className?: string;
-};
-
-export const UiArticle: FC<Props> = ({ children, className, ...props }) => {
+export const UiArticle: FC<PropsWithChildren<any>> = ({
+  children,
+  className,
+  ...props
+}) => {
   return (
-    <article {...props} className={classNames('article', className)}>
+    <article {...props} className={classNames("article", className)}>
       {children}
     </article>
   );

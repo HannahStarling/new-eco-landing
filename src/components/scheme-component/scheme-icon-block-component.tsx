@@ -2,16 +2,15 @@ import { SchemeBlock } from "@/constants/scheme";
 import { EMPTY_STRING } from "@/constants/texts";
 import { SchemeValueType } from "@/types/scheme";
 import Image from "next/image";
-import { FC, ReactNode } from "react";
+import { FC, PropsWithChildren } from "react";
 
 interface IProps {
-  children?: ReactNode;
   data: SchemeValueType<
     Pick<SchemeValueType<typeof SchemeBlock>, "rightIcon" | "leftIcon">
   >;
 }
 
-export const IconBlock: FC<IProps> = ({ data }) => {
+export const IconBlock: FC<PropsWithChildren<IProps>> = ({ data }) => {
   if (!data.text)
     return (
       <div className="scheme__icon_empty">

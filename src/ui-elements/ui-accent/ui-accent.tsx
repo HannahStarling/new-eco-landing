@@ -1,7 +1,7 @@
-import './ui-accent.scss';
-import classNames from 'classnames';
-import { FC } from 'react';
-import { Color } from '@/types/color';
+import "./ui-accent.scss";
+import classNames from "classnames";
+import { FC, PropsWithChildren } from "react";
+import { Color } from "@/types/color";
 
 export interface IProps {
   bold?: boolean;
@@ -9,14 +9,14 @@ export interface IProps {
   children?: React.ReactNode | React.ReactElement;
 }
 
-export const UiAccent: FC<IProps> = ({
+export const UiAccent: FC<PropsWithChildren<IProps>> = ({
   children,
   color = Color.greenMain,
   bold = false,
   ...props
 }) => {
   return (
-    <span {...props} className={classNames('accent', color, { bold })}>
+    <span {...props} className={classNames("accent", color, { bold })}>
       {children}
     </span>
   );

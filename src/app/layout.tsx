@@ -11,14 +11,10 @@ export const metadata = {
   description: "Платформа Intelogis для вашего бизнеса",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ru">
-    <body className={NUNITO_SANS.className}>{children}</body>
+      <body className={NUNITO_SANS.className}>{children}</body>
     </html>
   );
 }

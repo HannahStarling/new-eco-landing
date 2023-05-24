@@ -1,7 +1,8 @@
-import { ChangeEvent, useCallback, useEffect, useState } from 'react';
-import { getToken } from '@/api/get-token';
-import { FormErrors, FormValues, IUseFormArgument } from '@/types/models';
-import { FORM_TAG } from '@/constants/general';
+import {ChangeEvent, useCallback, useEffect, useState} from "react";
+import {getToken} from "@/api/get-token";
+import {FORM_TAG} from "@/constants/general";
+import {FormErrors, FormValues, IUseFormArgument} from "@/types/models";
+import {IFormFunction} from "@/types/functions";
 
 /**
  * Хук, управляющей формой и её полями ввода.
@@ -16,16 +17,17 @@ import { FORM_TAG } from '@/constants/general';
  * @param initialValues  Object with keys: input['name'], value: string/boolean
  * @param onSubmit callback for submit
  * @param validator callback for validation setter
+ * @param handleApiError
  * @param validationMessages  Object with keys: input['name'], value: string
  * @param initialErrors Object with keys: input['name'], value: string/boolean/number
  */
-export const useForm = <K extends string | number | symbol>({
-  initialValues = {},
+export const useForm = <K>({
+  initialValues,
   onSubmit,
   validator = () => true,
-  validationMessages = {},
-  initialErrors = {},
   handleApiError,
+  validationMessages,
+  initialErrors,
 }: IUseFormArgument<K>) => {
   const [values, setValues] = useState<FormValues<K>>(initialValues);
   const [errors, setErrors] = useState<FormErrors<K>>(initialErrors);
@@ -39,7 +41,7 @@ export const useForm = <K extends string | number | symbol>({
         setToken(data);
       } catch (error: any) {
         console.error(error);
-        handleApiError(error.name);
+        handleApiError?.(error.name);
       } finally {
       }
     }
@@ -47,29 +49,34 @@ export const useForm = <K extends string | number | symbol>({
     tokenCheck();
   }, []);
 
-  const resetForm = useCallback(
-    (resetValues = initialValues, resetErrors = {}, resetIsValid = false) => {
+  const resetForm: IFormFunction<K>["resetForm"] = useCallback(
+    (
+      resetValues = initialValues,
+      resetErrors = initialErrors,
+      resetIsValid = false
+    ) => {
       setValues(resetValues);
       setErrors(resetErrors);
       setIsValid(resetIsValid);
     },
-    [initialValues],
+    [initialValues, initialErrors]
   );
 
-  const handleSubmit = (values: any) => {
+  const handleSubmit = (values: FormValues<K> & { Agreement: boolean }) => {
     if (!Boolean(values.Agreement && isValid)) return;
-    onSubmit({ payload: values, resetForm, token, handleApiError });
+    token && onSubmit({ payload: values, resetForm, token });
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked, validationMessage } = e.target;
 
-    const isValid = e.target.closest(FORM_TAG).checkValidity() && validator({ values });
+    const isValid =
+      e.target.closest(FORM_TAG)?.checkValidity() && validator({ values });
 
     setValues((prevValues) => {
       return {
         ...prevValues,
-        [name]: type === 'checkbox' ? checked : value,
+        [name]: type === "checkbox" ? checked : value,
       };
     });
     /** Если необходимо выводить ошибки (feedback) */
@@ -78,11 +85,13 @@ export const useForm = <K extends string | number | symbol>({
         ? initialErrors
         : {
             ...prevErrors,
-            [name]: Boolean(validationMessage) && (validationMessages[name] ?? validationMessage),
+            [name]:
+              Boolean(validationMessage) &&
+              (validationMessages[name] ?? validationMessage),
           };
     });
 
-    setIsValid(isValid);
+    setIsValid(Boolean(isValid));
   };
 
   return {

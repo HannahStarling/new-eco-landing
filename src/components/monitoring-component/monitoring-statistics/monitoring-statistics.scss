@@ -8,7 +8,7 @@
   @include desktop {
     width: calc(360 / 1440 * 100vw);
   }
-  
+
   @include tablet {
     width: auto;
   }

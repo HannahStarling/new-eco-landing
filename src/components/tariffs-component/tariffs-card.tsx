@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import { UiCard } from "@/ui-elements/ui-card/ui-card";
 import { UiTitle } from "@/ui-elements/ui-title/ui-title";
 import { ListType, UiList } from "@/ui-elements/ui-list/ui-list";
@@ -13,7 +13,10 @@ interface IProps {
   period?: Period;
 }
 
-export const TariffsCard: FC<IProps> = ({ tariff, period = Period.Year }) => {
+export const TariffsCard: FC<PropsWithChildren<IProps>> = ({
+  tariff,
+  period = Period.Year,
+}) => {
   const { cost, name, includes } = TARIFFS[tariff];
   const isPersonal = typeof cost === "string";
 

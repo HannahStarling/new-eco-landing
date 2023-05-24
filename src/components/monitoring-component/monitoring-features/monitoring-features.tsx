@@ -21,16 +21,17 @@ const GPS_IMAGES = [
 
 const FEATURES_INFO = [
   {
-    title: 'Отображение рейса автомобиля и статуса выполнения заявки',
+    title: "Отображение рейса автомобиля и статуса выполнения заявки",
     list: [],
     img: { width: 26, height: 44, name: IconName.Location },
   },
   {
-    title: 'Анализ выполняемых заявок позволяет контролировать и снижать расходы на доставку',
+    title:
+      "Анализ выполняемых заявок позволяет контролировать и снижать расходы на доставку",
     list: [
-      'Анализ отклонений от маршрута',
-      'Анализ неразведенных заявок',
-      'Анализ безопасности дорожного движения',
+      "Анализ отклонений от маршрута",
+      "Анализ неразведенных заявок",
+      "Анализ безопасности дорожного движения",
     ],
     img: { width: 47, height: 44, name: IconName.LocationAnalysis },
   },
@@ -52,7 +53,12 @@ export const MonitoringFeatures: FC = () => {
       </div>
       <div className="monitoring-features__feature">
         {FEATURES_INFO.map((item) => (
-          <FeatureCard key={item.title} title={item.title} list={item.list} img={item.img} />
+          <FeatureCard
+            key={item.title}
+            title={item.title}
+            list={item.list}
+            img={item.img}
+          />
         ))}
       </div>
     </div>

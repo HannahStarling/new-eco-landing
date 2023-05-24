@@ -1,12 +1,14 @@
 import { Logo } from "@/constants/images";
 import Image from "next/image";
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 
 interface IProps {
   isWhiteHeader: boolean;
 }
 
-export const HeaderLogoComponent: FC<IProps> = ({ isWhiteHeader }) => {
+export const HeaderLogoComponent: FC<PropsWithChildren<IProps>> = ({
+  isWhiteHeader,
+}) => {
   return (
     <div className="header__logo">
       <Image
