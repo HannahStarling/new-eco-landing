@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 import { UiParagraph } from "@/ui-elements/ui-paragraph/ui-paragraph";
 import { UiSectionTitle } from "@/ui-elements/ui-section-title/ui-section-title";
 import { UiAccent } from "@/ui-elements/ui-accent/ui-accent";
@@ -8,7 +8,7 @@ interface IProps {
   text: string;
 }
 
-export const StageInfo: FC<IProps> = ({ text, accent }) => {
+export const StageInfo: FC<PropsWithChildren<IProps>> = ({ text, accent }) => {
   return (
     <div className="stage-info">
       <UiSectionTitle>

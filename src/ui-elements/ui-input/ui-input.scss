@@ -19,7 +19,8 @@
     color: var(--colors-accent-red-bright);
     border-bottom-color: var(--colors-accent-red-bright);
 
-    &:focus, :active {
+    &:focus,
+    :active {
       border-bottom-color: var(--colors-accent-red-bright);
     }
   }
@@ -88,6 +89,6 @@
 
 @media only screen and (max-width: 480px) {
   .ui-input__field {
-    max-width: 288px;
+    max-width: 100%;
   }
 }

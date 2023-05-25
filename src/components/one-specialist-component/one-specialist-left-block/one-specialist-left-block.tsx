@@ -1,12 +1,10 @@
-import { FC, ReactNode } from "react";
+import { FC, PropsWithChildren } from "react";
 import { LeftBlockData } from "@/constants/one-specialist";
 import { OneSpecialistUnit } from "../one-specialist-unit-block/one-specialist-unit";
 
-interface IProps {
-  children?: ReactNode;
-}
+interface IProps {}
 
-export const LeftBlock: FC<IProps> = ({ children }) => {
+export const LeftBlock: FC<PropsWithChildren<IProps>> = () => {
   return (
     <div className="one-specialist__left left">
       <div className="left__body">
@@ -19,7 +17,7 @@ export const LeftBlock: FC<IProps> = ({ children }) => {
         <div className="left__units unit">
           {Object.entries(LeftBlockData.units).map(([column, unitsData]) => {
             return (
-              <div key={column} className={`unit__${column}`}>
+              <>
                 {unitsData.map((unit, index) => {
                   return (
                     <OneSpecialistUnit
@@ -28,7 +26,7 @@ export const LeftBlock: FC<IProps> = ({ children }) => {
                     />
                   );
                 })}
-              </div>
+              </>
             );
           })}
         </div>

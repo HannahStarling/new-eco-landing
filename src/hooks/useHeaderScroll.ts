@@ -8,10 +8,13 @@ export const useHeaderScroll = ({
 }: {
   headerRef: RefObject<HTMLElement>;
 }) => {
-  const [isFixed, setFixedHeader] = useState(
-    window.innerWidth < MOBILE_RESOLUTION
-  );
+  const [isFixed, setFixedHeader] = useState(false);
   const [isScroll, setScroll] = useState(false);
+
+  useEffect(() => {
+    setFixedHeader(window.innerWidth < MOBILE_RESOLUTION);
+  }, []);
+
   useEffect(() => {
     const updateScrollDirection = () => {
       const headerTopPosition =

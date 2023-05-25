@@ -1,28 +1,30 @@
 import { HEADER_CSS_SELECTOR } from "@/constants/general";
-import { MouseEvent, useState } from "react";
+import { MouseEvent, SyntheticEvent, useState } from "react";
 
 export const useMenu = () => {
   const [activeMenu, setActiveMenu] = useState<Record<string, boolean>>({});
-  const handleSetActive = (e: MouseEvent<HTMLAnchorElement>, key: string) => {
+  const handleSetActive = (e: SyntheticEvent, key: string | undefined) => {
     e.preventDefault();
     e.stopPropagation();
-    setActiveMenu((prev): Record<string, boolean> => {
-      if (key in prev) {
+    key &&
+      setActiveMenu((prev): Record<string, boolean> => {
+        if (key in prev) {
+          return {
+            ...prev,
+            [key]: !prev[key],
+          };
+        }
         return {
           ...prev,
-          [key]: !prev[key],
+          [key]: true,
         };
-      }
-      return {
-        ...prev,
-        [key]: true,
-      };
-    });
+      });
   };
 
-  const handleScroll = (e: MouseEvent<HTMLAnchorElement>) => {
+  const handleScroll = (e: SyntheticEvent) => {
     e.preventDefault();
-    const href = e.currentTarget.href;
+    const elem = e.currentTarget as HTMLAnchorElement;
+    const href = elem.href;
     const targetId = href.replace(/.*\#/, "");
     const headerOffset = document
       .querySelector(HEADER_CSS_SELECTOR)!

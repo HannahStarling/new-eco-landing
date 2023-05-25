@@ -1,13 +1,13 @@
 import { SchemeBlock } from "@/constants/scheme";
 import { SchemeValueType } from "@/types/scheme";
 import classNames from "classnames";
-import { FC } from "react";
+import { FC, PropsWithChildren } from "react";
 
 interface IProps {
   data: SchemeValueType<Pick<SchemeValueType<typeof SchemeBlock>, "product">>;
 }
 
-export const ProductBlock: FC<IProps> = ({ data }) => {
+export const ProductBlock: FC<PropsWithChildren<IProps>> = ({ data }) => {
   if (!data) {
     return null;
   }

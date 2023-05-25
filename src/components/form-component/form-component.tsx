@@ -1,9 +1,16 @@
 "use client";
 
-import { FormFieldContactUs, FormFields } from "@/constants/form";
+import { FormFieldContactUs, FormFields, InputProps } from "@/constants/form";
 import { UiInput } from "@/ui-elements/ui-input/ui-input";
 import classNames from "classnames";
-import { ChangeEvent, FC, FormEvent } from "react";
+import {
+  ChangeEvent,
+  FC,
+  FormEvent,
+  InputHTMLAttributes,
+  PropsWithChildren,
+  useEffect,
+} from "react";
 import "./form-component.scss";
 import { UiButton } from "@/ui-elements/ui-button/ui-button";
 import { UiTitle } from "@/ui-elements/ui-title/ui-title";
@@ -24,7 +31,7 @@ interface IProps {
   onSubmit(values: FormValues<FormFieldContactUs>): void;
 }
 
-export const FormComponent: FC<IProps> = ({
+export const FormComponent: FC<PropsWithChildren<IProps>> = ({
   isValid,
   values,
   onChange,
@@ -55,25 +62,30 @@ export const FormComponent: FC<IProps> = ({
         )}
       </div>
       <form onSubmit={handleSubmit}>
-        {Object.entries(FormFields).map(([name, field]) => {
-          return (
-            <UiInput
-              error={errors[name]}
-              id={name}
-              key={name}
-              name={name}
-              pattern={field.pattern}
-              label={field.text}
-              type={field.type}
-              classname={field.className}
-              placeholder={field.placeholder}
-              required={field.required}
-              checked={values[name]}
-              value={values[name]}
-              onChange={onChange}
-            />
-          );
-        })}
+        {(Object.entries(FormFields) as Array<[FormFields, InputProps]>).map(
+          ([name, field]) => {
+            return (
+              <UiInput
+                error={errors[name]}
+                id={name}
+                key={name}
+                name={name}
+                pattern={field.pattern}
+                label={field.text}
+                type={field.type}
+                classname={field.className}
+                placeholder={field.placeholder}
+                required={field.required}
+                checked={Boolean(values[name])}
+                maxlength={field.maxlength}
+                value={
+                  values[name] as InputHTMLAttributes<HTMLInputElement>["value"]
+                }
+                onChange={onChange}
+              />
+            );
+          }
+        )}
         <UiButton
           disabled={!Boolean(values.Agreement) || !isValid}
           type={"submit"}

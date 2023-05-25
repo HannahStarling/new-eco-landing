@@ -1,11 +1,11 @@
 "use client";
 
-import { FC } from "react";
+import { FC, InputHTMLAttributes, PropsWithChildren } from "react";
 import classNames from "classnames";
 import "./ui-input.scss";
 import { FormType } from "@/constants/form";
 
-interface IProps {
+interface IProps extends Omit<InputHTMLAttributes<HTMLInputElement>, "type"> {
   label: string;
   required?: boolean;
   id?: string;
@@ -13,11 +13,11 @@ interface IProps {
   type: typeof FormType | string;
   name: string;
   placeholder?: string;
-  pattern?: string | null;
-  error?: string;
+  error?: string | boolean;
+  maxlength?: number | null;
 }
 
-export const UiInput: FC<IProps> = ({
+export const UiInput: FC<PropsWithChildren<IProps>> = ({
   error,
   classname,
   required,

@@ -11,26 +11,32 @@ export enum FormType {
   checkbox = "checkbox",
 }
 
-export type FormFieldContactUs = keyof ContactUsRequest | "Agreement";
+export type FormFields = keyof ContactUsRequest | "Agreement";
 
-type InputProps = {
+export type FormFieldContactUs = {
+  [P in FormFields]: string | boolean;
+};
+
+export type InputProps = {
   className: string | null;
   text: string;
   placeholder: string;
   type: FormType;
   required: boolean;
-  pattern: string | null;
+  pattern?: string;
+  maxlength: number | null;
 };
 export type FormValuesContactUs = FormValues<FormFieldContactUs>;
 
-export const FormFields: Record<FormFieldContactUs, InputProps> = {
+export const FormFields: Record<FormFields, InputProps> = {
   Name: {
     text: "Имя",
     placeholder: "Введите имя",
     type: FormType.text,
     className: null,
     required: true,
-    pattern: "^[А-ЯЁ][а-яё]{1,40}$",
+    pattern: "^(?![ ])[А-ЯЁа-яё ]{1,40}$",
+    maxlength: 40,
   },
   Phone: {
     text: "Телефон",
@@ -39,6 +45,7 @@ export const FormFields: Record<FormFieldContactUs, InputProps> = {
     className: null,
     required: true,
     pattern: "^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$",
+    maxlength: 15,
   },
   EMail: {
     text: "Электронная почта",
@@ -46,7 +53,7 @@ export const FormFields: Record<FormFieldContactUs, InputProps> = {
     type: FormType.email,
     className: null,
     required: true,
-    pattern: null,
+    maxlength: 254,
   },
   Organization: {
     text: "Название компании",
@@ -54,7 +61,7 @@ export const FormFields: Record<FormFieldContactUs, InputProps> = {
     type: FormType.text,
     className: null,
     required: false,
-    pattern: null,
+    maxlength: 100,
   },
   Appointment: {
     text: "Должность",
@@ -62,7 +69,7 @@ export const FormFields: Record<FormFieldContactUs, InputProps> = {
     type: FormType.text,
     className: null,
     required: false,
-    pattern: null,
+    maxlength: 100,
   },
   Agreement: {
     text: "Нажимая кнопку “Отправить”, я даю свое согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ “О персональных данных”, на условиях и для целей, оперделенных в Согласии на обработку персональных данных",
@@ -70,7 +77,7 @@ export const FormFields: Record<FormFieldContactUs, InputProps> = {
     className: "custom-checkbox",
     required: false,
     placeholder: EMPTY_STRING,
-    pattern: null,
+    maxlength: null,
   },
 };
 

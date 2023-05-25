@@ -13,32 +13,6 @@ export const units = {
       ],
     },
     {
-      serialNumber: "3-ый ",
-      name: "сотрудник",
-      data: [
-        {
-          icon: "/assets/icons/UnitSearch.svg",
-          responsibility: "Поиск перевозчика",
-          icon_width: 37,
-          icon_height: 44,
-        },
-      ],
-    },
-    {
-      serialNumber: "5-ый ",
-      name: "сотрудник",
-      data: [
-        {
-          icon: "/assets/icons/UnitReport.svg",
-          responsibility: "Подготовка отчетов",
-          icon_width: 36,
-          icon_height: 44,
-        },
-      ],
-    },
-  ],
-  column_2: [
-    {
       serialNumber: "2-ый ",
       name: "сотрудник",
       data: [
@@ -50,6 +24,19 @@ export const units = {
         },
       ],
     },
+    {
+      serialNumber: "3-ый ",
+      name: "сотрудник",
+      data: [
+        {
+          icon: "/assets/icons/UnitSearch.svg",
+          responsibility: "Поиск перевозчика",
+          icon_width: 37,
+          icon_height: 44,
+        },
+      ],
+    },
+
     {
       serialNumber: "4-ый ",
       name: "сотрудник",
@@ -64,6 +51,18 @@ export const units = {
           icon: "/assets/icons/UnitRecord.svg",
           responsibility: "Ведение документации",
           icon_width: 37,
+          icon_height: 44,
+        },
+      ],
+    },
+    {
+      serialNumber: "5-ый ",
+      name: "сотрудник",
+      data: [
+        {
+          icon: "/assets/icons/UnitReport.svg",
+          responsibility: "Подготовка отчетов",
+          icon_width: 36,
           icon_height: 44,
         },
       ],

@@ -17,7 +17,7 @@ export const RightBlock = () => {
         </div>
         <div className="right__border"></div>
         <div className="right__description">
-          <span>{RightBlockData.quantity}</span>
+          <span>{RightBlockData.quantity}&nbsp;</span>
           <span>{RightBlockData.description}</span>
         </div>
         <div className="right__caption">{RightBlockData.caption}</div>

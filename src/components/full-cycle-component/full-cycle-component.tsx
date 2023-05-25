@@ -23,12 +23,14 @@ const CYCLE_TEXT_LIST = [
 export const FullCycle = () => (
   <UiSection className="full-cycle">
     <UiSectionTitle>
-      <UiAccent color={Color.greenMain}>Обеспечиваем полный цикл обработки задачи</UiAccent>
+      <UiAccent color={Color.greenMain}>
+        Обеспечиваем полный цикл обработки задачи
+      </UiAccent>
       <br /> от заведения заявки до получения отчета о доставке груза
     </UiSectionTitle>
     <UiParagraph className="full-cycle__addition">
-      *Более 200 настроек для полной автоматизации процессов доставки с учетом всех особенностей
-      бизнеса: клиенты, бизнес-процессы, сроки, машины
+      *Более 200 настроек для полной автоматизации процессов доставки с учетом
+      всех особенностей бизнеса: клиенты, бизнес-процессы, сроки, машины
     </UiParagraph>
     <div className="full-cycle__scheme">
       <UiList type={ListType.vertical} disc>

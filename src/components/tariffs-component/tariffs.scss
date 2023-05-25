@@ -54,7 +54,16 @@
       &-item {
         display: flex;
         gap: 14px;
+
+        .accent.super-light {
+          text-decoration: line-through;
+        }
       }
+    }
+
+    .connect-modal {
+      align-self: center;
+      width: 100%;
     }
 
     &s {

@@ -1,14 +1,20 @@
 import { CONTACT_US_RULES } from "@/constants/validation";
 import { IFormFunction } from "@/types/functions";
-import { FormValuesContactUs } from "@/constants/form";
+import { FormFieldContactUs, FormFields } from "@/constants/form";
 
-export const validateData: IFormFunction<FormValuesContactUs>["validator"] = ({
+export const validateData: IFormFunction<FormFieldContactUs>["validator"] = ({
   values,
   rules = CONTACT_US_RULES,
 }) => {
-  let check = Object.keys(values).reduce(
+  const keys = Object.keys(values) as FormFields[];
+  let check = keys.reduce(
     (valid, key) => {
-      valid[key] = rules[key]?.test(values[key]) ?? true;
+      if (valid.hasOwnProperty(key)) {
+        valid[key] =
+          rules[key as keyof typeof CONTACT_US_RULES]?.test(
+            values[key] as string
+          ) ?? true;
+      }
       return valid;
     },
     {
@@ -16,7 +22,7 @@ export const validateData: IFormFunction<FormValuesContactUs>["validator"] = ({
       Name: false,
       EMail: false,
       Agreement: true,
-    }
+    } as FormFieldContactUs & { Agreement: boolean }
   );
   const isValid = Object.values(check);
   return isValid.every((valid) => valid);

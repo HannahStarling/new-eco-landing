@@ -1,9 +1,11 @@
 @import "@/app/styles/paths.scss";
+
 .menu {
   &__list {
     display: flex;
     align-items: center;
     justify-content: center;
+    user-select: none;
   }
 
   &__item {

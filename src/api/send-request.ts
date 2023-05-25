@@ -1,9 +1,10 @@
-import { request } from '@/helpers/api/request';
-import { APIURL } from '@/types/api';
+import { request } from "@/helpers/api/request";
+import { APIURL } from "@/types/api";
 
-type Props = {
+export const sendRequest = async ({
+  body,
+  token,
+}: {
+  token?: string | undefined;
   body?: Request;
-  token?: string | null;
-};
-export const sendRequest = ({ body, token }: Props) =>
-  request({ url: APIURL.sendRequest, body, token });
+}) => await request({ url: APIURL.sendRequest, body, token });

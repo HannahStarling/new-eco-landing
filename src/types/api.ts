@@ -37,7 +37,7 @@ export type RejectAPIResponse = {
 export type ContactUsRequest = {
   Name: string;
   Phone: string;
-  EMail: string;
+  EMail?: string;
   Organization?: string;
   Appointment?: string;
 };

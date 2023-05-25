@@ -1,6 +1,9 @@
-import { FC } from 'react';
-import { IOption, UiRadioGroup } from '@/ui-elements/ui-radio-group/ui-radio-group';
-import { Period, PeriodName, PERIODS } from '@/constants/tariffs';
+import { FC, PropsWithChildren } from "react";
+import {
+  IOption,
+  UiRadioGroup,
+} from "@/ui-elements/ui-radio-group/ui-radio-group";
+import { Period, PeriodName, PERIODS } from "@/constants/tariffs";
 
 interface IProps {
   chosen: Period;
@@ -8,7 +11,10 @@ interface IProps {
   onCheck({ item }: { item: IOption }): void;
 }
 
-export const TariffsPeriodRadio: FC<IProps> = ({ onCheck, chosen }) => {
+export const TariffsPeriodRadio: FC<PropsWithChildren<IProps>> = ({
+  onCheck,
+  chosen,
+}) => {
   return (
     <UiRadioGroup
       className={'tariffs__period-radio-group'}

@@ -9,16 +9,15 @@ const NUNITO_SANS = Nunito_Sans({
 export const metadata = {
   title: "Intelogis | Платформа для вашего бизнеса",
   description: "Платформа Intelogis для вашего бизнеса",
+  other: {
+    "format-detection": "telephone=no",
+  },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ru">
-    <body className={NUNITO_SANS.className}>{children}</body>
+      <body className={NUNITO_SANS.className}>{children}</body>
     </html>
   );
 }
