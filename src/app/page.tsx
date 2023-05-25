@@ -22,7 +22,6 @@ import { Contact } from "@/components/contact-component/contact";
 import { Comparison } from "@/components/comparison-component/comparison";
 
 export default function Home() {
-  console.log('VERSION:', process.env.NEXT_PUBLIC_GIT_COMMIT)
   return (
     <div className="wrapper">
       <HeaderComponent />
