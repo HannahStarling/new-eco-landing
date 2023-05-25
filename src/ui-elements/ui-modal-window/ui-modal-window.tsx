@@ -1,6 +1,7 @@
 import "./ui-modal-window.scss";
 import classNames from "classnames";
 import { FC, PropsWithChildren } from "react";
+import { createPortal } from "react-dom";
 
 interface IProps {
   visible: boolean;
@@ -14,7 +15,7 @@ export const UiModal: FC<PropsWithChildren<IProps>> = ({
   visible,
   ...props
 }) => {
-  return (
+  return createPortal(
     <aside
       className={classNames("modal", className, {
         modal_opened: visible,
@@ -25,6 +26,7 @@ export const UiModal: FC<PropsWithChildren<IProps>> = ({
           {children}
         </div>
       </div>
-    </aside>
+    </aside>,
+    document.body
   );
 };
