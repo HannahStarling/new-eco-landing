@@ -97,3 +97,8 @@ export const CONTACT_US_FORM_INITIAL_ERRORS: FormErrors<FormFieldContactUs> = {
   EMail: EMPTY_STRING,
   Agreement: EMPTY_STRING,
 };
+
+export enum FormID {
+  Modal = "Modal",
+  Footer = "Footer",
+}

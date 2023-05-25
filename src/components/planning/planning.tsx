@@ -9,6 +9,7 @@ import { UiParagraph } from "@/ui-elements/ui-paragraph/ui-paragraph";
 import { IconName } from "@/ui-elements/ui-icon/icon-names";
 import { FeatureCard } from "./feature-card";
 import { ImageType } from "@/types/image";
+import PlanningImg from "/public/assets/images/Planning.png";
 
 const SERVICE_IMAGES = [
   {
@@ -87,9 +88,7 @@ export const Planning: FC = () => {
         </div>
         <Image
           className="planning__content-map"
-          width={648}
-          height={352}
-          src="/assets/images/Planning.png"
+          src={PlanningImg}
           alt="Планировщик"
         />
       </div>
