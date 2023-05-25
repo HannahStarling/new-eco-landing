@@ -84,8 +84,7 @@ export const useForm = <K>({
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked, validationMessage } = e.target;
 
-    const isValid =
-      e.target.closest(FORM_TAG)?.checkValidity() && validator({ values });
+    const isValid = e.target.closest(FORM_TAG)?.checkValidity();
     setValues((prevValues) => {
       return {
         ...prevValues,

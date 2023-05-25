@@ -44,8 +44,8 @@ export const FormFields: Record<FormFields, InputProps> = {
     type: FormType.tel,
     className: null,
     required: true,
-    pattern: "^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$",
-    maxlength: 15,
+    pattern: "^(\\+7[0-9]{10})|([0-9]{7,11})$",
+    maxlength: 12,
   },
   EMail: {
     text: "Электронная почта",
@@ -53,6 +53,8 @@ export const FormFields: Record<FormFields, InputProps> = {
     type: FormType.email,
     className: null,
     required: true,
+    pattern:
+      "^(?=[A-Za-z0-9]+)[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+[A-Za-z0-9][.][A-Za-z]{2,}$",
     maxlength: 254,
   },
   Organization: {
