@@ -12,6 +12,7 @@ import { useBurger } from "@/hooks/useBurgerClick";
 import Link from "next/link";
 
 export const HeaderComponent = () => {
+  console.log('VERSION:', process.env.GIT_COMMIT)
   const headerRef = useRef<HTMLElement | null>(null);
   const { isScroll, isFixed } = useHeaderScroll({ headerRef });
   const { onBurgerClick, isOpen } = useBurger();
