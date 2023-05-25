@@ -16,10 +16,11 @@ export const BenefitsArticle: FC<IBenefitsArticle> = ({
   text,
   list,
   chips,
+  id,
 }) => {
   return (
     <UiArticle className={"benefits__article"}>
-      <UiTitle size={TitleSize.extraLarge}>
+      <UiTitle size={TitleSize.extraLarge} id={id}>
         <UiAccent color={Color.greenMain}>{title}</UiAccent>
       </UiTitle>
       <BenefitCard accent={accent} text={text} list={list} />

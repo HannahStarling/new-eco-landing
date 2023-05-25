@@ -17,4 +17,5 @@ export enum Color {
   typographyMain = "typography-main",
   typographyMedium = "typography-medium",
   neutralsLight = "neutrals-light",
+  superLight = "super-light",
 }

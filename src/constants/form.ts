@@ -34,7 +34,7 @@ export const FormFields: Record<FormFields, InputProps> = {
     type: FormType.text,
     className: null,
     required: true,
-    pattern: "^[А-ЯЁ][а-яё]{1,40}$",
+    pattern: "^(?![ ])[А-ЯЁа-яё ]{1,40}$",
   },
   Phone: {
     text: "Телефон",

@@ -15,6 +15,7 @@ export interface IBenefitsArticle {
     title: string;
     list: Array<string>;
   };
+  id: Role;
 }
 
 export type FormValues<K> = {
@@ -32,5 +33,6 @@ export interface IUseFormArgument<K> {
   validationMessages: FormValidationMessages<K>;
   onSubmit: IFormFunction<K>["onSubmit"];
   validator: IFormFunction<K>["validator"];
+  onClose: (() => void) | undefined;
   handleApiError?: (error: string) => void;
 }
