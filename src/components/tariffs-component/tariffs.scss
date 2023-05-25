@@ -54,6 +54,10 @@
       &-item {
         display: flex;
         gap: 14px;
+
+        .accent.super-light {
+          text-decoration: line-through;
+        }
       }
     }
 

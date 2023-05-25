@@ -32,4 +32,10 @@
   .ui-button {
     max-width: 264px;
   }
+
+  .form {
+    .ui-button {
+      max-width: 100%;
+    }
+  }
 }

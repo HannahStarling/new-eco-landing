@@ -2,6 +2,7 @@
   max-width: 576px;
   max-height: 616px;
   position: relative;
+  user-select: none;
 
   &__header {
     display: flex;

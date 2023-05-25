@@ -3,6 +3,7 @@ import { getToken } from "@/api/get-token";
 import { FORM_TAG } from "@/constants/general";
 import { FormErrors, FormValues, IUseFormArgument } from "@/types/models";
 import { IFormFunction } from "@/types/functions";
+import { lockScrollBody } from "@/helpers/lock-scroll-body";
 
 /**
  * Хук, управляющей формой и её полями ввода.
@@ -67,10 +68,10 @@ export const useForm = <K>({
   const handleSetSuccess = (success: boolean) => {
     if (success) {
       setSuccess(true);
-      document.querySelector("body")?.classList.add("lock");
+      lockScrollBody(true);
     } else {
       setSuccess(false);
-      document.querySelector("body")?.classList.remove("lock");
+      lockScrollBody(false);
       onClose?.();
     }
   };
@@ -85,7 +86,6 @@ export const useForm = <K>({
 
     const isValid =
       e.target.closest(FORM_TAG)?.checkValidity() && validator({ values });
-
     setValues((prevValues) => {
       return {
         ...prevValues,

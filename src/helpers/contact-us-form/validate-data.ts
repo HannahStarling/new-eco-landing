@@ -1,11 +1,6 @@
 import { CONTACT_US_RULES } from "@/constants/validation";
 import { IFormFunction } from "@/types/functions";
-import {
-  FormFieldContactUs,
-  FormFields,
-  FormValuesContactUs,
-} from "@/constants/form";
-import { FormValues } from "@/types/models";
+import { FormFieldContactUs, FormFields } from "@/constants/form";
 
 export const validateData: IFormFunction<FormFieldContactUs>["validator"] = ({
   values,
