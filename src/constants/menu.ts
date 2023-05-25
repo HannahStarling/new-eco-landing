@@ -12,12 +12,12 @@ export const menu = {
         sectionID: "#planning",
       },
       3: {
-        name: "Отслеживание рейсов и грузов",
-        sectionID: "#monitoring",
-      },
-      4: {
         name: "Тендерная площадка",
         sectionID: "#tender",
+      },
+      4: {
+        name: "Отслеживание рейсов и грузов",
+        sectionID: "#monitoring",
       },
       5: {
         name: "Электронные документы",
@@ -39,13 +39,13 @@ export const menu = {
     sectionID: "#implementing",
   },
   3: {
-    name: "Отзывы",
-    children: null,
-    sectionID: "#comments-list",
-  },
-  4: {
     name: "Тарифы",
     children: null,
     sectionID: "#tariffs",
+  },
+  4: {
+    name: "Отзывы",
+    children: null,
+    sectionID: "#comments-list",
   },
 };
