@@ -25,6 +25,7 @@ export const HeaderComponent = () => {
       <div className={"header__container"}>
         <Link href="/">
           <HeaderLogoComponent isWhiteHeader={isWhiteHeader} />
+          <div className={"header__black-logo"}></div>
         </Link>
         <div className={classNames("header__action", isOpen ? "active" : null)}>
           <div className="header__links">
