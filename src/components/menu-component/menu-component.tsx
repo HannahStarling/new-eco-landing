@@ -17,7 +17,7 @@ export enum MenuPlacement {
 interface IProps {
   placement?: MenuPlacement;
   isWhiteHeader?: boolean;
-  onBurgerClick: (isOpen?: boolean) => void;
+  onBurgerClick?: (isOpen?: boolean) => void;
 }
 
 export const MenuComponent: FC<PropsWithChildren<IProps>> = ({
