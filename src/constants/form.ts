@@ -54,7 +54,7 @@ export const FormFields: Record<FormFields, InputProps> = {
     className: null,
     required: true,
     pattern:
-      "^(?=[A-Za-z0-9]+)[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+[A-Za-z0-9][.][A-Za-z]{2,}$",
+      "^(?=[A-Za-z0-9]+)[A-Za-z0-9._-]+@([a-zA-Z0-9]+)([.-]{0,1})([a-zA-Z0-9])+[.][A-Za-z]{2,}$",
     maxlength: 254,
   },
   Organization: {

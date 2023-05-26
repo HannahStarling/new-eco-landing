@@ -12,7 +12,7 @@ import { useBurger } from "@/hooks/useBurgerClick";
 import Link from "next/link";
 
 export const HeaderComponent = () => {
-  console.log('VERSION:', process.env.NEXT_PUBLIC_GIT_COMMIT)
+  console.log("VERSION:", process.env.NEXT_PUBLIC_GIT_COMMIT);
   const headerRef = useRef<HTMLElement | null>(null);
   const { isScroll, isFixed } = useHeaderScroll({ headerRef });
   const { onBurgerClick, isOpen } = useBurger();
@@ -30,7 +30,10 @@ export const HeaderComponent = () => {
         </Link>
         <div className={classNames("header__action", isOpen ? "active" : null)}>
           <div className="header__links">
-            <MenuComponent isWhiteHeader={isWhiteHeader} />
+            <MenuComponent
+              onBurgerClick={onBurgerClick}
+              isWhiteHeader={isWhiteHeader}
+            />
             <HeaderButtonComponent isWhiteHeader={isWhiteHeader} />
           </div>
         </div>

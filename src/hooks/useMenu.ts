@@ -1,7 +1,7 @@
 import { HEADER_CSS_SELECTOR } from "@/constants/general";
 import { MouseEvent, SyntheticEvent, useState } from "react";
 
-export const useMenu = () => {
+export const useMenu = (onBurgerClick: (isOpen?: boolean) => void) => {
   const [activeMenu, setActiveMenu] = useState<Record<string, boolean>>({});
   const handleSetActive = (e: SyntheticEvent, key: string | undefined) => {
     e.preventDefault();
@@ -37,6 +37,7 @@ export const useMenu = () => {
       top: offsetPosition,
       behavior: "smooth",
     });
+    onBurgerClick(true);
   };
   return {
     activeMenu,
