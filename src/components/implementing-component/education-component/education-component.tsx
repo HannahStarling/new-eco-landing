@@ -10,6 +10,7 @@ import {
 import { ContentCard } from "./content-card";
 import { LinkInfo } from "./link-info";
 import Image from "next/image";
+import Sertificate from "/public/assets/images/Sertificate.png";
 
 const CONTENT_CARD_INFO = [
   {
@@ -24,7 +25,7 @@ const CONTENT_CARD_INFO = [
 
 const ACCESS_LINKS_INFO = [
   "Планировщик ИЛС с нуля до PRO",
-  "Внутреннее обучениепо всем продуктам ИЛС",
+  "Внутреннее обучение по всем продуктам ИЛС",
   "Мониторинг ИЛС с нуля до PRO",
   "Тендерная площадка ИЛС (грузовладелец) с нуля до PRO",
   "Тендерная площадка ИЛС (перевозчик) с нуля до PRO",
@@ -55,12 +56,7 @@ export const Education: FC = () => {
               <LinkInfo key={item} text={item} />
             ))}
           </div>
-          <Image
-            src="/assets/images/Sertificate.png"
-            alt="Сертификат"
-            width="645"
-            height="516"
-          />
+          <Image src={Sertificate} alt="Сертификат" />
         </div>
       </div>
     </div>

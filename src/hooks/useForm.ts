@@ -30,12 +30,12 @@ export const useForm = <K>({
   validationMessages,
   initialErrors,
   onClose,
+  onSuccess,
 }: IUseFormArgument<K>) => {
   const [values, setValues] = useState<FormValues<K>>(initialValues);
   const [errors, setErrors] = useState<FormErrors<K>>(initialErrors);
   const [isValid, setIsValid] = useState<boolean>(false);
   const [token, setToken] = useState<string | null>(null);
-  const [isSuccess, setSuccess] = useState<boolean>(false);
 
   useEffect(() => {
     async function tokenCheck() {
@@ -67,13 +67,13 @@ export const useForm = <K>({
 
   const handleSetSuccess = (success: boolean) => {
     if (success) {
-      setSuccess(true);
+      onSuccess?.(true);
       lockScrollBody(true);
     } else {
-      setSuccess(false);
+      onSuccess?.(false);
       lockScrollBody(false);
-      onClose?.();
     }
+    onClose?.();
   };
 
   const handleSubmit = (values: FormValues<K> & { Agreement: boolean }) => {
@@ -84,8 +84,7 @@ export const useForm = <K>({
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked, validationMessage } = e.target;
 
-    const isValid =
-      e.target.closest(FORM_TAG)?.checkValidity() && validator({ values });
+    const isValid = e.target.closest(FORM_TAG)?.checkValidity();
     setValues((prevValues) => {
       return {
         ...prevValues,
@@ -114,7 +113,6 @@ export const useForm = <K>({
     handleChange,
     resetForm,
     handleSubmit,
-    isSuccess,
     handleSetSuccess,
   };
 };

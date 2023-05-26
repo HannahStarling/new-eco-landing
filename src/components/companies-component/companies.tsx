@@ -17,12 +17,7 @@ export const Companies: FC = () => (
     <div className="companies__list">
       {companiesImages.map((img, id) => (
         <UiCard key={id}>
-          <Image
-            src={img.src}
-            width={img.width}
-            height={img.height}
-            alt={img.alt}
-          />
+          <Image src={img.src} alt={img.alt} />
         </UiCard>
       ))}
     </div>

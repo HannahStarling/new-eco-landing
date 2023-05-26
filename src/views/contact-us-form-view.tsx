@@ -8,32 +8,29 @@ import { validateData } from "@/helpers/contact-us-form/validate-data";
 import {
   CONTACT_US_FORM_INITIAL_ERRORS,
   CONTACT_US_FORM_INITIAL_VALUES,
+  FormID,
 } from "@/constants/form";
 import { CONTACT_US_VALIDATION_MESSAGES } from "@/constants/validation";
-import { SuccessWindow } from "@/components/success-window-component/success-window-component";
 
 interface IProps {
   onClose?(): void;
+  onSuccess?: (isSuccess: boolean) => void;
+  id: FormID;
 }
 
 export const ContactUsFormView: FC<PropsWithChildren<IProps>> = ({
   onClose,
+  onSuccess,
+  id,
 }) => {
-  const {
-    values,
-    isValid,
-    handleChange,
-    handleSubmit,
-    errors,
-    isSuccess,
-    handleSetSuccess,
-  } = useForm({
+  const { values, isValid, handleChange, handleSubmit, errors } = useForm({
     initialValues: CONTACT_US_FORM_INITIAL_VALUES,
     onSubmit: handleContactUsSubmit,
     validator: validateData,
     initialErrors: CONTACT_US_FORM_INITIAL_ERRORS,
     validationMessages: CONTACT_US_VALIDATION_MESSAGES,
     onClose,
+    onSuccess,
   });
 
   return (
@@ -45,8 +42,9 @@ export const ContactUsFormView: FC<PropsWithChildren<IProps>> = ({
         onChange={handleChange}
         onClose={onClose}
         onSubmit={handleSubmit}
+        key={id}
+        id={id}
       />
-      {isSuccess && <SuccessWindow handleSetSuccess={handleSetSuccess} />}
     </>
   );
 };

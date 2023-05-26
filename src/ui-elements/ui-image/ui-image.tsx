@@ -1,9 +1,7 @@
 import { FC, PropsWithChildren } from "react";
 import Image from "next/image";
 import classNames from "classnames";
-import { ImageName, ImageSize } from "@/ui-elements/ui-image/image-names";
-
-const ROOT_PATH = "/assets/images/";
+import { ImageName, ImageSrc } from "@/ui-elements/ui-image/image-names";
 
 export interface IProps {
   className?: string;
@@ -17,12 +15,6 @@ export const UiImage: FC<PropsWithChildren<IProps>> = ({
   name,
 }) => {
   return (
-    <Image
-      width={ImageSize[name].width}
-      height={ImageSize[name].height}
-      className={classNames(className)}
-      src={`${ROOT_PATH}${ImageName[name]}.png`}
-      alt={alt}
-    />
+    <Image className={classNames(className)} src={ImageSrc[name]} alt={alt} />
   );
 };

@@ -1,6 +1,11 @@
 "use client";
 
-import { FormFieldContactUs, FormFields, InputProps } from "@/constants/form";
+import {
+  FormFieldContactUs,
+  FormFields,
+  FormID,
+  InputProps,
+} from "@/constants/form";
 import { UiInput } from "@/ui-elements/ui-input/ui-input";
 import classNames from "classnames";
 import {
@@ -23,6 +28,7 @@ interface IProps {
   values: FormValues<FormFieldContactUs>;
   isValid: boolean;
   errors: FormErrors<FormFieldContactUs>;
+  id: FormID;
 
   onChange(e: ChangeEvent<HTMLInputElement>): void;
 
@@ -39,9 +45,11 @@ export const FormComponent: FC<PropsWithChildren<IProps>> = ({
   className,
   onClose,
   errors,
+  id,
 }) => {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+    e.stopPropagation();
     onSubmit(values);
   };
 
@@ -61,14 +69,14 @@ export const FormComponent: FC<PropsWithChildren<IProps>> = ({
           />
         )}
       </div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} id={id} key={id}>
         {(Object.entries(FormFields) as Array<[FormFields, InputProps]>).map(
           ([name, field]) => {
             return (
               <UiInput
                 error={errors[name]}
-                id={name}
-                key={name}
+                id={name + id}
+                key={name + id}
                 name={name}
                 pattern={field.pattern}
                 label={field.text}

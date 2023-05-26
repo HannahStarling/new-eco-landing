@@ -1,62 +1,73 @@
+import Uplast from "/public/assets/images/Uplast.png";
+import Borjomi from "/public/assets/images/Borjomi.png";
+import IEK from "/public/assets/images/IEK.png";
+import ATM from "/public/assets/images/ATM.png";
+import Palych from "/public/assets/images/Palych.png";
+import Vkusnoteevo from "/public/assets/images/Vkusnoteevo.png";
+import Danone from "/public/assets/images/Danone.png";
+import Petshop from "/public/assets/images/Petshop.png";
+import Ehrmann from "/public/assets/images/Ehrmann.png";
+import Lactalis from "/public/assets/images/Lactalis.png";
+
 export const companiesImages = [
   {
     width: 66,
     height: 58,
-    src: "/assets/images/Uplast.png",
+    src: Uplast,
     alt: "логотип Uplast",
   },
   {
     width: 139,
     height: 99,
-    src: "/assets/images/Borjomi.png",
+    src: Borjomi,
     alt: "логотип Borjomi",
   },
   {
     width: 95,
     height: 55,
-    src: "/assets/images/IEK.png",
+    src: IEK,
     alt: "логотип IEK",
   },
   {
     width: 118,
     height: 42,
-    src: "/assets/images/ATM.png",
+    src: ATM,
     alt: "логотип ATM",
   },
   {
     width: 107,
     height: 64,
-    src: "/assets/images/Palych.png",
+    src: Palych,
     alt: "логотип Palych",
   },
   {
     width: 115,
     height: 68,
-    src: "/assets/images/Vkusnoteevo.png",
+    src: Vkusnoteevo,
     alt: "логотип Vkusnoteevo",
   },
   {
     width: 116,
     height: 38,
-    src: "/assets/images/Danone.png",
+    src: Danone,
     alt: "логотип Danone",
   },
   {
     width: 111,
     height: 46,
-    src: "/assets/images/Petshop.png",
+    src: Petshop,
     alt: "логотип Petshop",
   },
   {
     width: 118,
     height: 47,
-    src: "/assets/images/Ehrmann.png",
+    src: Ehrmann,
     alt: "логотип Ehrmann",
   },
   {
     width: 121,
     height: 40,
-    src: "/assets/images/Lactalis.png",
+    src: Lactalis,
     alt: "логотип Lactalis",
   },
 ];

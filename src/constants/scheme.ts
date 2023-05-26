@@ -1,63 +1,76 @@
+import SchemeOrder from "/public/assets/icons/SchemeOrder.svg";
+import SchemeDownSm from "/public/assets/icons/SchemeDownSm.svg";
+import SchemeSearch from "/public/assets/icons/SchemeSearch.svg";
+import SchemeRoute from "/public/assets/icons/SchemeRoute.svg";
+import SchemeRouteList from "/public/assets/icons/SchemeRouteList.svg";
+import SchemeContract from "/public/assets/icons/SchemeContract.svg";
+import SchemeControl from "/public/assets/icons/SchemeControl.svg";
+import SchemeAct from "/public/assets/icons/SchemeAct.svg";
+import SchemeHistory from "/public/assets/icons/SchemeHistory.svg";
+import SchemeDownLg from "/public/assets/icons/SchemeDownLg.svg";
+import SchemeRight from "/public/assets/icons/SchemeRight.svg";
+import SchemeLeft from "/public/assets/icons/SchemeLeft.svg";
+
 export const SchemeIcons = {
   order: {
     text: "Заявка в вашей учетной системе",
-    icon: "/assets/icons/SchemeOrder.svg",
-    arrow: "/assets/icons/SchemeDownSm.svg",
+    icon: SchemeOrder,
+    arrow: SchemeDownSm,
     width: 59,
     height: 60,
   },
   route: {
     text: "Рассчитанные маршруты",
-    icon: "/assets/icons/SchemeRoute.svg",
-    arrow: "/assets/icons/SchemeDownSm.svg",
+    icon: SchemeRoute,
+    arrow: SchemeDownSm,
     width: 65,
     height: 60,
   },
   search: {
     text: "Найден исполнитель",
-    icon: "/assets/icons/SchemeSearch.svg",
-    arrow: "/assets/icons/SchemeDownSm.svg",
+    icon: SchemeSearch,
+    arrow: SchemeDownSm,
     width: 60,
     height: 60,
   },
   routelist: {
     text: "Маршрутные листы",
-    icon: "/assets/icons/SchemeRouteList.svg",
-    arrow: "/assets/icons/SchemeDownSm.svg",
+    icon: SchemeRouteList,
+    arrow: SchemeDownSm,
     width: 46,
     height: 60,
   },
   contract: {
     text: "Договор-заявка, маршрутные листы, ТТН, приложения к договору",
-    icon: "/assets/icons/SchemeContract.svg",
-    arrow: "/assets/icons/SchemeDownSm.svg",
+    icon: SchemeContract,
+    arrow: SchemeDownSm,
     width: 60,
     height: 60,
   },
   control: {
     text: "Контроль исполнения",
-    icon: "/assets/icons/SchemeControl.svg",
-    arrow: "/assets/icons/SchemeDownSm.svg",
+    icon: SchemeControl,
+    arrow: SchemeDownSm,
     width: 64,
     height: 64,
   },
   act: {
     text: "Акты выполненных работ",
-    icon: "/assets/icons/SchemeAct.svg",
-    arrow: "/assets/icons/SchemeDownSm.svg",
+    icon: SchemeAct,
+    arrow: SchemeDownSm,
     width: 60,
     height: 60,
   },
   history: {
     text: "История по всем рейсам + Ключевые метрики",
-    icon: "/assets/icons/SchemeHistory.svg",
+    icon: SchemeHistory,
     arrow: null,
     width: 68,
     height: 64,
   },
   arrowDown: {
     text: null,
-    icon: "/assets/icons/SchemeDownLg.svg",
+    icon: SchemeDownLg,
     width: null,
     height: 182,
   },
@@ -71,13 +84,13 @@ export const SchemeBlock = {
       name: "Система учета заявок",
       leftArrow: {
         text: "Импорт",
-        icon: "/assets/icons/SchemeRight.svg",
+        icon: SchemeRight,
       },
       rightArrow: {
         text: "Импорт",
-        icon: "/assets/icons/SchemeRight.svg",
+        icon: SchemeRight,
       },
-      downArrow: "/assets/icons/SchemeDownSm.svg",
+      downArrow: SchemeDownSm,
       className: "scheme__system scheme_center",
     },
   },
@@ -91,13 +104,13 @@ export const SchemeBlock = {
       name: "TMS",
       leftArrow: {
         text: "Автопланирование",
-        icon: "/assets/icons/SchemeLeft.svg",
+        icon: SchemeLeft,
       },
       rightArrow: {
         text: "Автопланирование",
-        icon: "/assets/icons/SchemeRight.svg",
+        icon: SchemeRight,
       },
-      downArrow: "/assets/icons/SchemeDownSm.svg",
+      downArrow: SchemeDownSm,
       className: "scheme__tms scheme_center",
     },
   },
@@ -109,10 +122,10 @@ export const SchemeBlock = {
       leftArrow: null,
       rightArrow: {
         text: "Конкурс или аукцион",
-        icon: "/assets/icons/SchemeRight.svg",
+        icon: SchemeRight,
       },
       className: "scheme__tender scheme_center",
-      downArrow: "/assets/icons/SchemeDownSm.svg",
+      downArrow: SchemeDownSm,
     },
   },
   edo: {
@@ -122,13 +135,13 @@ export const SchemeBlock = {
       name: "ЭДО",
       leftArrow: {
         text: "Генерация документов из шаблонов",
-        icon: "/assets/icons/SchemeLeft.svg",
+        icon: SchemeLeft,
       },
       rightArrow: {
         text: "Генерация документов из шаблонов",
-        icon: "/assets/icons/SchemeRight.svg",
+        icon: SchemeRight,
       },
-      downArrow: "/assets/icons/SchemeDownSm.svg",
+      downArrow: SchemeDownSm,
       className: "scheme__edo scheme_center",
     },
   },
@@ -142,13 +155,13 @@ export const SchemeBlock = {
       name: "Мониторинг + Мобильное приложение",
       leftArrow: {
         text: "Передача данных в режиме 'онлайн'",
-        icon: "/assets/icons/SchemeLeft.svg",
+        icon: SchemeLeft,
       },
       rightArrow: {
         text: "Передача данных в режиме 'онлайн'",
-        icon: "/assets/icons/SchemeRight.svg",
+        icon: SchemeRight,
       },
-      downArrow: "/assets/icons/SchemeDownSm.svg",
+      downArrow: SchemeDownSm,
       className: "scheme__monitoring scheme_center",
     },
   },
@@ -160,9 +173,9 @@ export const SchemeBlock = {
       leftArrow: null,
       rightArrow: {
         text: "Генерация документов из шаблонов",
-        icon: "/assets/icons/SchemeRight.svg",
+        icon: SchemeRight,
       },
-      downArrow: "/assets/icons/SchemeDownSm.svg",
+      downArrow: SchemeDownSm,
       className: "scheme__edo2 scheme_center",
     },
   },
@@ -173,11 +186,11 @@ export const SchemeBlock = {
       name: "Аналитика",
       leftArrow: {
         text: null,
-        icon: "/assets/icons/SchemeLeft.svg",
+        icon: SchemeLeft,
       },
       rightArrow: {
         text: null,
-        icon: "/assets/icons/SchemeRight.svg",
+        icon: SchemeRight,
       },
       downArrow: null,
       className: "scheme__analytics scheme_center",
