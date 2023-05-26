@@ -4,9 +4,9 @@ import { useState } from "react";
 
 export const useBurger = () => {
   const [isOpen, setOpen] = useState<boolean>(false);
-  const onBurgerClick = () => {
+  const onBurgerClick = (isOpen?: boolean) => {
     setOpen((prev) => {
-      return !prev;
+      return isOpen ? false : !prev;
     });
   };
 

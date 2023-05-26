@@ -4,9 +4,6 @@ const nextConfig = {
     API_HOST: "https://react.intelogis.ru",
     HTTPS: "true",
   },
-  images: {
-    unoptimized: true,
-  },
   distDir: "build",
 };
 

@@ -31,5 +31,9 @@
     box-shadow: 0 0 46px rgba(0, 0, 0, 0.3);
     border-radius: 24px;
     max-width: 576px;
+
+    @include mobile {
+      padding: 15px 24px 17px;
+    }
   }
 }
