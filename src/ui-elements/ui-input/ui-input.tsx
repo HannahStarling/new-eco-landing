@@ -14,7 +14,7 @@ interface IProps extends Omit<InputHTMLAttributes<HTMLInputElement>, "type"> {
   name: string;
   placeholder?: string;
   error?: string | boolean;
-  maxlength?: number | null;
+  maxlength?: number | undefined;
 }
 
 export const UiInput: FC<PropsWithChildren<IProps>> = ({
@@ -26,6 +26,7 @@ export const UiInput: FC<PropsWithChildren<IProps>> = ({
   type = "search",
   name,
   pattern,
+  maxlength,
   ...props
 }) => {
   return (
@@ -33,6 +34,7 @@ export const UiInput: FC<PropsWithChildren<IProps>> = ({
       <input
         autoComplete={"on"}
         {...props}
+        maxLength={maxlength}
         id={id}
         type={type as string}
         className={classNames("ui-input__field", classname, {

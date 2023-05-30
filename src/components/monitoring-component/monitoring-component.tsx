@@ -8,10 +8,11 @@ import { MonitoringFeatures } from "./monitoring-features/monitoring-features";
 import { MonitoringStatistics } from "./monitoring-statistics/monitoring-statistics";
 import MonitoringImg from "/public/assets/images/Monitoring.png";
 import MapImg from "/public/assets/images/Map.png";
+import { Role } from "@/types/models";
 
 export const Monitoring: FC = () => {
   return (
-    <UiSection className="monitoring">
+    <UiSection className="monitoring" id={Role.Carrier}>
       <UiSectionTitle>
         <UiAccent>Получаете план-фактный анализ на основе интеграции </UiAccent>
         с вашим сервисом мониторинга или внутри нашей платформы

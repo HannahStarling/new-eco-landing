@@ -5,10 +5,11 @@ import { LeftBlock } from "./one-specialist-left-block/one-specialist-left-block
 import { RightBlock } from "./one-specialist-right-block/one-specialist-right-block";
 import { UiSectionTitle } from "@/ui-elements/ui-section-title/ui-section-title";
 import { UiAccent } from "@/ui-elements/ui-accent/ui-accent";
+import { Role } from "@/types/models";
 
 export const OneSpecialist: FC = () => {
   return (
-    <UiSection className="one-specialist">
+    <UiSection className="one-specialist" id={Role.CargoOwner}>
       <UiSectionTitle>
         <UiAccent>Один специалист</UiAccent> может вести всю цепочку заявок
       </UiSectionTitle>
