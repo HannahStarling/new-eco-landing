@@ -1,8 +1,10 @@
 import "./ui-section.scss";
 import classNames from "classnames";
 import { FC, PropsWithChildren } from "react";
+import { Role } from "@/types/models";
 
 interface IProps {
+  id?: string | Role;
   children?: React.ReactNode | React.ReactElement;
   className?: string;
   fullWidth?: boolean;

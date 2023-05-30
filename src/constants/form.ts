@@ -24,7 +24,7 @@ export type InputProps = {
   type: FormType;
   required: boolean;
   pattern?: string;
-  maxlength: number | null;
+  maxlength: number | undefined;
 };
 export type FormValuesContactUs = FormValues<FormFieldContactUs>;
 
@@ -79,7 +79,7 @@ export const FormFields: Record<FormFields, InputProps> = {
     className: "custom-checkbox",
     required: false,
     placeholder: EMPTY_STRING,
-    maxlength: null,
+    maxlength: undefined,
   },
 };
 
