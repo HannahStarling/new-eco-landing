@@ -1,7 +1,18 @@
+@import "@/app/styles/breakpoints.scss";
+@import "@/app/styles/mixins.scss";
+
 .form {
   max-width: 576px;
   max-height: 616px;
   position: relative;
+  user-select: none;
+
+  @include mobile {
+    button {
+      max-height: 35px;
+      line-height: 14px;
+    }
+  }
 
   &__header {
     display: flex;
@@ -9,13 +20,30 @@
     justify-content: space-between;
     margin-bottom: 24px;
 
+    @include mobile {
+      margin-bottom: 10px;
+
+      .title {
+        line-height: 90%;
+      }
+    }
+
     &-title {
       font-size: 20px !important;
+
+      @include mobile {
+        font-size: 16px !important;
+      }
     }
 
     &-close {
       cursor: pointer;
     }
+  }
+
+  label {
+    max-height: 64px;
+    overflow-y: auto;
   }
 
   &__submit {
@@ -27,6 +55,18 @@
   .ui-input {
     margin-bottom: 16px;
     outline: var(--colors-neutrals-super-light);
+
+    @include mobile {
+      margin-bottom: 5px;
+
+      &__field {
+        padding: 7px 12px;
+      }
+
+      &-error {
+        padding: 0;
+      }
+    }
   }
 
   /* для элемента input c type="checkbox" */

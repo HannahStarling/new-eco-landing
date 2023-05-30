@@ -2,12 +2,15 @@
 
 import { useModal } from "@/hooks/useModal";
 import "./connect-modal.scss";
-import { FC, PropsWithChildren, ReactNode } from "react";
+import { FC, PropsWithChildren, ReactNode, useState } from "react";
 import { UiButton } from "@/ui-elements/ui-button/ui-button";
 import { UiModal } from "@/ui-elements/ui-modal-window/ui-modal-window";
 import classNames from "classnames";
 import { ContactUsFormView } from "@/views/contact-us-form-view";
 import { FillType, Mode } from "@/ui-elements/ui-button/types";
+import { lockScrollBody } from "@/helpers/lock-scroll-body";
+import { SuccessWindow } from "../success-window-component/success-window-component";
+import { FormID } from "@/constants/form";
 
 interface IProps {
   className?: string;
@@ -24,7 +27,20 @@ export const ConnectModal: FC<PropsWithChildren<IProps>> = ({
   fillType = "outlined",
 }) => {
   const { modalOpened, setModalOpened } = useModal();
-  const onOpen = () => setModalOpened(true);
+  const [isSuccess, setSuccess] = useState(false);
+  const onOpen = () => {
+    setModalOpened(true);
+    lockScrollBody(true);
+  };
+
+  const onClose = () => {
+    setModalOpened(false);
+    lockScrollBody(false);
+  };
+
+  const onSuccess = (isSuccess: boolean) => {
+    setSuccess(isSuccess);
+  };
 
   return (
     <div className="connect-modal">
@@ -38,9 +54,14 @@ export const ConnectModal: FC<PropsWithChildren<IProps>> = ({
       </UiButton>
       {modalOpened && (
         <UiModal visible={modalOpened}>
-          <ContactUsFormView onClose={() => setModalOpened(false)} />
+          <ContactUsFormView
+            id={FormID.Modal}
+            onClose={onClose}
+            onSuccess={onSuccess}
+          />
         </UiModal>
       )}
+      {isSuccess && <SuccessWindow onSuccess={onSuccess} />}
     </div>
   );
 };

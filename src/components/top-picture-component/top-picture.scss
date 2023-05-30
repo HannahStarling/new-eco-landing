@@ -3,7 +3,7 @@
 
 .top-picture {
   position: relative;
-  min-height: 75vh;
+  min-height: 100vh;
   background: url("/assets/images/cover.jpg") no-repeat center center;
   background-size: cover;
   @include mobile {

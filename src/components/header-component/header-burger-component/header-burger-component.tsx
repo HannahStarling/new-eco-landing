@@ -6,7 +6,7 @@ import { FC, PropsWithChildren } from "react";
 interface IProps {
   isOpen: boolean;
 
-  onBurgerClick(): void;
+  onBurgerClick(isOpen?: boolean): void;
 }
 
 export const HeaderBurgerComponent: FC<PropsWithChildren<IProps>> = ({
@@ -14,7 +14,7 @@ export const HeaderBurgerComponent: FC<PropsWithChildren<IProps>> = ({
   isOpen,
 }) => {
   return (
-    <div className="header__burger" onClick={onBurgerClick}>
+    <div className="header__burger" onClick={() => onBurgerClick()}>
       <span className={classNames(isOpen ? "active" : null)} />
     </div>
   );

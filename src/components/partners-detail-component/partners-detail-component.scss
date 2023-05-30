@@ -15,11 +15,11 @@
 
   &::-webkit-scrollbar-thumb {
     height: 5px;
-    background-color: var(--colors-typography-white);
+    background-color: var(--colors-neutrals-dark);
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background-color: var(--colors-typography-white);
+    background-color: var(--colors-neutrals-dark);
   }
 
   &::-webkit-scrollbar:vertical {
@@ -30,13 +30,28 @@
 .partner {
   &__detail {
     display: flex;
-    justify-content: space-between;
     flex-wrap: nowrap;
+    justify-content: center;
     margin-bottom: 62px;
+
+    @include desktop {
+      justify-content: flex-start;
+      padding: 10px;
+    }
+  }
+
+  &__single {
+    align-self: center;
+    flex: 1;
+
+    @include desktop {
+      flex: 0;
+      align-self: start;
+    }
   }
 
   &__single:nth-child(2) {
-    margin: 0 40px;
+    margin: 0 99px;
   }
 
   button.ui-button {

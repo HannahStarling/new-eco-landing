@@ -17,13 +17,15 @@ export enum MenuPlacement {
 interface IProps {
   placement?: MenuPlacement;
   isWhiteHeader?: boolean;
+  onBurgerClick?: (isOpen?: boolean) => void;
 }
 
 export const MenuComponent: FC<PropsWithChildren<IProps>> = ({
   placement = MenuPlacement.header,
   isWhiteHeader,
+  onBurgerClick,
 }) => {
-  const { activeMenu, handleSetActive, handleScroll } = useMenu();
+  const { activeMenu, handleSetActive, handleScroll } = useMenu(onBurgerClick);
 
   return (
     <nav

@@ -8,16 +8,11 @@ export const RightBlock = () => {
       <div className="right__body">
         <div className="right__head">
           {RightBlockData.header}{" "}
-          <Image
-            src={Logo.header.black}
-            width={Logo.header.width}
-            height={Logo.header.height}
-            alt={Logo.header.alt}
-          />
+          <Image src={Logo.header.black} alt={Logo.header.alt} />
         </div>
         <div className="right__border"></div>
         <div className="right__description">
-          <span>{RightBlockData.quantity}</span>
+          <span>{RightBlockData.quantity}&nbsp;</span>
           <span>{RightBlockData.description}</span>
         </div>
         <div className="right__caption">{RightBlockData.caption}</div>
@@ -40,8 +35,6 @@ export const RightBlock = () => {
             <Image
               src={RightBlockData.icon.src}
               alt={RightBlockData.icon.alt}
-              width={RightBlockData.icon.width}
-              height={RightBlockData.icon.height}
             />
           </div>
           <div className="responsibilities__right responsibility">

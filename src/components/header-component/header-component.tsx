@@ -9,8 +9,10 @@ import { useHeaderScroll } from "@/hooks/useHeaderScroll";
 import classNames from "classnames";
 import { HeaderBurgerComponent } from "./header-burger-component/header-burger-component";
 import { useBurger } from "@/hooks/useBurgerClick";
+import Link from "next/link";
 
 export const HeaderComponent = () => {
+  console.log("VERSION:", process.env.NEXT_PUBLIC_GIT_COMMIT);
   const headerRef = useRef<HTMLElement | null>(null);
   const { isScroll, isFixed } = useHeaderScroll({ headerRef });
   const { onBurgerClick, isOpen } = useBurger();
@@ -22,10 +24,16 @@ export const HeaderComponent = () => {
       className={classNames("header", isWhiteHeader ? "header_sticky" : null)}
     >
       <div className={"header__container"}>
-        <HeaderLogoComponent isWhiteHeader={isWhiteHeader} />
+        <Link href="/">
+          <HeaderLogoComponent isWhiteHeader={isWhiteHeader} />
+          <div className={"header__black-logo"}></div>
+        </Link>
         <div className={classNames("header__action", isOpen ? "active" : null)}>
           <div className="header__links">
-            <MenuComponent isWhiteHeader={isWhiteHeader} />
+            <MenuComponent
+              onBurgerClick={onBurgerClick}
+              isWhiteHeader={isWhiteHeader}
+            />
             <HeaderButtonComponent isWhiteHeader={isWhiteHeader} />
           </div>
         </div>

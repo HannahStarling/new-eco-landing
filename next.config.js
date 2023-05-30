@@ -4,7 +4,7 @@ const nextConfig = {
     API_HOST: "https://react.intelogis.ru",
     HTTPS: "true",
   },
-  distDir: 'build',
+  distDir: "build",
 };
 
 module.exports = nextConfig;

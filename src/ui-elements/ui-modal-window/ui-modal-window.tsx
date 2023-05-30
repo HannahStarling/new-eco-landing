@@ -17,10 +17,14 @@ export const UiModal: FC<PropsWithChildren<IProps>> = ({
 }) => {
   return createPortal(
     <aside
-      className={classNames("modal", className, { modal_opened: visible })}
+      className={classNames("modal", className, {
+        modal_opened: visible,
+      })}
     >
-      <div {...props} className={classNames("modal__inner", className)}>
-        {children}
+      <div className="modal__container">
+        <div {...props} className={classNames("modal__inner ", className)}>
+          {children}
+        </div>
       </div>
     </aside>,
     document.body

@@ -40,25 +40,16 @@ export const FullCycle = () => (
           </UiListItem>
         ))}
       </UiList>
-      <Image
-        src={Logo.header.black}
-        width={Logo.header.width}
-        height={Logo.header.height}
-        alt={Logo.header.alt}
-      />
+      <Image src={Logo.header.black} alt={Logo.header.alt} />
       <Image
         className="full-cycle__scheme-line-branch"
         src={fullCycleImages.LineBranch.src}
-        width={fullCycleImages.LineBranch.width}
-        height={fullCycleImages.LineBranch.height}
         alt={fullCycleImages.LineBranch.alt}
       />
       <div className="full-cycle__scheme-images">
         <UiCard>
           <Image
             src={fullCycleImages.CargoOwner.src}
-            width={fullCycleImages.CargoOwner.width}
-            height={fullCycleImages.CargoOwner.height}
             alt={fullCycleImages.CargoOwner.alt}
           />
           <UiParagraph>Грузовладелец</UiParagraph>
@@ -66,29 +57,21 @@ export const FullCycle = () => (
         <Image
           className="full-cycle__scheme-images__line"
           src={fullCycleImages.Line.src}
-          width={fullCycleImages.Line.width}
-          height={fullCycleImages.Line.height}
           alt={fullCycleImages.Line.alt}
         />
         <Image
           className="full-cycle__scheme-images__scheme"
           src={fullCycleImages.IntelogisCenter.src}
-          width={fullCycleImages.IntelogisCenter.width}
-          height={fullCycleImages.IntelogisCenter.height}
           alt={fullCycleImages.IntelogisCenter.alt}
         />
         <Image
           className="full-cycle__scheme-images__line"
           src={fullCycleImages.Line.src}
-          width={fullCycleImages.Line.width}
-          height={fullCycleImages.Line.height}
           alt={fullCycleImages.Line.alt}
         />
         <UiCard>
           <Image
             src={fullCycleImages.Carrier.src}
-            width={fullCycleImages.Carrier.width}
-            height={fullCycleImages.Carrier.height}
             alt={fullCycleImages.Carrier.alt}
           />
           <UiParagraph>Перевозчик</UiParagraph>

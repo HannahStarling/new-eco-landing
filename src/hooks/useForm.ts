@@ -3,6 +3,7 @@ import { getToken } from "@/api/get-token";
 import { FORM_TAG } from "@/constants/general";
 import { FormErrors, FormValues, IUseFormArgument } from "@/types/models";
 import { IFormFunction } from "@/types/functions";
+import { lockScrollBody } from "@/helpers/lock-scroll-body";
 
 /**
  * Хук, управляющей формой и её полями ввода.
@@ -29,12 +30,12 @@ export const useForm = <K>({
   validationMessages,
   initialErrors,
   onClose,
+  onSuccess,
 }: IUseFormArgument<K>) => {
   const [values, setValues] = useState<FormValues<K>>(initialValues);
   const [errors, setErrors] = useState<FormErrors<K>>(initialErrors);
   const [isValid, setIsValid] = useState<boolean>(false);
   const [token, setToken] = useState<string | null>(null);
-  const [isSuccess, setSuccess] = useState<boolean>(false);
 
   useEffect(() => {
     async function tokenCheck() {
@@ -66,13 +67,13 @@ export const useForm = <K>({
 
   const handleSetSuccess = (success: boolean) => {
     if (success) {
-      setSuccess(true);
-      document.querySelector("body")?.classList.add("lock");
+      onSuccess?.(true);
+      lockScrollBody(true);
     } else {
-      setSuccess(false);
-      document.querySelector("body")?.classList.remove("lock");
-      onClose?.();
+      onSuccess?.(false);
+      lockScrollBody(false);
     }
+    onClose?.();
   };
 
   const handleSubmit = (values: FormValues<K> & { Agreement: boolean }) => {
@@ -83,9 +84,7 @@ export const useForm = <K>({
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked, validationMessage } = e.target;
 
-    const isValid =
-      e.target.closest(FORM_TAG)?.checkValidity() && validator({ values });
-
+    const isValid = e.target.closest(FORM_TAG)?.checkValidity();
     setValues((prevValues) => {
       return {
         ...prevValues,
@@ -114,7 +113,6 @@ export const useForm = <K>({
     handleChange,
     resetForm,
     handleSubmit,
-    isSuccess,
     handleSetSuccess,
   };
 };

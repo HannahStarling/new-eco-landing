@@ -20,12 +20,7 @@ export const OneSpecialistUnit: FC<PropsWithChildren<IProps>> = ({
           return (
             <div className="unit__data" key={iconData.responsibility + index}>
               <div className="unit__ico">
-                <Image
-                  src={iconData.icon}
-                  alt={iconData.responsibility}
-                  width={iconData.icon_width}
-                  height={iconData.icon_height}
-                />
+                <Image src={iconData.icon} alt={iconData.responsibility} />
               </div>
               <div className="unit__reponsibility">
                 {iconData.responsibility}

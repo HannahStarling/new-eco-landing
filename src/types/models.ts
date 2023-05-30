@@ -34,5 +34,6 @@ export interface IUseFormArgument<K> {
   onSubmit: IFormFunction<K>["onSubmit"];
   validator: IFormFunction<K>["validator"];
   onClose: (() => void) | undefined;
+  onSuccess: ((isSuccess: boolean) => void) | undefined;
   handleApiError?: (error: string) => void;
 }

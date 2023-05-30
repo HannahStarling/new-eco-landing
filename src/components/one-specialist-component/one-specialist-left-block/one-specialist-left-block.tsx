@@ -17,7 +17,7 @@ export const LeftBlock: FC<PropsWithChildren<IProps>> = () => {
         <div className="left__units unit">
           {Object.entries(LeftBlockData.units).map(([column, unitsData]) => {
             return (
-              <div key={column} className={`unit__${column}`}>
+              <>
                 {unitsData.map((unit, index) => {
                   return (
                     <OneSpecialistUnit
@@ -26,7 +26,7 @@ export const LeftBlock: FC<PropsWithChildren<IProps>> = () => {
                     />
                   );
                 })}
-              </div>
+              </>
             );
           })}
         </div>

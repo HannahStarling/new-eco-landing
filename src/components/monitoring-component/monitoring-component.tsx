@@ -6,6 +6,8 @@ import { UiAccent } from "@/ui-elements/ui-accent/ui-accent";
 import Image from "next/image";
 import { MonitoringFeatures } from "./monitoring-features/monitoring-features";
 import { MonitoringStatistics } from "./monitoring-statistics/monitoring-statistics";
+import MonitoringImg from "/public/assets/images/Monitoring.png";
+import MapImg from "/public/assets/images/Map.png";
 
 export const Monitoring: FC = () => {
   return (
@@ -14,21 +16,10 @@ export const Monitoring: FC = () => {
         <UiAccent>Получаете план-фактный анализ на основе интеграции </UiAccent>
         с вашим сервисом мониторинга или внутри нашей платформы
       </UiSectionTitle>
-      <Image
-        width={1127}
-        height={498}
-        src="/assets/images/Monitoring.png"
-        alt="Мониторинг"
-      />
+      <Image src={MonitoringImg} alt="Мониторинг" />
       <div className="monitoring__info">
         <MonitoringFeatures />
-        <Image
-          className="monitoring__info-map"
-          width={360}
-          height={529}
-          src="/assets/images/Map.png"
-          alt="Карта"
-        />
+        <Image className="monitoring__info-map" src={MapImg} alt="Карта" />
         <MonitoringStatistics />
       </div>
     </UiSection>

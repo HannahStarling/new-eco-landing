@@ -1,6 +1,7 @@
 import { SchemeBlock } from "@/constants/scheme";
 import { SchemeValueType } from "@/types/scheme";
 import classNames from "classnames";
+import Image from "next/image";
 import { FC, PropsWithChildren } from "react";
 
 interface IProps {
@@ -17,7 +18,7 @@ export const ProductBlock: FC<PropsWithChildren<IProps>> = ({ data }) => {
         <div className="product__left left">
           {data.leftArrow?.icon && (
             <div className="left__arrow">
-              <img
+              <Image
                 alt={"Стрелка, показывает влево."}
                 src={data.leftArrow?.icon}
               />
@@ -30,7 +31,7 @@ export const ProductBlock: FC<PropsWithChildren<IProps>> = ({ data }) => {
         </div>
         <div className="product__right right">
           <div className="right__arrow">
-            <img
+            <Image
               alt={"Стрелка, показывает вправо."}
               src={data.rightArrow?.icon}
             />
@@ -40,7 +41,7 @@ export const ProductBlock: FC<PropsWithChildren<IProps>> = ({ data }) => {
       </div>
       {data.downArrow && (
         <div className="product__down">
-          <img alt={"Стрелка, показывает вниз."} src={data.downArrow} />
+          <Image alt={"Стрелка, показывает вниз."} src={data.downArrow} />
         </div>
       )}
     </div>

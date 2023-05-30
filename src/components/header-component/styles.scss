@@ -12,6 +12,10 @@
   background: transparent;
   color: var(--colors-neutrals-white);
 
+  &___black-logo {
+    display: none;
+  }
+
   @include mobile {
     &__burger {
       span {
@@ -71,6 +75,20 @@
     background: var(--colors-neutrals-white);
     color: var(--colors-typography-main);
     box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
+
+    .header__logo {
+      display: none;
+    }
+
+    .header__black-logo {
+      position: relative;
+      left: 8px;
+      display: block;
+      width: 170px;
+      height: 36px;
+      background: url($logo-ils-black) no-repeat center center;
+      z-index: 10;
+    }
 
     .list {
       .menu {
@@ -305,46 +323,6 @@
         content: "";
         bottom: 9px;
         transform: rotate(45deg);
-      }
-    }
-  }
-
-  @media (min-width: $breakpoint-desktop-md) {
-    &__logo {
-      padding: 0;
-    }
-    &__burger {
-      visibility: hidden;
-      opacity: 0;
-    }
-
-    &__action {
-      position: static;
-      top: 0;
-      left: 0;
-      height: 100%;
-      background: none;
-      box-shadow: none;
-      flex: 1;
-      transform: translate(0);
-    }
-
-    &__links {
-      flex-direction: row;
-      justify-content: flex-end;
-      top: 0;
-    }
-
-    .menu {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      &__list {
-        flex-direction: row;
-        justify-content: flex-start;
-        top: 0;
       }
     }
   }

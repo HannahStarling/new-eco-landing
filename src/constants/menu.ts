@@ -5,7 +5,7 @@ export const menu = {
     children: {
       1: {
         name: "Управление заявками",
-        sectionID: "#platform-modules",
+        sectionID: "#full-cycle",
       },
       2: {
         name: "Планирование маршрута",

@@ -13,12 +13,7 @@ export const SchemeHeaderComponent = () => {
           <span className="scheme-head__border" />
         </div>
         <div className="scheme-head__center">
-          <Image
-            src={Logo.header.black}
-            width={Logo.header.width}
-            height={Logo.header.height}
-            alt={Logo.header.alt}
-          />
+          <Image src={Logo.header.black} alt={Logo.header.alt} />
         </div>
         <div className="scheme-head__right">
           <span className="scheme-head__text scheme-head__text_right">
