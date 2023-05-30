@@ -2,6 +2,7 @@ export enum ImageName {
   BoardStart = "BoardStart",
   BoardNew = "BoardNew",
   Comparison = "Comparison",
+  Planning = "Planning",
   PlatformModules = "PlatformModules",
   Process = "Process",
   Tender = "Tender",
@@ -52,5 +53,9 @@ export const ImageSize: Record<
   [ImageName.BoardNew]: {
     width: 555,
     height: 268,
+  },
+  [ImageName.Planning]: {
+    width: 840,
+    height: 381.49,
   },
 };

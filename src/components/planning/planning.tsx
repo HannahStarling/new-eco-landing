@@ -3,33 +3,12 @@ import "./planning.scss";
 import { UiSection } from "@/ui-elements/ui-section/ui-section";
 import { FC } from "react";
 import { UiAccent } from "@/ui-elements/ui-accent/ui-accent";
-import Image from "next/image";
-import { ServiceCard } from "@/components/service-card/service-card";
 import { UiParagraph } from "@/ui-elements/ui-paragraph/ui-paragraph";
 import { IconName } from "@/ui-elements/ui-icon/icon-names";
 import { FeatureCard } from "./feature-card";
 import { ImageType } from "@/types/image";
-
-const SERVICE_IMAGES = [
-  {
-    width: 128,
-    height: 44,
-    src: "/assets/images/Yandex.png",
-    alt: "логотип Yandex",
-  },
-  {
-    width: 128,
-    height: 44,
-    src: "/assets/images/Veeroute.png",
-    alt: "логотип Veeroute",
-  },
-  {
-    width: 128,
-    height: 44,
-    src: "/assets/images/ILS.png",
-    alt: "логотип ILS",
-  },
-];
+import { UiImage } from "@/ui-elements/ui-image/ui-image";
+import { ImageName } from "@/ui-elements/ui-image/image-names";
 
 const FEATURE_INFO: Array<{
   title: string;
@@ -75,23 +54,8 @@ export const Planning: FC = () => {
         </div>
         <div className="planning__content-algorithms">
           <UiParagraph>Три алгоритма планирования на выбор</UiParagraph>
-          {SERVICE_IMAGES.map((item) => (
-            <ServiceCard
-              key={item.src}
-              width={item.width}
-              height={item.height}
-              alt={item.alt}
-              src={item.src}
-            />
-          ))}
+          <UiImage name={ImageName.Planning} alt={"Экран Планировщика."} />
         </div>
-        <Image
-          className="planning__content-map"
-          width={648}
-          height={352}
-          src="/assets/images/Planning.png"
-          alt="Планировщик"
-        />
       </div>
     </UiSection>
   );

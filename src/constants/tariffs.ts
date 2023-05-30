@@ -35,10 +35,10 @@ export interface ITariff {
 
 export const TARIFFS_NAMES: Record<Feature, string> = {
   [Feature.Demand]: "Учет заявок",
-  [Feature.PlannerILS]: "ТМС - ручной Планировщик ИЛС",
-  [Feature.PlannerAutoILS]: "ТМС авто Планировщик ИЛС",
-  [Feature.PlannerAutoVeeroute]: "ТМС авто Планировщик Вироут",
-  [Feature.PlannerAutoYandex]: "ТМС авто Планировщик Яндекс",
+  [Feature.PlannerILS]: "ТМС - ручной Планировщик",
+  [Feature.PlannerAutoILS]: "ТМС авто Планировщик (vol 1)",
+  [Feature.PlannerAutoVeeroute]: "ТМС авто Планировщик (vol 2)",
+  [Feature.PlannerAutoYandex]: "ТМС авто Планировщик (vol 3)",
   [Feature.Monitorig]: "Диспетчерский Мониторинг",
   [Feature.MobileApp]: "Мобильное приложение для Водителей",
   [Feature.TenderPlatform]: "Тендерная площадка",

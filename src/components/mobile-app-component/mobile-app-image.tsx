@@ -6,7 +6,7 @@ export const MobileAppImage: FC = () => {
   return (
     <div className={"mobile-app__image-container"}>
       <UiImage
-        alt={"Мобильный телефон с изображением мобильного приложения  ИЛС."}
+        alt={"Мобильный телефон с изображением мобильного приложения ТМС."}
         name={ImageName.Smartphone}
       />
       <div className={"mobile-app__decorative-element"} />

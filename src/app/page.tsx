@@ -2,7 +2,6 @@ import "./styles/page.scss";
 import { HeaderComponent } from "@/components/header-component/header-component";
 import { FooterComponent } from "@/components/footer-component/footer-component";
 import { MainComponent } from "@/components/main-component/main-component";
-import { Benefits } from "@/components/benefits-component/benefits";
 import { CommentsList } from "@/components/comments-list-component/comments-list";
 import { Companies } from "@/components/companies-component/companies";
 import { PlatformModules } from "@/components/platform-modules-component/platform-modules";
@@ -26,10 +25,9 @@ export default function Home() {
     <div className="wrapper">
       <HeaderComponent />
       <MainComponent>
-        <Benefits />
+        <OneSpecialist />
         <PlatformModules />
         <FullCycle />
-        <OneSpecialist />
         <ThePlatformAdjusts />
         <SchemeComponent />
         <Planning />
