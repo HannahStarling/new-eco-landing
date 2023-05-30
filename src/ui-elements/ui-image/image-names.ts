@@ -7,6 +7,7 @@ import Tender from "/public/assets/images/Tender.png";
 import Edo from "/public/assets/images/Edo.png";
 import EdoView from "/public/assets/images/EdoView.png";
 import Smartphone from "/public/assets/images/Smartphone.png";
+import Planning from "/public/assets/images/Planning.png";
 
 export enum ImageName {
   BoardStart = "BoardStart",
@@ -31,6 +32,7 @@ export const ImageSrc = {
   Edo,
   EdoView,
   Smartphone,
+  Planning,
 };
 
 export const ImageSize: Record<

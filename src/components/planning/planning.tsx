@@ -54,7 +54,11 @@ export const Planning: FC = () => {
         </div>
         <div className="planning__content-algorithms">
           <UiParagraph>Три алгоритма планирования на выбор</UiParagraph>
-          <UiImage name={ImageName.Planning} alt={"Экран Планировщика."} />
+          <UiImage
+            className={"planning__content-map"}
+            name={ImageName.Planning}
+            alt={"Экран Планировщика."}
+          />
         </div>
       </div>
     </UiSection>
