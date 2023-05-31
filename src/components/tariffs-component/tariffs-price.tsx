@@ -13,7 +13,10 @@ export const TariffsPrice: FC<PropsWithChildren<IProps>> = ({ price }) => {
       <UiAccent bold color={Color.typographyMain}>
         {price}
       </UiAccent>
-      <UiAccent color={Color.typographyMedium}> /в месяц</UiAccent>
+      <UiAccent color={Color.typographyMedium}>
+        {" "}
+        /в&nbsp;месяц (за&nbsp;одну машину)
+      </UiAccent>
     </>
   );
 };
