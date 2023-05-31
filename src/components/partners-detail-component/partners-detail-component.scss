@@ -32,39 +32,45 @@
   gap: 64px;
 
   &__detail {
-    display: flex;
+    @include flex-center;
     flex-wrap: nowrap;
-    justify-content: center;
     gap: 99px;
 
-    @include desktop {
+    @include laptop {
       padding: 10px;
+      gap: 15px;
+    }
+
+    @include tablet {
+      @include flex-column-center;
+      gap: 24px;
     }
   }
 
   &__single {
+    @include flex-column-center;
     align-self: center;
     flex: 1;
+    gap: 24px;
 
-    @include desktop {
-      flex: 0;
-      align-self: start;
+    @include mobile {
+      gap: 26px;
     }
   }
 
+  &__title {
+    font-size: 36px;
+    font-weight: var(--font-weights-bold);
+    @include mobile {
+      font-size: calc(36px / 2);
+    }
+  }
 
   button.ui-button {
     color: var(--colors-typography-white);
     border: 1px solid var(--colors-typography-white);
-  }
-
-  &__title {
-    margin-bottom: 24px;
-    font-size: 36px;
-    font-weight: var(--font-weights-bold);
-
     @include mobile {
-      margin-bottom: 26px;
+      padding: 6px 13px;
     }
   }
 }

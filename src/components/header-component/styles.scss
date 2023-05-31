@@ -20,6 +20,7 @@
     &__burger {
       span {
         background: var(--colors-typography-main) !important;
+
         &::after,
         &::before {
           background: var(--colors-typography-main) !important;
@@ -38,8 +39,8 @@
       z-index: 2;
     }
   }
-
-  &__container {
+  
+  & > .header__container {
     display: flex;
     justify-content: space-between;
     align-items: center;

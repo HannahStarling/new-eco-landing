@@ -24,6 +24,7 @@
 // __FLEX&GRID__
 @mixin flex-center {
   display: flex;
+  justify-content: center;
   justify-items: center;
   align-items: center;
 }

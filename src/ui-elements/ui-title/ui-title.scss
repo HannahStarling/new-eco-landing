@@ -1,29 +1,19 @@
+@import "@/app/styles/global.scss";
+
 @mixin medium-weight {
   &.medium-weight {
     font-weight: var(--font-weights-medium);
   }
 }
 
-//
-//@media screen and (orientation: landscape) {
-//  #toolbar {
-//    position: fixed;
-//    width: 2.65em;
-//    height: 100%;
-//  }
-//
-//  p {
-//    margin-left: 2em;
-//  }
-//
-//  li + li {
-//    margin-top: .5em;
-//  }
-//}
 .title {
   font-weight: var(--font-weights-bold);
   line-height: 120%;
   color: var(--colors-typography-medium);
+
+  @include mobile {
+    font-size: calc(#{$main-title-fs} / 2);
+  }
 
   &_extra-large {
     font-size: 32px;
