@@ -11,7 +11,7 @@
   transform: translate(-50%, -50%);
   width: 100%;
   @include mobile {
-    gap: 15px;
+    gap: 5vh;
   }
 
   &__container {
