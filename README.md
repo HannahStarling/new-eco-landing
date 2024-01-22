@@ -1,4 +1,14 @@
-## UiElements
+# Лединг компании INTELOGIS на Next.js 
+
+## Стек технологий
+
+- Next.js
+- Typescript/JavaScript (ES6)
+- SASS
+
+Для работы с формой связи необходим env файл с доступом к бекенду
+
+## Внутренние UiElements
 
 ## UiButton
 
