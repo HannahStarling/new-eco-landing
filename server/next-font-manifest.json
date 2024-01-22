@@ -1,0 +1,12 @@
+{
+  "pages": {},
+  "app": {
+    "/Users/hannah/WebstormProjects/new-eco-landing/node_modules/next/font/google/target.css?{\"arguments\":[{\"subsets\":[\"latin\",\"cyrillic-ext\",\"cyrillic\"]}],\"import\":\"Nunito_Sans\",\"path\":\"src/app/layout.tsx\",\"variableName\":\"NUNITO_SANS\"}": [
+      "static/media/23f25237a0dd6e5e-s.p.woff2",
+      "static/media/4211d34fd1c6f59f-s.p.woff2",
+      "static/media/61b81e7bde89ba40-s.p.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pagesUsingSizeAdjust": false
+}
