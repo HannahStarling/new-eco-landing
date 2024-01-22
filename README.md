@@ -1,4 +1,4 @@
-# Лединг компании INTELOGIS на Next.js 
+# Лендинг компании INTELOGIS на Next.js 
 
 ## Стек технологий
 
